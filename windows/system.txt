@@ -3,6 +3,7 @@ Applications
 
 Adobe Digital Editions (EPub)
 Adobe Reader
+Aomei Partition Assistant
 AutoHotKey
 BreeZip
 Bulk Rename Utility
@@ -10,15 +11,21 @@ Disk Genius
 FreeOffice
 HexChat
 Hyper-V
+Java
 MPV Player
-NoMachine
-Notepad++
 PuTTy
 PDF Reader by Xodo
+PDF Xchange Viewer
+Rufus
+ScreenToGif
 Sublime Text
 TigerVNC
+Transmission
 VcXsrv
+VLC Player
+WebTorrent
 WinDjView
+WinMerge
 WinSCP
 
 Settings
@@ -67,6 +74,12 @@ F8+z Minimize
    CustomCompressLevel=1
    CompressLevel=1
    QualityLevel=9
+
+TurboVNC
+========
+
+Java Viewer
+Alt+Enter Fullscreen
 
 VcXsrv
 ======

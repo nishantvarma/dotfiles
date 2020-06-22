@@ -1,27 +1,43 @@
-# => Libraries
+# Libraries
+# =========
 
 [[ -f /etc/bashrc ]] && source /etc/bashrc
 
 [[ -f /etc/bash_completion ]] && source /etc/bash_completion
 
-# => Alias
+# Unsets
+# ======
 
-alias ls="ls -L"
-alias ll="ls -lrt"
+unset LS_COLORS
+unset PROMPT_COMMAND
 
-# => Exports
+# Unalias
+# =======
 
-export PATH="${HOME}"/bin:"${PATH}"
-export PS1="$ "
+unalias ls 1>/dev/null 2>/dev/null
 
-# => Functions
+# Exports
+# =======
 
-function lazygit() {
+if [[ $TERM == *rxvt* ]]; then
+    export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
+fi
+export PS1="\W@\h % "
+
+# Functions
+# =========
+
+ll() {
+    ls -lrt
+}
+
+lazygit() {
     git add .
     git commit -a -m "$1"
     git push
 }
 
-# => FZF
+# FZF
+# ===
 
 [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash

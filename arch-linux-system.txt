@@ -10,10 +10,12 @@ Libraries
     base
     base-devel
     bdf-unifont
+    bindfs
     connman (network-manager)
     dash
     dhclient
     dhcpcd
+    exiftool (metadata-manager)
     freetype2
     fuse2
     git
@@ -23,9 +25,11 @@ Libraries
     linux-firmware
     man
     mosh
+    mssql-cli
     ncurses
     ntpd
     slock
+    sshpass
     strace
     ttf-dejavu
     ttf-liberation
@@ -50,9 +54,10 @@ Libraries
 Applications
 ============
 
+    2bwm (window-manager)
     atril (pdf-viewer) (djvu-viewer)
     bmpanel2
-    2bwm (window-manager)
+    clang-format (code-formatter)
     conky
     docker (container)
         portainer
@@ -64,7 +69,9 @@ Applications
     ghc (programming-language)
     gnu-netcat
     google-chrome (web-browser)
+    highlight (code-beautifier)
     id3
+    jailer (sql-client)
     jre-openjdk
     kitty (terminal-emulator)
     llpp (pdf-viewer)
@@ -78,12 +85,12 @@ Applications
     neovim
         python-neovim
     nvm
-    pychess
     python (programming-language)
     racket
     ripgrep (grep)
     rofi (launcher)
     rsync
+    scid (chess)
     shellcheck
     socat
     stow
@@ -106,6 +113,7 @@ Applications
     vlc
         libmicrodns (chromecast)
         protobuf (chromecast)
+    yapf (code-formatter)
     yarn
     yay (aur-helper)
     youtube-dl
@@ -132,7 +140,7 @@ Research
 Settings
 ========
 
-    Monospace Fonts: Dejavu Sans Mono, Liberation Mono, Lucida Console
+    Monospace Fonts: Dejavu Sans Mono, Dina, Liberation Mono, Lucida Console
     Sans Fonts: Noto Sans, Roboto Sans
     Disable netctl and enable connman.
 
@@ -141,6 +149,11 @@ Troubleshooting
 
     > Locale is not set as en_US.UTF-8.
     # Do `localectl set-locale LANG=en_US.UTF-8` and reboot.
+
+Fixme
+=====
+
+Start docker using the `-it` flag sets `TERM=xterm` breaking Acme's `win`.
 
 Hacks
 =====

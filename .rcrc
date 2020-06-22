@@ -4,8 +4,9 @@ SHELL=rc
 sign='> '
 
 fn a {
-
     # TODO: Should this folder be owned by the user?
+    9 plumber &&
+    cat $home/lib/plumbing | 9p write plumb/rules &&
     start-silently acme -m /mnt/acme $home/.acme
 }
 
@@ -14,16 +15,12 @@ fn cd {
     prompt=(`{basename `{pwd}}^$sign)
 }
 
-fn fd {
-    builtin fd --color never $*
+fn cl {
+    cat $* | awk 'length($0) > 79'
 }
 
-fn g+ {
-    cmd='find -type f'
-    if(git rev-parse --is-inside-work-tree >[1]/dev/null >[2]/dev/null)
-        cmd='git ls-files'
-    # FIXME: This doesn't work with files with spaces.
-    eval $cmd | xargs g $*
+fn fd {
+    builtin fd --color never $*
 }
 
 fn ll {
@@ -38,6 +35,20 @@ fn pwd {
 
 fn python {
     builtin python -q $*
+}
+
+fn rg {
+    builtin rg --no-heading --line-number $*
+}
+
+fn s {
+    if(git rev-parse --is-inside-work-tree >[1]/dev/null >[2]/dev/null)
+        git grep -n $*
+    if not echo "Not implemented."
+}
+
+fn shellcheck {
+    builtin shellcheck -f gcc $*
 }
 
 cd `{pwd}

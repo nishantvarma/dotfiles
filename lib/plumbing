@@ -1,0 +1,17 @@
+type is text
+data matches 'plumbing'
+data set /home/nishant/lib/plumbing
+attr add addr=1
+plumb to edit
+plumb client acme
+
+type is text
+data matches 'http[s]?:\/\/[^ ]*'
+plumb to firefox
+plumb start firefox $0
+
+type is text
+data matches '([a-zA-Z¡-?0-9_\-./]+)\.pgn'
+arg isfile $0
+plumb to scid
+plumb start scid $file

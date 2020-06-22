@@ -137,7 +137,7 @@ start() {
 }
 
 dirs=(
-    "${HOME}"/linuxdotfiles/
+    "${HOME}"/dotfiles/
     "${HOME}"/notes/
 )
 

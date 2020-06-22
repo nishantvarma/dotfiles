@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+# TODO: Make this robust.
+
+user=$1
+
+docker run \
+    --env DISPLAY=$DISPLAY \
+    --interactive \
+    --rm \
+    --network host \
+    --privileged \
+    --tty \
+    --user "$user" \
+    --volume $HOME/.Xauthority:/home/"$user"/.Xauthority \
+    --volume $HOME:/home/"$user" \
+    --volume /tmp/.X11-unix:/tmp/.X11-unix \
+    "${@:2}"

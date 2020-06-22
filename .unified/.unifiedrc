@@ -1,12 +1,27 @@
 " vim: syntax=vim
 
-" External Programs
-" =================
+" Prerequisites
+" =============
+
+" Programs
+" ========
 
 " https://github.com/BurntSushi/ripgrep
 " https://github.com/jonas/tig
 " https://github.com/junegunn/fzf.git
 " https://github.com/universal-ctags/ctags
+
+" Plugins
+" =======
+" https://github.com/ctrlpvim/ctrlp.vim.git
+" https://github.com/junegunn/fzf.vim.git
+" https://github.com/tpope/vim-repeat.git
+" https://github.com/tpope/vim-surround.git
+" https://github.com/troydm/easytree.vim.git
+" https://github.com/w0rp/ale.git
+" https://github.com/wellle/targets.vim.git
+
+" It should be present in the .unified/pack/bundle/start/ directory.
 
 " Notes
 " =====
@@ -46,6 +61,7 @@ set laststatus=1
 set lazyredraw
 set noautochdir
 set nofoldenable
+set formatoptions-=t
 set nohlsearch
 set nonumber
 set noswapfile
@@ -136,8 +152,8 @@ nnoremap <Leader>a ggVG
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>c :close<CR>
 nnoremap <Leader>d o<Esc>k
-nnoremap <Leader>e :Vaffle<CR>
-nnoremap <Leader>E :Vaffle expand("%:p:h")<CR>
+nnoremap <Leader>e :EasyTreeToggle<CR>
+nnoremap <Leader>E :EasyTreeToggle %:p:h<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>g :GFiles<CR>
 nnoremap <Leader>l :ALELint<CR>
@@ -171,17 +187,6 @@ nnoremap <C-Left> <C-T>
 " Plugins
 " =======
 
-call plug#begin('$HOME/.unified/bundle')
-Plug 'https://github.com/cocopon/vaffle.vim.git'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plug 'https://github.com/junegunn/fzf.vim.git'
-Plug 'https://github.com/junegunn/goyo.vim'
-Plug 'https://github.com/tpope/vim-repeat.git'
-Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'https://github.com/varmanishant/vim-python.git'
-Plug 'https://github.com/w0rp/ale.git'
-Plug 'https://github.com/wellle/targets.vim.git'
-call plug#end()
 syntax on
 filetype plugin indent on
 

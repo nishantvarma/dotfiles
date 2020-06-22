@@ -5,26 +5,55 @@ acme -m /mnt/acme .acme
 
 # Tips
 
-1. Selecting brackets will select the content inside it. This can be useful for
-   grouping commands. But it is a good idea to create a single command for
-   commonly used functions.
+1. Selecting brackets (or whitespace, if it on a standalone line) will select
+   the content inside it. This can be useful for grouping commands. However,
+   it is a good idea to create a single command for commonly used command
+   groups.
 2. The escape key (ESC) will select the content typed since last mouse action.
    If it is pressed again, it will cut the text. This is very handy in `win` to
    re-execute a command.
+3. `Edit =` will show the current line number.
+4. Sam language can be used to combine commands:
+   ```
+   Edit , {
+       d
+       c/\n
+   }
+   ```
+5. Scroll wheels can be used to expand and collapse `tags`.
+6. Middle-click executes a content. If it is an Acme command like `Edit`, it
+   gets executed by Acme; else it gets executed by the shell. You can
+   middle-click on the filename in the tag to execute it (based on shebang).
+   If you are already in `win`, it just passes it to the running process!
+7. `Send` can be used to send the clipboard content to `win`. This can be used
+   to send content from `tags`/`buffer` etc., to Shell, REPL etc.
+8. Fonts can be changed using the `fontsrv` command.
+9. The rc environment functions are available in Acme, but needs to be
+   single-quoted.
+10. You can make your own rules by creating a file called `$HOME/lib/plumbing`,
+    starting the program called `plumber` and updating it:
+   `cat $HOME/lib/plumbing | 9p write plumb/rules`
 
 # Commands
 
 9    fd    Font    g    "Indent on"    src    wc    win    winwatch
 
-"|fmt -w 79"    |sort
+"| fmt -w 79"    |sort
 
-cleanup-system    start-terminal
+cleanup-system    start-docker    start-firefox    start-terminal
+
+start-thunar    stop-docker    update-system
+
+{
+cleanup-system ; lc /home/nishant/Downloads/
+echo Acme | xclip -i
+}
 
 # Files
 
-linuxdotfiles/.clang-format
-linuxdotfiles/.rcrc
-linuxdotfiles/plan9.txt
+dotfiles/.clang-format
+dotfiles/.rcrc
+dotfiles/plan9.txt
 notes/the-zen.md
 scratch/scratch.c
 scratch/scratch.md
@@ -37,20 +66,20 @@ scratch/x11/button.c
 # Folders
 
 ./
-linuxdotfiles/
+dotfiles/
 notes/
 scratch/
 src/
 src/2bwm/
+src/ed/
 src/bmpanel/
 src/plan9port/
-
-scratch/sync-directories/
 
 # Git
 
 git-cola
-git commit -m "Fixups"
+win git add -p
+git commit -m Fixups
 git push origin master:master
 
 # Python

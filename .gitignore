@@ -20,6 +20,7 @@
 !.clang-format
 !.cwmrc
 !.fzfrc
+!.gitconfig
 !.gitignore
 !.nexrc
 !.rcrc
@@ -35,7 +36,9 @@
 
 !bin/
 !cheatsheets/
-!windows
+!lib/
+!scripts/
+!windows/
 
 # Safe hidden folders.
 
@@ -69,6 +72,7 @@
 !.config/tilix/
 !.config/tint2/
 !.config/vis/
+!.config/yapf/
 
 # Config => Cudatext
 
@@ -77,7 +81,7 @@
 !.config/cudatext/keys.json
 !.config/cudatext/user.json
 
-# Config => Cudatext
+# Config => Qtile
 
 !.config/qtile/
 .config/qtile/*
@@ -102,6 +106,21 @@
 !.config/code/User/settings.json
 !.config/code/User/keybindings.json
 
+# Local
+
+!.local/
+.local/*
+
+# Local => Share => Neovim
+
+!.local/share/
+.local/share/*
+!.local/share/nvim/
+.local/share/nvim/*
+!.local/share/nvim/site/
+.local/share/nvim/site/*
+!.local/share/nvim/site/pack/
+
 # Textadept
 
 !.textadept/
@@ -120,7 +139,7 @@
 # Unified
 
 !.unified/
-.unified/bundle
+.unified/pack/
 
 # Vifm
 
