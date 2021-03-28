@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-confirm-action "Exit" "Do you want to exit?" swaymsg exit

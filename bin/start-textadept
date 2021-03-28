@@ -1,5 +1,0 @@
-#!/usr/bin/dash
-
-start-silently \
-    "${APPS}"/textadept/textadept \
-    "${@}"

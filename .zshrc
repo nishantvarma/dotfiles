@@ -108,7 +108,6 @@ zstyle ':completion:*' menu select
 # History Settings
 # ================
 
-HISTFILE="${HOME}"/.commands
 HISTSIZE=50
 SAVEHIST=0
 setopt append_history
