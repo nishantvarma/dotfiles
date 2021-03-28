@@ -36,10 +36,6 @@ rm -f "${HOME}/.scheme_history"
 rm -f "${HOME}/.viminfo"
 rm -f "${HOME}/.zsh_history"
 
-# Restore
-
-dconf load /com/gexperts/Tilix/ < "${HOME}/.config/tilix/tilix.conf"
-
 # TODO: Downloads Folder
 # TODO: Apps Folder
 # TODO: Chroots
