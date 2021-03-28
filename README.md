@@ -1,17 +1,17 @@
 dotfiles for a minimal linux system
 
 - distro: arch linux
-- wm: 2bwm
+- wm: rio, 2bwm
 - panel: bmpanel
 - launcher: dmenu
-- terminal: kitty, termite
-- shell: rc, zsh
+- terminal: urxvt
+- shell: bash, rc, zsh
 - file manager: vifm, thunar
-- editor: acme, sublime, vim
-- pdf: atril, llpp, zathura
+- editor: acme, sublime, (neo)vim
+- pdf: llpp
 - audio: audacious, vlc
 - video: mpv
-- irc: thelounge
-- browser: google-chrome, qutebrowser
+- irc: hexchat
+- browser: firefix
 
 ![Arch Linux](/../screenshot/screenshot.png?raw=true "Arch Linux")
