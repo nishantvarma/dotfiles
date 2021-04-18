@@ -11,19 +11,19 @@ promptinit
 # Settings
 # ========
 
+HISTSIZE=50
+SAVEHIST=0
+
 setopt autocd
 
 PROMPT="%/ >>> "
 
-if [[ $TERM = dumb ]]; then
-  unset zle_bracketed_paste
-fi
-
-bindkey -v
-
 # X Terminal
 # ==========
 
+if [[ $TERM = dumb ]]; then
+  unset zle_bracketed_paste
+fi
 
 if [[ "${TERM}" = *xterm* ]] || [[ "${TERM}" = *256color* ]]; then
 
@@ -54,6 +54,8 @@ if [[ "${TERM}" = *xterm* ]] || [[ "${TERM}" = *256color* ]]; then
 
 fi
 
+bindkey -v
+
 KEYTIMEOUT=1
 
 function zle-line-init zle-keymap-select {
@@ -67,6 +69,11 @@ function zle-line-init zle-keymap-select {
 
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+# Auto Completion
+# ===============
+
+zstyle ':completion:*' menu select
 
 # Key Setup
 # =========
@@ -87,6 +94,11 @@ bindkey -- "^[[6~" end-of-buffer-or-history
 bindkey -- "^[[1;5C" forward-word
 bindkey -- "^[[1;5D" backward-word
 
+# Exports
+# =======
+
+export MANWIDTH=80
+
 # Aliases
 # =======
 
@@ -95,54 +107,52 @@ alias root="sudo -s"
 alias ll="ls -lrt"
 alias python="python -q"
 
-# Exports
-# =======
-
-export MANWIDTH=80
-
-# Auto Completion
-# ===============
-
-zstyle ':completion:*' menu select
-
-# History Settings
-# ================
-
-HISTSIZE=50
-SAVEHIST=0
-setopt append_history
-setopt bang_hist
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_find_no_dups
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt hist_reduce_blanks
-setopt hist_verify
-setopt inc_append_history
-setopt share_history
+# Data
+# ====
 
 # Functions
+# =========
 
-is-function() {
+is-function()
+{
     declare -f -F $1 > /dev/null
     return $?
 }
 
-repositories=(
-    ${HOME}/dotfiles/
-    ${HOME}/notes/
-)
+check-ping-ip()
+{
+    if ping -q -c 1 8.8.8.8 >/dev/null 2>&1; then
+        echo "Ok"
+    else
+        echo "Fail"
+    fi
+}
 
-check-git-status() {
+check-ping-dns()
+{
+    if ping -q -c 1 www.google.com >/dev/null 2>&1; then
+        echo "Ok"
+    else
+        echo "Fail"
+    fi
+}
+
+check-git-status()
+{
     git status --short
 }
 
-check-git-dirty() {
+check-git-dirty()
+{
+    local repositories=(
+        ${HOME}/dotfiles/
+        ${HOME}/notes/
+    )
+
     for repository in "${repositories[@]}"; do
         (
-            cd "$repository" || continue
-            echo "Directory: $repository"
+            cd "$repository" &&
+            echo "Directory: $repository" &&
             [[ -z $(git status -s) ]] || check-git-status
         )
     done
