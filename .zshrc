@@ -129,27 +129,21 @@ is-function() {
     return $?
 }
 
-start() {
-    if [[ -f project.sh ]]; then
-        (source project.sh; is-function run && run)
-    fi
-}
-
-dirs=(
-    "${HOME}"/dotfiles/
-    "${HOME}"/notes/
+repositories=(
+    ${HOME}/dotfiles/
+    ${HOME}/notes/
 )
 
-list-git-status() {
-    git status --short "${dir}"
+check-git-status() {
+    git status --short
 }
 
-check-git-status() {
-    for dir in "${dirs[@]}"; do
+check-git-dirty() {
+    for repository in "${repositories[@]}"; do
         (
-            cd "${dir}" || continue
-            echo "Directory: ${dir}"
-            [[ -z $(git status -s) ]] || list-git-status
+            cd "$repository" || continue
+            echo "Directory: $repository"
+            [[ -z $(git status -s) ]] || check-git-status
         )
     done
 }

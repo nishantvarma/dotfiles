@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-confirm-action "Kill" "Do you want to kill?" swaymsg kill
