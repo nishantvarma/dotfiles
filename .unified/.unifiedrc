@@ -72,8 +72,6 @@ set shiftwidth=4
 set smartcase
 set spelllang=en_us
 set spellsuggest=best,5
-set splitbelow
-set splitright
 set ssop=buffers
 set tabstop=4
 set tags=./tags;
