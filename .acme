@@ -71,8 +71,9 @@ notes/
 scratch/
 src/
 src/2bwm/
-src/ed/
 src/bmpanel/
+src/ed/
+src/network-monitor/
 src/plan9port/
 
 # Git
