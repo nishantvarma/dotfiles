@@ -1,6 +1,6 @@
 dotfiles for a minimal linux system
 
-- distro: arch linux
+- distro: archlinux
 - wm: 2bwm, rio
 - panel: bmpanel
 - launcher: dmenu
