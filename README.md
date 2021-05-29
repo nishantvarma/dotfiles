@@ -12,6 +12,6 @@ dotfiles for a minimal linux system
 - audio: audacious, vlc
 - video: mpv
 - irc: hexchat
-- browser: firefix
+- browser: firefox
 
 ![Arch Linux](/../screenshot/screenshot.png?raw=true "Arch Linux")
