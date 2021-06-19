@@ -1,3 +1,0 @@
-#!/bin/dash
-
-start-silently google-chrome-stable --class="google-chrome" "${@}"

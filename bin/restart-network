@@ -1,3 +1,0 @@
-#!/usr/bin/dash
-
-sudo systemctl restart connman.service

@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-confirm-action "Hibernate" "Do you want to hibernate?" systemctl hibernate

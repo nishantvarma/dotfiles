@@ -1,10 +1,5 @@
 #!/usr/bin/dash
 
-# TODO Network, Audio, Mount, Zoom To Fit
-# For higher resolutions install:
-# vmware drivers xf86-video-vmware and xf86-input-vmmouse and use the -vga
-# vmware switch.
-
 image=$1
 
 qemu-system-i386 \

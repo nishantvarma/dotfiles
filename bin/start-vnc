@@ -1,4 +1,0 @@
-#!/bin/bash
-
-vncserver -kill :1
-vncserver :1 -xstartup "${HOME}"/.vnc/xstartup.turbovnc.rio
