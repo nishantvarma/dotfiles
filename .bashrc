@@ -8,6 +8,7 @@
 # Unsets
 # ======
 
+unset HISTFILE
 unset LS_COLORS
 unset PROMPT_COMMAND
 
