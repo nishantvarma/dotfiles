@@ -41,3 +41,8 @@ lazygit() {
 # ===
 
 [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+
+# Hacks
+# =====
+
+[[ -f $HOME/.hacks.sh ]] && source $HOME/.hacks.sh
