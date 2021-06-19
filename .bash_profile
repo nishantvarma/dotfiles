@@ -1,3 +1,5 @@
+set +o history
+
 export APPS="$HOME/opt"
 export DATA="$HOME/data"
 
