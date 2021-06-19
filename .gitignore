@@ -17,6 +17,8 @@
 # Hidden files.
 
 !.acme
+!.bashrc
+!.bash_profile
 !.clang-format
 !.fzfrc
 !.gitconfig
