@@ -1,4 +1,5 @@
 set +o history
+unset HISTFILE
 
 export APPS="$HOME/opt"
 export DATA="$HOME/data"
