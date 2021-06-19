@@ -1,4 +1,3 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-# TODO: Make rc as the default shell.
 SHELL=rc start-silently 9 acme -m /mnt/acme "${@}"

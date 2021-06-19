@@ -1,5 +1,5 @@
-#!/usr/bin/dash
+#!/usr/bin/env bash
 
 killall bmpanel
-start-silently "${HOME}"/src/bmpanel/bmpanel \
-    "${HOME}"/src/bmpanel/themes/darkmini
+start-silently "$HOME"/src/bmpanel/bmpanel \
+    "$HOME"/src/bmpanel/themes/darkmini

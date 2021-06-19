@@ -1,9 +1,7 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-dir="${HOME}/data"
+file=$(find "$HOME" -name "*" | fzf)
 
-file=$(find "${HOME}" -name "*" | fzf)
-
-if [ "${file}" ]; then
-    echo "${file}"
+if [[ $file ]]; then
+    echo "$file"
 fi

@@ -1,12 +1,12 @@
-#!/usr/bin/dash
+#!/usr/bin/env bash
 
-from="${1}"
-to="${2}"
+source=$1
+destination=$2
 
 sudo iptables \
     --table nat \
     --insert PREROUTING \
     --protocol tcp \
-    --dport "${from}" \
+    --dport "$source" \
     --jump REDIRECT \
-    --to-ports "${to}"
+    --to-ports "$destination"

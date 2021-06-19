@@ -1,8 +1,6 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-# TODO: Make this robust.
-
-user=$1
+USER=$1
 
 docker run \
     --env DISPLAY=$DISPLAY \
@@ -11,8 +9,8 @@ docker run \
     --network host \
     --privileged \
     --tty \
-    --user "$user" \
-    --volume $HOME/.Xauthority:/home/"$user"/.Xauthority \
-    --volume $HOME:/home/"$user" \
+    --user "$USER" \
+    --volume "$HOME"/.Xauthority:/home/"$USER"/.Xauthority \
+    --volume "$HOME":/home/"$USER" \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
     "${@:2}"

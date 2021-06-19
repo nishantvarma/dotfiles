@@ -3,33 +3,20 @@
 declare -A icons
 
 icons=(
-["9term.9term"]="terminal-emulator.png"
-["Alacritty.Alacritty"]="terminal-emulator.png"
-["acme.acme"]="text-editor.png"
-["arandr.Arandr"]="gear.png"
-["atril.Atril"]="pdf-viewer.png"
-["audacious.Audacious"]="audio-player.png"
-["azuredatastudio.azuredatastudio"]="azure-data-studio.png"
-["code.Code"]="visual-studio-code.png"
-["featherpad.FeatherPad"]="text-editor.png"
-["file-manager.File-manager"]="file-manager.png"
-["gl.mpv"]="video-player.png"
-["kitty.kitty"]="terminal-emulator.png"
-["llpp.llpp"]="pdf-viewer.png"
-["mupdf.MuPDF"]="pdf-viewer.png"
-["office-excel.Office-excel"]="excel.png"
-["office-powerpoint.Office-powerpoint"]="powerpoint.png"
-["office-word.Office-word"]="word.png"
-["terminal-emulator.Terminal-emulator"]="terminal-emulator.png"
-["text-editor.FeatherPad"]="text-editor.png"
-["urxvt.URxvt"]="terminal-emulator.png"
-["xterm.XTerm"]="terminal-emulator.png"
+    [9term.9term]=terminal-emulator.png
+    [acme.acme]=text-editor.png
+    [featherpad.FeatherPad]=text-editor.png
+    [file-manager.File-manager]=file-manager.png
+    [gl.mpv]=video-player.png
+    [llpp.llpp]=pdf-viewer.png
+    [mupdf.MuPDF]=pdf-viewer.png
+    [text-editor.FeatherPad]=text-editor.png
+    [urxvt.URxvt]=terminal-emulator.png
+    [xterm.XTerm]=terminal-emulator.png
 )
 
-for application in "${!icons[@]}"
-do
-    for window in $(wmctrl -lx | grep "$application" | awk '{print $1}')
-    do
+for application in "${!icons[@]}"; do
+    for window in $(wmctrl -lx | grep "$application" | awk '{print $1}'); do
         xseticon -id "$window" "$HOME"/.icons/"${icons[$application]}"
     done
 done

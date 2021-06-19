@@ -1,6 +1,6 @@
-#!/usr/bin/dash
+#!/usr/bin/env bash
 
 start-silently \
-    "${APPS}"/sublime_merge/sublime_merge \
-    --class="sublime-merge" \
+    "$APPS"/sublime_merge/sublime_merge \
+    --class=sublime-merge \
     "${@}"

@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-confirm-action "Suspend" "Do you want to suspend?" systemctl suspend

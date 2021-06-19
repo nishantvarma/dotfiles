@@ -1,44 +1,31 @@
-#!/usr/bin/bash
-
-# TODO Define the term "cleanup"!
-# TODO Avoid mixing short and long command arguments.
+#!/usr/bin/env bash
 
 # Global Variables
 
-dotfiles="${HOME}/dotfiles"
+dotfiles="${HOME}"/dotfiles
 
 # Git Restore
 
-cd "${dotfiles}"
-git checkout -q .
-git clean -fdqx 1> /dev/null
+( cd "$dotfiles" && git checkout -q . &&  git clean -fdqx 1>/dev/null )
 
 # System
 
 sudo dmesg --clear
-sudo pacman -Sc --noconfirm 1> /dev/null
+sudo pacman -Sc --noconfirm 1>/dev/null
 sudo find /var/log -type f -delete
 sudo find /var/log/journal -name "*.journal" | xargs sudo rm -f
 
 # Application Folders
 
-rm -rf "${HOME}/.cache/"*
-rm -rf "${HOME}/.ghc/"
-rm -rf "${HOME}/.racket/"
+rm -rf "${HOME}"/.cache/*
+rm -rf "${HOME}"/.ghc/
+rm -rf "${HOME}"/.racket/
 
 # Application Files
 
-rm -f "${HOME}/.bash_history"
-rm -f "${HOME}/.dash_history"
-rm -f "${HOME}/.node_repl_history"
-rm -f "${HOME}/.python_history"
-rm -f "${HOME}/.scheme_history"
-rm -f "${HOME}/.viminfo"
-rm -f "${HOME}/.zsh_history"
+rm -f "${HOME}"/.*hist*
+rm -f "${HOME}"/.viminfo
 
 # TODO: Downloads Folder
-# TODO: Apps Folder
-# TODO: Chroots
-# TODO: Chrome Console
 
-echo "System cleanup completed."
+echo System cleanup completed.
