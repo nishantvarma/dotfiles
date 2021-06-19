@@ -5,7 +5,7 @@ dotfiles for a minimal linux system
 - panel: bmpanel
 - launcher: dmenu
 - terminal: urxvt
-- shell: bash, rc, zsh
+- shell: bash, rc
 - file manager: vifm, thunar
 - editor: acme, sublime, [neo]vim
 - pdf: llpp
