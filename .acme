@@ -73,7 +73,7 @@ src/
 src/2bwm/
 src/bmpanel/
 src/ed/
-src/network-monitor/
+src/nms/
 src/plan9port/
 
 # Git
