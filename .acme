@@ -45,7 +45,9 @@ cleanup-system    start-docker    start-firefox    start-terminal
 start-thunar    stop-docker    update-system
 
 {
-cleanup-system ; lc /home/nishant/Downloads/
+cleanup-system ;
+echo Downloads: ;  lc $home/Downloads/
+echo Scratch: ; cd $home/scratch/ ; git status --porcelain
 echo Acme | xclip -i
 }
 
