@@ -25,6 +25,7 @@
 !.gitignore
 !.nexrc
 !.rcrc
+!.screenrc
 !.vimrc
 !.xinitrc
 !.xinitrc.2bwm
