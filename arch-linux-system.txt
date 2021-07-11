@@ -93,6 +93,7 @@ Applications
     rofi (launcher)
     rsync
     scid (chess)
+    screen
     shellcheck
     socat
     sthttpd (http-server)
