@@ -33,17 +33,17 @@ ll() {
 }
 
 lazygit() {
-    git add .
-    git commit -a -m "$1"
+    git add . &&
+    git commit -a -m "$1" &&
     git push
 }
 
 # FZF
 # ===
 
-[[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+[[ -f $HOME/.fzf.bash ]] && source "$HOME"/.fzf.bash
 
 # Hacks
 # =====
 
-[[ -f $HOME/.hacks.sh ]] && source $HOME/.hacks.sh
+[[ -f $HOME/.hacks.sh ]] && source "$HOME"/.hacks.sh
