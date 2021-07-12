@@ -28,12 +28,14 @@ export PS1="\W % "
 # Functions
 # =========
 
-ll() {
+ll()
+{
     ls -lrt
 }
 
-lazygit() {
-    git add . &&
+lazygit()
+{
+    git add -p &&
     git commit -a -m "$1" &&
     git push
 }
