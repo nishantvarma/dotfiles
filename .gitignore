@@ -25,7 +25,7 @@
 !.gitignore
 !.nexrc
 !.rcrc
-!.screenrc
+!.tmux.conf
 !.vimrc
 !.xinitrc
 !.xinitrc.2bwm
