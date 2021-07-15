@@ -122,6 +122,7 @@ URxvt*boldFont: xft:DejaVu Sans Mono:size=10:autohint=true:antialias=true
 URxvt.cursorBlink: true
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
+URxvt.saveLines: 0
 URxvt.scrollBar: false
 
 ! Keybindings
