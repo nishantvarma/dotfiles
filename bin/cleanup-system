@@ -4,6 +4,12 @@
 
 dotfiles="${HOME}"/dotfiles
 
+docker()
+{
+    builtin docker image prune &&
+    builtin docker builder prune
+}
+
 # Git Restore
 
 ( cd "$dotfiles" && git checkout -q . &&  git clean -fdqx 1>/dev/null )
@@ -26,12 +32,11 @@ rm -rf "${HOME}"/.racket/
 rm -f "${HOME}"/.*hist*
 rm -f "${HOME}"/.viminfo
 
-# TODO: Downloads Folder
+# Miscellaneous Folders
 
-docker()
-{
-    builtin docker image prune &&
-    builtin docker builder prune
-}
+echo Downloads: &&  ls "$HOME"/Downloads/
+echo Scratch: && ( cd "$HOME"/scratch/ && git status --porcelain)
+
+echo Acme | xclip -i
 
 echo System cleanup completed.
