@@ -28,4 +28,10 @@ rm -f "${HOME}"/.viminfo
 
 # TODO: Downloads Folder
 
+docker()
+{
+    builtin docker image prune &&
+    builtin docker builder prune
+}
+
 echo System cleanup completed.
