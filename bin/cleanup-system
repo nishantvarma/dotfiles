@@ -34,7 +34,7 @@ rm -f "${HOME}"/.viminfo
 
 # Miscellaneous Folders
 
-echo Downloads: &&  ls "$HOME"/Downloads/
+echo Downloads: && ls "$HOME"/Downloads/
 echo Scratch: && ( cd "$HOME"/scratch/ && git status --porcelain)
 
 echo Acme | xclip -i
