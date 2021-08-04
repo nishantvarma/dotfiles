@@ -40,7 +40,7 @@ Hyper-V
 
 Install dhcpcd, dhclient and turbovnc.
 
-MP3
+Mp3
 ===
 
 id3tool -t "<song title>"
@@ -54,8 +54,8 @@ Shift + Left Click shows the Playlist
 Pacman
 ======
 
-pacman -Cfsri  # cleanup up cache and unused dependencies
-pacman -R -s <package>  # remove unused dependencies
+pacman -Cfsri # cleanup up cache and unused dependencies
+pacman -R -s <package> # remove unused dependencies
 
 Python
 ======
@@ -67,18 +67,12 @@ Qemu
 
 qemu-system-x86_64 -boot d -cdrom boot.iso -m 512
 
-Qtcreator
-=========
-
-1. Use FakeVim by loading the appropriate vim configuration file.
-2. Use gitk and git gui.
-
 Socat
 =====
 
-socat STDIN STDOUT  # echo
-socat TCP-LISTEN:10000,crlf -  # watching
-socat TCP-LISTEN:10000,fork,reuseaddr TCP:google.com:443  # relay
+socat STDIN STDOUT # echo
+socat TCP-LISTEN:10000,crlf - # watching
+socat TCP-LISTEN:10000,fork,reuseaddr TCP:google.com:443 # relay
 
 Sound
 =====
@@ -89,17 +83,14 @@ System
 ======
 
 sudo dd if=linux.iso | sudo pv | sudo dd of=/dev/sdb
-xhost +local:  # sharing xserver for chroot
-export DISPLAY=:0  # chroot
+xhost +local: # sharing xserver for chroot
+export DISPLAY=:0 # chroot
 
-Theia
-=====
+Tmux
+====
 
-yarn run start --hostname 0.0.0.0 --port 8080
-
-Packages can be downloaded manually and put in `plugins` folder.
-
-To redirect port 80 to 8080, see the `redirect-port` script.
+Right click opens menu.
+Shift + Mouse passes the mouse control to terminal emulator.
 
 Touchpad
 ========
@@ -111,16 +102,6 @@ Urxvt
 
 Ctrl + Alt will select vertically.
 Ctrl + Shift + C and V will copy and paste.
-
-WPS Excel
-=========
-
-Tools=>Options=>View=>Gridlines Color=>Automatic
-
-WPS Office
-==========
-
-Tools->Options->View->Gridlines Color=Automatic
 
 Xargs
 =====
