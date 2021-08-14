@@ -1,17 +1,17 @@
-dotfiles for a minimal linux system
+Dotfiles for a minimalistic Linux system.
 
-- distro: archlinux
-- wm: 2bwm, rio
-- panel: bmpanel
-- launcher: dmenu
-- terminal: tmux, urxvt
-- shell: bash, rc
-- file manager: vifm, thunar
-- editor: acme, sublime, [neo]vim
-- pdf: llpp
-- audio: audacious, vlc
-- video: mpv
-- irc: hexchat
-- browser: firefox
+- Distro: archlinux
+- Wm: 2bwm, rio
+- Panel: bmpanel
+- Launcher: dmenu
+- Terminal: tmux, urxvt
+- Shell: bash, rc
+- File Manager: vifm, thunar
+- Editor: acme, sublime, [neo]vim
+- Pdf: llpp
+- Audio: audacious, vlc
+- Video: mpv
+- Irc: hexchat
+- Browser: firefox
 
 ![Arch Linux](/../screenshot/screenshot.png?raw=true "Arch Linux")
