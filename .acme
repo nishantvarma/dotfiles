@@ -20,9 +20,9 @@ acme -m /mnt/acme .acme
    cat $HOME/lib/plumbing | 9p write plumb/rules
    ```
 5. Scroll wheel expand and collapse `tags`.
-6. The escape key <kbd>ESC</kbd> selects the content typed since the last mouse
-   action. If it's pressed again, it will cut the selection. This is very handy
-   in `win` to clear the output and re-execute a command.
+6. The escape key (ESC) the content typed since the last mouse action. If it's
+   pressed again, it will cut the selection. This can be used in `win` to clear
+   the output and re-execute a command.
 7. `$%` refers to the current file.
 8. Sam command language:
    * `Edit =` shows the current line number.
