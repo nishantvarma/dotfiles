@@ -60,6 +60,7 @@ Applications
     bmpanel2
     clang-format (code-formatter)
     conky
+    cudatext (text-editor)
     docker (container)
     fd (file-searcher)
     featherpad (text-editor)
