@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-file=$(find "$HOME" -name "*" | fzf)
-
-if [[ $file ]]; then
-    echo "$file"
-fi

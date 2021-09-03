@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-SHELL=rc start-silently 9 acme -m /mnt/acme "${@}"
