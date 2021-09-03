@@ -46,11 +46,11 @@ acme -m /mnt/acme .acme
 
 "| fmt -w 79"    |sort
 
-cleanup-system    start-docker    start-firefox    start-terminal
+firefox    term    thunar
 
-start-thunar    stop-docker    update-system
+start-docker    stop-docker
 
-cleanup-system
+update    clean
 
 # Files
 

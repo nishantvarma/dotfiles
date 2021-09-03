@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+start-silently /usr/bin/firefox "${@}"
