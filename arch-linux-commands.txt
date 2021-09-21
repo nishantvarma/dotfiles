@@ -35,6 +35,11 @@ git reset HEAD~
 git add ...
 git commit -c ORIG_HEAD
 
+Git Cola
+========
+
+"View" window is started on sticky mode.
+
 Hyper-V
 =======
 
