@@ -20,6 +20,7 @@ Libraries
     freetype2
     fuse2
     git
+    git gui
     gitk
     gnome-icon-theme
     gvfs-mtp
