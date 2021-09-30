@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cd "$HOME"/src/git-cola && source bin/activate && git-cola

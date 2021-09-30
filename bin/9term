@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-SHELL=rc silent 9 9term "${@}"
