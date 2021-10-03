@@ -39,6 +39,7 @@ acme -m /mnt/acme .acme
     arguments needs to be single-quoted to work correctly.
 12. Fonts can be changed using the `fontsrv` command.
 13. `sed` and `xclip` can be used to do vertical selection.
+14. Ensure `TERM=dumb` to make `win` work correctly.
 
 # Commands
 
