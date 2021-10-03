@@ -79,6 +79,7 @@ TurboVNC
 ========
 
 Java Viewer
+Manual Keyboard Grab
 Alt+Enter Fullscreen
 
 VcXsrv
