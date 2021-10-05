@@ -20,7 +20,7 @@ Libraries
     freetype2
     fuse2
     git
-    git gui
+    git-gui
     gitk
     gnome-icon-theme
     gvfs-mtp
@@ -99,6 +99,7 @@ Applications
     screen
     shellcheck
     socat
+    sqlformat
     sthttpd (http-server)
     sublime-merge
     sublime-text
