@@ -41,6 +41,7 @@ Libraries
     wget
     xclip
     xf86-video-fbdev
+    xorg-apps
     xorg-driver
     xorg-fonts-misc
     xorg-server
