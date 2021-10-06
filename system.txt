@@ -33,10 +33,14 @@ Settings
 
 Sans Font: Calibri
 
-System Maintenance
-==================
+General
+=======
 
-TODO: Move this to Windows Script.
+Use touchpad gestures.
+
+Maintenance
+=================
+
 1. Do "Clear Activity History" once in a while.
 2. Clear PowerShell history: del (Get-PSReadlineOption).HistorySavePath
 
