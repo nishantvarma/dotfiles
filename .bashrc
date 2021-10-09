@@ -34,13 +34,19 @@ ll()
     ls -lrt
 }
 
-lazygit()
+gc()
 {
     local msg=$1
 
     git add -p &&
     git commit -a -m "$msg" &&
     git push
+}
+
+gr()
+{
+    git fetch origin &&
+    git rebase
 }
 
 # FZF
