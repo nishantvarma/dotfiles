@@ -90,6 +90,7 @@ Applications
     plan9port
     python (programming-language)
     qtcreator (text-editor)
+    qutebrowser (web-browser)
     racket
     rc (shell)
     rio (window-manager)
