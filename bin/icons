@@ -10,7 +10,7 @@ icons=(
     [llpp.llpp]=pdf.png
     [mupdf.MuPDF]=pdf.png
     [urxvt.URxvt]=term.png
-    [vimb.Vimb]=term.png
+    [vimb.Vimb]=browser.png
     [xterm.XTerm]=term.png
 )
 
