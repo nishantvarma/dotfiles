@@ -3,16 +3,15 @@
 declare -A icons
 
 icons=(
-    [9term.9term]=terminal-emulator.png
-    [acme.acme]=text-editor.png
-    [featherpad.FeatherPad]=text-editor.png
-    [file-manager.File-manager]=file-manager.png
-    [gl.mpv]=video-player.png
-    [llpp.llpp]=pdf-viewer.png
-    [mupdf.MuPDF]=pdf-viewer.png
-    [text-editor.FeatherPad]=text-editor.png
-    [urxvt.URxvt]=terminal-emulator.png
-    [xterm.XTerm]=terminal-emulator.png
+    [9term.9term]=term.png
+    [acme.acme]=editor.png
+    [file-manager.File-manager]=file.png
+    [gl.mpv]=video.png
+    [llpp.llpp]=pdf.png
+    [mupdf.MuPDF]=pdf.png
+    [urxvt.URxvt]=term.png
+    [vimb.Vimb]=term.png
+    [xterm.XTerm]=term.png
 )
 
 for application in "${!icons[@]}"; do
