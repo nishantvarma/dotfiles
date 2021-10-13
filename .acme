@@ -9,9 +9,8 @@ acme -m /mnt/acme .acme
 3. Middle click executes selected content. If it's an Acme command like `Edit`,
    it is executed by Acme, else it is executed by the shell. You can middle
    click on the filename in the `tag` to execute it (based on the shebang). If
-   you are already in `win`, it just `stdin`'s it to the running process. This
-   can also by done by selecting the text with `Ctrl' and clicking the left
-   button.
+   you are already in `win`, it just `stdin`'s it to the running process. `Ctrl`
+   plus left click simulates the middle button.
 4. Right click performs action according to the `plumbing` rules. For e.g., if
    the selection is a file or directory, open it. If nothing matches, find the
    next occurence of the text. You can make your own rules:
@@ -21,8 +20,7 @@ acme -m /mnt/acme .acme
    ```
    cat $HOME/lib/plumbing | 9p write plumb/rules
    ```
-   This can also by done by selecting the text with `Shift' and clicking the
-   left button.
+   Shift plus left click simulates the right button.
 
 5. Scroll wheel expand and collapse `tags`.
 6. The escape key (ESC) the content typed since the last mouse action. If it's
