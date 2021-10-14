@@ -57,6 +57,10 @@ start-docker    stop-docker
 
 update    clean
 
+highlight -I -s molokai $% | vimb - >[2]/dev/null
+
+| sqlformat - -r -k upper -i lower
+
 # Files
 
 dotfiles/.clang-format
