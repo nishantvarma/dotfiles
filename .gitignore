@@ -1,24 +1,17 @@
 # This repository is intended to use as the home folder, so it whitelists
 # everything that is version-controlled. Folders that can be trusted are
-# completely whitelisted; others go through the same process! This can be
-# redesigned if required.
+# completely whitelisted; others go through the same process!
 
-# Ignore everything.
+# Home
 
 /*
 
-# Normal files.
+# Files
 
-!arch-linux-commands.txt
-!arch-linux-system.txt
-!plan9.txt
-!README.md
-
-# Hidden files.
-
+!.Xresources
 !.acme
-!.bashrc
 !.bash_profile
+!.bashrc
 !.clang-format
 !.fzfrc
 !.gitconfig
@@ -31,37 +24,35 @@
 !.xinitrc.2bwm
 !.xinitrc.i3wm
 !.xinitrc.rio
-!.Xresources
 !.zprofile
 !.zshrc
+!README.md
+!arch-linux-commands.txt
+!arch-linux-system.txt
+!plan9.txt
 
-# Safe normal folders.
-
-!bin/
-!cheatsheets/
-!lib/
-
-# Safe hidden folders.
+# Folders
 
 !.icons/
 !.moc/
 !.unified/
+!.urxvt
 !.vim
 !.wallpapers/
-!.urxvt
-
-# Unsafe folders.
+!bin/
+!cheatsheets/
+!lib/
 
 # Config
 
 !.config/
 .config/*
 
-# Normal files.
+# Files
 
 !.config/.fonts.conf
 
-# Safe folders in Config.
+# Folders
 
 !.config/conky/
 !.config/gtk-3.0/
@@ -70,22 +61,18 @@
 !.config/rofi/
 !.config/yapf/
 
-# Config => Sublime Text
+# Config > Vimb
 
-!.config/sublime-text-3/
-.config/sublime-text-3/*
-!.config/sublime-text-3/Packages/
-.config/sublime-text-3/Packages/*
-!.config/sublime-text-3/Packages/User/
-.config/sublime-text-3/Packages/User/*
-!.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+!.config/vimb/
+.config/vimb/*
+!.config/vimb/config
 
 # Local
 
 !.local/
 .local/*
 
-# Local => Share => Neovim
+# Local > Share> Neovim
 
 !.local/share/
 .local/share/*
