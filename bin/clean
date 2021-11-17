@@ -29,7 +29,7 @@ rm -rf "${HOME}"/.racket/
 
 # Application Files
 
-rm -f "${HOME}"/.*hist*
+rm -f "${HOME}"/.*h{i,}st*
 rm -f "${HOME}"/.viminfo
 
 # Miscellaneous Folders
