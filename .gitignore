@@ -82,6 +82,12 @@
 .local/share/nvim/site/*
 !.local/share/nvim/site/pack/
 
+# Textadept
+
+!.textadept
+.textadept/*
+.textadept/init.lua
+
 # Unified
 
 !.unified/
