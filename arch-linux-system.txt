@@ -118,9 +118,11 @@ Applications
 Research
 ========
 
+    cudatext
     jailer (sql)
     Kivy
     observable
+    textadept
     TinyCC
 
 Settings
