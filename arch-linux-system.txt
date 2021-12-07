@@ -121,6 +121,7 @@ Research
     cudatext
     jailer (sql)
     Kivy
+    lite (text-editor)
     observable
     textadept
     TinyCC
