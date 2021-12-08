@@ -54,7 +54,7 @@ ffmpeg -i "http://mixlr.com/broadcasts/{id}/playlist.m3u8" -c copy audio.aac
 Mpv
 ---
 
-Shift + Left Click shows the Playlist
+Shift + Left # Playlist
 
 Pacman
 ------
