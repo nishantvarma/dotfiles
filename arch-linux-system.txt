@@ -1,10 +1,10 @@
 A minimal Arch Linux desktop setup.
 
 Installation
-============
+------------
 
 Libraries
-=========
+---------
 
     alsa-utils
     base
@@ -53,7 +53,7 @@ Libraries
     zip
 
 Applications
-============
+------------
 
     2bwm (wm)
     9wm (wm)
@@ -116,7 +116,7 @@ Applications
     xdotool
 
 Research
-========
+--------
 
     cudatext
     jailer (sql)
@@ -127,14 +127,14 @@ Research
     TinyCC
 
 Settings
-========
+--------
 
     Monospace Fonts: Dejavu Sans Mono, Dina, Liberation Mono, Lucida Console
     Sans Fonts: Noto Sans, Roboto Sans
     Disable netctl and enable connman.
 
 Troubleshooting
-===============
+---------------
 
     > Locale is not set as en_US.UTF-8.
     # Do `localectl set-locale LANG=en_US.UTF-8` and reboot.

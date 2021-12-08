@@ -1,33 +1,27 @@
-Acme
-----
+# Acme
 
 acme -m /mnt/acme
 
-Assembly
---------
+# Assembly
 
 as --32 file.s -o file.o
 ld "-melf_i386" file.o -o file
 
-Bash
-----
+# Bash
 
 vim <(git log branch_one) <(git log branch_two)
 for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 
-Find
-----
+# Find
 
 find . -path ./omit -prune -o -name '*.txt' -print
 
-Firewall
---------
+# Firewall
 
 sudo firewall-cmd --permanent --add-port=8000/tcp
 sudo firewall-cmd --reload=> IPython
 
-Git
----
+# Git
 
 git commit -m "Something terribly misguided."
 git reset HEAD~
@@ -35,85 +29,70 @@ git reset HEAD~
 git add ...
 git commit -c ORIG_HEAD
 
-Git Cola
---------
+# Git Cola
 
 "View" window is started on sticky mode.
 
-Hyper-V
--------
+# Hyper-V
 
 Install dhcpcd, dhclient and turbovnc.
 
-Mp3
----
+# Mp3
 
 id3tool -t "<song title>"
 ffmpeg -i "http://mixlr.com/broadcasts/{id}/playlist.m3u8" -c copy audio.aac
 
-Mpv
----
+# Mpv
 
 Shift + Left # Playlist
 
-Pacman
-------
+# Pacman
 
 pacman -Cfsri # cleanup up cache and unused dependencies
 pacman -R -s <package> # remove unused dependencies
 
-Python
-------
+# Python
 
 python -m SimpleHTTPServer 8000
 
-Qemu
-----
+# Qemu
 
 qemu-system-x86_64 -boot d -cdrom boot.iso -m 512
 
-Socat
------
+# Socat
 
 socat STDIN STDOUT # echo
 socat TCP-LISTEN:10000,crlf - # watching
 socat TCP-LISTEN:10000,fork,reuseaddr TCP:google.com:443 # relay
 
-Sound
------
+# Sound
 
 alsamixer
 
-System
-------
+# System
 
 sudo dd if=linux.iso | sudo pv | sudo dd of=/dev/sdb
 xhost +local: # sharing xserver for chroot
 export DISPLAY=:0 # chroot
 
-Tmux
-----
+# Tmux
 
 Right Click # Menu
 Shift + Mouse # Terminal Emulator
 
-Touchpad
---------
+# Touchpad
 
 synclient TapButton1=0
 
-Urxvt
------
+# Urxvt
 
 Ctrl + Alt # Vertical Selection
 Ctrl + Shift + C/V # Copy/Paste
 
-Xargs
------
+# Xargs
 
 cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick 96f51c0'
 
-X Server
---------
+# X Server
 
 xwininfo -display :0
