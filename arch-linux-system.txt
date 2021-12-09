@@ -112,7 +112,7 @@ A minimal Arch Linux desktop setup.
 
     jailer (sql)
     Kivy
-    lite-xl (text-editor)
+    lite (text-editor)
     observable
     textadept
     TinyCC
