@@ -1,10 +1,8 @@
 A minimal Arch Linux desktop setup.
 
-Installation
-------------
+# Installation
 
-Libraries
----------
+# Libraries
 
     alsa-utils
     base
@@ -52,12 +50,10 @@ Libraries
     xseticon
     zip
 
-Applications
-------------
+# Applications
 
     2bwm (wm)
-    9wm (wm)
-    bmpanel2
+    bmpanel
     clang-format (beautifier)
     docker
     fd (searcher)
@@ -83,8 +79,6 @@ Applications
         python-neovim
     plan9port
     python (language)
-    qtcreator (editor)
-    qutebrowser (web)
     racket (language)
     rc (shell)
     rio (wm)
@@ -99,7 +93,6 @@ Applications
     thunar
         thunar-archive-plugin
         thunar-media-tags-plugin
-    tk
     turbovnc
     unrar
     rxvt-unicode
@@ -115,26 +108,17 @@ Applications
     youtube-dl
     xdotool
 
-Research
---------
+# Research
 
-    cudatext
     jailer (sql)
     Kivy
-    lite (text-editor)
+    lite-xl (text-editor)
     observable
     textadept
     TinyCC
 
-Settings
---------
+# Settings
 
     Monospace Fonts: Dejavu Sans Mono, Dina, Liberation Mono, Lucida Console
     Sans Fonts: Noto Sans, Roboto Sans
     Disable netctl and enable connman.
-
-Troubleshooting
----------------
-
-    > Locale is not set as en_US.UTF-8.
-    # Do `localectl set-locale LANG=en_US.UTF-8` and reboot.
