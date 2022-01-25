@@ -18,8 +18,6 @@ docker()
 
 sudo dmesg --clear
 sudo pacman -Sc --noconfirm 1>/dev/null
-sudo find /var/log -type f -delete
-sudo find /var/log/journal -name "*.journal" | xargs sudo rm -f
 
 # Application Folders
 
