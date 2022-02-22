@@ -7,7 +7,8 @@ dotfiles="${HOME}"/dotfiles
 docker()
 {
     builtin docker image prune &&
-    builtin docker builder prune
+    builtin docker builder prune &&
+    builtin docker volume prune
 }
 
 # Git Restore
