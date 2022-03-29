@@ -1,10 +1,10 @@
 " vim: syntax=vim
 
 " Prerequisites
-" -------------
+" =============
 
 " Programs
-" --------
+" ========
 
 " https://github.com/BurntSushi/ripgrep
 " https://github.com/jonas/tig
@@ -12,7 +12,7 @@
 " https://github.com/universal-ctags/ctags
 
 " Plugins
-" -------
+" =======
 
 " https://github.com/ctrlpvim/ctrlp.vim.git
 " https://github.com/junegunn/fzf.vim.git
@@ -25,12 +25,12 @@
 " It should be present in the .unified/pack/bundle/start/ directory.
 
 " Notes
-" -----
+" =====
 
 " 1. 't' is a temporary register.
 
 " Utilities
-" ---------
+" =========
 
 function! Start()
     edit $HOME/scratch/scratch.md
@@ -43,7 +43,7 @@ endfunction
 command! SynStack call SynStack()
 
 " Settings
-" --------
+" ========
 
 set autoindent
 set autoread
@@ -86,13 +86,9 @@ set wrapmargin=0
 
 let &path .= '**'
 
-autocmd BufEnter *.md set filetype=markdown
-
 autocmd VimEnter * if argc() == 0 | call Start() | endif
 
-autocmd CmdwinEnter * map <buffer> <F5> <CR>q:
-
-autocmd FileType make set noexpandtab autoindent shiftwidth=4 tabstop=4
+autocmd BufEnter *.md set filetype=markdown
 
 if &term!='dumb'
     let &t_EI = "\e[2 q"
@@ -100,11 +96,17 @@ if &term!='dumb'
     autocmd VimEnter * normal <Esc>
 endif
 
+autocmd CmdwinEnter * map <buffer> <F5> <CR>q:
+
+autocmd FileType make set noexpandtab autoindent shiftwidth=4 tabstop=4
+
+autocmd VimLeave * ClearAllCtrlPCaches
+
 " Keyboard Mappings
-" -----------------
+" =================
 
 " General
-" -------
+" =======
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <Down> gj
@@ -125,14 +127,14 @@ inoremap <C-G> <Esc>:wq!<CR>
 inoremap <C-S> <Esc>:write<CR>
 
 " G
-" -
+" =
 
 " TODO: Generalize this for all filetypes.
 nnoremap gc mt:%!purge-files<CR>`t
 nnoremap gp gwip
 
 " Square Bracket
-" --------------
+" ==============
 
 nnoremap [b :bprevious<CR>
 nnoremap ]b :bnext<CR>
@@ -140,12 +142,12 @@ nnoremap [t :tabprevious<CR>
 nnoremap ]t :tabnext<CR>
 
 " Spacebar
-" --------
+" ========
 
 nnoremap <Space> :CtrlPBuffer<CR>
 
 " Backslash
-" ---------
+" =========
 
 nnoremap <Leader><Leader> :e#<CR>
 nnoremap <Leader>a ggVG
@@ -175,7 +177,7 @@ xnoremap <Leader><Up> :move-2<cr>gv=gv
 xnoremap <Leader><Down> :move'>+<cr>gv=gv
 
 " Ctrl
-" ----
+" ====
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -185,13 +187,13 @@ nnoremap <C-Right> <C-]>
 nnoremap <C-Left> <C-T>
 
 " Plugins
-" -------
+" =======
 
 syntax on
 filetype plugin indent on
 
 " Ale
-" ---
+" ===
 
 let g:ale_lint_on_save = 0
 let g:ale_lint_on_enter = 0
@@ -200,7 +202,7 @@ let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '?'
 
 " FZF
-" ---
+" ===
 
 set rtp+=~/.fzf
 
@@ -210,7 +212,7 @@ let g:fzf_tmux_width = '50%'
 let g:fzf_layout = {'down': '~40%'}
 
 " Markdown
-" --------
+" ========
 
 let g:markdown_fenced_languages = [
     \ 'c',
@@ -222,25 +224,25 @@ let g:markdown_fenced_languages = [
 \ ]
 
 " Netrw
-" -----
+" =====
 
 let g:loaded_netrw = 0
 let g:loaded_netrwPlugin = 0
 
 " Theme
-" -----
+" =====
 
 color base16-standard
 
 " Hacks
-" -----
+" =====
 
 imap jj <Esc>
 
 hi NonText ctermfg=0
 
 " References
-" ----------
+" ==========
 
 " https://www.vi-improved.org/vimusermanual.pdf
 " https://editorconfig.org
