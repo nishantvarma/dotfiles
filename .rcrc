@@ -5,9 +5,10 @@ sign='> '
 
 fn a {
     # TODO: Should this folder be owned by the user?
+    killall plumber &&
     9 plumber &&
     cat $home/lib/plumbing | 9p write plumb/rules &&
-    start-silently acme -m /mnt/acme $home/.acme
+    silent acme -m /mnt/acme $home/.acme
 }
 
 fn cd {
