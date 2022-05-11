@@ -1,7 +1,3 @@
-" Apprentice.vim -- Vim color scheme.
-" Author:      Romain Lafourcade (romainlafourcade@gmail.com)
-" Webpage:     https://github.com/romainl/Apprentice
-
 hi clear
 
 if exists("syntax_on")
