@@ -24,6 +24,8 @@ set viewcolumns=*{name}
 set wildmenu
 only
 
+autocmd DirEnter ~/Downloads setlocal sort=-mtime
+
 " Commands
 " ========
 
@@ -42,37 +44,8 @@ only
 command df df -h %m 2> /dev/null
 command diff vim -d %f %F
 
-" File Handlers
-" =============
-
-" Audio
-" =====
-
-filetype *.m4a,*.mp3,*.ogg,*.wav,*.webm
-         \ mpv %f 2> /dev/null &
-
-" Documents
-" =========
-
-filetype *.djvu,*.pdf
-         \ evince %f 2> /dev/null &
-
-filetype *.doc,*.docx,.xls,*.xlsx
-         \ libreoffice %f 2> /dev/null &
-
-" Everything
-" ==========
-
-filetype *
-         \ thunar %f 2> /dev/null &
-
-" Auto Commands
-" =============
-
-autocmd DirEnter ~/Downloads setlocal sort=-mtime
-
-" Mappings
-" ========
+" Keyboard Mappings
+" =================
 
 nmap - gh
 nmap i cw<c-a>
@@ -88,7 +61,34 @@ nmap gb :file &<cr>l
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
 
-" Colors
+" Documents
+" =========
+
+filetype *.djvu,*.pdf
+         \ evince %f 2>/dev/null &
+
+filetype *.doc,*.docx,.xls,*.xlsx
+         \ libreoffice %f 2>/dev/null &
+
+" Audio
+" =====
+
+filetype *.m4a,*.mp3,*.ogg,*.wav,*.webm
+         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
+
+" Video
+" =====
+
+filetype *.mkv,*.mp4
+         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
+
+" Others
 " ======
+
+filetype *
+         \ thunar %f 2>/dev/null &
+
+" Theme
+" =====
 
 colorscheme Default
