@@ -29,11 +29,6 @@ export PS1="\W % "
 # Functions
 # =========
 
-ll()
-{
-    ls -lrt
-}
-
 cd()
 {
     builtin cd "$@" &&
@@ -42,6 +37,11 @@ cd()
             source initialize.sh
         fi
     fi
+}
+
+ll()
+{
+    ls -lrt
 }
 
 # FZF

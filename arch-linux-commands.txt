@@ -51,6 +51,10 @@ Shift + Left # Playlist
 pacman -Cfsri # cleanup up cache and unused dependencies
 pacman -R -s <package> # remove unused dependencies
 
+# Pdf
+
+exiftool -overwrite_original -recurse -all= *
+
 # Python
 
 python -m SimpleHTTPServer 8000
