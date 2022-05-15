@@ -6,13 +6,8 @@ acme -m /mnt/acme
 # Assembly
 # ========
 
-as --32 file.s -o file.o
-ld "-melf_i386" file.o -o file
-
-# Find
-# ====
-
-find . -path ./omit -prune -o -name "*.txt" -print
+as --32 <src> -o <obj>
+ld -melf_i386 <obj> -o <bin>
 
 # Media Conversion
 # ================
@@ -22,6 +17,7 @@ for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 # Mp3
 # ===
 
+ffmpeg -i <in> -map 0:a -c:a copy -map_metadata -1 <out> # delete tags
 id3tool -t "<title>"
 
 # Mpv
@@ -42,7 +38,7 @@ python -m SimpleHTTPServer 8000
 # Qemu
 # ====
 
-qemu-system-x86_64 -boot d -cdrom boot.iso -m 512
+qemu-system-x86_64 -boot d -cdrom <iso> -m 512
 
 # Socat
 # =====
@@ -54,7 +50,7 @@ socat TCP-LISTEN:10000,fork,reuseaddr TCP:google.com:443 # relay
 # System
 # ======
 
-sudo dd if=linux.iso | sudo pv | sudo dd of=/dev/sdb
+sudo dd if=<iso> | sudo pv | sudo dd of=/dev/sdb
 
 # Tmux
 # ====
@@ -76,7 +72,7 @@ Ctrl + Shift + C/V # Copy/Paste
 # Xargs
 # =====
 
-cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick 96f51c0'
+cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick <commit>'
 
 # X Server
 # ========
