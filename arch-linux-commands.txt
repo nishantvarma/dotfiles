@@ -13,7 +13,7 @@ ld -melf_i386 <obj> -o <bin>
 # =====
 
 find . -type f -name "*[mkv]" -exec sh -c \
-    'x="$1"; ffmpeg -i "$x" "${x%.*}.mp4" && rm "$x"' shell {} \;
+    'in="$1"; ffmpeg -i "$in" "${in%.*}.mp4" && rm "$in"' shell {} \;
 
 # Mp3
 # ===
