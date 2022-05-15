@@ -12,7 +12,7 @@ ld -melf_i386 <obj> -o <bin>
 # Media
 # =====
 
-find . -type f -name "*[mkv]" -exec sh -c \
+find . -type f -name "*.mkv" -exec sh -c \
     'in="$1"; ffmpeg -i "$in" "${in%.*}.mp4" && rm "$in"' shell {} \;
 
 # Mp3
