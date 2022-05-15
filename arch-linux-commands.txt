@@ -9,8 +9,8 @@ acme -m /mnt/acme
 as --32 <src> -o <obj>
 ld -melf_i386 <obj> -o <bin>
 
-# Media Conversion
-# ================
+# Media
+# =====
 
 for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 
