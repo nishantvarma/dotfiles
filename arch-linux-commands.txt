@@ -12,7 +12,8 @@ ld -melf_i386 <obj> -o <bin>
 # Media
 # =====
 
-for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+find . -type f -name "*[mkv]" -exec sh -c \
+    'x="$1"; ffmpeg -i "$x" "${x%.*}.mp4" && rm "$x"' shell {} \;
 
 # Mp3
 # ===
