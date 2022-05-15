@@ -61,11 +61,11 @@ nmap gb :file &<cr>l
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
 
-" Audio
-" =====
+" Text
+" ====
 
-filetype *.m4a,*.mp3,*.ogg,*.wav,*.webm
-         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
+filetype *.html,*.md,*.txt
+         \ gedit %f 2>/dev/null &
 
 " Document
 " ========
@@ -76,23 +76,23 @@ filetype *.djvu,*.pdf
 filetype *.doc,*.docx,.xls,*.xlsx
          \ libreoffice %f 2>/dev/null &
 
-" Text
-" ====
+" Audio
+" =====
 
-filetype *.html,*.md,*.txt
-         \ gedit %f 2>/dev/null &
-
-" Others
-" ======
-
-filetype *
-         \ thunar %f 2>/dev/null &
+filetype *.m4a,*.mp3,*.ogg,*.wav,*.webm
+         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
 
 " Video
 " =====
 
 filetype *.mkv,*.mp4
          \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
+
+" Others
+" ======
+
+filetype *
+         \ thunar %f 2>/dev/null &
 
 " Theme
 " =====
