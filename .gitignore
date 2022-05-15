@@ -34,7 +34,6 @@
 # Folders
 
 !.icons/
-!.moc/
 !.unified/
 !.urxvt
 !.vim
@@ -81,6 +80,14 @@
 !.local/share/nvim/site/
 .local/share/nvim/site/*
 !.local/share/nvim/site/pack/
+
+# Moc
+
+!.moc/
+.moc/*
+!.moc/config
+!.moc/keymap
+!.moc/themes
 
 # Textadept
 
