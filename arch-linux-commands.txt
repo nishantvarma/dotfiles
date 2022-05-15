@@ -28,7 +28,7 @@ Shift + Left # Playlist
 # Pdf
 # ===
 
-exiftool -overwrite_original -recurse -all= *
+exiftool -overwrite_original -recurse -all= -ext pdf .
 
 # Python
 # ======
