@@ -48,16 +48,17 @@ command diff vim -d %f %F
 " =================
 
 nmap - gh
-nmap i cw<c-a>
-nmap o :touch<space>
+nmap E :edit<cr>
 nmap O :mkdir<space>
-nmap q :quit<CR>
-nmap s :shell<cr>
 nmap S :sort<cr>
-nmap t :!start-terminal &<cr>
-nmap w :file<space><tab>
 nmap cc cw<c-u>
 nmap gb :file &<cr>l
+nmap i cw<c-a>
+nmap o :touch<space>
+nmap q :quit<CR>
+nmap s :shell<cr>
+nmap t :!start-terminal &<cr>
+nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
 
