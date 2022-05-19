@@ -1,8 +1,7 @@
 A minimal Arch Linux desktop setup.
 
-# Installation
-
 # Libraries
+# =========
 
     alsa-utils
     base
@@ -10,13 +9,14 @@ A minimal Arch Linux desktop setup.
     bdf-unifont
     bindfs
     bmon
-    connman (network)
     dhclient
     dhcpcd
     exiftool (metadata)
+    ffmpeg
     freetype2
     fuse2
     git
+        git-cola
         git-gui
         gitk
     gnome-icon-theme
@@ -57,16 +57,9 @@ A minimal Arch Linux desktop setup.
     clang-format (beautifier)
     docker
     fd (searcher)
-    featherpad (editor)
-    feh (image)
-    firefox (web)
     fzf (searched)
     ghc (language)
-    git-cola
-    google-chrome (web-browser)
     highlight (beautifier)
-    id3
-    jre-openjdk
     llpp (pdf)
     meld (diff)
     mkvtoolnix-gui (video)
@@ -74,27 +67,17 @@ A minimal Arch Linux desktop setup.
     mpv (video)
     moc (music)
     mupdf (pdf)
-    nano
-    neovim
-        python-neovim
     plan9port
     python (language)
+        black
     racket (language)
     rc (shell)
     rio (wm)
     ripgrep (searcher)
-    rsync
     scid (chess)
     shellcheck
     socat
     sqlformat
-    sublime-merge
-    sublime-text
-    thunar
-        thunar-archive-plugin
-        thunar-media-tags-plugin
-    turbovnc
-    unrar
     rxvt-unicode
         gtk2
         gtk2-perl
@@ -102,9 +85,6 @@ A minimal Arch Linux desktop setup.
     vlc
         libmicrodns (chromecast)
         protobuf (chromecast)
-    yapf (beautifier)
-    yarn
-    yay (package)
     youtube-dl
     xdotool
 
@@ -114,7 +94,6 @@ A minimal Arch Linux desktop setup.
     Kivy
     lite (text-editor)
     observable
-    textadept
     TinyCC
 
 # Settings
