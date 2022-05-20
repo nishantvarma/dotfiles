@@ -39,6 +39,16 @@ cd()
     fi
 }
 
+dp()
+{
+    find . -type d -exec sh -c 'chmod 755 "$1"' shell {} \;
+}
+
+fp()
+{
+    find . -type f -exec sh -c 'chmod 644 "$1"' shell {} \;
+}
+
 ll()
 {
     ls -lrt
