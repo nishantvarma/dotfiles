@@ -8,7 +8,7 @@ fn a {
     killall plumber &&
     9 plumber &&
     cat $home/lib/plumbing | 9p write plumb/rules &&
-    silent acme -m /mnt/acme $home/.acme
+    sil acme -m /mnt/acme $home/.acme
 }
 
 fn cd {

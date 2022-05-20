@@ -14,5 +14,5 @@ xhost +local:
 
 PATH="${PATH}":"${HOME}"/src/plan9port/bin
 # TODO: Make rc as the default shell.
-SHELL=rc silent 9 rio
-SHELL=rc silent 9 9term rc -i "${HOME}"/.rcrc
+SHELL=rc sil 9 rio
+SHELL=rc sil 9 9term rc -i "${HOME}"/.rcrc
