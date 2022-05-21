@@ -24,11 +24,6 @@
 
 " It should be present in the .unified/pack/bundle/start/ directory.
 
-" Notes
-" =====
-
-" 1. 't' is a temporary register.
-
 " Utilities
 " =========
 
@@ -129,8 +124,6 @@ inoremap <C-S> <Esc>:write<CR>
 " G
 " =
 
-" TODO: Generalize this for all filetypes.
-nnoremap gc mt:%!purge-files<CR>`t
 nnoremap gp gwip
 
 " Square Bracket
@@ -141,8 +134,8 @@ nnoremap ]b :bnext<CR>
 nnoremap [t :tabprevious<CR>
 nnoremap ]t :tabnext<CR>
 
-" Spacebar
-" ========
+" Space
+" =====
 
 nnoremap <Space> :CtrlPBuffer<CR>
 
