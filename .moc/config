@@ -7,5 +7,6 @@ Layout2 = ""
 Layout3 = ""
 
 ASCIILines = no
+SetXtermTitle = no
 
 theme = minimal
