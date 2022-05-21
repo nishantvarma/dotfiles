@@ -85,17 +85,9 @@ autocmd VimEnter * if argc() == 0 | call Start() | endif
 
 autocmd BufEnter *.md set filetype=markdown
 
-if &term!='dumb'
-    let &t_EI = "\e[2 q"
-    let &t_SI = "\e[5 q"
-    autocmd VimEnter * normal <Esc>
-endif
-
 autocmd CmdwinEnter * map <buffer> <F5> <CR>q:
 
 autocmd FileType make set noexpandtab autoindent shiftwidth=4 tabstop=4
-
-autocmd VimLeave * ClearAllCtrlPCaches
 
 " Keyboard Mappings
 " =================
