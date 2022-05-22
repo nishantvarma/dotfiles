@@ -53,8 +53,7 @@ mp3()
         ffmpeg -i "$file" "${file%.*}.mp3" &&
         rm "$file"
     fi &&
-    ffmpeg -i "${file%.*}.mp3" -map 0:a -c:a copy -map_metadata -1 mp3.mp3 &&
-    mv mp3.mp3 "${file%.*}.mp3"
+    mat2 --inplace "${file%.*}.mp3"
 }
 
 # FZF

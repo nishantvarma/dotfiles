@@ -15,12 +15,6 @@ ld -melf_i386 <obj> -o <bin>
 find . -type f -name "*.mkv" -exec sh -c \
     'in="$1"; ffmpeg -i "$in" "${in%.*}.mp4" && rm "$in"' shell {} \;
 
-# Mp3
-# ===
-
-ffmpeg -i <in> -map 0:a -c:a copy -map_metadata -1 <out> # delete tags
-id3tool -t "<title>"
-
 # Mpv
 # ===
 
