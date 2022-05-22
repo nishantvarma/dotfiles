@@ -8,5 +8,6 @@ Layout3 = ""
 
 ASCIILines = no
 SetXtermTitle = no
+Shuffle=yes
 
 theme = minimal
