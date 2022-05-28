@@ -49,7 +49,6 @@ mp3()
     local file=$1
 
     if [[ "$file" != *.mp3 ]]; then
-        echo reached
         ffmpeg -i "$file" "${file%.*}.mp3" &&
         rm "$file"
     fi &&
