@@ -55,6 +55,11 @@ mp3()
     mat2 --inplace "${file%.*}.mp3"
 }
 
+pdf()
+{
+    mat2 --inplace "$@"
+}
+
 # FZF
 # ===
 
