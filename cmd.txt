@@ -30,6 +30,11 @@ python -m SimpleHTTPServer 8000
 
 qemu-system-x86_64 -boot d -cdrom <iso> -m 512
 
+# Rsync
+# =====
+
+rsync -am --include='*.pdf' --include='*/' --exclude='*' src/ dest
+
 # Socat
 # =====
 
