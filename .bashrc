@@ -41,7 +41,7 @@ cd()
 
 ll()
 {
-    ls -lrt
+    ls -hlrt
 }
 
 mp3()
@@ -57,7 +57,7 @@ mp3()
 
 pdf()
 {
-    mat2 --inplace "$@"
+    exiftool -overwrite_original "$@"
 }
 
 # FZF

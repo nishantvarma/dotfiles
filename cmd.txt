@@ -20,11 +20,6 @@ find . -type f -name "*.mkv" -exec sh -c \
 
 Shift + Left # Playlist
 
-# Pdf
-# ===
-
-exiftool -overwrite_original -recurse -all= -ext pdf .
-
 # Python
 # ======
 
