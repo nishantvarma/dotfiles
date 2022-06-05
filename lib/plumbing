@@ -8,9 +8,8 @@ plumb client acme
 type is text
 data matches '([a-zA-Z¡-?0-9_\-./]+)\.djvu'
 arg isfile $0
-plumb to scid
-plumb start scid $file
-type is text
+plumb to evince
+plumb start evince $file
 
 type is text
 data matches '([a-zA-Z¡-?0-9_\-./]+)\.mp3'
@@ -27,9 +26,10 @@ plumb start mpv --player-operation-mode=pseudo-gui $file
 type is text
 data matches '([a-zA-Z¡-?0-9_\-./]+)\.pdf'
 arg isfile $0
-plumb to scid
-plumb start scid $file
+plumb to evince
+plumb start evince $file
 
+type is text
 data matches '([a-zA-Z¡-?0-9_\-./]+)\.pgn'
 arg isfile $0
 plumb to scid
