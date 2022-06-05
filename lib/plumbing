@@ -34,3 +34,9 @@ data matches '([a-zA-Z¡-?0-9_\-./]+)\.pgn'
 arg isfile $0
 plumb to scid
 plumb start scid $file
+
+type is text
+data matches '([a-zA-Z¡-?0-9_\-./]+)\.webm'
+arg isfile $0
+plumb to mpv
+plumb start mpv --player-operation-mode=pseudo-gui $file
