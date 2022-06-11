@@ -57,7 +57,7 @@ mp3()
 
 pdf()
 {
-    exiftool -overwrite_original "$@"
+    exiftool -all= -overwrite_original "$@"
 }
 
 # FZF
