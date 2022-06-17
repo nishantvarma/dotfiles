@@ -14,8 +14,8 @@ icons=(
     [xterm.XTerm]=term.png
 )
 
-for application in "${!icons[@]}"; do
-    for window in $(wmctrl -lx | grep "$application" | awk '{print $1}'); do
-        xseticon -id "$window" "$HOME"/.icons/"${icons[$application]}"
+for app in "${!icons[@]}"; do
+    for win in $(wmctrl -lx | grep "$app" | awk '{print $1}'); do
+        xseticon -id "$win" "$HOME"/.icons/"${icons[$app]}"
     done
 done

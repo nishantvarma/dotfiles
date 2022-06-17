@@ -72,6 +72,5 @@ cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick <commit>'
 # X Server
 # ========
 
-xwininfo -display :0
-xhost +local: # sharing xserver for chroot
-export DISPLAY=:0 # chroot
+xhost +local: # allow access
+export DISPLAY=:0 # inside chroot
