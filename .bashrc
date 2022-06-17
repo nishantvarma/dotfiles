@@ -62,9 +62,9 @@ pdf()
 
 x()
 {
-    sil Xephyr -br -ac -noreset -screen 1366x768 :1 &&
+    sil Xephyr -br -ac -noreset -screen 1304x768 :1 &&
     sleep 0.1 &&
-    DISPLAY=:1 rio
+    DISPLAY=:1 sil rio
 }
 
 # FZF
