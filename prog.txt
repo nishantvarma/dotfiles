@@ -15,16 +15,15 @@ A minimal Arch Linux desktop setup.
     freetype2
     fuse2
     git
-        git-cola
-        git-gui
-        gitk
+      git-cola
+      git-gui
+      gitk
     gnome-icon-theme
     gnu-netcat
     gvfs-mtp
     linux
     linux-firmware
     man
-    mat2 (metadata-cleaner)
     ncurses
     ntpd
     slock
@@ -54,13 +53,14 @@ A minimal Arch Linux desktop setup.
 
     2bwm (wm)
     bmpanel
-    clang-format (beautifier)
+    clang-format (formatter)
+    djview4
     docker
-    fd (searcher)
-    fzf (searched)
-    ghc (language)
-    highlight (beautifier)
+    fd (grep)
+    ghc (lang)
+    highlight (formatter)
     llpp (pdf)
+    mat2 (cleaner)
     meld (diff)
     mkvtoolnix-gui (video)
     most
@@ -68,31 +68,26 @@ A minimal Arch Linux desktop setup.
     moc (music)
     mupdf (pdf)
     plan9port
-    python (language)
+      rc (shell)
+      rio (wm)
+    python (lang)
         black
-    racket (language)
-    rc (shell)
-    rio (wm)
-    ripgrep (searcher)
+    racket (lang)
+    ripgrep (grep)
     scid (chess)
     shellcheck
     socat
     sqlformat
     rxvt-unicode
-        gtk2
-        gtk2-perl
+      gtk2
+      gtk2-perl
     vimb (browser)
-    vlc
-        libmicrodns (chromecast)
-        protobuf (chromecast)
     youtube-dl
-    xdotool
 
 # Research
 
-    jailer (sql)
     Kivy
-    lite (text-editor)
+    lite (editor)
     observable
     TinyCC
 
@@ -100,4 +95,3 @@ A minimal Arch Linux desktop setup.
 
     Monospace Fonts: Dejavu Sans Mono, Dina, Liberation Mono, Lucida Console
     Sans Fonts: Noto Sans, Roboto Sans
-    Disable netctl and enable connman.
