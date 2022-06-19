@@ -24,6 +24,12 @@ plumb to mpv
 plumb start mpv --player-operation-mode=pseudo-gui $file
 
 type is text
+data matches '([a-zA-Z¡-?0-9_\-./]+)\.ods'
+arg isfile $0
+plumb to libreoffice
+plumb start libreoffice $file
+
+type is text
 data matches '([a-zA-Z¡-?0-9_\-./]+)\.pdf'
 arg isfile $0
 plumb to evince
