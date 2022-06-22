@@ -60,6 +60,11 @@ pdf()
     exiftool -all= -overwrite_original "$@"
 }
 
+plan9()
+{
+    qemu-system-i386 -cdrom plan9.iso
+}
+
 x()
 {
     sil Xephyr -br -ac -noreset -screen 1304x768 :1 &&
