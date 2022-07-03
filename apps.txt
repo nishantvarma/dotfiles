@@ -53,12 +53,12 @@ A minimal Arch Linux desktop setup.
 
     2bwm (wm)
     bmpanel
-    clang-format (formatter)
+    clang-format (fmtr)
     djview4
     docker
     fd (grep)
     ghc (lang)
-    highlight (formatter)
+    highlight (fmtr)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
@@ -82,7 +82,7 @@ A minimal Arch Linux desktop setup.
       gtk2
       gtk2-perl
     vimb (browser)
-    youtube-dl
+    yt-dlp (youtube)
 
 # Research
 
