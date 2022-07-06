@@ -39,6 +39,12 @@ cd()
     fi
 }
 
+g(){
+    git add -p &&
+    git commit -m "Fixups" &&
+    git push origin
+}
+
 ll()
 {
     ls -hlrt
