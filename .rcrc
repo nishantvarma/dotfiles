@@ -4,7 +4,7 @@ SHELL=rc
 sign='> '
 
 fn a {
-    killall plumber || true &&
+    killall plumber >[2]/dev/null || true &&
     9 plumber &&
     cat $home/lib/plumbing | 9p write plumb/rules &&
     sil acme -a -m /mnt/acme $home/.acme
