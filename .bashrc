@@ -39,6 +39,18 @@ cd()
     fi
 }
 
+cm()
+{
+    local file=$1
+    local extn=$2
+
+    if [[ $file != *.$extn ]]; then
+        ffmpeg -i "$file" "${file%.*}.$extn" &&
+        rm "$file"
+    fi &&
+    mat2 --inplace "${file%.*}.$extn"
+}
+
 g(){
     git add -p &&
     git commit -m "Fixups" &&
@@ -54,11 +66,14 @@ mp3()
 {
     local file=$1
 
-    if [[ "$file" != *.mp3 ]]; then
-        ffmpeg -i "$file" "${file%.*}.mp3" &&
-        rm "$file"
-    fi &&
-    mat2 --inplace "${file%.*}.mp3"
+    cm "$file" mp3
+}
+
+mp4()
+{
+    local file=$1
+
+    cm "$file" mp4
 }
 
 pdf()
