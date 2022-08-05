@@ -51,6 +51,11 @@ cm()
     mat2 --inplace "${file%.*}.$extn"
 }
 
+e()
+{
+    find . -type f | grep -oE '\.(\w+)$' | sort -u
+}
+
 g(){
     git add -p &&
     git commit -m "Fixups" &&
