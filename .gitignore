@@ -1,6 +1,6 @@
 # This repository is intended to be used as the home folder; so it whitelists
 # everything that is version-controlled. Folders that can be trusted are
-# completely whitelisted; others go through the same process!
+# completely whitelisted, others go through the same process!
 
 # Home
 
