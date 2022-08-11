@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-sil \
-    "$APPS"/sublime_merge/sublime_merge \
-    --class=sublime-merge \
-    "${@}"

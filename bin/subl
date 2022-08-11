@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-sil \
-    "$APPS"/sublime_text/sublime_text \
-    --class=sublime-text \
-    "${@}"
