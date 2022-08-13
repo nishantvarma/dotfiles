@@ -107,11 +107,6 @@ x()
     DISPLAY=:1 sil rio
 }
 
-# FZF
-# ===
-
-[[ -f $HOME/.fzf.bash ]] && source "$HOME"/.fzf.bash
-
 # Hacks
 # =====
 
