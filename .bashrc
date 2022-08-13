@@ -29,6 +29,15 @@ export PS1='$(basename $(pwd)) % '
 # Functions
 # =========
 
+b()
+{
+    local repo
+
+    repo=$(basename $(git remote get-url origin))
+
+    git bundle create "${repo%.git}" --all
+}
+
 cd()
 {
     builtin cd "$@" &&
