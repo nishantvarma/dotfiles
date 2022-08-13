@@ -35,7 +35,7 @@ b()
 
     repo=$(basename $(git remote get-url origin))
 
-    git bundle create "${repo%.git}" --all
+    git bundle create ~/scratch/"${repo%.git}" --all
 }
 
 cd()
