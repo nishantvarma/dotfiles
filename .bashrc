@@ -29,7 +29,7 @@ export PS1='$(basename $(pwd)) % '
 # Functions
 # =========
 
-bundle()
+bkp()
 {
     local repo
 
