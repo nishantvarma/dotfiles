@@ -31,12 +31,13 @@ acme -m /mnt/acme .acme
 8. Sam command language:
    * `Edit =` shows the current line number.
    * Clearing the editor and inserting a new line:
-   ```
-   Edit , {
-       d
-       c/\n
-   }
-   ```
+      ```
+      Edit , {
+        d
+        c/\n
+      }
+      ```
+   * `Edit X"." ...` executes edit over all open files.
 9. `Send` sends the clipboard content to `win`. This can be used to send content
    from `tags`/`buffer` etc., to Shell, REPL etc.
 10. The Rc functions available in the environment are available in Acme, but
