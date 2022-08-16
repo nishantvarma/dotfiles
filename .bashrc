@@ -29,7 +29,7 @@ export PS1='$(basename $(pwd)) % '
 # Functions
 # =========
 
-b()
+bundle()
 {
     local repo
 
@@ -60,7 +60,7 @@ cm()
     mat2 --inplace "${file%.*}.$extn"
 }
 
-e()
+exts()
 {
     find . -type f | grep -oE '\.(\w+)$' | sort -u
 }
@@ -73,7 +73,7 @@ g(){
 
 ll()
 {
-    ls -hlrt
+    ls -hlrt "$@"
 }
 
 mp3()
@@ -100,7 +100,7 @@ plan9()
     qemu-system-i386 -cdrom plan9.iso
 }
 
-x()
+rio()
 {
     sil Xephyr -br -ac -noreset -screen 1304x768 :1 &&
     sleep 0.1 &&
