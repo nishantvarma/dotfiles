@@ -60,6 +60,13 @@ cm()
     mat2 --inplace "${file%.*}.$extn"
 }
 
+dirty()
+{
+    if ! git diff --quiet; then
+        git status --porcelain && g
+    fi
+}
+
 exts()
 {
     find . -type f | grep -oE '\.(\w+)$' | sort -u

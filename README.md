@@ -1,4 +1,4 @@
-Dotfiles for a minimalistic Linux system.
+Dotfiles for a minimal Linux system.
 
 - Distro: Any
 - Wm: 2bwm, rio
