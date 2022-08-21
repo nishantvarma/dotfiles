@@ -54,6 +54,7 @@ A minimal Arch Linux desktop setup.
     2bwm (wm)
     bmpanel
     clang-format (fmtr)
+    cloc (code)
     djview4
     docker
     fd (grep)
