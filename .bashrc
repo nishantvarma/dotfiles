@@ -29,6 +29,13 @@ export PS1='$(basename "$(pwd)") % '
 # Functions
 # =========
 
+app()
+{
+    local url=$1
+
+    chrome.exe --app="$url" --new-window
+}
+
 bkp()
 {
     local repo
