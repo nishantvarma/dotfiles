@@ -60,12 +60,6 @@
 !.config/rofi/
 !.config/yapf/
 
-# Config > Vimb
-
-!.config/vimb/
-.config/vimb/*
-!.config/vimb/config
-
 # Config > Code
 
 !.config/Code/
@@ -74,12 +68,18 @@
 !.config/Code/User/*
 !.config/Code/User/settings.json
 
+# Config > Vimb
+
+!.config/vimb/
+.config/vimb/*
+!.config/vimb/config
+
 # Local
 
 !.local/
 .local/*
 
-# Local > Share> Neovim
+# Local > Share > Neovim
 
 !.local/share/
 .local/share/*
