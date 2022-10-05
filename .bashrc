@@ -29,13 +29,6 @@ export PS1='$(basename "$(pwd)") % '
 # Functions
 # =========
 
-app()
-{
-    local url=$1
-
-    google-chrome --app="$url" --new-window
-}
-
 bkp()
 {
     local repo
