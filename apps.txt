@@ -50,6 +50,7 @@ A minimal Arch Linux desktop setup.
     zip
 
 # Applications
+# ============
 
     2bwm (wm)
     bmpanel
@@ -95,6 +96,7 @@ A minimal Arch Linux desktop setup.
     yt-dlp (youtube)
 
 # Research
+# ========
 
     Kivy
     lite (editor)
@@ -102,6 +104,7 @@ A minimal Arch Linux desktop setup.
     TinyCC
 
 # Settings
+# ========
 
     Monospace Fonts: Dejavu Sans Mono, Dina, Liberation Mono, Lucida Console
     Sans Fonts: Noto Sans, Roboto Sans
