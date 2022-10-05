@@ -83,6 +83,15 @@ A minimal Arch Linux desktop setup.
       gtk2
       gtk2-perl
     vimb (browser)
+    vscode
+      Dev Containers
+      Docker
+      Jupyter
+      Jupyter Keymap
+      Jupyter Notebook Renderers
+      Material Theme
+      Pylance
+      Python
     yt-dlp (youtube)
 
 # Research
