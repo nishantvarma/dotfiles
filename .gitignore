@@ -66,6 +66,14 @@
 .config/vimb/*
 !.config/vimb/config
 
+# Config > Code
+
+!.config/Code/
+.config/Code/*
+!.config/Code/User/
+!.config/Code/User/*
+!.config/Code/User/settings.json
+
 # Local
 
 !.local/
