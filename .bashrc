@@ -33,7 +33,7 @@ app()
 {
     local url=$1
 
-    chrome.exe --app="$url" --new-window
+    google-chrome --app="$url" --new-window
 }
 
 bkp()
