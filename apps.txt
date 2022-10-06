@@ -85,12 +85,12 @@ A minimal Arch Linux desktop setup.
       gtk2-perl
     vimb (browser)
     vscode
-      Dev Containers
       Docker
       Jupyter
       Jupyter Keymap
       Jupyter Notebook Renderers
       Material Theme
+      Remove Development
       Pylance
       Python
     yt-dlp (youtube)
