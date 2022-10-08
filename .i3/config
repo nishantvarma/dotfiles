@@ -1,1 +1,8 @@
-bindsym $mod+Return exec urxvt
+set $mod Mod4
+
+bindsym $mod+r reload
+bindsym $mod+Return urxvt
+bindsym $mod+shift+r restart
+bindsym Mod4+Shift+a focus parent,kill
+
+font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 8
