@@ -1,6 +1,7 @@
 set $mod Mod4
 
 bindsym $mod+d exec dmenu_run
+bindsym $mod+f fullscreen
 bindsym $mod+r reload
 bindsym $mod+Return exec urxvt
 bindsym $mod+shift+r restart
