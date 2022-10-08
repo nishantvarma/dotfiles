@@ -16,6 +16,7 @@
 !.fzfrc
 !.gitconfig
 !.gitignore
+!.i3status.conf
 !.nexrc
 !.rcrc
 !.tmux.conf
