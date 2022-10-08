@@ -41,7 +41,7 @@ xterm.vt100.geometry: 80x24
 
 ! General
 
-xterm*allowBoldFonts: false
+xterm*allowBoldFonts: true
 xterm*selectToClipboard: true
 xterm*locale: true
 xterm*loginshell: true
@@ -115,10 +115,11 @@ URxvt*color15: #f8f8f2
 ! Font
 
 URxvt*font: xft:DejaVu Sans Mono:size=10:autohint=true:antialias=true
-URxvt*boldFont: xft:DejaVu Sans Mono:size=10:autohint=true:antialias=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:size=10:autohint=true:antialias=true
 
 ! General
 
+URxvt.allow_bold: true
 URxvt.cursorBlink: true
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
