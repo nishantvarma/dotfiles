@@ -86,6 +86,7 @@ A minimal Arch Linux desktop setup.
     vimb (browser)
     vscode
       Docker
+      GitLens
       Jupyter
       Jupyter Keymap
       Jupyter Notebook Renderers

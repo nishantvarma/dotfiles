@@ -1,5 +1,10 @@
 {
+    "git.confirmSync": false,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
-    "workbench.colorTheme": "Visual Studio Dark"
+    "window.menuBarVisibility": "hidden",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
 }
