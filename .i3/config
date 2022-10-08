@@ -7,4 +7,4 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+shift+r restart
 bindsym Mod4+Shift+a focus parent,kill
 
-font pango:Consolas Bold 8
+font pango:Dejavu Sans Mono Bold 8
