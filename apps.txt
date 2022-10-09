@@ -107,5 +107,5 @@ A minimal Arch Linux desktop setup.
 # Settings
 # ========
 
-    Monospace Fonts: Consolas, Dejavu Sans Mono, Liberation Mono, Lucida Console
+    Monospace Fonts: Consolas, Dejavu Sans Mono
     Sans Fonts: Noto Sans, Roboto Sans
