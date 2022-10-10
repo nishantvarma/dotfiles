@@ -9,7 +9,6 @@
 " https://github.com/tpope/vim-repeat.git
 " https://github.com/tpope/vim-surround.git
 " https://github.com/vim-scripts/opsplorer.git
-" https://github.com/wellle/targets.vim.git
 
 " It should be present in the .unified/pack/bundle/start/ directory.
 
