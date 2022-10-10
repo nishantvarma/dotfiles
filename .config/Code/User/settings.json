@@ -1,5 +1,7 @@
 {
     "git.confirmSync": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.mode.active": "zen",
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
     "window.menuBarVisibility": "hidden",
