@@ -4,26 +4,30 @@ floating_modifier $mod
 
 bindsym $mod+a focus parent
 bindsym $mod+d exec dmenu_run
-bindsym $mod+Down focus down
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
 bindsym $mod+h split h
-bindsym $mod+Left focus left
 bindsym $mod+q kill
 bindsym $mod+r reload
-bindsym $mod+Return exec urxvt
-bindsym $mod+Right focus right
 bindsym $mod+s layout stacking
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+Right move right
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+Shift+Up move up
 bindsym $mod+space focus mode_toggle
-bindsym $mod+Up focus up
 bindsym $mod+v split v
 bindsym $mod+w layout tabbed
+
+bindsym $mod+Return exec urxvt
+
+bindsym $mod+Down focus down
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Up move up
+
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+space floating toggle
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
