@@ -6,9 +6,7 @@
 " Plugins
 " =======
 
-" https://github.com/vim-scripts/opsplorer.git
-
-" It should be present in the .unified/pack/bundle/start/ directory.
+" Plugins should be placed in the .unified/pack/bundle/start/ directory.
 
 " Utilities
 " =========
@@ -112,23 +110,13 @@ nnoremap ]b :bnext<CR>
 nnoremap [t :tabprevious<CR>
 nnoremap ]t :tabnext<CR>
 
-" Space
-" =====
-
-nnoremap <Space> :CtrlPBuffer<CR>
-
 " Backslash
 " =========
 
 nnoremap <Leader><Leader> :e#<CR>
 nnoremap <Leader>a ggVG
-nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>c :close<CR>
 nnoremap <Leader>d o<Esc>k
-nnoremap <Leader>e :Opsplore<CR>
-nnoremap <Leader>E :Opsplore %:p:h<CR>
-nnoremap <Leader>l :ALELint<CR>
-nnoremap <Leader>m :CtrlPMRUFiles<CR>
 nnoremap <Leader>q :qall<CR>
 nnoremap <Leader>r :'{,'}s/\<<C-R>=expand('<cword>')<CR>\>/
 nnoremap <Leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
@@ -160,15 +148,6 @@ nnoremap <C-Left> <C-T>
 
 syntax on
 filetype plugin indent on
-
-" Ale
-" ===
-
-let g:ale_lint_on_save = 0
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_sign_error = 'x'
-let g:ale_sign_warning = '?'
 
 " Markdown
 " ========
