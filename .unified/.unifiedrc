@@ -3,13 +3,6 @@
 " Prerequisites
 " =============
 
-" Programs
-" ========
-
-" https://github.com/BurntSushi/ripgrep
-" https://github.com/jonas/tig
-" https://github.com/universal-ctags/ctags
-
 " Plugins
 " =======
 
@@ -17,7 +10,6 @@
 " https://github.com/tpope/vim-repeat.git
 " https://github.com/tpope/vim-surround.git
 " https://github.com/vim-scripts/opsplorer.git
-" https://github.com/w0rp/ale.git
 " https://github.com/wellle/targets.vim.git
 
 " It should be present in the .unified/pack/bundle/start/ directory.
