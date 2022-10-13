@@ -88,8 +88,10 @@ A minimal Arch Linux desktop setup.
       Docker
       GitLens
       Jupyter
+      Jupyter Cell Tags
       Jupyter Keymap
       Jupyter Notebook Renderers
+      Jupyter Slideshow
       Material Theme
       Remove Development
       Pylance
