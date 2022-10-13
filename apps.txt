@@ -92,6 +92,7 @@ A minimal Arch Linux desktop setup.
       Jupyter Keymap
       Jupyter Notebook Renderers
       Jupyter Slideshow
+      Markdown All in One
       Material Theme
       Remove Development
       Pylance
