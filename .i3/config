@@ -7,7 +7,6 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
 bindsym $mod+h split h
-bindsym $mod+l floating toggle
 bindsym $mod+q kill
 bindsym $mod+r reload
 bindsym $mod+s layout stacking
@@ -15,8 +14,9 @@ bindsym $mod+v split v
 bindsym $mod+w layout tabbed
 bindsym $mod+x exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'
 
-bindsym $mod+space focus mode_toggle
 bindsym $mod+Return exec urxvt
+bindsym $mod+Tab focus mode_toggle
+bindsym $mod+space floating toggle
 
 bindsym $mod+Down focus down
 bindsym $mod+Left focus left
