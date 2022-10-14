@@ -1,9 +1,7 @@
 ! Xterm
 ! =====
 
-! Ansi Colors
-
-! Base 16 Standard
+! Colors
 
 xterm*background: #121212
 xterm*foreground: #f8f8f2
@@ -52,7 +50,7 @@ xterm*visualBell: false
 ! URxvt
 ! =====
 
-! Base 16 Standard
+! Colors
 
 URxvt*background: #121212
 URxvt*foreground: #f8f8f2
@@ -78,36 +76,6 @@ URxvt*color13: #f92672
 ! Cyan
 URxvt*color6: #1fd6ff
 URxvt*color14: #1fd6ff
-! White
-URxvt*color7: #f8f8f2
-URxvt*color15: #f8f8f2
-
-! Base 16 Ladakh
-
-URxvt*background: #121212
-URxvt*foreground: #f8f8f2
-URxvt*cursorColor: #f8f8f2
-! Black
-URxvt*color0: #121212
-URxvt*color8: #444444
-! Red
-URxvt*color1: #fa3f82
-URxvt*color9: #fa3f82
-! Green
-URxvt*color2: #50c878
-URxvt*color10: #50c878
-! Yellow
-URxvt*color3: #d1d65f
-URxvt*color11: #d1d65f
-! Blue
-URxvt*color4: #61afef
-URxvt*color12: #61afef
-! Magenta
-URxvt*color5: #ff66ff
-URxvt*color13: #ff66ff
-! Cyan
-URxvt*color6: #80daeb
-URxvt*color14: #80daeb
 ! White
 URxvt*color7: #f8f8f2
 URxvt*color15: #f8f8f2
