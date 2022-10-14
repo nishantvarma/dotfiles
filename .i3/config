@@ -12,7 +12,7 @@ bindsym $mod+r reload
 bindsym $mod+s layout stacking
 bindsym $mod+v split v
 bindsym $mod+w layout tabbed
-bindsym $mod+x exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'
+bindsym $mod+x exec "i3warn -m 'Exit?' -B 'Yes' 'i3-msg exit'"
 
 bindsym $mod+Return exec urxvt
 bindsym $mod+Tab focus mode_toggle
