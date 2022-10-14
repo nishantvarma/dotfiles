@@ -94,9 +94,10 @@ A minimal Arch Linux desktop setup.
       Jupyter Slideshow
       Markdown All in One
       Material Theme
-      Remove Development
       Pylance
       Python
+      Remote Development
+      Shellcheck
     yt-dlp (youtube)
 
 # Research
