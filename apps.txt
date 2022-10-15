@@ -54,13 +54,13 @@ A minimal Arch Linux desktop setup.
 
     2bwm (wm)
     bmpanel
-    clang-format (fmtr)
+    clang-format (code)
     cloc (code)
     djview4
     docker
     fd (grep)
     ghc (lang)
-    highlight (fmtr)
+    highlight (code)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
@@ -76,13 +76,13 @@ A minimal Arch Linux desktop setup.
         black
     racket (lang)
     ripgrep (grep)
+    rxvt-unicode
+      gtk2
+      gtk2-perl
     scid (chess)
     shellcheck
     socat
     sqlformat
-    rxvt-unicode
-      gtk2
-      gtk2-perl
     vimb (browser)
     vscode
       Docker
