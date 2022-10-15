@@ -61,7 +61,7 @@ A minimal Arch Linux desktop setup.
     fd (grep)
     ghc (lang)
     highlight (code)
-    kazam(screen-recorder)
+    kazam (screen-recorder)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
