@@ -80,6 +80,7 @@ A minimal Arch Linux desktop setup.
       gtk2
       gtk2-perl
     scid (chess)
+    screenkey
     shellcheck
     socat
     sqlformat
