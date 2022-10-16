@@ -3,6 +3,7 @@ configuration {
     modi: "window,run,ssh,drun";
     show-icons: true;
     sort: false;
-    theme: "rofi-theme";
     window-format: "{w} {t}";
 }
+
+@theme "theme"
