@@ -3,17 +3,18 @@ set $mod Mod4
 floating_modifier $mod
 
 bindsym $mod+a focus parent
-bindsym $mod+d exec dmenu_run
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
 bindsym $mod+h split h
+bindsym $mod+k kill
 bindsym --release $mod+l exec slock
-bindsym $mod+q kill
 bindsym $mod+r reload
 bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
 bindsym $mod+v split v
-bindsym $mod+w layout tabbed
-bindsym $mod+x exec "i3warn -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+bindsym $mod+q exec "i3warn -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+bindsym $mod+z exec "rofi -show window"
+bindsym $mod+x exec "rofi -show run"
 
 bindsym $mod+Return exec urxvt
 bindsym $mod+Tab focus mode_toggle
