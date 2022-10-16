@@ -1,9 +1,9 @@
 * {
     font: "Dejavu Sans Mono Medium 12";
 
-    green: #50c878;
-    blue: #128bd5;
     black: #000000;
+    blue: #128bd5;
+    green: #50c878;
 
     accent-color: #000000;
     urgent-color: #c40233;
@@ -28,7 +28,7 @@ inputbar {
     spacing: 8px; 
     padding: 8px;
 
-    background-color: @blue;
+    background-color: @black;
 }
 
 prompt, entry, element-icon, element-text {
@@ -36,7 +36,7 @@ prompt, entry, element-icon, element-text {
 }
 
 prompt {
-    text-color: @accent-color;
+    text-color: @green;
 }
 
 textbox {
@@ -58,7 +58,7 @@ element {
 }
 
 element normal normal {
-    text-color: @black;
+    text-color: @gray;
 }
 
 element normal urgent {
