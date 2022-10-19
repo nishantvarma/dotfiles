@@ -4,7 +4,10 @@
     "gitlens.mode.active": "zen",
     "python.linting.enabled": true,
     "python.linting.pylamaEnabled": true,
-    "python.linting.pylamaArgs": ["-l", "pycodestyle,pydocstyle,pylint"],
+    "python.linting.pylamaArgs": [
+        "--linters", "pycodestyle,pydocstyle,pylint",
+        "--pydocstyle-convention", "google"
+    ],
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
     "window.menuBarVisibility": "hidden",
