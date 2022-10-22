@@ -99,7 +99,6 @@ A minimal Arch Linux desktop setup.
       Pylance
       Python
       Remote Development
-      ReStructuredText Syntax Highlighting
       Shellcheck
     yt-dlp (youtube)
 
