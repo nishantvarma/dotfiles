@@ -12,6 +12,7 @@
     "terminal.integrated.cursorWidth": 2,
     "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.editor.wrapTabs":true,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     }
