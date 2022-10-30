@@ -20,7 +20,7 @@ window {
     width: 480;
     y-offset: -160;
 
-    border: 3px;
+    border: 2px;
     border-color: @blue;
 
     background-color: @black;
