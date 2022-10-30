@@ -8,11 +8,12 @@ bindsym $mod+f fullscreen
 bindsym $mod+h split h
 bindsym $mod+k kill
 bindsym --release $mod+l exec slock
+bindsym $mod+q exec "i3warn -m 'Exit?' -B 'Yes' 'i3-msg exit'"
 bindsym $mod+r reload
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
 bindsym $mod+v split v
-bindsym $mod+q exec "i3warn -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+bindsym $mod+w exec wp
 bindsym $mod+z exec "rofi -show window"
 bindsym $mod+x exec "rofi -show run -no-show-icons"
 
