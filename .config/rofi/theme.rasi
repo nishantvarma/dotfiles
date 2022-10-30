@@ -2,9 +2,9 @@
     font: "Dejavu Sans Mono 10";
 
     black: #020202;
-    gray: #202020;
+    gray: #222222;
     blue: #285577;
-    red: #c40233;
+    red: #900000;
     white: #f8f8f2;
 
     background-color: transparent;
@@ -20,6 +20,9 @@ window {
     width: 480;
     y-offset: -160;
 
+    border: 3px;
+    border-color: @blue;
+
     background-color: @black;
 }
 
@@ -27,7 +30,7 @@ inputbar {
     padding: 8px;
     spacing: 8px; 
 
-    background-color: @blue;
+    background-color: @gray;
 }
 
 prompt, entry, element-icon, element-text {
@@ -75,7 +78,7 @@ element selected {
 }
 
 element selected normal, element selected active {
-    background-color: @gray;
+    background-color: @blue;
 }
 
 element selected urgent {
