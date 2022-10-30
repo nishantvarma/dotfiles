@@ -2,8 +2,8 @@
     font: "Dejavu Sans Mono 10";
 
     black: #020202;
-    gray: #262626;
-    blue: #128bd5;
+    gray: #202020;
+    blue: #285577;
     red: #c40233;
     white: #f8f8f2;
 
@@ -27,7 +27,7 @@ inputbar {
     padding: 8px;
     spacing: 8px; 
 
-    background-color: @gray;
+    background-color: @blue;
 }
 
 prompt, entry, element-icon, element-text {
@@ -67,7 +67,7 @@ element normal urgent {
 }
 
 element normal active {
-    text-color: @black;
+    text-color: @white;
 }
 
 element selected {
