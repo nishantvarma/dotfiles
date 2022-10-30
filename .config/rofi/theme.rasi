@@ -40,6 +40,7 @@ prompt, entry, element-icon, element-text {
 }
 
 prompt {
+    font: "Dejavu Sans Mono Bold 10";
     text-color: @white;
 }
 
