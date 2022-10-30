@@ -1,19 +1,19 @@
 * {
-    font: "Dejavu Sans Mono 10";
-
     black: #020202;
     gray: #222222;
     blue: #285577;
     red: #900000;
     white: #f8f8f2;
 
-    background-color: transparent;
-    text-color: @white;
-
     margin: 0;
     padding: 0;
     spacing: 0;
-}
+
+    font: "Dejavu Sans Mono 10";
+
+    background-color: transparent;
+    text-color: @white;
+ }
 
 window {
     location: center;
