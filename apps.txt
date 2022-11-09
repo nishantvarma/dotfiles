@@ -59,9 +59,9 @@ A minimal Arch Linux desktop setup.
     djview4
     docker
     fd (grep)
+    flameshot (screen-recorder)
     ghc (lang)
     highlight (code)
-    kazam (screen-recorder)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
