@@ -117,7 +117,9 @@
       /usr/local/share/jwm
     </IconPath>
 	<Desktops width="4" height="1">
-		<Background type="solid">#111111</Background>
+		<Background type="command">
+            feh --bg-scale .wallpapers/gradient-gray.png
+        </Background>
 	</Desktops>
 	<DoubleClickSpeed>400</DoubleClickSpeed>
 	<DoubleClickDelta>2</DoubleClickDelta>
