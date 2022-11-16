@@ -62,6 +62,7 @@ A minimal Arch Linux desktop setup.
     flameshot (screen-recorder)
     ghc (lang)
     highlight (code)
+    irssi (irc)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
