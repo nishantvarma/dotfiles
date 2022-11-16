@@ -68,6 +68,12 @@
 !.config/Code/User/settings.json
 !.config/Code/User/keybindings.json
 
+# Config > Jwm
+
+!.config/jwm/
+.config/jwm/*
+!.config/jwm/jwmrc
+
 # Config > Vimb
 
 !.config/vimb/
