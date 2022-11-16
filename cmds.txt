@@ -69,6 +69,11 @@ Ctrl + Shift + C/V # Copy/Paste
 
 cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick <commit>'
 
+# Weechat
+# =======
+
+Use Ctrl+x and /buffer clear to clear the main buffer.
+
 # X Server
 # ========
 
