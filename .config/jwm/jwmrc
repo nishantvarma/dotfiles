@@ -160,6 +160,13 @@
     <Mouse context="minimize" button="2">move</Mouse>
     <Mouse context="minimize" button="-3">shade</Mouse>
     <Group>
+        <Class>Conky</Class>
+        <Option>nolist</Option>
+        <Option>noborder</Option>
+        <Option>notitle</Option>
+        <Option>sticky</Option>
+    </Group>
+    <Group>
         <Class>URxvt</Class>
         <Option>iignore</Option>
     </Group>
