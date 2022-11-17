@@ -7,6 +7,7 @@
         </Menu>
         <Menu icon="folder" label="Utilities">
             <Program icon="utilities-terminal" label="Editor">featherpad</Program>
+            <Program icon="utilities-terminal" label="File Manager">nautilus</Program>
             <Program icon="utilities-terminal" label="Terminal">urxvt</Program>
         </Menu>
         <Separator/>
@@ -121,18 +122,18 @@
     <Key key="j">down</Key>
     <Key key="k">up</Key>
     <Key key="l">right</Key>
-    <Key mask="A" key="#">desktop#</Key>
-    <Key mask="A" key="F1">root:1</Key>
-    <Key mask="A" key="F2">window</Key>
-    <Key mask="A" key="F4">close</Key>
-    <Key mask="A" key="F10">maximize</Key>
-    <Key mask="A" key="Left">ldesktop</Key>
-    <Key mask="A" key="Right">rdesktop</Key>
-    <Key mask="A" key="Up">udesktop</Key>
-    <Key mask="A" key="Down">ddesktop</Key>
-    <Key mask="A" key="Tab">nextstacked</Key>
-    <Key mask="A" key="x">exec: rofi -show run</Key>
-    <Key mask="A" key="z">exec: rofi -show window</Key>
+    <Key mask="4" key="#">desktop#</Key>
+    <Key mask="4" key="F1">root:1</Key>
+    <Key mask="4" key="F2">window</Key>
+    <Key mask="4" key="F4">close</Key>
+    <Key mask="4" key="F10">maximize</Key>
+    <Key mask="4" key="Left">ldesktop</Key>
+    <Key mask="4" key="Right">rdesktop</Key>
+    <Key mask="4" key="Up">udesktop</Key>
+    <Key mask="4" key="Down">ddesktop</Key>
+    <Key mask="4" key="Tab">nextstacked</Key>
+    <Key mask="4" key="x">exec: rofi -show run</Key>
+    <Key mask="4" key="z">exec: rofi -show window</Key>
     <Mouse context="root" button="4">ldesktop</Mouse>
     <Mouse context="root" button="5">rdesktop</Mouse>
     <Mouse context="title" button="1">move</Mouse>
