@@ -87,25 +87,25 @@
 		<Background>#999999</Background>
 	</PopupStyle>
 	<IconPath>
-      /usr/local/share/icons/Tango/scalable/actions
+        /usr/local/share/icons/Tango/scalable/actions
     </IconPath>
 	<IconPath>
-      /usr/local/share/icons/Tango/scalable/apps
+        /usr/local/share/icons/Tango/scalable/apps
     </IconPath>
 	<IconPath>
-      /usr/local/share/icons/Tango/scalable/places
+        /usr/local/share/icons/Tango/scalable/places
     </IconPath>
 	<IconPath>
-      /usr/local/share/icons/Tango/scalable/status
+        /usr/local/share/icons/Tango/scalable/status
     </IconPath>
 	<IconPath>
-      /usr/local/share/icons/Tango/scalable/mimetypes
+        /usr/local/share/icons/Tango/scalable/mimetypes
     </IconPath>
 	<IconPath>
-      /usr/local/share/jwm
+        /usr/local/share/jwm
     </IconPath>
 	<Desktops width="4" height="1">
-		<Background type="command">
+	    <Background type="command">
             feh --bg-scale .wallpapers/gradient-gray.png
         </Background>
 	</Desktops>
@@ -115,26 +115,26 @@
 	<SnapMode distance="10">border</SnapMode>
 	<MoveMode>opaque</MoveMode>
 	<ResizeMode>opaque</ResizeMode>
+	<Key key="Escape">escape</Key>
+	<Key key="Left">left</Key>
+	<Key key="Right">right</Key>
 	<Key key="Up">up</Key>
 	<Key key="Down">down</Key>
-	<Key key="Right">right</Key>
-	<Key key="Left">left</Key>
+	<Key key="Return">select</Key>
 	<Key key="h">left</Key>
 	<Key key="j">down</Key>
 	<Key key="k">up</Key>
 	<Key key="l">right</Key>
-	<Key key="Return">select</Key>
-	<Key key="Escape">escape</Key>
-	<Key mask="A" key="Tab">nextstacked</Key>
-	<Key mask="A" key="F4">close</Key>
 	<Key mask="A" key="#">desktop#</Key>
 	<Key mask="A" key="F1">root:1</Key>
 	<Key mask="A" key="F2">window</Key>
+	<Key mask="A" key="F4">close</Key>
 	<Key mask="A" key="F10">maximize</Key>
-	<Key mask="A" key="Right">rdesktop</Key>
 	<Key mask="A" key="Left">ldesktop</Key>
+	<Key mask="A" key="Right">rdesktop</Key>
 	<Key mask="A" key="Up">udesktop</Key>
 	<Key mask="A" key="Down">ddesktop</Key>
+	<Key mask="A" key="Tab">nextstacked</Key>
 	<Mouse context="root" button="4">ldesktop</Mouse>
 	<Mouse context="root" button="5">rdesktop</Mouse>
 	<Mouse context="title" button="1">move</Mouse>
