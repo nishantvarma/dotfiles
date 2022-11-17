@@ -21,7 +21,7 @@
     <Tray height="28" x="0" y="-1" autohide="off" delay="1000">
         <TrayButton label="JWM">root:1</TrayButton>
         <Spacer width="2"/>
-        <TrayButton label="Hide">showdesktop</TrayButton>
+        <TrayButton label="#">showdesktop</TrayButton>
         <Spacer width="2"/>
         <Pager labeled="true"/>
         <TaskList maxwidth="256"/>
