@@ -4,8 +4,8 @@ battery()
 {
     while :; do
         charge=$(cat /sys/class/power_supply/BAT0/capacity)
-        if [[ $charge -le 25 ]]; then
-            i3err -m "Battery is critically low!"
+        if [[ $charge -le 75 ]]; then
+            notify-send -u critical -t 5000 "Battery is low"
         fi &&
         sleep 60
     done

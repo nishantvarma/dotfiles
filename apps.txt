@@ -25,6 +25,7 @@ A minimal Arch Linux desktop setup.
     linux-firmware
     man
     ncurses
+    notify-osd
     ntpd
     slock
     sshpass
