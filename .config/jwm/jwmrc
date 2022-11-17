@@ -49,7 +49,7 @@
         <Foreground>#ffffff</Foreground>
         <Opacity>0.75</Opacity>
     </TrayStyle>
-    <TaskListStyle list="desktop" group="false">
+    <TaskListStyle>
         <Font>Sans-9:bold</Font>
         <Active>
             <Foreground>#ffffff</Foreground>
