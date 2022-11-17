@@ -22,9 +22,6 @@
 		<Restart label="Restart" icon="reload"/>
 		<Exit label="Exit" confirm="true" icon="exit"/>
 	</RootMenu>
-	<Group>
-		<Option>tiled</Option>
-	</Group>
 	<Tray height="28" x="0" y="-1" autohide="off" delay="1000">
 		<TrayButton label="JWM">root:1</TrayButton>
 		<Spacer width="2"/>
@@ -51,13 +48,13 @@
 		</Active>
 	</WindowStyle>
 	<TrayStyle decorations="motif">
-		<Font>Sans-9</Font>
+		<Font>Sans-9:bold</Font>
 		<Background>#333333</Background>
 		<Foreground>#ffffff</Foreground>
 		<Opacity>0.75</Opacity>
 	</TrayStyle>
 	<TaskListStyle list="all" group="true">
-		<Font>Sans-9</Font>
+		<Font>Sans-9:bold</Font>
 		<Active>
 			<Foreground>#ffffff</Foreground>
 			<Background>#555555</Background>
@@ -85,7 +82,7 @@
 		<Opacity>0.85</Opacity>
 	</MenuStyle>
 	<PopupStyle>
-		<Font>Sans-9</Font>
+		<Font>Sans-9:bold</Font>
 		<Foreground>#000000</Foreground>
 		<Background>#999999</Background>
 	</PopupStyle>
