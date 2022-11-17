@@ -25,19 +25,10 @@
 	<Group>
 		<Option>tiled</Option>
 	</Group>
-	<Group>
-		<Name>xterm</Name>
-		<Option>vmax</Option>
-	</Group>
-	<Group>
-		<Name>xclock</Name>
-		<Option>drag</Option>
-		<Option>notitle</Option>
-	</Group>
-	<Tray x="0" y="-1" height="28" autohide="off" delay="1000">
+	<Tray height="28" x="0" y="-1" autohide="off" delay="1000">
 		<TrayButton label="JWM">root:1</TrayButton>
 		<Spacer width="2"/>
-		<TrayButton label="_">showdesktop</TrayButton>
+		<TrayButton label="Desktop">showdesktop</TrayButton>
 		<Spacer width="2"/>
 		<Pager labeled="true"/>
 		<TaskList maxwidth="256"/>
@@ -94,7 +85,7 @@
 		<Opacity>0.85</Opacity>
 	</MenuStyle>
 	<PopupStyle>
-		<Font>Sans-10</Font>
+		<Font>Sans-9</Font>
 		<Foreground>#000000</Foreground>
 		<Background>#999999</Background>
 	</PopupStyle>
