@@ -12,7 +12,6 @@ battery()
 }
 
 xrdb -load "$HOME"/.Xresources
-feh --bg-scale "$HOME"/.wallpapers/gradient-purple.jpg
 xhost +local:
 sil conky
 battery &
