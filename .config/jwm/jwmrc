@@ -131,11 +131,11 @@
     <Key mask="4" key="Right">rdesktop</Key>
     <Key mask="4" key="Up">udesktop</Key>
     <Key mask="4" key="Down">ddesktop</Key>
-    <Key mask="4" key="Return">exec: urxvt</Key>
+    <Key mask="4" key="Return">exec:urxvt</Key>
     <Key mask="4" key="Tab">nextstacked</Key>
     <Key mask="4" key="r">restart</Key>
-    <Key mask="4" key="x">exec: rofi -show run</Key>
-    <Key mask="4" key="z">exec: rofi -show window</Key>
+    <Key mask="4" key="x">exec:rofi -show run</Key>
+    <Key mask="4" key="z">exec:rofi -show window</Key>
     <Mouse context="root" button="4">ldesktop</Mouse>
     <Mouse context="root" button="5">rdesktop</Mouse>
     <Mouse context="title" button="1">move</Mouse>
