@@ -162,10 +162,6 @@
         <Option>sticky</Option>
     </Group>
     <Group>
-        <Class>mpv</Class>
-        <Option>iignore</Option>
-    </Group>
-    <Group>
         <Class>URxvt</Class>
         <Option>iignore</Option>
     </Group>
