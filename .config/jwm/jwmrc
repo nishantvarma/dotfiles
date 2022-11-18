@@ -127,6 +127,7 @@
     <Key mask="4" key="Return">exec:urxvt</Key>
     <Key mask="4" key="Tab">nextstacked</Key>
     <Key mask="4" key="r">restart</Key>
+    <Key mask="4" key="w">exec:wp</Key>
     <Key mask="4" key="x">exec:rofi -show run</Key>
     <Key mask="4" key="z">exec:rofi -show window</Key>
     <Mouse context="root" button="4">ldesktop</Mouse>
