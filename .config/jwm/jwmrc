@@ -129,9 +129,6 @@
     <Key mask="4" key="r">restart</Key>
     <Key mask="4" key="x">exec:rofi -show run</Key>
     <Key mask="4" key="z">exec:rofi -show window</Key>
-    <Mouse context="root" button="1"></Mouse>
-    <Mouse context="root" button="2"></Mouse>
-    <Mouse context="root" button="3"></Mouse>
     <Mouse context="root" button="4">ldesktop</Mouse>
     <Mouse context="root" button="5">rdesktop</Mouse>
     <Mouse context="title" button="1">move</Mouse>
