@@ -83,42 +83,6 @@
         <Foreground>#000000</Foreground>
         <Background>#999999</Background>
     </PopupStyle>
-    <IconPath>/usr/share/icons/gnome/256x256/actions</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/apps</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/categories</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/devices</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/emblems</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/places</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/status</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/actions</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/animations</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/apps</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/categories</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/devices</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/emblems</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/places</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/status</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/actions</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/apps</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/categories</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/devices</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/emblems</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/places</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/status</IconPath>
-    <IconPath>/usr/share/icons/hicolor/256x256/apps</IconPath>
-    <IconPath>/usr/share/icons/hicolor/256x256/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/actions</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/apps</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/categories</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/devices</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/emblems</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/status</IconPath>
-    <IconPath>/usr/share/icons/hicolor/512x512/apps</IconPath>
-    <IconPath>/usr/share/icons/hicolor/512x512/mimetypes</IconPath>
     <IconPath>/usr/share/icons/hicolor/scalable/actions</IconPath>
     <IconPath>/usr/share/icons/hicolor/scalable/apps</IconPath>
     <IconPath>/usr/share/icons/hicolor/scalable/categories</IconPath>
@@ -165,6 +129,9 @@
     <Key mask="4" key="r">restart</Key>
     <Key mask="4" key="x">exec:rofi -show run</Key>
     <Key mask="4" key="z">exec:rofi -show window</Key>
+    <Mouse context="root" button="1"></Mouse>
+    <Mouse context="root" button="2"></Mouse>
+    <Mouse context="root" button="3"></Mouse>
     <Mouse context="root" button="4">ldesktop</Mouse>
     <Mouse context="root" button="5">rdesktop</Mouse>
     <Mouse context="title" button="1">move</Mouse>
