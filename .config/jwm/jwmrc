@@ -23,8 +23,8 @@
         <Spacer width="2"/>
         <TrayButton label="#">showdesktop</TrayButton>
         <Spacer width="2"/>
-        <Pager labeled="true"/>
         <TaskList maxwidth="256"/>
+        <Pager labeled="true"/>
         <Dock/>
         <Spacer width="2"/>
         <Clock format="%d-%b-%y %l:%M %p">
