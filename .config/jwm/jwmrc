@@ -18,7 +18,7 @@
         <Restart label="Restart" icon="reload"/>
         <Exit label="Exit" confirm="true" icon="exit"/>
     </RootMenu>
-    <Tray height="28" x="0" y="-1" autohide="off" delay="1000">
+    <Tray height="28" x="0" y="-1" delay="1000">
         <TrayButton label="JWM">root:1</TrayButton>
         <Spacer width="2"/>
         <TrayButton label="#">showdesktop</TrayButton>
