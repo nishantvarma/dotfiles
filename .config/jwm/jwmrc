@@ -2,9 +2,9 @@
 <JWM>
     <RootMenu onroot="12">
         <Program icon="web-browser" label="Chrome">google-chrome</Program>
-        <Program icon="utilities-terminal" label="Featherpad">featherpad</Program>
+        <Program icon="accessories-text-editor" label="Featherpad">featherpad</Program>
         <Program icon="web-browser" label="Firefox">firefox</Program>
-        <Program icon="utilities-terminal" label="Nautilus">nautilus</Program>
+        <Program icon="system-file-manager" label="Nautilus">nautilus</Program>
         <Program icon="utilities-terminal" label="Urxvt">urxvt</Program>
         <Separator/>
         <Program icon="lock" label="Lock">
