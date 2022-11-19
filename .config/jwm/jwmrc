@@ -23,7 +23,7 @@
         <Spacer width="2"/>
         <TaskList maxwidth="256"/>
 		<Swallow name="conky" width="252">
-            conky -c .config/conky/tray.conf
+            conky
 		</Swallow>
         <Spacer width="2"/>
         <Clock format="%d-%b-%y %l:%M %p">
