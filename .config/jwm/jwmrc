@@ -6,9 +6,9 @@
             <Program icon="web-browser" label="Firefox">firefox</Program>
         </Menu>
         <Menu icon="folder" label="Utilities">
-            <Program icon="utilities-terminal" label="Editor">featherpad</Program>
-            <Program icon="utilities-terminal" label="File Manager">nautilus</Program>
-            <Program icon="utilities-terminal" label="Terminal">urxvt</Program>
+            <Program icon="utilities-terminal" label="Featherpad">featherpad</Program>
+            <Program icon="utilities-terminal" label="Nautilus">nautilus</Program>
+            <Program icon="utilities-terminal" label="Urxvt">urxvt</Program>
         </Menu>
         <Separator/>
         <Program icon="lock" label="Lock">
