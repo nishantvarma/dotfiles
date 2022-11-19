@@ -91,8 +91,10 @@ URxvt.allow_bold: true
 URxvt.cursorBlink: true
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
-URxvt.saveLines: 0
-URxvt.scrollBar: false
+URxvt.saveLines: 4096
+URxvt.scrollBar: true
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: plain
 
 ! Keybindings
 
