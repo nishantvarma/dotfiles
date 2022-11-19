@@ -23,13 +23,17 @@
         <Spacer width="2"/>
         <TrayButton label="#">showdesktop</TrayButton>
         <Spacer width="2"/>
-        <TaskList maxwidth="256"/>
         <Pager labeled="true"/>
-        <Dock/>
+        <Spacer width="2"/>
+        <TaskList maxwidth="256"/>
+		<Swallow name="conky" width="252">
+            conky -c .config/conky/tray.conf
+		</Swallow>
         <Spacer width="2"/>
         <Clock format="%d-%b-%y %l:%M %p">
             <Button mask="123">exec:xclock</Button>
         </Clock>
+        <Dock/>
     </Tray>
     <WindowStyle decorations="motif">
         <Font>Sans-9:bold</Font>
@@ -126,6 +130,8 @@
     <Key mask="4" key="Down">ddesktop</Key>
     <Key mask="4" key="Return">exec:urxvt</Key>
     <Key mask="4" key="Tab">nextstacked</Key>
+    <Key mask="4" key="d">showdesktop</Key>
+    <Key mask="4" key="r">restart</Key>
     <Key mask="4" key="r">restart</Key>
     <Key mask="4" key="w">exec:wp</Key>
     <Key mask="4" key="x">exec:rofi -show run</Key>
