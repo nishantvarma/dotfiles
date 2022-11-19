@@ -7,9 +7,7 @@
         <Program icon="system-file-manager" label="Nautilus">nautilus</Program>
         <Program icon="utilities-terminal" label="Urxvt">urxvt</Program>
         <Separator/>
-        <Program icon="lock" label="Lock">
-           slock
-        </Program>
+        <Program icon="lock" label="Lock">slock</Program>
         <Separator/>
         <Restart label="Restart" icon="reload"/>
         <Exit label="Exit" confirm="true" icon="exit"/>
