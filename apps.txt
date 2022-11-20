@@ -1,78 +1,38 @@
-A minimal Arch Linux desktop setup.
-
-# Libraries
-# =========
-
-    alsa-utils
-    base
-    base-devel
-    bdf-unifont
-    bindfs
-    bmon
-    dhclient
-    dhcpcd
-    ffmpeg
-    freetype2
-    fuse2
-    git
-      git-cola
-      git-gui
-      gitk
-    gnome-icon-theme
-    gnu-netcat
-    gvfs-mtp
-    linux
-    linux-firmware
-    man
-    ncurses
-    notify-osd
-    ntpd
-    slock
-    sshpass
-    strace
-    ttf-dejavu
-    ttf-liberation
-    ttf-roboto
-    unzip
-    wget
-    xclip
-    xf86-video-fbdev
-    xorg-apps
-    xorg-driver
-    xorg-fonts-misc
-    xorg-server
-    xorg-server-xephyr
-    xorg-xhost
-    xorg-xinit
-    xorg-xrandr
-    xsel
-    xsensors
-    xseticon
-    zip
+A minimal Linux desktop setup.
 
 # Applications
 # ============
 
     2bwm (wm)
-    bmpanel
+    bindfs
+    bmpanel (tray)
     clang-format (code)
     cloc (code)
     djview4
     docker
     fd (grep)
-    flameshot (screen-recorder)
+    ffmpeg
+    flameshot (screenshot)
     ghc (lang)
+    git
+      git-cola
+      git-gui
+      gitk
+    gnu-netcat
+    gvfs-mtp
     highlight (code)
     i3 (wm)
     jwm (wm)
+    light
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
     mkvtoolnix-gui (video)
+    moc (music)
     most
     mpv (video)
-    moc (music)
     mupdf (pdf)
+    notify-osd
     plan9port
       rc (shell)
       rio (wm)
@@ -86,8 +46,14 @@ A minimal Arch Linux desktop setup.
     scid (chess)
     screenkey
     shellcheck
+    slock
     socat
     sqlformat
+    strace
+    ttf-dejavu
+    ttf-liberation
+    ttf-roboto
+    unzip
     vimb (browser)
     vscode
       Docker
@@ -105,7 +71,14 @@ A minimal Arch Linux desktop setup.
       Remote Development
       Shellcheck
     weechat (irc)
+    wget
+    xclip
+    xorg-server-xephyr
+    xorg-xhost
+    xsel
+    xseticon
     yt-dlp (youtube)
+    zip
 
 # Research
 # ========
