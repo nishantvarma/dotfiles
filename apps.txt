@@ -28,7 +28,7 @@ A minimal Linux desktop setup.
     mat2 (cleaner)
     meld (diff)
     mkvtoolnix-gui (video)
-    moc (music)
+    mocp (music)
     most
     mpv (video)
     mupdf (pdf)
@@ -44,7 +44,7 @@ A minimal Linux desktop setup.
       gtk2
       gtk2-perl
     scid (chess)
-    screenkey
+    screenkey (screenshot)
     shellcheck
     slock
     socat
