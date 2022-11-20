@@ -91,7 +91,7 @@ URxvt.allow_bold: true
 URxvt.cursorBlink: true
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
-URxvt.saveLines: 4096
+URxvt.saveLines: 8192
 URxvt.scrollBar: true
 URxvt*scrollBar_right: true
 URxvt*scrollstyle: plain
