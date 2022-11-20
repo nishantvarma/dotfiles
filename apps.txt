@@ -8,6 +8,7 @@ A minimal Linux desktop setup.
     bmpanel (tray)
     clang-format (code)
     cloc (code)
+    cudatext (editor)
     djview4
     docker
     fd (grep)
