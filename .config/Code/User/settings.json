@@ -17,5 +17,6 @@
     "workbench.editor.wrapTabs": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
-    }
+    },
+    "extensions.ignoreRecommendations": true
 }
