@@ -58,6 +58,7 @@ A minimal Linux desktop setup.
     vimb (browser)
     vscode
       Docker
+      Excel Viewer
       GitLens
       Jupyter
       Jupyter Cell Tags
