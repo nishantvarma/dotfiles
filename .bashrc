@@ -85,9 +85,9 @@ ll()
 
 mp3()
 {
-    local file=$1
+    local file
 
-    cm "$file" mp3
+    for file in "$@"; do echo $file && cm "$file" mp3 || return; done
 }
 
 mp4()
