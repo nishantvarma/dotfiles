@@ -54,6 +54,7 @@ cm()
     local extn=${!#}
 
     for file in "${files[@]}"; do
+        echo "Processing $file"
         if [[ $file != *.$extn ]]; then
             ffmpeg -i "$file" "${file%.*}.$extn" &&
             rm "$file"
