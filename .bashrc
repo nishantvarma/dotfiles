@@ -50,14 +50,16 @@ cd()
 
 cm()
 {
-    local file=$1
-    local extn=$2
+    local files=("${@:1:$#-1}")
+    local extn=${!#}
 
-    if [[ $file != *.$extn ]]; then
-        ffmpeg -i "$file" "${file%.*}.$extn" &&
-        rm "$file"
-    fi &&
-    mat2 --inplace "${file%.*}.$extn"
+    for file in "${files[@]}"; do
+        if [[ $file != *.$extn ]]; then
+            ffmpeg -i "$file" "${file%.*}.$extn" &&
+            rm "$file"
+        fi &&
+        mat2 --inplace "${file%.*}.$extn"
+    done
 }
 
 dirty()
@@ -85,16 +87,13 @@ ll()
 
 mp3()
 {
-    local file
 
-    for file in "$@"; do echo $file && cm "$file" mp3 || return; done
+    cm "$@" mp3
 }
 
 mp4()
 {
-    local file=$1
-
-    cm "$file" mp4
+    cm "$@" mp4
 }
 
 pdf()
