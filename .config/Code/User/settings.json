@@ -19,5 +19,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true
-    }
+    },
+    "editor.minimap.enabled": false
 }
