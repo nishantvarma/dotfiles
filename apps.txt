@@ -14,6 +14,7 @@ A minimal Linux desktop setup.
     fd (grep)
     ffmpeg
     flameshot (screenshot)
+    formiko (markdown)
     ghc (lang)
     git
       git-cola
