@@ -58,6 +58,11 @@ Shift + Mouse # Terminal Emulator
 
 synclient TapButton1=0
 
+# Ubuntu
+# =====
+
+gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+
 # Urxvt
 # =====
 
