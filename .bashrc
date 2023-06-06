@@ -81,10 +81,16 @@ g(){
     git push origin
 }
 
+gm()
+{
+    git difftool -t meld --dir-diff
+}
+
 ll()
 {
     ls -hlrt "$@"
 }
+
 
 mp3()
 {
