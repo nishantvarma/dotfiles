@@ -47,6 +47,7 @@ A minimal Linux desktop setup.
       gtk2-perl
     scid (chess)
     screenkey (screenshot)
+    sd (sed)
     shellcheck
     slock
     socat
