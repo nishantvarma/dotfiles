@@ -13,19 +13,12 @@ A minimal Linux desktop setup.
     docker
     fd (grep)
     ffmpeg
-    flameshot (screenshot)
     formiko (markdown)
     ghc (lang)
     git
       git-cola
-      git-gui
-      gitk
     gnu-netcat
     gvfs-mtp
-    highlight (code)
-    i3 (wm)
-    jwm (wm)
-    light
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
@@ -33,20 +26,19 @@ A minimal Linux desktop setup.
     mocp (music)
     most
     mpv (video)
-    mupdf (pdf)
     notify-osd
     plan9port
       rc (shell)
       rio (wm)
     python (lang)
-        black
+      black
     racket (lang)
+    recoll (grep)
     ripgrep (grep)
     rxvt-unicode
       gtk2
       gtk2-perl
     scid (chess)
-    screenkey (screenshot)
     sd (sed)
     shellcheck
     slock
@@ -74,7 +66,6 @@ A minimal Linux desktop setup.
       Rainbow CSV
       Remote Development
       Shellcheck
-    weechat (irc)
     wget
     xclip
     xorg-server-xephyr
