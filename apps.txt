@@ -6,6 +6,7 @@ A minimal Linux desktop setup.
     2bwm (wm)
     bindfs
     bmpanel (tray)
+    briss (pdf)
     clang-format (code)
     cloc (code)
     cudatext (editor)
