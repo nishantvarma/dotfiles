@@ -20,6 +20,7 @@ A minimal Linux desktop setup.
       git-cola
     gnu-netcat
     gvfs-mtp
+    k2pdfopt (ebook)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
