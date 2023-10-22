@@ -1,4 +1,5 @@
 {
+    "diffEditor.renderSideBySide": false,
     "extensions.ignoreRecommendations": true,
     "git.confirmSync": false,
     "gitlens.plusFeatures.enabled": false,
