@@ -21,6 +21,7 @@ A minimal Linux desktop setup.
     gnu-netcat
     gvfs-mtp
     k2pdfopt (crop)
+    lapce (editor)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
