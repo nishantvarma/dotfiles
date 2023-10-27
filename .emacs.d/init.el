@@ -1,6 +1,7 @@
 ; User Interface
 
 (setq mode-line-format nil)
+(setq ring-bell-function 'ignore)
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
@@ -33,11 +34,9 @@
 (require-package 'flycheck)
 (require-package 'ivy)
 (require-package 'magit)
-(require-package 'markdown-mode)
 (require-package 'minimap)
 (require-package 'swiper)
 (require-package 'treemacs)
-(require-package 'xclip)
 
 ; Settings
 
@@ -86,7 +85,7 @@
   (mapc #'disable-theme custom-enabled-themes))
 
 (if (display-graphic-p)
-    (load-theme 'panorama t)
+    (load-theme 'badwolf t)
   (load-theme 'base-16 t))
 
 ; Company
