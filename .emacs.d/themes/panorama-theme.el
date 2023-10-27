@@ -1,26 +1,25 @@
 (deftheme panorama "The panorama color theme for Emacs")
 
 (let ((class '((class color) (min-colors 89)))
-      (panorama-bg             "#121212")
-      (panorama-fg             "#f8f8f0")
-      (panorama-orange         "#ffb700")
-      (panorama-pink           "#ff2c4b")
-      (panorama-red            "#f43841")
-      (panorama-yellow         "#d7ff00")
-      (panorama-green          "#3fff00")
-      (panorama-wine           "#960050")
-      (panorama-teal           "#008080")
-      (panorama-aqua           "#00ffff")
-      (panorama-blue           "#0097ff")
-      (panorama-slateblue      "#7070f0")
-      (panorama-purple         "#af5fff")
-      (panorama-lightgray      "#444444")
-      (panorama-darkgray       "#333333"))
+      (panorama-bg "#121212")
+      (panorama-fg "#f8f8f0")
+      (panorama-orange "#ff7538")
+      (panorama-pink "#fa86c4")
+      (panorama-red "#f43841")
+      (panorama-yellow "#fff44f")
+      (panorama-green "#03c04a")
+      (panorama-wine "#960050")
+      (panorama-teal "#008080")
+      (panorama-aqua "#00ffff")
+      (panorama-blue "#00bfff")
+      (panorama-slateblue "#7070f0")
+      (panorama-purple "#9f2f68")
+      (panorama-lightgray "#444444")
+      (panorama-darkgray "#333333"))
 
   (custom-theme-set-faces
    
    'panorama
-
 
    ;; base
 

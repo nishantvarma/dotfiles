@@ -85,7 +85,7 @@
   (mapc #'disable-theme custom-enabled-themes))
 
 (if (display-graphic-p)
-    (load-theme 'badwolf t)
+    (load-theme 'panorama t)
   (load-theme 'base-16 t))
 
 ; Company
@@ -105,14 +105,15 @@
 
 ; Evil
 
+(global-set-key (kbd "C-z") 'evil-mode)
 (global-evil-leader-mode)
 (global-evil-surround-mode)
-(evil-mode)
 (setq evil-move-cursor-back nil)
 
 (evil-set-initial-state 'treemacs-mode 'emacs)
 (evil-set-initial-state 'magit-log-edit-mode 'emacs)
 
+(define-key evil-normal-state-map (kbd "C-z") 'evil-mode)
 (define-key evil-normal-state-map " " 'execute-extended-command)
 (define-key evil-normal-state-map "s" 'save-buffer)
 (define-key evil-normal-state-map "[b" 'evil-prev-buffer)
@@ -182,7 +183,3 @@
 ; Swiper
 
 (global-set-key (kbd "C-s") 'swiper)
-
-; Xclip
-
-(xclip-mode 1)
