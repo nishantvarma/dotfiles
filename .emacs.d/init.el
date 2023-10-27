@@ -7,7 +7,7 @@
 (tool-bar-mode -1)
 (toggle-frame-maximized)
 (add-to-list 'default-frame-alist
-             '(font . "DejaVu Sans Mono-10.5"))
+             '(font . "Ubuntu Mono-13"))
 
 ; Packages
 
