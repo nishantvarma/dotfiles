@@ -28,6 +28,7 @@
 
 (require-package 'counsel)
 (require-package 'company)
+(require-package `docker)
 (require-package 'evil)
 (require-package 'evil-leader)
 (require-package 'evil-surround)
@@ -37,6 +38,8 @@
 (require-package 'minimap)
 (require-package 'swiper)
 (require-package 'treemacs)
+(require-package 'vterm)
+
 
 ; Settings
 
