@@ -1,6 +1,7 @@
 {
     "diffEditor.renderSideBySide": false,
     "extensions.ignoreRecommendations": true,
+    "git.autoRepositoryDetection": "openEditors",
     "git.confirmSync": false,
     "gitlens.plusFeatures.enabled": false,
     "gitlens.mode.active": "zen",
