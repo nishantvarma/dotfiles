@@ -48,6 +48,7 @@ A minimal Linux desktop setup.
     socat
     sqlformat
     strace
+    sysstat
     ttf-dejavu
     ttf-liberation
     ttf-roboto
