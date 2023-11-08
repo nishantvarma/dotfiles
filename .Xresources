@@ -91,13 +91,13 @@ URxvt.allow_bold: true
 URxvt.cursorBlink: true
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
-URxvt.saveLines: 8192
-URxvt.scrollBar: true
-URxvt*scrollBar_right: true
+URxvt.saveLines: 0
+URxvt.scrollBar: false
 URxvt*scrollstyle: plain
 
 ! Keybindings
 
+URxvt.keysym.Control-l: command:\033c
 URxvt.keysym.Control-Shift-N: perl:new-window
 
 ! Plugins
