@@ -64,6 +64,7 @@ A minimal Linux desktop setup.
       Jupyter Keymap
       Jupyter Notebook Renderers
       Jupyter Slideshow
+      Leo Editor Integration with Visual Studio Code
       Markdown All in One
       Material Theme
       Pylance
