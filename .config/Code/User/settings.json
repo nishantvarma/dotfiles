@@ -21,5 +21,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true
-    }
+    },
+    "leoIntegration.leoEditorPath": "/home/tnishant/.local/lib/python3.8/site-packages"
 }
