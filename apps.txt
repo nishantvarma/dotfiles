@@ -7,35 +7,30 @@ A minimal Linux desktop setup.
     bindfs
     bmpanel (tray)
     briss (pdf)
-    clang-format (code)
-    cloc (code)
-    cudatext (editor)
+    clang-format (formatter)
+    cloc (linter)
     djview4
     docker
     fd (grep)
     ffmpeg
-    formiko (markdown)
     ghc (lang)
     git
       git-cola
     gnu-netcat
     gvfs-mtp
-    k2pdfopt (crop)
     leo (outliner)
-    lapce (editor)
     llpp (pdf)
     mat2 (cleaner)
     meld (diff)
     mkvtoolnix-gui (video)
-    mocp (music)
+    mocp (audio)
     most
     mpv (video)
-    notify-osd
     plan9port
       rc (shell)
       rio (wm)
     python (lang)
-      black
+      black (formatter)
     racket (lang)
     recoll (grep)
     ripgrep (grep)
@@ -48,6 +43,7 @@ A minimal Linux desktop setup.
     slock
     socat
     sqlformat
+    squeak (smalltalk)
     strace
     sysstat
     ttf-dejavu
@@ -85,8 +81,6 @@ A minimal Linux desktop setup.
 # ========
 
     Kivy
-    lite (editor)
-    observable
     TinyCC
 
 # Settings
