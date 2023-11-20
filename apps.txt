@@ -9,6 +9,7 @@ A minimal Linux desktop setup.
     briss (pdf)
     clang-format (formatter)
     cloc (linter)
+    cuis (smalltalk)
     djview4
     docker
     fd (grep)
@@ -43,7 +44,6 @@ A minimal Linux desktop setup.
     slock
     socat
     sqlformat
-    squeak (smalltalk)
     strace
     sysstat
     ttf-dejavu
