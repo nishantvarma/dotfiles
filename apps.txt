@@ -82,6 +82,7 @@ A minimal Linux desktop setup.
 
     Kivy
     TinyCC
+    Tkinter-Designer
 
 # Settings
 # ========
