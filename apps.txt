@@ -80,9 +80,8 @@ A minimal Linux desktop setup.
 # Research
 # ========
 
-    Kivy
+    NiceGUI
     TinyCC
-    Tkinter-Designer
 
 # Settings
 # ========
