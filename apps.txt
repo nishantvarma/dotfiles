@@ -77,12 +77,6 @@ A minimal Linux desktop setup.
     yt-dlp (youtube)
     zip
 
-# Research
-# ========
-
-    NiceGUI
-    TinyCC
-
 # Settings
 # ========
 
