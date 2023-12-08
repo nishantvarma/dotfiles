@@ -14,6 +14,7 @@
     ],
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.scrollback": 4096,
     "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "Material Theme Darker High Contrast",
     "workbench.editor.tabSizing": "shrink",
