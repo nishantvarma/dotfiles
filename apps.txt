@@ -19,6 +19,7 @@ A minimal Linux desktop setup.
       git-cola
     gnu-netcat
     gvfs-mtp
+    lapce (editor)
     leo (outliner)
     llpp (pdf)
     mat2 (cleaner)
