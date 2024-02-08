@@ -5,13 +5,6 @@
     "git.confirmSync": false,
     "gitlens.plusFeatures.enabled": false,
     "gitlens.mode.active": "zen",
-    "python.formatting.blackArgs": ["--line-length", "79"],
-    "python.linting.enabled": true,
-    "python.linting.pylamaEnabled": true,
-    "python.linting.pylamaArgs": [
-        "--linters", "pycodestyle,pydocstyle,pylint",
-        "--pydocstyle-convention", "google"
-    ],
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
     "terminal.integrated.scrollback": 4096,
