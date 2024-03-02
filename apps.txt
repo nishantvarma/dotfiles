@@ -69,6 +69,7 @@ A minimal Linux desktop setup.
       Rainbow CSV
       Remote Development
       Shellcheck
+      VS Code Speech
     wget
     xclip
     xorg-server-xephyr
