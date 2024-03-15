@@ -53,6 +53,7 @@ A minimal Linux desktop setup.
     unzip
     vimb (browser)
     vscode
+      Codeium
       Docker
       Excel Viewer
       GitLens
