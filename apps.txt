@@ -56,6 +56,7 @@ A minimal Linux desktop setup.
       Codeium
       Docker
       Excel Viewer
+      Git Graph
       GitLens
       Jupyter
       Jupyter Cell Tags
