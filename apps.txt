@@ -76,6 +76,7 @@ A minimal Linux desktop setup.
     xclip
     xorg-server-xephyr
     xorg-xhost
+    xournalpp (note)
     xsel
     xseticon
     yt-dlp (youtube)
