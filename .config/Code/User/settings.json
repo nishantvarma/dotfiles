@@ -10,6 +10,7 @@
     "terminal.integrated.scrollback": 4096,
     "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.editor.closeEmptyGroups": false,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.wrapTabs": false,
     "[python]": {
