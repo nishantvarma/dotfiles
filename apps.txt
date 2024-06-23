@@ -80,6 +80,7 @@ A minimal Linux desktop setup.
   xsel
   xseticon
   yt-dlp (youtube)
+  zed (editor)
   zip
 
 # Settings
