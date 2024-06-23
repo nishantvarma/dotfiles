@@ -3,87 +3,87 @@ A minimal Linux desktop setup.
 # Applications
 # ============
 
-    2bwm (wm)
-    bindfs
-    bmpanel (tray)
-    briss (pdf)
-    clang-format (formatter)
-    cloc (linter)
-    cuis (smalltalk)
-    djview4
-    docker
-    fd (grep)
-    ffmpeg
-    ghc (lang)
-    git
-      git-cola
-    gnu-netcat
-    gvfs-mtp
-    lapce (editor)
-    leo (outliner)
-    llpp (pdf)
-    mat2 (cleaner)
-    meld (diff)
-    mkvtoolnix-gui (video)
-    mocp (audio)
-    most
-    mpv (video)
-    plan9port
-      rc (shell)
-      rio (wm)
-    python (lang)
-      black (formatter)
-    racket (lang)
-    recoll (grep)
-    ripgrep (grep)
-    rxvt-unicode
-      gtk2
-      gtk2-perl
-    scid (chess)
-    sd (sed)
-    shellcheck
-    slock
-    socat
-    sqlformat
-    strace
-    sysstat
-    ttf-dejavu
-    ttf-liberation
-    ttf-roboto
-    unzip
-    vimb (browser)
-    vscode
-      Codeium
-      Docker
-      Excel Viewer
-      Git Graph
-      GitLens
-      Jupyter
-      Jupyter Cell Tags
-      Jupyter Keymap
-      Jupyter Notebook Renderers
-      Jupyter Slideshow
-      Leo Editor Integration with Visual Studio Code
-      Markdown All in One
-      Material Theme
-      Pylance
-      Python
-      Rainbow CSV
-      Remote Development
-      Shellcheck
-      VS Code Speech
-    wget
-    xclip
-    xorg-server-xephyr
-    xorg-xhost
-    xournalpp (note)
-    xsel
-    xseticon
-    yt-dlp (youtube)
-    zip
+  2bwm (wm)
+  bindfs
+  bmpanel (tray)
+  briss (pdf)
+  clang-format (formatter)
+  cloc (linter)
+  cuis (smalltalk)
+  djview4
+  docker
+  fd (grep)
+  ffmpeg
+  ghc (lang)
+  git
+    git-cola
+  gnu-netcat
+  gvfs-mtp
+  lapce (editor)
+  leo (outliner)
+  llpp (pdf)
+  mat2 (cleaner)
+  meld (diff)
+  mkvtoolnix-gui (video)
+  mocp (audio)
+  most
+  mpv (video)
+  plan9port
+    rc (shell)
+    rio (wm)
+  python (lang)
+    black (formatter)
+  racket (lang)
+  recoll (grep)
+  ripgrep (grep)
+  rxvt-unicode
+    gtk2
+    gtk2-perl
+  scid (chess)
+  sd (sed)
+  shellcheck
+  slock
+  socat
+  sqlformat
+  strace
+  sysstat
+  ttf-dejavu
+  ttf-liberation
+  ttf-roboto
+  unzip
+  vimb (browser)
+  vscode
+    Codeium
+    Docker
+    Excel Viewer
+    Git Graph
+    GitLens
+    Jupyter
+    Jupyter Cell Tags
+    Jupyter Keymap
+    Jupyter Notebook Renderers
+    Jupyter Slideshow
+    Leo Editor Integration with Visual Studio Code
+    Markdown All in One
+    Material Theme
+    Pylance
+    Python
+    Rainbow CSV
+    Remote Development
+    Shellcheck
+    VS Code Speech
+  wget
+  xclip
+  xorg-server-xephyr
+  xorg-xhost
+  xournalpp (note)
+  xsel
+  xseticon
+  yt-dlp (youtube)
+  zip
 
 # Settings
 # ========
 
-    Monospace Fonts: Consolas, Dejavu Sans Mono
-    Sans Fonts: Noto Sans, Roboto Sans
+  Monospace Fonts: Consolas, Dejavu Sans Mono
+  Sans Fonts: Noto Sans, Roboto Sans
