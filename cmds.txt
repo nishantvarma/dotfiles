@@ -25,6 +25,11 @@ find . -type f -name "*.mkv" -exec sh -c \
 
 Shift + Left # Playlist
 
+# Plan 9
+# ======
+
+Deps: libfontconfig1-dev libx11-dev x11proto-core-dev libxt-dev libxext-dev
+
 # Python
 # ======
 
