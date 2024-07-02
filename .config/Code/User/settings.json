@@ -16,6 +16,5 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true
-    },
-    "git.openRepositoryInParentFolders": "never"
+    }
 }
