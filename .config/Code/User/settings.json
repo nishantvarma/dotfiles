@@ -8,6 +8,7 @@
     "terminal.integrated.scrollback": 4096,
     "window.menuBarVisibility": "hidden",
     "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#e6db74",
         "terminal.background":"#181818",
         "terminal.foreground":"#f8f8f2",
         "terminal.ansiBlack":"#181818",
@@ -26,7 +27,7 @@
         "terminal.ansiBrightCyan":"#1fd6ff",
         "terminal.ansiWhite":"#f8f8f2",
         "terminal.ansiBrightWhite":"#f8f8f2",
-        "terminalCursor.foreground": "#f8f8f2"
+        "terminalCursor.foreground": "#e6db74"
     },
     "workbench.colorTheme": "Material Theme Darker High Contrast",
     "workbench.editor.closeEmptyGroups": false,
