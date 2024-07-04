@@ -3,18 +3,35 @@
     "extensions.ignoreRecommendations": true,
     "git.autoRepositoryDetection": "openEditors",
     "git.confirmSync": false,
-    "gitlens.plusFeatures.enabled": false,
-    "gitlens.mode.active": "zen",
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
     "terminal.integrated.scrollback": 4096,
     "window.menuBarVisibility": "hidden",
+    "workbench.colorCustomizations": {
+        "terminal.background":"#121212",
+        "terminal.foreground":"#f8f8f2",
+        "terminal.ansiBlack":"#121212",
+        "terminal.ansiBrightBlack":"#444444",
+        "terminal.ansiRed":"#ff614d",
+        "terminal.ansiBrightRed":"#ff614d",
+        "terminal.ansiGreen":"#50c878",
+        "terminal.ansiBrightGreen":"#50c878",
+        "terminal.ansiYellow":"#e6db74",
+        "terminal.ansiBrightYellow":"#e6db74",
+        "terminal.ansiBlue":"#128bd5",
+        "terminal.ansiBrightBlue":"#128bd5",
+        "terminal.ansiMagenta":"#f92672",
+        "terminal.ansiBrightMagenta":"#f92672",
+        "terminal.ansiCyan":"#1fd6ff",
+        "terminal.ansiBrightCyan":"#1fd6ff",
+        "terminal.ansiWhite":"#f8f8f2",
+        "terminal.ansiBrightWhite":"#f8f8f2"
+    },
     "workbench.colorTheme": "Material Theme Darker High Contrast",
     "workbench.editor.closeEmptyGroups": false,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.wrapTabs": false,
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true
     }
 }
