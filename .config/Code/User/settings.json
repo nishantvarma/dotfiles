@@ -25,7 +25,8 @@
         "terminal.ansiCyan":"#1fd6ff",
         "terminal.ansiBrightCyan":"#1fd6ff",
         "terminal.ansiWhite":"#f8f8f2",
-        "terminal.ansiBrightWhite":"#f8f8f2"
+        "terminal.ansiBrightWhite":"#f8f8f2",
+        "terminalCursor.foreground": "#f8f8f2"
     },
     "workbench.colorTheme": "Material Theme Darker High Contrast",
     "workbench.editor.closeEmptyGroups": false,
