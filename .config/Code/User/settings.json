@@ -8,9 +8,9 @@
     "terminal.integrated.scrollback": 4096,
     "window.menuBarVisibility": "hidden",
     "workbench.colorCustomizations": {
-        "terminal.background":"#121212",
+        "terminal.background":"#181818",
         "terminal.foreground":"#f8f8f2",
-        "terminal.ansiBlack":"#121212",
+        "terminal.ansiBlack":"#181818",
         "terminal.ansiBrightBlack":"#444444",
         "terminal.ansiRed":"#ff614d",
         "terminal.ansiBrightRed":"#ff614d",
