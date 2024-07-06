@@ -79,6 +79,7 @@ scratch/x11/button.c
 # Folders
 
 ./
+Data/
 dotfiles/
 notes/
 scratch/
