@@ -67,7 +67,6 @@ highlight -I -s molokai $% | vimb - >[2]/dev/null
 dotfiles/.clang-format
 dotfiles/.rcrc
 dotfiles/plan9.txt
-notes/the-zen.md
 scratch/scratch.c
 scratch/scratch.md
 scratch/scratch.py
@@ -84,11 +83,7 @@ dotfiles/
 notes/
 scratch/
 src/
-src/2bwm/
-src/bmpanel/
-src/ed/
-src/nms/
-src/plan9port/
+src/plan9/
 
 # Git
 
