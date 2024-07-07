@@ -84,6 +84,7 @@ notes/
 scratch/
 src/
 src/plan9/
+Unsynced/
 
 # Git
 
@@ -94,4 +95,4 @@ git push origin master:master
 
 # Python
 
-python $%    pyflakes    pylint
+python	pyflakes    pylint
