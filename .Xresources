@@ -34,7 +34,7 @@ xterm.color15: #f8f8f2
 ! Font
 
 xterm.vt100.faceName: DejaVu Sans Mono:style=Book:antialias=true
-xterm.vt100.faceSize: 10
+xterm.vt100.faceSize: 12
 xterm.vt100.geometry: 80x24
 
 ! General
@@ -82,8 +82,8 @@ URxvt.color15: #f8f8f2
 
 ! Font
 
-URxvt.font: xft:DejaVu Sans Mono:size=10.5:autohint=true:antialias=true
-URxvt.boldFont: xft:DejaVu Sans Mono:bold:size=10.5:autohint=true:antialias=true
+URxvt.font: xft:DejaVu Sans Mono:size=12:autohint=true:antialias=true
+URxvt.boldFont: xft:DejaVu Sans Mono:bold:size=12:autohint=true:antialias=true
 
 ! General
 
