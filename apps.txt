@@ -35,6 +35,7 @@ A minimal Linux desktop setup.
     rio (wm)
   python (lang)
     black (formatter)
+  qemacs (editor)
   racket (lang)
   recoll (grep)
   ripgrep (grep)
