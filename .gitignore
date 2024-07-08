@@ -105,6 +105,12 @@
 !.moc/keymap
 !.moc/themes
 
+# Moc
+
+!.qe/
+.qe/*
+!.qe/config
+
 # Textadept
 
 !.textadept
