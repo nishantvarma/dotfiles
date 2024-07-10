@@ -84,6 +84,7 @@ A minimal Linux desktop setup.
   xseticon
   yt-dlp (youtube)
   zed (editor)
+  zellij (multiplexer)
   zip
 
 # Settings
