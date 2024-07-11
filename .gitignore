@@ -13,6 +13,7 @@
 !.bash_profile
 !.bashrc
 !.clang-format
+!.edwin
 !.fzfrc
 !.gitconfig
 !.gitignore
