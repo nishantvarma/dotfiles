@@ -26,6 +26,7 @@ A minimal Linux desktop setup.
   llpp (pdf)
   mat2 (cleaner)
   meld (diff)
+  mit-scheme (scheme)
   mkvtoolnix-gui (video)
   mocp (audio)
   most
