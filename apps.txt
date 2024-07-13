@@ -22,6 +22,7 @@ A minimal Linux desktop setup.
   gvfs-mtp
   lapce (editor)
   leo (outliner)
+  lem (editor)
   lite-xl (editor)
   llpp (pdf)
   mat2 (cleaner)
