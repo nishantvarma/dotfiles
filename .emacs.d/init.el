@@ -40,7 +40,6 @@
 (require-package 'treemacs)
 (require-package 'vterm)
 
-
 ; Settings
 
 (show-paren-mode)
