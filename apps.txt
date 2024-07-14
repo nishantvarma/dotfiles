@@ -18,6 +18,7 @@ A minimal Linux desktop setup.
   ghc (lang)
   git
     git-cola
+    gitui
   gnu-netcat
   gvfs-mtp
   lapce (editor)
