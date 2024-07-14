@@ -1,4 +1,5 @@
-" Terminal Color Definitions
+" Variables
+" =========
 
 let s:black = '0'
 let s:red = '1'
@@ -10,13 +11,15 @@ let s:cyan = '6'
 let s:gray = '8'
 let s:white = '7'
 
-" Theme Setup
+" Setup
+" =====
 
 hi clear
 syntax reset
 let g:colors_name = 'base16-standard'
 
 " Highlighting Function
+" =====================
 
 function <sid>hi(group, ctermbg, ctermfg, attr)
     if a:ctermbg != ''
@@ -30,7 +33,8 @@ function <sid>hi(group, ctermbg, ctermfg, attr)
     endif
 endfunction
 
-" Vim Editor Colors
+" Editor
+" ======
 
 call <sid>hi('ColorColumn', s:gray, 'none', 'none')
 call <sid>hi('Conceal', s:gray, s:black, 'none')
@@ -72,7 +76,8 @@ call <sid>hi('Warning', s:black, s:white, 'none')
 call <sid>hi('WarningMsg', s:black, s:white, 'none')
 call <sid>hi('WildMenu', s:yellow, s:black, 'none')
 
-" Standard Syntax Colors
+" Syntax
+" ======
 
 call <sid>hi('Boolean', 'none', s:cyan, 'none')
 call <sid>hi('Character', 'none', s:green, 'none')
@@ -117,16 +122,11 @@ call <sid>hi('Type', 'none', s:blue, 'none')
 call <sid>hi('TypeDef', 'none', s:blue, 'none')
 call <sid>hi('Underlined', s:black, s:blue, 'underline')
 
-" Remove functions
-
-delfunction <sid>hi
-
-" Remove Color Variables
+" Cleanup
+" =======
 
 unlet s:black s:red s:green s:yellow s:blue s:magenta s:cyan s:white s:gray
-
-" TODO Create a function for linking?
-" TODO Support light background
+delfunction <sid>hi
 
 " Vim
 
