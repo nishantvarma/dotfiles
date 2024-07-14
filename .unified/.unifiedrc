@@ -28,13 +28,14 @@ command! SynStack call SynStack()
 set autoindent
 set autoread
 set backupdir=$HOME/.backup.d/
-set completeopt-=preview
 set cinoptions+=t0
+set completeopt-=preview
 set encoding=utf-8
 set expandtab
 set foldlevel=2
 set foldmethod=indent
 set foldnestmax=2
+set formatoptions-=t
 set hidden
 set ignorecase
 set incsearch
@@ -42,10 +43,10 @@ set laststatus=1
 set lazyredraw
 set noautochdir
 set nofoldenable
-set formatoptions-=t
 set nohlsearch
 set nonumber
 set noswapfile
+set notermguicolors
 set nowrap
 set path&
 set ruler
@@ -54,6 +55,7 @@ set smartcase
 set spelllang=en_us
 set spellsuggest=best,5
 set ssop=buffers
+set t_Co=16
 set tabstop=4
 set tags=./tags;
 set textwidth=79
