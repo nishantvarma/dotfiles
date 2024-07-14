@@ -117,6 +117,7 @@ nnoremap <Leader><Leader> :e#<CR>
 nnoremap <Leader>a ggVG
 nnoremap <Leader>c :close<CR>
 nnoremap <Leader>d o<Esc>k
+nnoremap <Leader>e :terminal %<CR>
 nnoremap <Leader>q :qall<CR>
 nnoremap <Leader>r :'{,'}s/\<<C-R>=expand('<cword>')<CR>\>/
 nnoremap <Leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
