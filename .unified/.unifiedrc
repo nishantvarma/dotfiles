@@ -6,7 +6,7 @@
 " Plugins
 " =======
 
-" Plugins should be placed in the */pack/bundle/start/ directory.
+" Plugins should be placed in the */pack/bundle/start directory.
 " The base path is ~/.vim and ~/.local/share/nvim/site respectively.
 
 " Utilities
