@@ -110,7 +110,7 @@ mp4()
     cm "$@" mp4
 }
 
-multiplexer()
+mux()
 {
     tmux -u "$@"
 }
