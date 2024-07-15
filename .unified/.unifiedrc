@@ -134,7 +134,7 @@ nnoremap <Leader>s :Rg<Space>
 nnoremap <Leader>u O<Esc>j
 nnoremap <Leader>v :let @_=system("start-terminal zsh -c tig")<CR>
 nnoremap <Leader>w :%s/\s\+$<CR>
-nnoremap <Leader>x :bdelete<CR>
+nnoremap <Leader>x :bprevious<BAR>bdelete#<CR>
 nnoremap <Leader>X :bufdo bdelete<CR>
 nnoremap <Leader>y :let @+=expand("%:p")<CR>
 nnoremap <Leader>Y :let @+=expand("%:p:h")<CR>
@@ -152,6 +152,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-Right> <C-]>
 nnoremap <C-Left> <C-T>
+
+"Terminal
+
+tnoremap <Esc> <C-\><C-n>
 
 " Plugins
 " =======
