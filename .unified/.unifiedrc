@@ -56,6 +56,8 @@ set shiftwidth=4
 set smartcase
 set spelllang=en_us
 set spellsuggest=best,5
+set splitbelow
+set splitright
 set ssop=buffers
 set t_Co=16
 set tabstop=4
@@ -120,9 +122,11 @@ nnoremap ]t :tabnext<CR>
 
 nnoremap <Leader><Leader> :e#<CR>
 nnoremap <Leader>a ggVG
+nnoremap <Leader>b :Telescope buffers<CR>
 nnoremap <Leader>c :close<CR>
 nnoremap <Leader>d o<Esc>k
 nnoremap <Leader>e :terminal %<CR>
+nnoremap <Leader>f :Telescope find_files cwd=
 nnoremap <Leader>q :qall<CR>
 nnoremap <Leader>r :'{,'}s/\<<C-R>=expand("<cword>")<CR>\>/
 nnoremap <Leader>R :%s/\<<C-R>=expand("<cword>")<CR>\>/

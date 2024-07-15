@@ -7,5 +7,3 @@ set shada="none"
 au TermOpen * startinsert
 
 "TODO Clear ~/.local/share/nvim/shada/main.shada
-
-tnoremap <ESC> <C-\><C-N>:bd!<CR>

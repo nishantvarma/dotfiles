@@ -110,6 +110,11 @@ mp4()
     cm "$@" mp4
 }
 
+multiplexer()
+{
+    tmux -u "$@"
+}
+
 pdf()
 {
     exiftool -all= -overwrite_original "$@"
