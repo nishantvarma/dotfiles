@@ -88,6 +88,7 @@
 !.config/zellij/
 .config/zellij/*
 !.config/zellij/config.kdl
+!.config/zellij/layouts
 
 # Local
 
