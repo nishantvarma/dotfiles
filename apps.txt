@@ -9,6 +9,7 @@ A minimal Linux desktop setup.
   briss (pdf)
   clang-format (formatter)
   cloc (linter)
+  cudatext (editor)
   cuis (smalltalk)
   djview4
   docker
