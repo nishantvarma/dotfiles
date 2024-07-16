@@ -83,6 +83,12 @@
 .config/vimb/*
 !.config/vimb/config
 
+# Config > Zellij
+
+!.config/zellij/
+.config/zellij/*
+!.config/zellij/config.kdl
+
 # Local
 
 !.local/
