@@ -126,6 +126,7 @@ nnoremap <Leader>b :Telescope buffers sort_mru=true<CR>
 nnoremap <Leader>c :close<CR>
 nnoremap <Leader>d o<Esc>k
 nnoremap <Leader>e :NvimTreeToggle<CR>
+nnoremap <Leader>E :Oil<CR>
 nnoremap <Leader>f :Telescope find_files cwd=
 nnoremap <Leader>k :bprevious<BAR>bdelete#<CR>
 nnoremap <Leader>q :qall<CR>
