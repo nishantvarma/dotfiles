@@ -7,6 +7,13 @@
 " is ~/.vim and ~/.local/share/nvim/site respectively. Check the init files for
 " plugins used.
 
+" Tips
+" ====
+
+" mkessions saves the current state.
+" m[A-Z] is a global bookmark.
+" m[a-z] is a local bookmark.
+
 " Utilities
 " =========
 
@@ -65,6 +72,7 @@ set tags=./tags;
 set textwidth=79
 set timeoutlen=1000
 set ttimeoutlen=0
+set viminfo='1000,f1
 set wildcharm=<c-z>
 set wildmenu
 set wildmode=full
