@@ -140,6 +140,8 @@ nnoremap <Leader>k :bprevious<BAR>bdelete#<CR>
 nnoremap <Leader>q :qall<CR>
 nnoremap <Leader>r :'{,'}s/\<<C-R>=expand("<cword>")<CR>\>/
 nnoremap <Leader>R :%s/\<<C-R>=expand("<cword>")<CR>\>/
+nnoremap <Leader>t :terminal<CR>
+nnoremap <Leader>T :terminal bash -c "cd %:p:h && bash"<CR>
 nnoremap <Leader>s :Rg<Space>
 nnoremap <Leader>u O<Esc>j
 nnoremap <Leader>v :let @_=system("start-terminal zsh -c tig")<CR>
