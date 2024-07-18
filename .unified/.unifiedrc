@@ -7,6 +7,8 @@
 " is ~/.vim and ~/.local/share/nvim/site respectively. Check the init files for
 " plugins used.
 
+" https://github.com/romainl/vim-qf
+
 " Tips
 " ====
 
