@@ -21,6 +21,7 @@ unalias ls 1>/dev/null 2>/dev/null
 # =======
 
 export EDITOR=vim
+export LANG=en_US.UTF-8
 if [[ "$TERM" != dumb  && "$TERM" != "emacs" ]]; then
     export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
 fi
@@ -108,11 +109,6 @@ mp3()
 mp4()
 {
     cm "$@" mp4
-}
-
-mux()
-{
-    tmux -u "$@"
 }
 
 pdf()
