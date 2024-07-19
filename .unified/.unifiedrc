@@ -137,12 +137,14 @@ nnoremap <Leader>c :close<CR>
 nnoremap <Leader>d o<Esc>k
 nnoremap <Leader>e :NvimTreeToggle<CR>
 nnoremap <Leader>E :Oil<CR>
-nnoremap <Leader>f :Telescope find_files cwd=
+nnoremap <Leader>f :Telescope find_files<CR>
+nnoremap <Leader>F :Telescope find_files cwd=
 nnoremap <Leader>k :bprevious<BAR>bdelete#<CR>
 nnoremap <Leader>q :qall<CR>
 nnoremap <Leader>r :'{,'}s/\<<C-R>=expand("<cword>")<CR>\>/
 nnoremap <Leader>R :%s/\<<C-R>=expand("<cword>")<CR>\>/
-nnoremap <Leader>s :Rg<Space>
+nnoremap <Leader>s :Telescope live_grep<CR>
+nnoremap <Leader>S :Telescope live_grep cwd=
 nnoremap <Leader>t :terminal<CR>
 nnoremap <Leader>T :terminal bash -c "cd %:p:h && bash"<CR>
 nnoremap <Leader>u O<Esc>j

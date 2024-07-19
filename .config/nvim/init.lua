@@ -24,4 +24,13 @@ package("nvim-tree", {
 })
 package("oil")
 package("outline")
-package("telescope") -- needs plenary
+package("telescope", { -- needs plenary
+  pickers = {
+    find_files = {
+      search_dirs = {".", "src"}
+    },
+    live_grep = {
+      search_dirs = {".", "src"}
+    }
+  }
+})
