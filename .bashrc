@@ -2,7 +2,6 @@
 # =========
 
 [[ -f /etc/bashrc ]] && source /etc/bashrc
-
 [[ -f /etc/bash_completion ]] && source /etc/bash_completion
 
 # Unsets
@@ -16,6 +15,11 @@ unset PROMPT_COMMAND
 # =======
 
 unalias ls 1>/dev/null 2>/dev/null
+
+# Settings
+# ========
+
+shopt -s autocd
 
 # Exports
 # =======
@@ -80,11 +84,6 @@ g(){
     git add -p &&
     git commit -m "Fixups" &&
     git push origin
-}
-
-gm()
-{
-    git difftool -t meld --dir-diff
 }
 
 i3()
