@@ -61,6 +61,14 @@ nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
 
+" Bookmarks
+" =========
+
+mark d ~/Data
+mark h ~
+mark n ~/Downloads
+mark u ~/Unsynced
+
 " Text
 " ====
 
