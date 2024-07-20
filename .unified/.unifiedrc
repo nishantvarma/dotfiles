@@ -8,6 +8,7 @@
 " plugins used.
 
 " https://github.com/romainl/vim-qf
+" https://github.com/kylechui/nvim-surround.git
 
 " Tips
 " ====
