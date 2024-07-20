@@ -13,7 +13,7 @@
 " Tips
 " ====
 
-" mkessions saves the current state.
+" mkession saves the current state.
 " m[A-Z] is a global bookmark.
 " m[a-z] is a local bookmark.
 
