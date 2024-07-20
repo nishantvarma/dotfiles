@@ -1,8 +1,10 @@
 # Starting
+# ========
 
 acme -m /mnt/acme .acme
 
 # Tips
+# ====
 
 1. Left click places the cursor at the selected position.
 2. Double left click selects text blocks (words, quotes, lines, brackets etc.)
@@ -47,6 +49,7 @@ acme -m /mnt/acme .acme
 14. Set `TERM=dumb` for `win` to work correctly.
 
 # Commands
+# ========
 
 9    fd    Font    g    "Indent on"    src    wc    win    winwatch
 
@@ -63,6 +66,7 @@ highlight -I -s molokai $% | vimb - >[2]/dev/null
 | sqlformat - -r -k upper -i lower
 
 # Files
+# =====
 
 dotfiles/.clang-format
 dotfiles/.rcrc
@@ -76,6 +80,7 @@ scratch/plan9/ls.c
 scratch/x11/button.c
 
 # Folders
+# =======
 
 ./
 Data/
@@ -87,6 +92,7 @@ src/plan9/
 Unsynced/
 
 # Git
+# ===
 
 git-cola
 win git add -p
@@ -94,5 +100,6 @@ git commit -m Fixups
 git push origin master:master
 
 # Python
+# ======
 
 python	pyflakes    pylint
