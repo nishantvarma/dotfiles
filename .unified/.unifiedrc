@@ -177,7 +177,7 @@ nnoremap <C-Left> <C-T>
 " Space
 " =====
 
-nnoremap <Space> za
+nnoremap <Space> :AerialToggle<CR>
 
 " Terminal
 " ========
