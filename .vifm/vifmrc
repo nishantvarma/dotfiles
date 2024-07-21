@@ -67,7 +67,7 @@ nmap yf :!echo %c:p | xclip %i<cr>
 mark d ~/Data
 mark h ~
 mark n ~/Downloads
-mark n ~/opt
+mark o ~/opt
 mark s ~/src
 mark t ~/scratch
 mark u ~/Unsynced
