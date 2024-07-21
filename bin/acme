@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-SHELL=rc sil 9 acme -a -m /mnt/acme "${@}"
