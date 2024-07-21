@@ -174,7 +174,13 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-Right> <C-]>
 nnoremap <C-Left> <C-T>
 
-"Terminal
+" Space
+" =====
+
+nnoremap <Space> za
+
+" Terminal
+" ========
 
 tnoremap <Esc> <C-\><C-n>
 
