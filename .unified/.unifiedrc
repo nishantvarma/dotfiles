@@ -14,9 +14,10 @@
 " Tips
 " ====
 
-" mkession saves the current state.
-" m[A-Z] is a global bookmark.
-" m[a-z] is a local bookmark.
+" m[A-Z]: global bookmark
+" m[a-z]: local bookmark
+" gx: open file using xdg-open
+" mkession: save current state
 
 " Utilities
 " =========
