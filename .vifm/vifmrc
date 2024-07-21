@@ -87,6 +87,12 @@ filetype *.djvu,*.pdf
 filetype *.doc,*.docx,.xls,*.xlsx
          \ libreoffice %f 2>/dev/null &
 
+" Image
+" =====
+
+filetype *.jpeg
+         \ feh %f 2>/dev/null &
+
 " Audio
 " =====
 
