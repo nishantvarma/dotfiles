@@ -4,6 +4,7 @@ A minimal Linux desktop setup.
 # ============
 
   2bwm (wm)
+  bat (cat)
   bindfs
   bmpanel (tray)
   briss (pdf)
