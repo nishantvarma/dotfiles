@@ -45,8 +45,8 @@ set completeopt-=preview
 set encoding=utf-8
 set expandtab
 set foldlevel=2
-set foldmethod=indent
-set foldnestmax=2
+set foldmethod=syntax
+set foldnestmax=4
 set formatoptions-=t
 set hidden
 set ignorecase

@@ -23,7 +23,6 @@ package("nvim-tree", {
   }
 })
 package("oil")
-package("outline")
 package("telescope", { -- needs plenary
   pickers = {
     find_files = {
@@ -33,4 +32,10 @@ package("telescope", { -- needs plenary
       search_dirs = {".", "src"}
     }
   }
+})
+package("aerial", {
+  layout = {
+    default_direction = "prefer_left"
+  },
+  manage_folds = true
 })
