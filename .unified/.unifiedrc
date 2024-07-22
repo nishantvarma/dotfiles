@@ -34,6 +34,7 @@ endfunction
 function! SynStack()
     echo map(synstack(line("."), col(".")), "synIDattr(v:val, 'name')")
 endfunction
+
 command! SynStack call SynStack()
 
 " Settings
@@ -49,6 +50,7 @@ set expandtab
 set foldlevel=2
 set foldmethod=syntax
 set foldnestmax=4
+set foldtext=getline(v:foldstart)
 set formatoptions-=t
 set hidden
 set ignorecase
@@ -86,11 +88,7 @@ set wrapmargin=0
 let &path .= "**"
 
 autocmd VimEnter * if argc() == 0 | call Start() | endif
-
-autocmd BufEnter *.md set filetype=markdown
-
 autocmd CmdwinEnter * map <buffer> <F5> <CR>q:
-
 autocmd FileType make set noexpandtab autoindent shiftwidth=4 tabstop=4
 
 " Keyboard Mappings
