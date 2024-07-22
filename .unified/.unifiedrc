@@ -151,11 +151,11 @@ nnoremap <Leader>r :'{,'}s/\<<C-R>=expand("<cword>")<CR>\>/
 nnoremap <Leader>R :%s/\<<C-R>=expand("<cword>")<CR>\>/
 nnoremap <Leader>s :Telescope live_grep<CR>
 nnoremap <Leader>S :Telescope live_grep cwd=
-nnoremap <Leader>t :terminal<CR>
-nnoremap <Leader>T :terminal bash -c "cd %:p:h && bash"<CR>
+nnoremap <Leader>t :rightbelow terminal<CR>
+nnoremap <Leader>T :rightbelow terminal bash -c "cd %:p:h && bash"<CR>
 nnoremap <Leader>u O<Esc>j
 nnoremap <Leader>w :%s/\s\+$<CR>
-nnoremap <Leader>x :terminal %<CR>
+nnoremap <Leader>x :rightbelow terminal %<CR>
 nnoremap <Leader>X :bufdo bdelete<CR>
 nnoremap <Leader>y :let @+=expand("%:p")<CR>
 nnoremap <Leader>Y :let @+=expand("%:p:h")<CR>

@@ -1,15 +1,16 @@
 Dotfiles for a minimal Linux system.
 
-- Distro: Any
-- Wm: 2bwm, rio
-- Panel: bmpanel
-- Launcher: dmenu
-- Terminal: tmux, urxvt
-- Shell: bash, rc
-- File Manager: vifm, thunar
-- Editor: acme, vim
-- Pdf: llpp
-- Audio: audacious, vlc
-- Video: mpv
-- Irc: hexchat
-- Browser: firefox
+Some apps:
+
+- wm: `2bwm`, `i3`, `jwm`, `rio`
+- panel: `bmpanel`
+- launcher: `dmenu`, `rofi`
+- terminal: `tmux`, `urxvt`
+- shell: `bash`, `rc`
+- file manager: `vifm`
+- editor: `acme`, `neovim`, `vim`
+- pdf: `llpp`
+- audio: `mocp`
+- video: `mpv`
+- irc: `weechat`
+- browser: `vimb`
