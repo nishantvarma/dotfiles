@@ -120,6 +120,7 @@ inoremap <C-S> <Esc>:write<CR>
 " =
 
 nnoremap gp gwip
+nnoremap gx :call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>
 
 " Square Bracket
 " ==============
@@ -145,7 +146,7 @@ nnoremap <Leader>f :Telescope find_files<CR>
 nnoremap <Leader>F :Telescope find_files cwd=
 nnoremap <Leader>g :let @_=system("start-terminal zsh -c tig")<CR>
 nnoremap <Leader>k :bprevious <BAR> bdelete#<CR>
-nnoremap <Leader>l :cexpr system("pyflakes " .  expand("%:p")) <BAR> copen<CR>
+nnoremap <Leader>l :cexpr system("pyflakes " . expand("%:p")) <BAR> copen<CR>
 nnoremap <Leader>q :qall<CR>
 nnoremap <Leader>r :'{,'}s/\<<C-R>=expand("<cword>")<CR>\>/
 nnoremap <Leader>R :%s/\<<C-R>=expand("<cword>")<CR>\>/
