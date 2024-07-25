@@ -10,6 +10,13 @@ local function package(name, opts)
   end
 end
 
+package("aerial", {
+  layout = {
+    default_direction = "prefer_left"
+  },
+  autojump = true,
+  manage_folds = true
+})
 package("nvim-tree", {
   renderer = {
     icons = {
@@ -22,6 +29,7 @@ package("nvim-tree", {
     }
   }
 })
+package("nvim-treesitter")
 package("oil")
 package("telescope", { -- needs plenary
   pickers = {
@@ -32,11 +40,4 @@ package("telescope", { -- needs plenary
       search_dirs = {".", "src"}
     }
   }
-})
-package("aerial", {
-  layout = {
-    default_direction = "prefer_left"
-  },
-  autojump = true,
-  manage_folds = true
 })
