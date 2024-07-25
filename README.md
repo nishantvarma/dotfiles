@@ -1,6 +1,6 @@
 Dotfiles for a minimal Linux system.
 
-Some apps:
+Some useful apps:
 
 - wm: `2bwm`, `i3`, `jwm`, `rio`
 - panel: `bmpanel`
