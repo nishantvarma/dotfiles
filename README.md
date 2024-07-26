@@ -9,7 +9,7 @@ Some useful apps:
 - shell: `bash`, `rc`
 - file manager: `vifm`
 - editor: `acme`, `neovim`, `vim`
-- pdf: `llpp`
+- pdf: `apvlv`
 - audio: `mocp`
 - video: `mpv`
 - irc: `weechat`

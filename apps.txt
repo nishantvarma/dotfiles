@@ -4,6 +4,7 @@ A minimal Linux desktop setup.
 # ============
 
 2bwm (wm)
+apvlv (pdf)
 bat (cat)
 bindfs
 bmpanel (tray)
@@ -25,7 +26,6 @@ gnu-netcat
 gvfs-mtp
 leo (outliner)
 lite-xl (editor)
-llpp (pdf)
 mat2 (cleaner)
 meld (diff)
 mkvtoolnix-gui (video)
