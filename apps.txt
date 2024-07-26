@@ -4,7 +4,6 @@ A minimal Linux desktop setup.
 # ============
 
 2bwm (wm)
-apvlv (pdf)
 bat (cat)
 bindfs
 bmpanel (tray)
@@ -88,6 +87,7 @@ xournalpp (note-taking)
 xsel
 xseticon
 yt-dlp (youtube)
+zathura (pdf)
 zed (editor)
 zip
 
