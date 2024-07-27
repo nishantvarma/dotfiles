@@ -35,6 +35,7 @@
 !.emacs.d/
 !.i3/
 !.icons/
+!.qutebrowser/
 !.unified/
 !.urxvt
 !.vim
