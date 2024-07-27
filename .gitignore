@@ -35,7 +35,6 @@
 !.emacs.d/
 !.i3/
 !.icons/
-!.qutebrowser/
 !.unified/
 !.urxvt
 !.vim
@@ -76,6 +75,12 @@
 !.config/jwm/
 .config/jwm/*
 !.config/jwm/jwmrc
+
+# Config > Qutebrowser
+
+!.config/qutebrowser/
+.config/qutebrowser/*
+!.config/qutebrowser/config.py
 
 # Config > Vimb
 
