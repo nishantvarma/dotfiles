@@ -98,6 +98,10 @@ ll()
     ls -hlrt "$@"
 }
 
+md2html()
+{
+  pandoc -f markdown "$1"
+}
 
 mp3()
 {
