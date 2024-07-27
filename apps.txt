@@ -39,6 +39,7 @@ plan9port
 python (lang)
   black (formatter)
 qemacs (editor)
+qutebrowser
 recoll (grep)
 ripgrep (grep)
 rxvt-unicode
