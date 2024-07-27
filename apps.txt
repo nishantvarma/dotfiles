@@ -16,6 +16,7 @@ djview4
 docker
 fd (find)
 ffmpeg
+formiko (markdown)
 freeplane (mind-map)
 ghc (lang)
 git
