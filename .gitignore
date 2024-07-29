@@ -54,6 +54,7 @@
 
 # Folders
 
+!.config/alacritty/
 !.config/conky/
 !.config/gtk-3.0/
 !.config/mpv/

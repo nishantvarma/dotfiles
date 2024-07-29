@@ -1,0 +1,31 @@
+[cursor]
+style = "Beam"
+thickness = 0.2
+
+[colors.primary]
+background = "#121212"
+foreground = "#f8f8f2"
+
+[colors.cursor]
+text = "#121212"
+cursor = "#ffffff"
+
+[colors.normal]
+black = "#121212"
+red = "#ff614d"
+green = "#50c878"
+yellow = "#e6db74"
+blue = "#128bd5"
+magenta = "#f92672"
+cyan = "#1fd6ff"
+white = "#f8f8f2"
+
+[colors.bright]
+black = "#444444"
+red = "#ff614d"
+green = "#50c878"
+yellow = "#e6db74"
+blue = "#128bd5"
+magenta = "#f92672"
+cyan = "#1fd6ff"
+white = "#f8f8f2"
