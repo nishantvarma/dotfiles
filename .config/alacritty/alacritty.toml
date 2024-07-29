@@ -30,5 +30,10 @@ magenta = "#f92672"
 cyan = "#1fd6ff"
 white = "#f8f8f2"
 
+[keyboard]
+bindings = [
+  { key = "F11", action = "ToggleFullscreen" }
+]
+
 [selection]
 save_to_clipboard = true
