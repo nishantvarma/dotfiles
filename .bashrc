@@ -26,7 +26,7 @@ shopt -s autocd
 
 export EDITOR=vim
 export LANG=en_US.UTF-8
-if [[ "$TERM" != dumb  && "$TERM" != "emacs" ]]; then
+if [[ "$TERM" != dumb ]]; then
     export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
 fi
 export PS1='$(basename "$(pwd)") % '
