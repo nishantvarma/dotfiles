@@ -16,8 +16,8 @@ red = "#ff614d"
 green = "#50c878"
 yellow = "#e6db74"
 blue = "#128bd5"
-magenta = "#f92672"
-cyan = "#1fd6ff"
+magenta = "#ee82ee"
+cyan = "#4bf0fc"
 white = "#f8f8f2"
 
 [colors.bright]
@@ -26,8 +26,8 @@ red = "#ff614d"
 green = "#50c878"
 yellow = "#e6db74"
 blue = "#128bd5"
-magenta = "#f92672"
-cyan = "#1fd6ff"
+magenta = "#ee82ee"
+cyan = "#4bf0fc"
 white = "#f8f8f2"
 
 [keyboard]
