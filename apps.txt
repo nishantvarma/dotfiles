@@ -54,6 +54,7 @@ socat
 sqlformat
 strace
 sysstat
+tgpt (llm)
 tmux (multiplexer)
 ttf-dejavu
 ttf-liberation
