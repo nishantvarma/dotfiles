@@ -55,7 +55,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 font pango:Consolas Bold Semi-Condensed 10
 
-for_window [class=".*"] title_format "%class"
+for_window [class="^.*"] title_format "%class"
 
 bar {
     status_command i3status
