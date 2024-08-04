@@ -24,7 +24,7 @@ green = "#50c878"
 yellow = "#e6db74"
 blue = "#128bd5"
 magenta = "#fd3f92"
-cyan = "#4bf0fc"
+cyan = "#64ffda"
 white = "#f8f8f2"
 
 [colors.bright]
@@ -34,7 +34,7 @@ green = "#50c878"
 yellow = "#e6db74"
 blue = "#128bd5"
 magenta = "#fd3f92"
-cyan = "#4bf0fc"
+cyan = "#64ffda"
 white = "#f8f8f2"
 
 [keyboard]
