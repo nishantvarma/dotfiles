@@ -17,7 +17,7 @@ bindsym $mod+w exec wp
 bindsym $mod+z exec "rofi -show window"
 bindsym $mod+x exec "rofi -show run -no-show-icons"
 
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 bindsym $mod+Tab focus mode_toggle
 bindsym $mod+space floating toggle
 
