@@ -1,8 +1,8 @@
 [font]
-size = 14
+size = 12
 
 [font.normal]
-family = "Tamsyn"
+family = "Consolas"
 style = "Regular"
 
 [cursor]
