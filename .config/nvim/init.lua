@@ -30,6 +30,7 @@ package("nvim-tree", {
   }
 })
 package("nvim-treesitter")
+package("various-textobjs", {useDefaultKeymaps = true})
 package("oil")
 package("telescope", { -- needs plenary
   pickers = {
