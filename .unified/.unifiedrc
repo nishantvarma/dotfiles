@@ -7,9 +7,10 @@
 " is ~/.vim and ~/.local/share/nvim/site respectively. Check the init files for
 " plugins used.
 
-" https://github.com/kylechui/nvim-surround.git
 " https://github.com/romainl/vim-qf
+" https://github.com/tpope/vim-commentary.git
 " https://github.com/tpope/vim-repeat.git
+" https://github.com/tpope/vim-surround.git
 
 " Tips
 " ====
