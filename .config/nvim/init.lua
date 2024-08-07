@@ -1,6 +1,9 @@
 vim.cmd("source $HOME/.unified/.unifiedrc")
 vim.cmd("source $HOME/.config/nvim/nvim.vim")
 
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+
 local function package(name, opts)
   local status, module = pcall(require, name)
   if status then
