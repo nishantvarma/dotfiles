@@ -89,7 +89,7 @@ set wrapmargin=0
 let &path .= "**"
 
 autocmd VimEnter * if argc() == 0 | call Start() | endif
-autocmd CmdwinEnter * map <buffer> <F5> <CR>q:
+autocmd BufEnter * try | lcd %:p:h | catch | endtry
 autocmd FileType make set noexpandtab autoindent shiftwidth=4 tabstop=4
 
 " Keyboard Mappings
