@@ -17,8 +17,7 @@ package("aerial", {
   layout = {
     default_direction = "prefer_left"
   },
-  autojump = true,
-  manage_folds = true
+  autojump = true
 })
 package("nvim-tree", {
   renderer = {
