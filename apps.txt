@@ -43,7 +43,6 @@ python (lang)
 qemacs (editor)
 qutebrowser
 recoll (grep)
-retext (markdown)
 ripgrep (grep)
 rxvt-unicode (terminal)
   gtk2
