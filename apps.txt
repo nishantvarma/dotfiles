@@ -4,10 +4,10 @@ A minimal Linux desktop setup.
 # ============
 
 2bwm (wm)
-alacritty (terminal-emulator)
-bat (cat)
+alacritty (terminal)
+bat (pager)
 bindfs
-bmpanel (tray)
+bmpanel
 briss (pdf)
 clang-format (formatter)
 cloc (linter)
@@ -43,8 +43,9 @@ python (lang)
 qemacs (editor)
 qutebrowser
 recoll (grep)
+retext (markdown)
 ripgrep (grep)
-rxvt-unicode
+rxvt-unicode (terminal)
   gtk2
   gtk2-perl
 scid (chess)
