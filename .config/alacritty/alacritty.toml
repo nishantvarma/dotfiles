@@ -1,8 +1,8 @@
 [font]
-size = 12
+size = 11
 
 [font.normal]
-family = "Consolas"
+family = "Go Mono"
 style = "Regular"
 
 [cursor]

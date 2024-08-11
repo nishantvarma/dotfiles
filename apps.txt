@@ -99,5 +99,5 @@ zip
 # Settings
 # ========
 
-Monospace Fonts: Consolas, Dejavu Sans Mono, Dina, Tamsyn, Terminus
+Monospace Fonts: Consolas, Dejavu Sans Mono, Dina, Go Mono, Tamsyn, Terminus
 Sans Fonts: Noto Sans, Roboto Sans
