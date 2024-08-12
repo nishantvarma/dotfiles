@@ -25,6 +25,8 @@ git
   gitui
 gnu-netcat
 gvfs-mtp
+harlequin (db)
+  harlequin-odbc
 leo (outliner)
 lite-xl (editor)
 mat2 (cleaner)
