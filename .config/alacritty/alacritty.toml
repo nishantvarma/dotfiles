@@ -1,8 +1,8 @@
 [font]
-size = 11
+size = 11.25
 
 [font.normal]
-family = "Go Mono"
+family = "Source Code Pro"
 style = "Regular"
 
 [cursor]
