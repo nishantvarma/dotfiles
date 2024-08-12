@@ -5,7 +5,7 @@ A minimal Linux desktop setup.
 
 2bwm (wm)
 alacritty (terminal)
-bat (pager)
+bat (cat)
 bindfs
 bmpanel
 briss (pdf)
