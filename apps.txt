@@ -63,7 +63,6 @@ tmux (multiplexer)
 ttf-dejavu
 ttf-liberation
 ttf-roboto
-typora (markdown)
 unzip
 vim (editor)
 vimb (browser)
@@ -95,6 +94,7 @@ xorg-xhost
 xournalpp (note-taking)
 xsel
 xseticon
+yn (markdown)
 yt-dlp (youtube)
 zathura (pdf)
 zed (editor)
