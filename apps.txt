@@ -94,7 +94,7 @@ xorg-xhost
 xournalpp (note-taking)
 xsel
 xseticon
-yn (markdown)
+Yank Note (markdown)
 yt-dlp (youtube)
 zathura (pdf)
 zed (editor)
