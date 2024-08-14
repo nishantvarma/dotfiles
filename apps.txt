@@ -4,7 +4,7 @@ A minimal Linux desktop setup.
 # ============
 
 2bwm (wm)
-alacritty (terminal)
+alacritty (terminal-emulator)
 bat (cat)
 bindfs
 bmpanel
@@ -43,11 +43,12 @@ plan9port
   rio (wm)
 python (lang)
   black (formatter)
+  rich (terminal-extras)
 qemacs (editor)
 qutebrowser
 recoll (grep)
 ripgrep (grep)
-rxvt-unicode (terminal)
+rxvt-unicode (terminal-emulator)
   gtk2
   gtk2-perl
 scid (chess)
