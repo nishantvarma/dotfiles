@@ -54,6 +54,7 @@ rxvt-unicode (terminal-emulator)
 scid (chess)
 sd (sed)
 shellcheck
+siyuan (notes)
 slock
 socat
 sqlformat
@@ -92,7 +93,7 @@ wget
 xclip
 xorg-server-xephyr
 xorg-xhost
-xournalpp (note-taking)
+xournalpp (notes)
 xsel
 xseticon
 Yank Note (markdown)
