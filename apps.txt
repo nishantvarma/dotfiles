@@ -1,109 +1,84 @@
-A minimal Linux desktop setup.
+# Operating System
+# ================
 
-# Applications
-# ============
+oberon [a2]
+plan9port [rc, rio]
 
-2bwm (wm)
-alacritty (terminal-emulator)
-bat (cat)
+# Programming
+# ===========
+
+erlang
+ghc
+python [black, pdoc]
+smalltalk [cuis]
+
+# Tools
+# =====
+
+alacritty
+bat
+cudatext
+fd
+git [cola, tig]
+harlequin [odbc]
+meld
+mkdocs
+neovim
+recoll
+rich
+ripgrep
+sd
+shellcheck
+tgpt
+tmux 
+treesitter
+vim
+
+# System
+# ======
+
 bindfs
-bmpanel
-briss (pdf)
-clang-format (formatter)
-cloc (linter)
-cudatext (editor)
-cuis (smalltalk)
-djview4
 docker
-fd (find)
 ffmpeg
-formiko (markdown)
-freeplane (mind-map)
-ghc (lang)
-git
-  git-cola
-  gitui
+fonts [consolas, dejavu, go]
 gnu-netcat
 gvfs-mtp
-harlequin (db)
-  harlequin-odbc
-leo (outliner)
-lite-xl (editor)
-mat2 (cleaner)
-meld (diff)
-mindforger (markdown)
-mkvtoolnix-gui (video)
-mocp (audio)
-most
-mpv (video)
-neovim (editor)
-open-interpreter (llm)
-plan9port
-  rc (shell)
-  rio (wm)
-python (lang)
-  black (formatter)
-  rich (terminal-extras)
-qemacs (editor)
-qutebrowser
-recoll (grep)
-ripgrep (grep)
-rxvt-unicode (terminal-emulator)
-  gtk2
-  gtk2-perl
-scid (chess)
-sd (sed)
-shellcheck
-siyuan (notes)
+mat2
 slock
 socat
-sqlformat
 strace
 sysstat
-tgpt (llm)
-tmux (multiplexer)
-ttf-dejavu
-ttf-liberation
-ttf-roboto
 unzip
-vim (editor)
-vimb (browser)
-vscode
-  Codeium
-  Docker
-  Excel Viewer
-  Git Graph
-  GitLens
-  Jupyter
-  Jupyter Cell Tags
-  Jupyter Keymap
-  Jupyter Notebook Renderers
-  Jupyter Slideshow
-  Leo Editor Integration with Visual Studio Code
-  Markdown All in One
-  Material Theme
-  Pylance
-  Python
-  Rainbow CSV
-  Remote Development
-  Shellcheck
-  VS Code Speech
-weechat (irc)
 wget
 xclip
 xorg-server-xephyr
 xorg-xhost
-xournalpp (notes)
 xsel
 xseticon
-Yank Note (markdown)
-yt-dlp (youtube)
-zathura (pdf)
-zed (editor)
+yt-dlp
 zip
 
-# Settings
-# ========
+# Apps
+# ====
 
-Monospace Fonts: Consolas, Dejavu Sans Mono, Dina, Go Mono, Tamsyn, Terminus
-Sans Fonts: Noto Sans, Roboto Sans
+briss
+djview4
+mkvtoolnix-gui
+mocp
+mpv
+qutebrowser
+scid
+weechat
+xournalpp
+zathura
+
+# R&D
+# ===
+
+2bwm
+bmpanel
+leo
+lite-xl
+zed
+siyuan
+open-interpreter
