@@ -30,7 +30,7 @@ ripgrep
 sd
 shellcheck
 tgpt
-tmux 
+tmux
 treesitter
 vim
 
