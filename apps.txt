@@ -79,6 +79,7 @@ zathura
 bmpanel
 leo
 lite-xl
-zed
-siyuan
+obsidian
 open-interpreter
+siyuan
+zed
