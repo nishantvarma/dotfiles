@@ -1,5 +1,5 @@
-# Operating System
-# ================
+# Operating Systems
+# =================
 
 oberon [a2]
 plan9port [rc, rio]
@@ -23,6 +23,7 @@ git [cola, tig]
 harlequin [odbc]
 meld
 mkdocs
+micro
 neovim
 recoll
 rich
