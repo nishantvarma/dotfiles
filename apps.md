@@ -23,6 +23,7 @@ meld
 mkdocs
 micro
 neovim
+presenterm
 recoll
 rich
 ripgrep
