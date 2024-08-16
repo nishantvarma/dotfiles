@@ -1,19 +1,17 @@
 # Operating Systems
-# =================
 
 oberon [a2]
 plan9port [rc, rio]
 
-# Programming
-# ===========
+# Programming Languages
 
+chez
 erlang
 ghc
 python [black, pdoc]
 smalltalk [cuis]
 
 # Tools
-# =====
 
 alacritty
 bat
@@ -36,7 +34,6 @@ treesitter
 vim
 
 # System
-# ======
 
 bindfs
 docker
@@ -60,7 +57,6 @@ yt-dlp
 zip
 
 # Apps
-# ====
 
 briss
 djview4
@@ -74,7 +70,6 @@ xournalpp
 zathura
 
 # R&D
-# ===
 
 2bwm
 bmpanel
