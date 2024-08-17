@@ -4,6 +4,20 @@ vim.cmd("source $HOME/.config/nvim/nvim.vim")
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
+function execute()
+  local filetype = vim.bo.filetype
+
+  local filetype_commands = {
+    markdown = ":terminal mdcat -p %"
+  }
+
+  if filetype_commands[filetype] then
+    vim.cmd(filetype_commands[filetype])
+  else
+    vim.cmd(":terminal %")
+  end
+end
+
 local function package(name, opts)
   local status, module = pcall(require, name)
   if status then
@@ -44,17 +58,3 @@ package("telescope", { -- needs plenary
     }
   }
 })
-
-function execute()
-    local filetype = vim.bo.filetype
-
-    local filetype_commands = {
-        markdown = ":terminal mdcat -p %"
-    }
-
-    if filetype_commands[filetype] then
-        vim.cmd(filetype_commands[filetype])
-    else
-        vim.cmd(":terminal %")
-    end
-end
