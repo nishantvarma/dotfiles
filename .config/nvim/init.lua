@@ -7,12 +7,12 @@ vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 function execute()
   local filetype = vim.bo.filetype
 
-  local filetype_commands = {
+  local commands = {
     markdown = ":terminal mdcat -p %"
   }
 
-  if filetype_commands[filetype] then
-    vim.cmd(filetype_commands[filetype])
+  if commands[filetype] then
+    vim.cmd(commands[filetype])
   else
     vim.cmd(":terminal %")
   end
