@@ -1,23 +1,23 @@
 # Operating Systems
 
-oberon [a2]
-plan9port [rc, rio]
+oberon (a2)
+plan9port: (rc, rio)
 
 # Programming Languages
 
 chez
 erlang
 ghc
-python [black, pdoc]
-smalltalk [cuis]
+python (black, pdoc)
+smalltalk (cuis)
 
 # Tools
 
 bat
 cudatext
 fd
-git [cola, tig]
-harlequin [odbc]
+git (cola, tig)
+harlequin (odbc)
 kitty
 meld
 mkdocs
@@ -32,14 +32,16 @@ shellcheck
 tgpt
 tmux
 treesitter
+vifm
 vim
+yazi
 
 # System
 
 bindfs
 docker
 ffmpeg
-fonts [consolas, dejavu, go]
+fonts (consolas, dejavu, go + nerd)
 gnu-netcat
 gvfs-mtp
 mat2
