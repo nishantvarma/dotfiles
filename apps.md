@@ -13,12 +13,12 @@ smalltalk [cuis]
 
 # Tools
 
-alacritty
 bat
 cudatext
 fd
 git [cola, tig]
 harlequin [odbc]
+kitty
 meld
 mkdocs
 micro
