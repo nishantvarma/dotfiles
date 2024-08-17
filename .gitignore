@@ -1,6 +1,6 @@
-# This repository is intended to be used as the home folder; so it whitelists
+# This repository is intended to be used as the home folder, so it whitelists
 # everything that is version-controlled. Folders that can be trusted are
-# completely whitelisted, others go through the same process!
+# exempted; others go through the same process.
 
 # Home
 
@@ -54,12 +54,12 @@
 
 # Folders
 
-!.config/alacritty/
 !.config/conky/
 !.config/gtk-3.0/
 !.config/kitty/
 !.config/mpv/
 !.config/nvim/
+!.config/presenterm/
 !.config/rofi/
 !.config/zathura/
 
