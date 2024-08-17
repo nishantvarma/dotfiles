@@ -44,3 +44,17 @@ package("telescope", { -- needs plenary
     }
   }
 })
+
+function execute()
+    local filetype = vim.bo.filetype
+
+    local filetype_commands = {
+        markdown = ":terminal mdcat -p %"
+    }
+
+    if filetype_commands[filetype] then
+        vim.cmd(filetype_commands[filetype])
+    else
+        vim.cmd(":terminal %")
+    end
+end
