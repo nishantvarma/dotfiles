@@ -42,7 +42,7 @@
 * bindfs
 * docker
 * ffmpeg
-* fonts (consolas, dejavu, go + nerd)
+* fonts (consolas, dejavu, go, noto + nerd)
 * gnu-netcat
 * gvfs-mtp
 * mat2
