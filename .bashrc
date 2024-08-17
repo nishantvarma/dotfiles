@@ -31,6 +31,10 @@ if [[ "$TERM" != dumb ]]; then
 fi
 export PS1='$(basename "$(pwd)") % '
 
+# Alias
+
+alias ls="ls --hyperlink=auto"
+
 # Functions
 # =========
 
