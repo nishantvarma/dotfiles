@@ -1,7 +1,7 @@
 # Operating Systems
 
 oberon (a2)
-plan9port: (rc, rio)
+plan9port: (acme, rc, rio)
 
 # Programming Languages
 
@@ -76,6 +76,7 @@ zathura
 
 2bwm
 bmpanel
+i3 (rofi)
 leo
 lite-xl
 obsidian
