@@ -61,6 +61,7 @@
 !.config/nvim/
 !.config/presenterm/
 !.config/rofi/
+!.config/yazi/
 !.config/zathura/
 
 # Config > Code
