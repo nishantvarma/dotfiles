@@ -80,6 +80,7 @@
 * i3 (rofi)
 * leo
 * lite-xl
+* nnn
 * obsidian
 * open-interpreter
 * siyuan
