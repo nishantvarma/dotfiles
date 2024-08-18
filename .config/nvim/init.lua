@@ -5,16 +5,22 @@ vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
 function execute()
+  local filename = vim.fn.expand("%")
   local filetype = vim.bo.filetype
 
   local commands = {
-    markdown = ":terminal mdcat -p %"
+    markdown = {"msg", "launch", "--type", "overlay", "mdcat", "-p", filename},
   }
 
-  if commands[filetype] then
-    vim.cmd(commands[filetype])
+  local command = commands[filetype]
+
+  if command then
+    vim.fn.jobstart(command, {detach = true})
   else
-    vim.cmd(":terminal %")
+    vim.fn.jobstart(
+        {"msg", "launch", "bash", "-c", filename .. " && read"},
+        {detach = true}
+    )
   end
 end
 
