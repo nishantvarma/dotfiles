@@ -9,7 +9,7 @@ function execute()
   local filetype = vim.bo.filetype
 
   local commands = {
-    markdown = {"msg", "launch", "--type", "overlay", "mdcat", "-p", filename},
+    markdown = {"msg", "launch", "--type", "overlay", "mdcat", "-p", filename}
   }
 
   local command = commands[filetype]
