@@ -77,6 +77,7 @@
 
 * 2bwm
 * bmpanel
+* helix
 * i3 (rofi)
 * leo
 * lite-xl
