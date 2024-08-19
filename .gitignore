@@ -56,6 +56,7 @@
 
 !.config/conky/
 !.config/gtk-3.0/
+!.config/helix/
 !.config/kitty/
 !.config/mpv/
 !.config/nvim/
@@ -72,6 +73,12 @@
 .config/Code/User/*
 !.config/Code/User/settings.json
 !.config/Code/User/keybindings.json
+
+# Config > Helix
+
+!.config/helix/
+.config/helix/*
+!.config/helix/config.toml
 
 # Config > Jwm
 
