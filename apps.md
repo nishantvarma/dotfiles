@@ -36,6 +36,7 @@
 * vifm
 * vim
 * yazi
+* zoxide
 
 # System
 
