@@ -13,21 +13,16 @@
 !.bash_profile
 !.bashrc
 !.clang-format
-!.edwin
-!.fzfrc
 !.gitconfig
 !.gitignore
 !.i3status.conf
-!.nexrc
 !.rcrc
 !.tmux.conf
 !.vimrc
 !.xinitrc
-!.zprofile
-!.zshrc
 !README.md
-!cmds.txt
 !apps.md
+!cmds.txt
 !plan9.txt
 
 # Folders
@@ -80,23 +75,11 @@
 .config/helix/*
 !.config/helix/config.toml
 
-# Config > Jwm
-
-!.config/jwm/
-.config/jwm/*
-!.config/jwm/jwmrc
-
 # Config > Qutebrowser
 
 !.config/qutebrowser/
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
-
-# Config > Vimb
-
-!.config/vimb/
-.config/vimb/*
-!.config/vimb/config
 
 # Local
 
@@ -119,12 +102,6 @@
 !.moc/config
 !.moc/keymap
 !.moc/themes
-
-# Moc
-
-!.qe/
-.qe/*
-!.qe/config
 
 # Unified
 

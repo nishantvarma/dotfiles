@@ -1,8 +1,0 @@
-set download-path=~/Downloads/
-set smooth-scrolling=true
-set webgl=true
-
-nmap + zI
-nmap - zO
-nmap = zz
-nmap q :quit<CR>
