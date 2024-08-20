@@ -13,6 +13,7 @@
 
 # Tools
 
+* asciidoctor
 * bat
 * cudatext
 * fd
