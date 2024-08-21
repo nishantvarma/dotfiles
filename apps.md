@@ -80,6 +80,7 @@
 * 2bwm
 * bmpanel
 * helix
+* kakoune
 * i3 (rofi)
 * leo
 * lite-xl
