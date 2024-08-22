@@ -10,3 +10,6 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal.space]
+z = [":pipe tgpt -c -q"]
