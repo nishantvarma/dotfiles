@@ -71,6 +71,7 @@
 !.config/helix/
 .config/helix/*
 !.config/helix/config.toml
+!.config/helix/theme.toml
 
 # Config > Qutebrowser
 
