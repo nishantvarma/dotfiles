@@ -11,5 +11,13 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+[keys.normal]
+X = ["extend_line_up", "extend_to_line_bounds"]
+A-x = "extend_to_line_bounds"
+
 [keys.normal.space]
 z = [":pipe tgpt -c -q"]
+
+[keys.select]
+X = ["extend_line_up", "extend_to_line_bounds"]
+A-x = "extend_to_line_bounds"
