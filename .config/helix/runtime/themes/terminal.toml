@@ -14,9 +14,9 @@
 "ui.menu" = { fg = "white" }
 "ui.menu.scroll" = { fg = "light-gray" }
 "ui.menu.selected" = { modifiers = ["reversed"] }
-"ui.popup" = { fg = "white", bg="gray" }
+"ui.popup" = { fg = "white", bg = "gray" }
 "ui.selection" = { bg = "gray" }
-"ui.statusline" = { fg = "white" }
+"ui.statusline" = { fg = "white", bg = "gray" }
 "ui.statusline.inactive" = { fg = "gray" }
 "ui.statusline.insert" = { fg = "black", bg = "green" }
 "ui.statusline.normal" = { fg = "black", bg = "blue" }
