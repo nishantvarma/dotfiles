@@ -13,7 +13,7 @@
 "ui.linenr.selected" = { fg = "white",  modifiers = ["bold"] }
 "ui.menu" = { fg = "white" }
 "ui.menu.scroll" = { fg = "light-gray" }
-"ui.menu.selected" = { modifiers = ["reversed"] }
+"ui.menu.selected" = { bg = "gray" }
 "ui.popup" = { fg = "white", bg = "gray" }
 "ui.selection" = { bg = "gray" }
 "ui.statusline" = { fg = "green", bg = "gray" }
