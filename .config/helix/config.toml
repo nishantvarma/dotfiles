@@ -1,4 +1,4 @@
-theme = "theme"
+theme = "terminal"
 
 [editor]
 gutters = ["diagnostics", "spacer", "diff"]
