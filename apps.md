@@ -20,6 +20,7 @@
 * git (cola, tig)
 * harlequin (odbc)
 * kitty
+* lynx
 * mdcat
 * meld
 * mkdocs
