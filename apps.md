@@ -8,7 +8,7 @@
 * chez
 * erlang
 * ghc
-* python (black, pdoc)
+* python (black, pdoc, pypy)
 * smalltalk (cuis)
 
 # Tools
