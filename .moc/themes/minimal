@@ -1,6 +1,6 @@
 background = white black
 current_time = white black
-directory = white black
+directory = blue black
 disabled = white black
 empty_mixer_bar = white black
 empty_time_bar = white black
