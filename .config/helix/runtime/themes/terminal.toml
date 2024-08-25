@@ -1,18 +1,19 @@
-"ui.background" = { fg = "white"}
-"ui.background.separator" = { fg = "gray" }
+"ui.background" = { bg = "black" }
+"ui.background.separator" = { fg = "red" }
 "ui.cursor" = { modifiers = ["reversed"] }
-"ui.cursor.match" = { fg = "light-yellow", underline = { color = "light-yellow", style = "line" } }
+"ui.cursor.match" = { fg = "yellow", underline = { color = "yellow", style = "line" } }
 "ui.cursor.primary" = { modifiers = ["reversed", "slow_blink"] }
 "ui.cursor.secondary" = { modifiers = ["reversed"] }
 "ui.cursorcolumn.primary" = { bg = "gray" }
 "ui.cursorcolumn.secondary" = { bg = "gray" }
-"ui.cursorline.primary" = { underline = { color = "light-gray", style = "line" } }
-"ui.cursorline.secondary" = { underline = { color = "light-gray", style = "line" } }
-"ui.help" = { fg = "light-gray" }
-"ui.linenr" = { fg = "light-gray" }
+"ui.cursorline.primary" = { underline = { color = "gray", style = "line" } }
+"ui.cursorline.secondary" = { underline = { color = "gray", style = "line" } }
+"ui.gutter" = "gray"
+"ui.help" = { fg = "gray" }
+"ui.linenr" = { fg = "gray" }
 "ui.linenr.selected" = { fg = "white",  modifiers = ["bold"] }
 "ui.menu" = { fg = "white" }
-"ui.menu.scroll" = { fg = "light-gray" }
+"ui.menu.scroll" = { fg = "gray" }
 "ui.menu.selected" = { bg = "gray" }
 "ui.popup" = { fg = "white", bg = "gray" }
 "ui.selection" = { bg = "gray" }
@@ -21,7 +22,7 @@
 "ui.statusline.insert" = { fg = "black", bg = "green" }
 "ui.statusline.normal" = { fg = "black", bg = "blue" }
 "ui.statusline.select" = { fg = "black", bg = "magenta" }
-"ui.text" = { fg = "black" }
+"ui.text" = { fg = "white" }
 "ui.text.focus" = { fg = "white", bg = "gray" }
 "ui.virtual.indent-guide" = "gray"
 "ui.virtual.inlay-hint" = { fg = "white", bg = "gray" }
@@ -32,50 +33,49 @@
 "ui.virtual.whitespace" = "gray"
 "ui.virtual.wrap" = "gray"
 "ui.window" = { fg = "gray" }
-"ui.gutter" = "gray"
 
-"info" = "light-blue"
-"hint" = "light-gray"
-"debug" = "light-gray"
-"warning" = "light-yellow"
-"error" = "light-red"
+"info" = "blue"
+"hint" = "gray"
+"debug" = "gray"
+"warning" = "yellow"
+"error" = "red"
 
-"diagnostic.debug" = { underline ={ color ="light-gray", style = "dashed" } }
-"diagnostic.error" = { underline = { color ="light-red", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "light-gray", style = "double_line" } }
-"diagnostic.info" = { underline = { color = "light-blue", style = "dotted" } }
-"diagnostic.warning" = { underline = { color = "light-yellow", style = "curl" } }
+"diagnostic.debug" = { underline ={ color ="gray", style = "dashed" } }
+"diagnostic.error" = { underline = { color ="red", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "gray", style = "double_line" } }
+"diagnostic.info" = { underline = { color = "blue", style = "dotted" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
 
 "attribute" = "yellow"
-"comment" = "light-gray"
+"comment" = "gray"
 "constant" = "yellow"
-"constant.character.escape" = "light-cyan"
+"constant.character.escape" = "cyan"
 "constant.numeric" = "yellow"
-"constructor" = "light-blue"
-"function" = "light-blue"
-"keyword" = "light-magenta"
-"label" = "light-magenta"
-"namespace" = "light-magenta"
-"special" = "light-blue"
-"string"  = "light-green"
-"type" = "light-yellow"
-"variable" = "light-red"
+"constructor" = "blue"
+"function" = "blue"
+"keyword" = "magenta"
+"label" = "magenta"
+"namespace" = "magenta"
+"special" = "blue"
+"string"  = "green"
+"type" = "yellow"
+"variable" = "red"
 "variable.other.member" = "green"
 
-"diff.delta" = "light-blue"
+"diff.delta" = "blue"
 "diff.delta.moved" = "blue"
-"diff.minus" = "light-red"
-"diff.plus" = "light-green"
+"diff.minus" = "red"
+"diff.plus" = "green"
 
-"markup.bold" = { fg = "light-yellow", modifiers = ["bold"] }
-"markup.heading" = "light-blue"
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading" = "blue"
 "markup.insert" = { fg = "green" }
-"markup.italic" = { fg = "light-magenta", modifiers = ["italic"] }
-"markup.link.text" = "light-red"
+"markup.italic" = { fg = "magenta", modifiers = ["italic"] }
+"markup.link.text" = "red"
 "markup.link.url" = { fg = "yellow", underline = { color = "yellow", style = "line"} }
-"markup.list" = "light-red"
+"markup.list" = "red"
 "markup.normal" = { fg = "blue" }
-"markup.quote" = "light-cyan"
+"markup.quote" = "cyan"
 "markup.raw" = "green"
 "markup.select" = { fg = "magenta" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
