@@ -21,7 +21,7 @@
 "ui.statusline.insert" = { fg = "black", bg = "green" }
 "ui.statusline.normal" = { fg = "black", bg = "blue" }
 "ui.statusline.select" = { fg = "black", bg = "magenta" }
-"ui.text" = { fg = "light-gray" }
+"ui.text" = { fg = "black" }
 "ui.text.focus" = { fg = "white", bg = "gray" }
 "ui.virtual.indent-guide" = "gray"
 "ui.virtual.inlay-hint" = { fg = "white", bg = "gray" }
