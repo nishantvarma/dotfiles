@@ -47,7 +47,7 @@ acme -m /mnt/acme .acme
 12. Fonts can be changed using the `fontsrv` command.
 13. `sed` and `xclip` can be used to do vertical selection.
 14. Set `TERM=dumb` for `win` to work correctly.
-15. B/E can be used to interact with the editor.
+15. `B`/`E` can be used to interact with the editor. `E` can be set as `$EDITOR`.
 
 # Commands
 # ========
