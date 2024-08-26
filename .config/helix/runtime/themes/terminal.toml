@@ -40,7 +40,7 @@
 "warning" = "yellow"
 "error" = "red"
 
-"diagnostic.debug" = { underline ={ color ="gray", style = "dashed" } }
+"diagnostic.debug" = { underline = { color ="gray", style = "dashed" } }
 "diagnostic.error" = { underline = { color ="red", style = "curl" } }
 "diagnostic.hint" = { underline = { color = "gray", style = "double_line" } }
 "diagnostic.info" = { underline = { color = "blue", style = "dotted" } }
