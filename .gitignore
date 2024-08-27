@@ -54,6 +54,7 @@
 !.config/nvim/
 !.config/presenterm/
 !.config/rofi/
+!.config/vis/
 !.config/yazi/
 !.config/zathura/
 
