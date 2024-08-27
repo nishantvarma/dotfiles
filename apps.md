@@ -88,5 +88,7 @@
 * nnn
 * obsidian
 * open-interpreter
+* sim
 * siyuan
+* vis
 * zed
