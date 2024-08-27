@@ -1,5 +1,15 @@
 require("vis")
 
+vis:command_register("fzf", function(argv, force, win, selection, range)
+    local command = "fzf"
+    local file = io.popen(command)
+    local output = file:read()
+    local success, msg, status = file:close()
+
+    vis:command(string.format("e '%s'", output))
+    vis:feedkeys("<vis-redraw>")
+end)
+
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
 
 vis.events.subscribe(vis.events.INIT, function()
