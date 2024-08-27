@@ -85,6 +85,7 @@
 * i3 (rofi)
 * leo
 * lite-xl
+* nextvi
 * nnn
 * obsidian
 * open-interpreter
