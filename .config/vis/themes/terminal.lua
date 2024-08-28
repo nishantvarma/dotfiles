@@ -59,7 +59,7 @@ lexers.STYLE_TAG_UNKNOWN = lexers.STYLE_TAG .. ",italics"
 -- Markdown
 
 lexers.STYLE_BOLD = "bold"
-lexers.STYLE_CODE = lexers.STYLE_EMBEDDED
+lexers.STYLE_CODE = "fore:white"
 lexers.STYLE_HR = "fore:white"
 for i = 1,6 do
     lexers["STYLE_HEADING_H" .. i] = lexers.STYLE_HEADING
