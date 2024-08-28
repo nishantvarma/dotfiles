@@ -11,6 +11,7 @@ vis:command_register("fzf", function(argv, force, win, selection, range)
 end)
 
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
+vis:map(vis.modes.NORMAL, " ", ":<Up>")
 
 vis.events.subscribe(vis.events.INIT, function()
     vis:command(string.format("open '%s'", "scratch/scratch.txt"))
