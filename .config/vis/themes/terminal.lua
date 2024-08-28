@@ -52,7 +52,7 @@ lexers.STYLE_PSEUDOELEMENT = "fore:white"
 -- HTML
 
 lexers.STYLE_ATTRIBUTE_UNKNOWN = lexers.STYLE_ATTRIBUTE .. ",italics"
-lexers.STYLE_TAG_DOCTYPE = lexers.STYLE_TAG .. ""
+lexers.STYLE_TAG_DOCTYPE = lexers.STYLE_TAG
 lexers.STYLE_TAG_SINGLE = lexers.STYLE_TAG
 lexers.STYLE_TAG_UNKNOWN = lexers.STYLE_TAG .. ",italics"
 
