@@ -81,7 +81,7 @@ dirty()
 
 dwm()
 {
-    sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
+    sil Xephyr -br -ac -noreset -fullscreen :1 &&
     sleep 0.1 &&
     DISPLAY=:1 sil dwm
 }
