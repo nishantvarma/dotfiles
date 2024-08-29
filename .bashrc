@@ -72,18 +72,18 @@ cm()
     done
 }
 
-dwm()
-{
-    sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :2 && # 1920x964
-    sleep 0.1 &&
-    DISPLAY=:1 sil dwm
-}
-
 dirty()
 {
     if ! git diff --quiet; then
         git status --porcelain && g
     fi
+}
+
+dwm()
+{
+    sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
+    sleep 0.1 &&
+    DISPLAY=:1 sil dwm
 }
 
 exts()
@@ -99,7 +99,7 @@ g(){
 
 i3()
 {
-    sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :2 && # 1920x964
+    sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
     sleep 0.1 &&
     DISPLAY=:1 sil i3
 }
