@@ -92,5 +92,6 @@
 * open-interpreter
 * sim
 * siyuan
+* st
 * vis
 * zed
