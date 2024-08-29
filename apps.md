@@ -13,35 +13,6 @@
 * python (black, pdoc, pypy)
 * smalltalk (cuis)
 
-# Tools
-
-* asciidoctor
-* bat
-* cudatext
-* fd
-* git (cola, tig)
-* harlequin (odbc)
-* kitty
-* lynx
-* mdcat
-* meld
-* mkdocs
-* micro
-* neovim
-* presenterm
-* recoll
-* rich
-* ripgrep
-* sd
-* shellcheck
-* tgpt
-* tmux
-* treesitter
-* vifm
-* vim
-* yazi
-* zoxide
-
 # System
 
 * bindfs
@@ -67,32 +38,58 @@
 
 # Apps
 
+* asciidoctor
+* bat
 * briss
 * djview4
+* fd
+* git (cola)
+* harlequin (odbc)
+* lynx
+* mdcat
+* meld
+* micro
 * mkvtoolnix-gui
 * mocp
 * mpv
+* nnn
+* presenterm
 * qutebrowser
+* recoll
+* rich
+* ripgrep
 * scid
+* sd
+* shellcheck
+* st
+* tabbed
+* tgpt
+* tmux
+* treesitter
+* vifm
+* vim
+* vis
 * weechat
 * xournalpp
 * zathura
+* zoxide
 
-# R&D
+# Extras
 
 * 2bwm
 * bmpanel
+* cudatext
 * helix
 * kakoune
+* kitty
 * i3 (rofi)
 * leo
 * lite-xl
-* nnn
+* mkdocs
+* neovim
 * obsidian
 * open-interpreter
 * sim
 * siyuan
-* st
-* tabbed
-* vis
+* yazi
 * zed
