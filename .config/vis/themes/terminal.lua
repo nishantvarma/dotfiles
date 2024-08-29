@@ -1,14 +1,14 @@
 local lexers = vis.lexers
 
 lexers.STYLE_COLOR_COLUMN = "back:red"
-lexers.STYLE_CURSOR = "back:white,fore:black"
+lexers.STYLE_CURSOR = "back:gray,fore:default"
 lexers.STYLE_CURSOR_LINE = "underlined"
-lexers.STYLE_CURSOR_PRIMARY = lexers.STYLE_CURSOR .. ",fore:yellow"
+lexers.STYLE_CURSOR_PRIMARY = "back:white,fore:black"
 lexers.STYLE_EOF = "fore:white"
 lexers.STYLE_INFO = "bold"
 lexers.STYLE_LINENUMBER = "fore:white"
 lexers.STYLE_LINENUMBER_CURSOR = lexers.STYLE_LINENUMBER
-lexers.STYLE_SELECTION = "back:gray"
+lexers.STYLE_SELECTION = "back:gray,fore:default"
 lexers.STYLE_SEPARATOR = lexers.STYLE_DEFAULT
 lexers.STYLE_STATUS = "back:gray,fore:yellow"
 lexers.STYLE_STATUS_FOCUSED = "back:gray,fore:green"
