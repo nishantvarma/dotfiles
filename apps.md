@@ -93,5 +93,6 @@
 * sim
 * siyuan
 * st
+* tabbed
 * vis
 * zed
