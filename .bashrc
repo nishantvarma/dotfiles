@@ -101,7 +101,7 @@ i3()
 {
     sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :2 && # 1920x964
     sleep 0.1 &&
-    DISPLAY=:2 sil i3
+    DISPLAY=:1 sil i3
 }
 
 ll()
