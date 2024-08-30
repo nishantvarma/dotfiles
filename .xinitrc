@@ -11,6 +11,7 @@ battery()
     done
 }
 
+synclient TapButton1=1
 xrdb -load "$HOME"/.Xresources
 xhost +local:
 battery &

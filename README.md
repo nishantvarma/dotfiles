@@ -29,6 +29,7 @@
 * unzip
 * wget
 * xclip
+* xserver-xorg-input-synaptics
 * xorg-server-xephyr
 * xorg-xhost
 * xpra
