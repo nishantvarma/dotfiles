@@ -45,6 +45,7 @@
 
 # Folders
 
+!.config/bat/
 !.config/conky/
 !.config/gtk-3.0/
 !.config/helix/

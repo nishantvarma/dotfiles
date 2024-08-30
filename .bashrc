@@ -25,6 +25,13 @@ shopt -s autocd
 # =======
 
 export EDITOR=vim
+export FZF_DEFAULT_OPTS="
+    --color fg:7,bg:0,hl:8
+    --color fg+:7,bg+:8,hl+:8
+    --color=info:1,prompt:2,pointer:3
+    --color=marker:4,spinner:5,header:6
+    --color=border:7
+"
 export LANG=en_US.UTF-8
 if [[ "$TERM" != dumb ]]; then
     export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
@@ -32,6 +39,7 @@ fi
 export PS1='$(basename "$(pwd)") % '
 
 # Alias
+# =====
 
 alias ls="ls --hyperlink=auto"
 
@@ -42,7 +50,7 @@ bkp()
 {
     local repo
 
-    repo=$(basename $(git remote get-url origin))
+    repo=$(basename "$(git remote get-url origin)")
 
     git bundle create ~/scratch/"${repo%.git}" --all
 }
