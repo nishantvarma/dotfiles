@@ -87,13 +87,6 @@ dirty()
     fi
 }
 
-dwm()
-{
-    sil Xephyr -br -ac -noreset -fullscreen :1 &&
-    sleep 0.1 &&
-    DISPLAY=:1 sil dwm
-}
-
 exts()
 {
     find . -type f | grep -oE '\.(\w+)$' | sort -u
@@ -143,7 +136,14 @@ plan9()
     qemu-system-i386 -cdrom plan9.iso
 }
 
-rio()
+vdwm()
+{
+    sil Xephyr -br -ac -noreset -fullscreen :1 &&
+    sleep 0.1 &&
+    DISPLAY=:1 sil dwm
+}
+
+vrio()
 {
     sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
     sleep 0.1 &&

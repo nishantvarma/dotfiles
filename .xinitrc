@@ -13,7 +13,6 @@ battery()
 
 xrdb -load "$HOME"/.Xresources
 xhost +local:
-sil conky
 battery &
-
-wait
+feh --bg-scale "$HOME"/.wallpapers/gradient-cyan.png
+exec dwm
