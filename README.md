@@ -31,6 +31,7 @@
 * xclip
 * xorg-server-xephyr
 * xorg-xhost
+* xpra
 * xsel
 * xseticon
 * yt-dlp
