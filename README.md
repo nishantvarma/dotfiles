@@ -95,5 +95,6 @@
 * open-interpreter
 * sim
 * siyuan
+* vscode (asciidoctor, gitlens, material theme, remote development)
 * yazi
 * zed
