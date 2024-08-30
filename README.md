@@ -39,10 +39,12 @@
 
 # Apps
 
+* abduco
 * asciidoctor
 * bat
 * briss
 * djview4
+* dvtm
 * fd
 * git (cola)
 * harlequin (odbc)
