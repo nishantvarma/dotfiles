@@ -15,8 +15,6 @@ end)
 -- Normal Keys
 vis:map(vis.modes.NORMAL, " ", ":execute commands<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
-vis:map(vis.modes.VISUAL, "s", "<Escape>sgv")
-vis:map(vis.modes.VISUAL_LINE, "s", "<Escape>sgv")
 
 -- The G Key
 vis:map(vis.modes.VISUAL, "gf", function()
@@ -25,8 +23,7 @@ vis:map(vis.modes.VISUAL, "gf", function()
 end)
 
 -- Leader Key
-vis:map(vis.modes.NORMAL, "\\\\", function()
-end)
+vis:map(vis.modes.NORMAL, "\\\\", "")
 vis:map(vis.modes.NORMAL, "\\f", ":execute preview<Enter>")
 vis:map(vis.modes.NORMAL, "\\q", ":q<Enter>")
 
