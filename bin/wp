@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-wallpaper=$(ls -1 "$HOME"/.wallpapers | rofi -dmenu -b -p wallpaper:)
+wallpaper=$(ls -1 "$HOME"/.wallpapers | dmenu )
 feh --bg-scale "$HOME"/.wallpapers/"$wallpaper"
