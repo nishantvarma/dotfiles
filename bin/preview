@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo e "$(fd -t f -X grep -lI . | fzf --preview "batcat {}")"
