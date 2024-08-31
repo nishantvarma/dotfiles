@@ -96,5 +96,6 @@
 * sim
 * siyuan
 * vscode (asciidoctor, gitlens, material theme, remote development)
+* wily
 * yazi
 * zed
