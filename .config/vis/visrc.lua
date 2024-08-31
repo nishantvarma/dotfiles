@@ -12,22 +12,18 @@ vis:command_register("execute", function(argv, force, win, selection, range)
     vis:feedkeys("<vis-redraw>")
 end)
 
--- Normal Keys
 vis:map(vis.modes.NORMAL, " ", ":execute commands<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
 
--- The G Key
 vis:map(vis.modes.VISUAL, "gf", function()
     local win = vis.win
     local text = win.file:content(win.selection.range)
 end)
 
--- Leader Key
 vis:map(vis.modes.NORMAL, "\\\\", "")
 vis:map(vis.modes.NORMAL, "\\f", ":execute preview<Enter>")
 vis:map(vis.modes.NORMAL, "\\q", ":q<Enter>")
 
--- Cut Copy Paste
 vis:map(vis.modes.NORMAL, "<C-c>", '"+yy')
 vis:map(vis.modes.VISUAL, "<C-c>", '"+ygv')
 vis:map(vis.modes.NORMAL, "<C-v>", '"+p')
