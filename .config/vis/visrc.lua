@@ -2,7 +2,6 @@ require("vis")
 
 vis:command_register("execute", function(argv, force, win, selection, range)
     local command = table.concat(argv, " ")
-    vis:info("executing " .. command)
     local file = io.popen(command)
     local output = file:read()
     local success, msg, status = file:close()
