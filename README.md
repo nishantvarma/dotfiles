@@ -3,7 +3,7 @@
 # Operating Systems
 
 * oberon (a2)
-* plan9port: (acme, rc, rio)
+* plan9port (acme, rc, rio)
 
 # Programming Languages
 
