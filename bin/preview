@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-echo e "$(fd -t f -X grep -lI . | fzf --preview "batcat {}")"
+dir=${1:-"$(pwd)"} &&
+echo "e $(fd . $dir -t f -X grep -lI . | fzf --preview 'batcat {}')"
