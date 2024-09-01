@@ -97,4 +97,5 @@ I like [suckless](https://suckless.org/)™ tools.
 * siyuan
 * vscode (asciidoctor, gitlens, material theme, remote development)
 * wily
-* yazi* zed
+* yazi
+* zed
