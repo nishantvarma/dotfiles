@@ -9,6 +9,12 @@ acme -m /mnt/acme
 as --32 <src> -o <obj>
 ld -melf_i386 <obj> -o <bin>
 
+# Dvtm
+# ====
+
+dvtm -c fifo
+echo [create|focus|tag] ... > fifo
+
 # Gnome
 # =====
 
