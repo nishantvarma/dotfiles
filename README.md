@@ -1,4 +1,4 @@
-[Suckless](https://suckless.org/)
+I like [suckless ™](https://suckless.org/) tools.
 
 # Operating Systems
 
