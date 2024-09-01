@@ -17,10 +17,6 @@ end)
 
 vis:map(vis.modes.NORMAL, " ", ":exec vis-cmds<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
-vis:map(vis.modes.VISUAL, "gf", function()
-    local win = vis.win
-    local text = win.file:content(win.selection.range)
-end)
 backslash = "\\"
 vis:map(vis.modes.NORMAL, backslash .. "d", "o<Escape>")
 vis:map(vis.modes.NORMAL, backslash .. "f", ":exec vis-preview<Enter>")
