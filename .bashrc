@@ -31,6 +31,7 @@ export FZF_DEFAULT_OPTS="
     --color=info:1,prompt:2,pointer:3
     --color=marker:4,spinner:5,header:6
     --color=border:7
+    --tac
 "
 export LANG=en_US.UTF-8
 if [[ "$TERM" != dumb ]]; then
