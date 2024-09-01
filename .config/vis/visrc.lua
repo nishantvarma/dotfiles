@@ -14,10 +14,10 @@ vis:command_register("exec", function(argv, force, win, selection, range)
     vis:feedkeys("<vis-redraw>")
 end)
 
+backslash = "\\"
 
 vis:map(vis.modes.NORMAL, " ", ":exec vis-cmds<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
-backslash = "\\"
 vis:map(vis.modes.NORMAL, backslash .. "d", "o<Escape>")
 vis:map(vis.modes.NORMAL, backslash .. "f", ":exec vis-preview<Enter>")
 vis:map(vis.modes.NORMAL, backslash .. "F", ":exec vis-preview ")
