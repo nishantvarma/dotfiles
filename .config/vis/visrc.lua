@@ -6,7 +6,10 @@ vis:command_register("exec", function(argv, force, win, selection, range)
     local output = file:read()
     local success, msg, status = file:close()
     if output then
-        vis:command(output)
+        for part in string.gmatch(output, "[^:\n]+") do
+            local command = part:match("^%s*(.-)%s*$")
+            vis:command(command)
+        end
     end
     vis:feedkeys("<vis-redraw>")
 end)
