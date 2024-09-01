@@ -1,13 +1,13 @@
 require("vis")
 
 vis:command_register("exec", function(argv, force, win, selection, range)
-    local cmd = table.concat(argv, " ")
-    local file = io.popen(cmd)
+    local command = table.concat(argv, " ")
+    local file = io.popen(command)
     local output = file:read()
-    local success, msg, status = file:close()
+    local success, message, status = file:close()
     if output then
         for part in string.gmatch(output, "[^:\n]+") do
-            local command = part:match("^%s*(.-)%s*$")
+            command = part:match("^%s*(.-)%s*$")
             vis:command(command)
         end
     end
@@ -16,7 +16,7 @@ end)
 
 backslash = "\\"
 
-vis:map(vis.modes.NORMAL, " ", ":exec vis-cmds<Enter>")
+vis:map(vis.modes.NORMAL, " ", ":exec vis-commands<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
 vis:map(vis.modes.NORMAL, backslash .. "d", "o<Escape>")
 vis:map(vis.modes.NORMAL, backslash .. "f", ":exec vis-preview<Enter>")
