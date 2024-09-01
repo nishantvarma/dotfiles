@@ -1,4 +1,0 @@
-#!/bin/bash
-
-vncserver -kill :2
-vncserver :2  -xstartup "${HOME}"/.vnc/xstartup.turbovnc.2bwm

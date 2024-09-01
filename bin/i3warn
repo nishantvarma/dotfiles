@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-i3-nagbar -t warning -f "pango:Terminus Bold 8" "$@"

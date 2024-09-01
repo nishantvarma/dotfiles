@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-kitten @ --to "$KITTY_LISTEN_ON" "$@"

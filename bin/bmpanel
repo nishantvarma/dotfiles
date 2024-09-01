@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-killall bmpanel
-sil "$HOME"/src/bmpanel/bmpanel \
-    "$HOME"/src/bmpanel/themes/darkmini

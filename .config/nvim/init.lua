@@ -4,26 +4,6 @@ vim.cmd("source $HOME/.config/nvim/nvim.vim")
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
-function execute()
-  local filename = vim.fn.expand("%")
-  local filetype = vim.bo.filetype
-
-  local commands = {
-    markdown = {"msg", "launch", "--type", "overlay", "mdcat", "-p", filename}
-  }
-
-  local command = commands[filetype]
-
-  if command then
-    vim.fn.jobstart(command, {detach = true})
-  else
-    vim.fn.jobstart(
-        {"msg", "launch", "bash", "-c", filename .. " && read"},
-        {detach = true}
-    )
-  end
-end
-
 local function package(name, opts)
   local status, module = pcall(require, name)
   if status then
