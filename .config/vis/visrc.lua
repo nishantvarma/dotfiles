@@ -14,21 +14,20 @@ vis:command_register("exec", function(argv, force, win, selection, range)
     vis:feedkeys("<vis-redraw>")
 end)
 
+leader = "\\"
+
 vis:map(vis.modes.NORMAL, " ", ":exec vis-cmds<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
-
 vis:map(vis.modes.VISUAL, "gf", function()
     local win = vis.win
     local text = win.file:content(win.selection.range)
 end)
-
-leader = "\\"
-
+vis:map(vis.modes.NORMAL, leader .. "d", "o<Escape>")
 vis:map(vis.modes.NORMAL, leader .. "f", ":exec vis-preview<Enter>")
 vis:map(vis.modes.NORMAL, leader .. "F", ":exec vis-preview ")
 vis:map(vis.modes.NORMAL, leader .. "q", ":q<Enter>")
 vis:map(vis.modes.NORMAL, leader .. "s", ":exec vis-search ")
-
+vis:map(vis.modes.NORMAL, leader .. "u", "O<Escape>")
 vis:map(vis.modes.NORMAL, "<C-Up>", "<vis-window-prev>")
 vis:map(vis.modes.NORMAL, "<C-Down>", "<vis-window-next>")
 
