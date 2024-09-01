@@ -22,6 +22,7 @@ end)
 vis:map(vis.modes.NORMAL, "\\f", ":execute preview<Enter>")
 vis:map(vis.modes.NORMAL, "\\F", ":execute preview ")
 vis:map(vis.modes.NORMAL, "\\q", ":q<Enter>")
+vis:map(vis.modes.NORMAL, "\\s", ":execute search ")
 
 vis:map(vis.modes.NORMAL, "<Tab>", function()
 end)
