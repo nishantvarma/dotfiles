@@ -1,11 +1,11 @@
 I like [suckless](https://suckless.org/)™ tools.
 
-# Operating Systems
+# operating systems
 
 * oberon (a2)
 * plan9port (acme, rc, rio)
 
-# Programming Languages
+# programming languages
 
 * chez
 * erlang
@@ -13,7 +13,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * python (black, pdoc, pypy)
 * smalltalk (cuis)
 
-# System
+# system
 
 * bindfs
 * docker
@@ -38,7 +38,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * yt-dlp
 * zip
 
-# Apps
+# apps
 
 * abduco
 * asciidoctor
@@ -78,7 +78,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * zathura
 * zoxide
 
-# Extras
+# extras
 
 * 2bwm
 * bmpanel
@@ -97,5 +97,4 @@ I like [suckless](https://suckless.org/)™ tools.
 * siyuan
 * vscode (asciidoctor, gitlens, material theme, remote development)
 * wily
-* yazi
-* zed
+* yazi* zed
