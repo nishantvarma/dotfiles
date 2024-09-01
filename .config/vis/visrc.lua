@@ -29,8 +29,8 @@ vis:map(vis.modes.NORMAL, leader .. "F", ":exec vis-preview ")
 vis:map(vis.modes.NORMAL, leader .. "q", ":q<Enter>")
 vis:map(vis.modes.NORMAL, leader .. "s", ":exec vis-search ")
 
-vis:map(vis.modes.NORMAL, "<Tab>", function()
-end)
+vis:map(vis.modes.NORMAL, "<C-Up>", "<vis-window-prev>")
+vis:map(vis.modes.NORMAL, "<C-Down>", "<vis-window-next>")
 
 vis.events.subscribe(vis.events.INIT, function()
     vis:command("set theme terminal")
