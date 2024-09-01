@@ -33,6 +33,7 @@ vis:map(vis.modes.NORMAL, "<C-Up>", "<vis-window-prev>")
 vis:map(vis.modes.NORMAL, "<C-Down>", "<vis-window-next>")
 
 vis.events.subscribe(vis.events.INIT, function()
+    vis:command("set autoindent on")
     vis:command("set theme terminal")
 end)
 
