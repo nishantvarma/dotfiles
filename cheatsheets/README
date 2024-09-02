@@ -45,20 +45,6 @@ synclient TapButton1=0
 Right Click # Menu
 Shift + Mouse # Terminal Emulator
 
-# Weechat
-# =======
-
-/server add libera irc.libera.chat/6697 -ssl -autoconnect
-/set irc.server.libera.nicks "nishant"
-/set irc.server.libera.username "nishant"
-/set irc.server.libera.realname "Nishant Varma"
-/set irc.server.libera.password "********"
-/set irc.server.libera.autojoin "##math,##programming,#python"
-/save
-/connect libera
-
-Use Ctrl+x and /buffer clear to clear the main buffer.
-
 # Xargs
 # =====
 

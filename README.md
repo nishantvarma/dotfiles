@@ -50,6 +50,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * fd
 * git (cola)
 * harlequin (odbc)
+* jj
 * lynx
 * mdcat
 * meld
