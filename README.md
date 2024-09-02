@@ -21,6 +21,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * fonts (consolas, dejavu, go, noto + nerd)
 * gnu-netcat
 * gvfs-mtp
+* maim
 * mat2
 * slock
 * socat
