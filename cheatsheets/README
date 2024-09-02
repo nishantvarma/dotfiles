@@ -1,14 +1,3 @@
-# Acme
-# ====
-
-acme -m /mnt/acme
-
-# Assembly
-# ========
-
-as --32 <src> -o <obj>
-ld -melf_i386 <obj> -o <bin>
-
 # Dvtm
 # ====
 
@@ -18,28 +7,13 @@ echo [create|focus|tag] ... > fifo
 # Gnome
 # =====
 
+gsettings set org.gnome.desktop.lockdown disable-lock-screen true
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
-
-# Media
-# =====
-
-find . -type f -name "*.mkv" -exec sh -c \
-    'in="$1"; ffmpeg -i "$in" "${in%.*}.mp4" && rm "$in"' shell {} \;
-
-# Mpv
-# ===
-
-Shift + Left # Playlist
 
 # Plan 9
 # ======
 
-Deps: libfontconfig1-dev libx11-dev x11proto-core-dev libxt-dev libxext-dev
-
-# Python
-# ======
-
-python -m SimpleHTTPServer 8000
+libfontconfig1-dev libx11-dev x11proto-core-dev libxt-dev libxext-dev
 
 # Qemu
 # ====
@@ -62,33 +36,14 @@ socat TCP-LISTEN:10000,fork,reuseaddr TCP:google.com:443 # relay
 # ======
 
 sudo dd if=<iso> | sudo pv | sudo dd of=/dev/sdb
+sudo mount -t vfat /dev/sda1 /media/hdd -o rw,uid=$(id -u),gid=$(id -g)
+synclient TapButton1=0
 
 # Tmux
 # ====
 
 Right Click # Menu
 Shift + Mouse # Terminal Emulator
-
-# Touchpad
-# ========
-
-synclient TapButton1=0
-
-# Ubuntu
-# =====
-
-gsettings set org.gnome.desktop.lockdown disable-lock-screen true
-
-# Urxvt
-# =====
-
-Ctrl + Alt # Vertical Selection
-Ctrl + Shift + C/V # Copy/Paste
-
-# Xargs
-# =====
-
-cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick <commit>'
 
 # Weechat
 # =======
@@ -103,6 +58,11 @@ cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick <commit>'
 /connect libera
 
 Use Ctrl+x and /buffer clear to clear the main buffer.
+
+# Xargs
+# =====
+
+cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick <commit>'
 
 # X Server
 # ========
