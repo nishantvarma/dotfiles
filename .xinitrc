@@ -16,4 +16,5 @@ xrdb -load "$HOME"/.Xresources
 xhost +local:
 battery &
 feh --bg-scale "$HOME"/.wallpapers/gradient-cyan.png
+sil slstatus &
 exec dwm
