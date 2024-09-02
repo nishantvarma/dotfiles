@@ -137,6 +137,11 @@ plan9()
     qemu-system-i386 -cdrom plan9.iso
 }
 
+ss()
+{
+    maim -s | xclip -selection clipboard -t image/png
+}
+
 vdwm()
 {
     sil Xephyr -br -ac -noreset -fullscreen :1 &&
