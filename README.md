@@ -69,6 +69,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * scid
 * sd
 * shellcheck
+* sqlfmt
 * st
 * tabbed
 * tgpt
