@@ -10,6 +10,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * erlang
 * ghc
 * io
+* lua
 * python (pypy)
 * scheme (chez)
 * smalltalk (cuis)
@@ -59,12 +60,12 @@ I like [suckless](https://suckless.org/)™ tools.
 * mkvtoolnix-gui
 * mocp
 * mpv
-* nnn
 * presenterm
 * qutebrowser
 * recoll
 * rich
 * ripgrep
+* rover
 * scid
 * sd
 * shellcheck
@@ -93,6 +94,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * leo
 * lite-xl
 * mkdocs
+* nnn
 * neovim
 * obsidian
 * open-interpreter
