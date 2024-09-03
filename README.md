@@ -60,12 +60,12 @@ I like [suckless](https://suckless.org/)™ tools.
 * mkvtoolnix-gui
 * mocp
 * mpv
+* noice
 * presenterm
 * qutebrowser
 * recoll
 * rich
 * ripgrep
-* rover
 * scid
 * sd
 * shellcheck
