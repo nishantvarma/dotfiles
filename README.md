@@ -7,10 +7,11 @@ I like [suckless](https://suckless.org/)™ tools.
 
 # programming languages
 
-* chez
 * erlang
 * ghc
-* python (black, pdoc, pypy)
+* io
+* python (pypy)
+* scheme (chez)
 * smalltalk (cuis)
 
 # system
