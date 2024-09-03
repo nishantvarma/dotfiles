@@ -2,7 +2,7 @@
 
 synclient \
     CircScrollTrigger=2 \
-    CircularScrolling=on \
+    CircularScrolling=1 \
     CoastingSpeed=0 \
     EmulateTwoFingerMinW=8 \
     EmulateTwoFingerMinZ=40 \
@@ -10,12 +10,12 @@ synclient \
     FingerHigh=50 \
     FingerLow=30 \
     FingerLow=30 \
-    HorizEdgeScroll=on \
-    HorizTwoFingerScroll=on \
+    HorizEdgeScroll=1 \
+    HorizTwoFingerScroll=1 \
     MaxTapTime=125 \
     TapButton1=1 \
     TapButton1=1 \
     TapButton2=3 \
     TapButton3=2 \
-    VertEdgeScroll=on \
-    VertTwoFingerScroll=on
+    VertEdgeScroll=1 \
+    VertTwoFingerScroll=1
