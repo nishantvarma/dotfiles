@@ -7,13 +7,10 @@ synclient \
     EmulateTwoFingerMinW=8 \
     EmulateTwoFingerMinZ=40 \
     FingerHigh=40 \
-    FingerHigh=50 \
-    FingerLow=30 \
     FingerLow=30 \
     HorizEdgeScroll=1 \
     HorizTwoFingerScroll=1 \
     MaxTapTime=125 \
-    TapButton1=1 \
     TapButton1=1 \
     TapButton2=3 \
     TapButton3=2 \
