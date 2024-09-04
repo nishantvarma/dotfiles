@@ -20,7 +20,7 @@ set sort=+name
 set statusline='>'
 set trash
 set undolevels=100
-set vicmd=vim
+set vimcmd=vim
 set viewcolumns=*{name}
 set vifmrc
 set wildmenu
