@@ -15,4 +15,5 @@ synclient \
     TapButton2=3 \
     TapButton3=2 \
     VertEdgeScroll=1 \
-    VertTwoFingerScroll=1
+    VertTwoFingerScroll=1 &&
+xiput set-prop 15 "Synaptics Finger" 50 80 257
