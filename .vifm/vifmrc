@@ -17,7 +17,6 @@ set slowfs=curlftpfs
 set smartcase
 set sortnumbers
 set sort=+name
-set statusline='>'
 set trash
 set undolevels=100
 set vicmd=vis
