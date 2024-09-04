@@ -56,7 +56,7 @@ nmap yf :!echo %c:p | xclip %i<cr>
 " Viewer
 " ======
 
-fileviewer * batcat --pager never %c -p
+fileviewer * pager %c
 
 " Opener
 " ======
