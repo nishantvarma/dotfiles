@@ -14,4 +14,5 @@ synclient \
     TapButton3=2 \
     VertEdgeScroll=1 \
     VertTwoFingerScroll=1 &&
-xinput set-prop 15 "Synaptics Finger" 50 80 257
+id=$(xinput list | grep -i "touchpad" | awk '{print $6}' | cut -d = -f 2) &&
+xinput set-prop "$id" "Synaptics Finger" 50 80 257
