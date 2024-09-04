@@ -6,8 +6,6 @@ synclient \
     CoastingSpeed=0 \
     EmulateTwoFingerMinW=8 \
     EmulateTwoFingerMinZ=40 \
-    FingerHigh=80 \
-    FingerLow=50 \
     HorizEdgeScroll=1 \
     HorizTwoFingerScroll=1 \
     MaxTapTime=125 \
@@ -16,4 +14,4 @@ synclient \
     TapButton3=2 \
     VertEdgeScroll=1 \
     VertTwoFingerScroll=1 &&
-xiput set-prop 15 "Synaptics Finger" 50 80 257
+xinput set-prop 15 "Synaptics Finger" 50 80 257
