@@ -26,6 +26,7 @@ set wildmenu
 only
 
 autocmd DirEnter ~/Downloads setlocal sort=-mtime
+autocmd DirEnter *immediate* setlocal sort=-mtime
 
 " Commands
 " ========
