@@ -1,6 +1,11 @@
 " Settings
 " ========
 
+autocmd DirEnter *immediate* setlocal sort=-mtime
+autocmd DirEnter ~/Downloads setlocal sort=-mtime
+
+colorscheme Default
+
 set fastrun
 set followlinks
 set fusehome=/tmp/vifm_fuse
@@ -22,25 +27,11 @@ set undolevels=100
 set vicmd=vis
 set viewcolumns=*{name}
 set wildmenu
-only
 
-autocmd DirEnter *immediate* setlocal sort=-mtime
-autocmd DirEnter ~/Downloads setlocal sort=-mtime
+view
 
 " Commands
 " ========
-
-" :com[mand] name action
-" The following macros can be used in a command
-" %a is replaced with the user arguments.
-" %c the current file under the cursor.
-" %C the current file under the cursor in the other directory.
-" %f the current selected file, or files.
-" %F the current selected file, or files in the other directory.
-" %b same as %f %F.
-" %d the current directory name.
-" %D the other window directory name.
-" %m run the command in a menu window
 
 command df df -h %m 2> /dev/null
 command diff vim -d %f %F
@@ -62,6 +53,25 @@ nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
 
+" Viewer
+" ======
+
+fileviewer * batcat --pager never %c -p
+
+" Opener
+" ======
+
+filetype *.djvu,*.pdf
+         \ evince %f 2>/dev/null &
+filetype *.doc,*.docx,.xls,*.xlsx
+         \ libreoffice %f 2>/dev/null &
+filetype *.jpeg
+         \ feh %f 2>/dev/null &
+filetype *.m4a,*.mp3,*.ogg,*.wav,*.webm
+         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
+filetype *.mkv,*.mp4
+         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
+
 " Bookmarks
 " =========
 
@@ -72,47 +82,3 @@ mark o ~/opt
 mark s ~/src
 mark t ~/scratch
 mark u ~/Unsynced
-
-" Text
-" ====
-
-filetype *.html,*.md,*.txt
-         \ vis %f 2>/dev/null &
-
-" Document
-" ========
-
-filetype *.djvu,*.pdf
-         \ evince %f 2>/dev/null &
-
-filetype *.doc,*.docx,.xls,*.xlsx
-         \ libreoffice %f 2>/dev/null &
-
-" Image
-" =====
-
-filetype *.jpeg
-         \ feh %f 2>/dev/null &
-
-" Audio
-" =====
-
-filetype *.m4a,*.mp3,*.ogg,*.wav,*.webm
-         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
-
-" Video
-" =====
-
-filetype *.mkv,*.mp4
-         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
-
-" Others
-" ======
-
-filetype *
-         \ thunar %f 2>/dev/null &
-
-" Theme
-" =====
-
-colorscheme Default
