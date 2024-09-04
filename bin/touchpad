@@ -6,8 +6,8 @@ synclient \
     CoastingSpeed=0 \
     EmulateTwoFingerMinW=8 \
     EmulateTwoFingerMinZ=40 \
-    FingerHigh=40 \
-    FingerLow=30 \
+    FingerHigh=80 \
+    FingerLow=50 \
     HorizEdgeScroll=1 \
     HorizTwoFingerScroll=1 \
     MaxTapTime=125 \
