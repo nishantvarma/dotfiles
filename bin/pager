@@ -5,5 +5,5 @@ type=$(file -i "$1" | awk '{print $2}')
 if [[ "$type" == *directory* ]]; then
     tree "${@}"
 elif [[ "$type" == *text* ]]; then
-    batcat --style=plain "${@}"
+    batcat "${@}"
 fi

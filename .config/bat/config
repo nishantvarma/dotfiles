@@ -1,3 +1,3 @@
 --color=always
---style=numbers
+--style=plain
 --theme base16
