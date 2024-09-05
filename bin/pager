@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-batcat --style=plain "${@}"
+type=$(file -i "$1" | awk '{print $2}')
+
+if [[ "$type" == *directory* ]]; then
+    tree "${@}"
+elif [[ "$type" == *text* ]]; then
+    batcat --style=plain "${@}"
+fi

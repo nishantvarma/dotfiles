@@ -53,6 +53,11 @@ nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
 
+" Viewer
+" ======
+
+fileview * pager %c
+
 " Opener
 " ======
 
