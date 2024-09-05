@@ -22,9 +22,11 @@ set slowfs=curlftpfs
 set smartcase
 set sortnumbers
 set sort=+name
+set tabprefix=" "
+set tabsuffix=" "
 set trash
 set undolevels=100
-set vicmd=vis
+set vicmd="#editor#run vis"
 set viewcolumns=*{name}
 set wildmenu
 
