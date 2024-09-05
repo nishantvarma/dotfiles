@@ -1,7 +1,7 @@
 " Settings
 " ========
 
-autocmd DirEnter IMMEDIATE setlocal sort=-mtime
+autocmd DirEnter *immediate* setlocal sort=-mtime
 autocmd DirEnter Downloads setlocal sort=-mtime
 
 colorscheme Default
