@@ -64,7 +64,8 @@ fileview * pager %c
 filetype *.jpeg,*.jpg,*.png sil feh %f
 filetype *.djvu,*.pdf sil zathura %f
 filetype *.doc,*.docx,.xls,*.xlsx sil libreoffice %f
-filetype *.m4a,*.mkv,*.mp[3|4],*.ogg,*.wav,*.webm sil mpv %f
+filetype *.mp3,*.ogg,*.wav sil moc -p %f
+filetype *.m4a,*.mkv,*.mp4,*.webm sil mpv %f
 
 " Bookmarks
 " =========
