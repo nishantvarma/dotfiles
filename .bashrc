@@ -28,9 +28,9 @@ export EDITOR=vim
 export FZF_DEFAULT_OPTS="
     --color fg:7,bg:0,hl:6
     --color fg+:7,bg+:8,hl+:5
-    --color=info:1,prompt:2,pointer:3
-    --color=marker:4,spinner:5,header:6
-    --color=border:7
+    --color info:1,prompt:2,pointer:3
+    --color marker:4,spinner:5,header:6
+    --color border:7
     --tac
 "
 export LANG=en_US.UTF-8
@@ -42,7 +42,7 @@ export PS1='$(basename "$(pwd)") % '
 # Alias
 # =====
 
-alias ls="ls --hyperlink=auto"
+alias ls="ls --hyperlink auto"
 
 # Functions
 # =========
