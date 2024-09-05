@@ -7,11 +7,11 @@
     log = false
 
 [core]
-	pager = cat
+    pager = cat
 
 [user]
     email = nishant.varma@gmail.com
     name = Nishant Varma
 
 [cola]
-	spellcheck = false
+    spellcheck = false

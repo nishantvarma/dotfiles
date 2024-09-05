@@ -56,7 +56,7 @@ nmap yf :!echo %c:p | xclip %i<cr>
 " Viewer
 " ======
 
-fileview * pager %c
+fileview * viewer %c
 
 " Opener
 " ======
