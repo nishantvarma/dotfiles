@@ -42,7 +42,7 @@ export PS1='$(basename "$(pwd)") % '
 # Alias
 # =====
 
-alias ls="ls --hyperlink auto"
+alias ls="ls --hyperlink=auto"
 
 # Functions
 # =========
