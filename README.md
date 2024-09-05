@@ -7,6 +7,8 @@ I like [suckless](https://suckless.org/)™ tools.
 
 # programming languages
 
+* bash
+* dash
 * erlang
 * ghc
 * io
