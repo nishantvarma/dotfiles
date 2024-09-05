@@ -1,5 +1,12 @@
 I like [suckless](https://suckless.org/)™ tools.
 
+# tl;dr
+
+* outliner: filesystem
+* explorer: `vifm`
+* editor: `vis`
+* automation: `bash`
+
 # operating systems
 
 * oberon (a2)
