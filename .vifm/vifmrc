@@ -61,16 +61,10 @@ fileview * pager %c
 " Opener
 " ======
 
-filetype *.djvu,*.pdf
-         \ evince %f 2>/dev/null &
-filetype *.doc,*.docx,.xls,*.xlsx
-         \ libreoffice %f 2>/dev/null &
-filetype *.jpeg
-         \ feh %f 2>/dev/null &
-filetype *.m4a,*.mp3,*.ogg,*.wav,*.webm
-         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
-filetype *.mkv,*.mp4
-         \ mpv --player-operation-mode=pseudo-gui %f 2>/dev/null &
+filetype *.jpeg,*.jpg,*.png sil feh %f
+filetype *.djvu,*.pdf sil zathura %f
+filetype *.doc,*.docx,.xls,*.xlsx sil libreoffice %f
+filetype *.m4a,*.mkv,*.mp[3|4],*.ogg,*.wav,*.webm sil mpv %f
 
 " Bookmarks
 " =========
