@@ -21,6 +21,7 @@ set slowfs=curlftpfs
 set smartcase
 set sortnumbers
 set sort=+name
+set tablabel="%p:t"
 set tabprefix=" "
 set tabsuffix=" "
 set trash
