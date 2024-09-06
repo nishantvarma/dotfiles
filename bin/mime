@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+file -i "$1" | awk '{print $2}'

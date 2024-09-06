@@ -99,21 +99,9 @@ g(){
     git push origin
 }
 
-i3()
-{
-    sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
-    sleep 0.1 &&
-    DISPLAY=:1 sil i3
-}
-
 ll()
 {
     ls -hlrt "$@"
-}
-
-md2html()
-{
-  pandoc -f markdown "$1"
 }
 
 mp3()
@@ -137,23 +125,16 @@ plan9()
     qemu-system-i386 -cdrom plan9.iso
 }
 
+rio()
+{
+    spawn Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
+    sleep 0.1 &&
+    DISPLAY=:1 spawn rio
+}
+
 ss()
 {
     maim -s | xclip -selection clipboard -t image/png
-}
-
-vdwm()
-{
-    sil Xephyr -br -ac -noreset -fullscreen :1 &&
-    sleep 0.1 &&
-    DISPLAY=:1 sil dwm
-}
-
-vrio()
-{
-    sil Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
-    sleep 0.1 &&
-    DISPLAY=:1 sil rio
 }
 
 # Hacks
