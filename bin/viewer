@@ -4,7 +4,7 @@ if [[ $1 == ..* ]]; then
     exit 0
 fi
 
-type=$(file -i "$1" | awk '{print $2}')
+type=$(mime $1)
 
 if [[ "$type" == *directory* ]]; then
     tree "${@}"
