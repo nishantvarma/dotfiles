@@ -22,6 +22,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * python (pypy)
 * scheme (chez)
 * smalltalk (cuis)
+* tcl (tk)
 
 # system
 
@@ -58,7 +59,7 @@ I like [suckless](https://suckless.org/)™ tools.
 * djview4
 * dvtm
 * fd
-* git (cola)
+* git (cola, gui)
 * harlequin (odbc)
 * jj
 * lynx
