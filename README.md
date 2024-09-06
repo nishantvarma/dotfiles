@@ -16,6 +16,7 @@ I like [suckless](https://suckless.org/)™ tools.
 
 * bash
 * erlang
+* es
 * ghc
 * io
 * lua
