@@ -57,7 +57,7 @@ nmap gb :file &<cr>l
 nmap i cw<c-a>
 nmap o :touch<space>
 nmap q :quit<CR>
-nmap s :shell<cr>
+nmap s :!sil st<cr>
 nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
