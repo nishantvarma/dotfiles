@@ -37,6 +37,11 @@ view
 
 command df df -h %m 2> /dev/null
 command diff vim -d %f %F
+command FZFFind :set noquickview
+              \| let $PICK = term("find | fzf --height 10 2>/dev/tty")
+              \| if $PICK != ""
+              \|     execute "goto" fnameescape($PICK)
+              \| endif
 
 " Keyboard Mappings
 " =================
@@ -54,6 +59,7 @@ nmap s :shell<cr>
 nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
+nmap <c-p> :FZFFind<cr>
 
 " Viewer
 " ======
