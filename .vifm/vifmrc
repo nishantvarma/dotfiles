@@ -35,11 +35,10 @@ view
 " Commands
 " ========
 
-command df df -h %m 2> /dev/null
+command df df -h %m 2>/dev/null
 command diff vim -d %f %F
 command FZFFind :let $PICK = term("preview")
               \| if $PICK != ""
-              \|     execute "goto" fnameescape($PICK)
               \|     execute "edit" fnameescape($PICK)
               \| endif
 
