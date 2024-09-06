@@ -26,7 +26,7 @@ set tabprefix=" "
 set tabsuffix=" "
 set trash
 set undolevels=100
-set vicmd="#editor#run vis"
+set vicmd=vis
 set viewcolumns=*{name}
 set wildmenu
 
@@ -40,6 +40,7 @@ command diff vim -d %f %F
 command FZFFind :let $PICK = term("preview")
               \| if $PICK != ""
               \|     execute "goto" fnameescape($PICK)
+              \|     execute "edit" fnameescape($PICK)
               \| endif
 
 " Keyboard Mappings
