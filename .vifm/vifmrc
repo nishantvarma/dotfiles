@@ -37,8 +37,7 @@ view
 
 command df df -h %m 2> /dev/null
 command diff vim -d %f %F
-command FZFFind :set noquickview
-              \| let $PICK = term("find | fzf --height 10 2>/dev/tty")
+command FZFFind :let $PICK = term("preview")
               \| if $PICK != ""
               \|     execute "goto" fnameescape($PICK)
               \| endif
