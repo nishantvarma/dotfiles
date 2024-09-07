@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
 
-type=$(mime $1)
+firstline=$(head -n 1 "$1")
+
+shebang()
+{
+    if [[ "$firstline" =~ ^#! ]]; then
+        interpreter=$(echo "$firstline" | sed 's/^#!//')
+        spawn st $interpreter $1
+        true
+    else
+        false
+    fi
+}
+
+type=$(mime "$1")
 
 if [[ "$type" == *audio* ]]; then
     mocp -l "${@}"
@@ -13,9 +26,9 @@ elif [[ "$type" == *image* ]]; then
 elif [[ "$type" == *pdf* ]]; then
     spawn zathura "${@}"
 elif [[ "$type" == *shellscript* ]]; then
-    spawn st bash "${@}"
+    shebang "${@}" || spawn st bash "${@}"
 elif [[ "$type" == *text* ]]; then
-    spawn st vis "${@}"
+    shebang "${@}" || spawn st vis "${@}"
 elif [[ "$type" == *video* ]]; then
     spawn mpv "${@}"
 fi
