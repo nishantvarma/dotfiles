@@ -12,6 +12,8 @@ elif [[ "$type" == *image* ]]; then
     spawn feh "${@}"
 elif [[ "$type" == *pdf* ]]; then
     spawn zathura "${@}"
+elif [[ "$type" == *shellscript* ]]; then
+    spawn st bash "${@}"
 elif [[ "$type" == *text* ]]; then
     spawn st vis "${@}"
 elif [[ "$type" == *video* ]]; then
