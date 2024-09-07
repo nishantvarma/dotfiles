@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ $1 == ..* ]]; then
-    exit 0
-fi
-
 type=$(mime $1)
 
 if [[ "$type" == *directory* ]]; then

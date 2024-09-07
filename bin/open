@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+type=$(mime $1)
+
+if [[ "$type" == *audio* ]]; then
+    mocp -l "${@}"
+elif [[ "$type" == *directory* ]]; then
+    spawn st vifm "${@}"
+elif [[ "$type" == *djvu* ]]; then
+    spawn zathura "${@}"
+elif [[ "$type" == *image* ]]; then
+    spawn feh "${@}"
+elif [[ "$type" == *pdf* ]]; then
+    spawn zathura "${@}"
+elif [[ "$type" == *text* ]]; then
+    spawn st vis "${@}"
+elif [[ "$type" == *video* ]]; then
+    spawn mpv "${@}"
+fi

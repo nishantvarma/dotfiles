@@ -68,16 +68,12 @@ nmap <c-s> :FZFGoto<cr>
 " Viewer
 " ======
 
-fileview * viewer %c
+fileview * view %c
 
 " Opener
 " ======
 
-filetype *.jpeg,*.jpg,*.png spawn feh %f
-filetype *.djvu,*.pdf spawn zathura %f
-filetype *.doc,*.docx,.xls,*.xlsx spawn libreoffice %f
-filetype *.mp3,*.ogg,*.wav mocp -a -p %f
-filetype *.m4a,*.mkv,*.mp4,*.webm spawn mpv %f
+filetype * open %f
 
 " Bookmarks
 " =========
