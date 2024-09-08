@@ -74,7 +74,6 @@ that can be opened in explorers!
 # apps
 
 * abduco
-* asciidoctor
 * bat
 * briss
 * djview4
@@ -84,7 +83,6 @@ that can be opened in explorers!
 * harlequin (odbc)
 * jj
 * lynx
-* mdcat
 * meld
 * micro
 * mkvtoolnix-gui
@@ -108,30 +106,16 @@ that can be opened in explorers!
 * vifm
 * vim
 * vis
-* weechat
 * xournalpp
 * zathura
 * zoxide
 
 # extras
 
-* 2bwm
-* bmpanel
 * cudatext
-* helix
-* kakoune
-* kitty
-* i3 (rofi)
 * leo
-* lite-xl
-* mkdocs
-* nnn
-* neovim
-* obsidian
 * open-interpreter
 * sim
 * siyuan
-* vscode (asciidoctor, gitlens, material theme, remote development)
-* wily
-* yazi
+* vscode (gitlens, material theme, remote development)
 * zed
