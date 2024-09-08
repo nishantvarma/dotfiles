@@ -21,6 +21,9 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
 
 [The above information can be represented as an outline.]
 
+The idea can be *closed* if programs output `outlines` that can be opened in
+`vifm`!
+
 # operating systems
 
 * oberon (a2)
