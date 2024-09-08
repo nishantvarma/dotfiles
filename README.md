@@ -4,7 +4,7 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy.
 
 * outliner: filesystem
   * a *folder* groups **any** topic.
-  * it can contain another folder (topic) / file (input to *any* program).
+  * it can contain another folder (topic) / file (input to **any** program).
   * a link is a light-weight reference.
 * window-manager: `dwm`
 * terminal: `st`
