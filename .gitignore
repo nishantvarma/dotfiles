@@ -22,7 +22,6 @@
 
 # Folders
 
-!.icons/
 !.vim
 !.wallpapers/
 !bin/
@@ -34,14 +33,9 @@
 !.config/
 .config/*
 
-# Files
-
-!.config/.fonts.conf
-
 # Folders
 
 !.config/bat/
-!.config/gtk-3.0/
 !.config/mpv/
 !.config/vis/
 !.config/zathura/
