@@ -91,7 +91,6 @@ store lists, dictionaries, trees etc.
 * mkvtoolnix-gui
 * mocp
 * mpv
-* presenterm
 * qutebrowser
 * recoll
 * rich
@@ -104,7 +103,6 @@ store lists, dictionaries, trees etc.
 * tabbed
 * tgpt
 * tmux
-* treesitter
 * vifm
 * vim
 * vis
