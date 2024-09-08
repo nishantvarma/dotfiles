@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
 
-firstline=$(head -n 1 "$1")
+file=$1
 
 shebang()
 {
-    if [[ "$firstline" =~ ^#! ]]; then
-        interpreter=$(echo "$firstline" | sed 's/^#!//')
-        spawn st $interpreter $1
+    local header
+    header=$(head -n 1 "$file")
+    if [[ "$header" =~ ^#! ]]; then
+        interpreter=$(echo "$header" | sed 's/^#!//')
+        spawn st $interpreter ${@}
         true
     else
         false
     fi
 }
 
-type=$(mime "$1")
+type=$(mime "$file")
+
+if [[ "$type" == *symlink* ]]; then
+    type=$(mime $(readlink "$file"))
+fi
 
 if [[ "$type" == *audio* ]]; then
     mocp -l "${@}"

@@ -6,11 +6,11 @@ autocmd DirEnter Downloads setlocal sort=-mtime
 colorscheme Default
 
 set fastrun
-set followlinks
 set fusehome=/tmp/vifm_fuse
 set history=10
 set ignorecase
 set incsearch
+set nofollowlinks
 set nohlsearch
 set noiec
 set norunexec
