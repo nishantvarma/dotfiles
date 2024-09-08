@@ -1,10 +1,16 @@
-I like [suckless](https://suckless.org/)™ tools.
+I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy.
 
 # tl;dr
 
 * outliner: filesystem
+  * *folders* group  *any* topic.
+  * a folder can contain other folder (topic), file (document, multimedia, scripts).
+  * links -> light references!
 * explorer: `vifm`
+  * keyboard-driven outline operations: bookmarks, navigation, preview, open.
+  * everything is `clickable`!
 * editor: `vis`
+  * `vi` bindings + structured regexp.
 * automation: `bash`
 
 # operating systems
