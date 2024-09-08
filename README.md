@@ -4,14 +4,18 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy.
 
 * outliner: filesystem
   * a *folder* groups **any** topic.
-  * a folder can contain other folder (topic), file (document, multimedia, scripts).
+  * it can contain another folder (topic) / file (input to *any* program).
   * a link is a light-weight reference.
+* window-manager: `dwm`
+* terminal: `st`
 * explorer: `vifm`
-  * keyboard-driven tui for outline operations: bookmark, navigation, preview, open.
+  * `vi`-like tui for outline operations: bookmark, navigate, preview, open.
   * everything is `clickable`.
+  * everything opens in a `dwm` window possibly `st`.
 * editor: `vis`
-  * `vi` bindings + structured regexp.
+  * `vi`-like bindings with structured regexp.
 * automation: `bash`
+* ide: `linux`
 
 # operating systems
 
