@@ -30,7 +30,7 @@ that can be opened in explorers!
 # operating systems
 
 * oberon (a2)
-* plan9port (acme, rc, rio)
+* plan9[port] (acme, rc, rio)
 
 # programming languages
 
