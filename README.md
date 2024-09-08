@@ -3,12 +3,12 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy.
 # tl;dr
 
 * outliner: filesystem
-  * *folders* group  *any* topic.
-  * a folder can contain other folder (topic), file (document, multimedia, scripts).
-  * links -> light references!
+  * a *folders* group *any* topic.
+  * a folder can contain other folders (topic), files (document, multimedia, scripts).
+  * a link is a light-weight reference.
 * explorer: `vifm`
-  * keyboard-driven outline operations: bookmarks, navigation, preview, open.
-  * everything is `clickable`!
+  * keyboard-driven outline operations: bookmark, navigation, preview, open.
+  * everything is `clickable`.
 * editor: `vis`
   * `vi` bindings + structured regexp.
 * automation: `bash`
