@@ -1,105 +1,40 @@
-! Xterm
+! XTerm
 ! =====
 
 ! Colors
 
-xterm.background: #121212
-xterm.foreground: #f8f8f2
-xterm.cursorColor: #f8f8f2
-! Black
-xterm.color0: #121212
-xterm.color8: #444444
-! Red
-xterm.color1: #ff614d
-xterm.color9: #ff614d
-! Green
-xterm.color2: #50c878
-xterm.color10: #50c878
-! Yellow
-xterm.color3: #e6db74
-xterm.color11: #e6db74
-! Blue
-xterm.color4: #128bd5
-xterm.color12: #128bd5
-! Magenta
-xterm.color5: #f92672
-xterm.color13: #f92672
-! Cyan
-xterm.color6: #1fd6ff
-xterm.color14: #1fd6ff
-! White
-xterm.color7: #f8f8f2
-xterm.color15: #f8f8f2
+XTerm*background: #121212
+XTerm*foreground: #f8f8f2
+XTerm*cursorColor: #f8f8f2
+XTerm*color0: #121212
+XTerm*color1: #fd5e53
+XTerm*color2: #50c878
+XTerm*color3: #e6db74
+XTerm*color4: #318ce7
+XTerm*color5: #fd3f92
+XTerm*color6: #40e0d0
+XTerm*color7: #f8f8f2
+XTerm*color8: #262626
+XTerm*color9: #fd5e53
+XTerm*color10: #50c878
+XTerm*color11: #e6db74
+XTerm*color12: #318ce7
+XTerm*color13: #fd3f92
+XTerm*color14: #40e0d0
+XTerm*color15: #f8f8f2
 
 ! Font
 
-xterm.vt100.faceName: DejaVu Sans Mono:style=Book:antialias=true
-xterm.vt100.faceSize: 12
-xterm.vt100.geometry: 80x24
+XTerm.vt100.faceName: DejaVu Sans Mono:style=Book:antialias=true
+XTerm.vt100.faceSize: 13
+XTerm.vt100.geometry: 80x24
 
 ! General
 
-xterm.allowBoldFonts: true
-xterm.selectToClipboard: true
-xterm.locale: true
-xterm.loginshell: true
-xterm.savelines: 0
-xterm.utf8: 1
-xterm.visualBell: false
-
-! URxvt
-! =====
-
-! Colors
-
-URxvt.background: #121212
-URxvt.foreground: #f8f8f2
-URxvt.cursorColor: #f8f8f2
-! Black
-URxvt.color0: #121212
-URxvt.color8: #444444
-! Red
-URxvt.color1: #ff614d
-URxvt.color9: #ff614d
-! Green
-URxvt.color2: #50c878
-URxvt.color10: #50c878
-! Yellow
-URxvt.color3: #e6db74
-URxvt.color11: #e6db74
-! Blue
-URxvt.color4: #128bd5
-URxvt.color12: #128bd5
-! Magenta
-URxvt.color5: #f92672
-URxvt.color13: #f92672
-! Cyan
-URxvt.color6: #1fd6ff
-URxvt.color14: #1fd6ff
-! White
-URxvt.color7: #f8f8f2
-URxvt.color15: #f8f8f2
-
-! Font
-
-URxvt.font: xft:DejaVu Sans Mono:size=12:autohint=true:antialias=true
-URxvt.boldFont: xft:DejaVu Sans Mono:bold:size=12:autohint=true:antialias=true
-
-! General
-
-URxvt.allow_bold: true
-URxvt.cursorBlink: true
-URxvt.letterSpace: -1
-URxvt.lineSpace: 0
-URxvt.saveLines: 0
-URxvt.scrollBar: false
-URxvt.scrollstyle: plain
-
-! Keybindings
-
-URxvt.keysym.Control-l: command:\033c
-URxvt.keysym.Control-Shift-N: perl:new-window
-
-! Plugins
-
-URxvt.perl-ext-common: new-window
+XTerm.allowBoldFonts: true
+XTerm.selectToClipboard: true
+XTerm.locale: true
+XTerm.loginshell: true
+XTerm.savelines: 0
+XTerm.utf8: 1
+XTerm.visualBell: false
