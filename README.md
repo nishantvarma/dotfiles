@@ -25,7 +25,9 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
 Need to see if everything: window, process etc., can be mapped to an outline.
 For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
 
-Programs need to communicate via outlines.
+If interprocess communication happens via files (like Plan 9), such outlines
+can integrate well with the environment allowing for enhanced scripting
+possibilities.
 
 # operating systems
 
