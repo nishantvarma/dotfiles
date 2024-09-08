@@ -6,7 +6,8 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
 * outliner: filesystem
   * a *folder* groups **any** topic.
   * it can contain another folder (topic) / file (input to **any** program).
-  * a (relative) link is a (flexible) light-weight reference.
+  * a (relative) link is a (flexible) light-weight reference -- creates complex
+    structures.
   * its like encapsulation in oops: bind data + operations.
 * explorer: `vifm`
   * `vi`-like tui for outline operations: bookmark, navigate, preview, open.
@@ -25,7 +26,7 @@ Need to see if everything: window, process etc., can be mapped to an outline.
 For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
 
 This idea can be *closed* if programs can output such filesystem `outlines`
-that can be opened in explorers!
+that can be opened in explorers.
 
 # operating systems
 
