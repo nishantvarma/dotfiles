@@ -7,6 +7,7 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
   * a *folder* groups **any** topic.
   * it can contain another folder (topic) / file (input to **any** program).
   * a link is a light-weight reference.
+  * its like an oops: bind data and operations.
 * window-manager: `dwm`
 * terminal: `st`
 * explorer: `vifm`
