@@ -18,7 +18,7 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
 * automation: `bash`
 * ide: `linux`
 
-[The above information can be represented as an outline without markdown.]
+[The above information can be represented as an outline.]
 
 # operating systems
 
