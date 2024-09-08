@@ -21,10 +21,11 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
 
 [The above information can be represented as an outline.]
 
-It would be great if process tree can be mapped to this concept.
+Need to see if everything: window, process etc., can be mapped to an outline.
+For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<tree>`.
 
 This idea can be *closed* if programs can output such filesystem `outlines`
-that can be opened in `vifm`! For example, `pid` 1 has an output `pid/out/1`.
+that can be opened in explorers!
 
 # operating systems
 
