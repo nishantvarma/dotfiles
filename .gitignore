@@ -23,7 +23,6 @@
 # Folders
 
 !.icons/
-!.unified/
 !.vim
 !.wallpapers/
 !bin/
@@ -47,15 +46,6 @@
 !.config/vis/
 !.config/zathura/
 
-# Config > Code
-
-!.config/Code/
-.config/Code/*
-!.config/Code/User/
-.config/Code/User/*
-!.config/Code/User/settings.json
-!.config/Code/User/keybindings.json
-
 # Config > Qutebrowser
 
 !.config/qutebrowser/
@@ -69,11 +59,6 @@
 !.moc/config
 !.moc/keymap
 !.moc/themes
-
-# Unified
-
-!.unified/
-.unified/pack/
 
 # Vifm
 

@@ -114,8 +114,5 @@ store lists, dictionaries, trees etc.
 
 * cudatext
 * leo
-* open-interpreter
 * sim
-* siyuan
-* vscode (gitlens, material theme, remote development)
 * zed
