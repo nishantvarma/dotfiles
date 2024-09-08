@@ -1,4 +1,4 @@
-I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
+I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 [cat-v](https://doc.cat-v.org/).
 
 # tl;dr
