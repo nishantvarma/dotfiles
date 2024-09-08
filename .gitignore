@@ -43,7 +43,6 @@
 
 !.config/bat/
 !.config/gtk-3.0/
-!.config/kitty/
 !.config/mpv/
 !.config/vis/
 !.config/zathura/
