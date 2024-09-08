@@ -17,6 +17,8 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy.
 * automation: `bash`
 * ide: `linux`
 
+[The above information can be represented as an outline without markdown.]
+
 # operating systems
 
 * oberon (a2)
