@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-fd . "$1" -a -t f | fzf --preview "view {}"
+folder=${1:-"$(pwd)"}
+
+fd . "$folder" -a -t f | fzf --preview "view {}"
