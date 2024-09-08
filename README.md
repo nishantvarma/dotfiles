@@ -6,7 +6,7 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
 * outliner: filesystem
   * a *folder* groups **any** topic.
   * it can contain another folder (topic) / file (input to **any** program).
-  * a link is a light-weight reference.
+  * a (relative) link is a (flexible) light-weight reference.
   * its like encapsulation in oops: bind data + operations.
 * explorer: `vifm`
   * `vi`-like tui for outline operations: bookmark, navigate, preview, open.
