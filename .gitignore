@@ -42,16 +42,10 @@
 # Folders
 
 !.config/bat/
-!.config/conky/
 !.config/gtk-3.0/
-!.config/helix/
 !.config/kitty/
 !.config/mpv/
-!.config/nvim/
-!.config/presenterm/
-!.config/rofi/
 !.config/vis/
-!.config/yazi/
 !.config/zathura/
 
 # Config > Code
@@ -63,36 +57,11 @@
 !.config/Code/User/settings.json
 !.config/Code/User/keybindings.json
 
-# Config > Helix
-
-!.config/helix/
-.config/helix/*
-!.config/helix/config.toml
-!.config/helix/runtime/
-.config/helix/runtime/*
-!.config/helix/runtime/themes/
-.config/helix/runtime/themes/*
-!.config/helix/runtime/themes/terminal.toml
-
 # Config > Qutebrowser
 
 !.config/qutebrowser/
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
-
-# Local
-
-!.local/
-.local/*
-
-# Local > Share > Neovim
-
-!.local/share/
-.local/share/*
-!.local/share/nvim/
-.local/share/nvim/*
-!.local/share/nvim/site/
-.local/share/nvim/site/*
 
 # Moc
 

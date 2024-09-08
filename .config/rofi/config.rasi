@@ -1,9 +1,0 @@
-configuration {
-    matching: "fuzzy";
-    modi: "window,run,ssh,drun";
-    show-icons: true;
-    sort: false;
-    window-format: "{w} {t}";
-}
-
-@theme "theme"
