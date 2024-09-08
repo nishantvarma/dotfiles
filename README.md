@@ -21,8 +21,10 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
 
 [The above information can be represented as an outline.]
 
-The idea can be *closed* if programs output `outlines` that can be opened in
-`vifm`!
+It would be great if process tree can be mapped to this concept.
+
+This idea can be *closed* if programs can output such filesystem `outlines`
+that can be opened in `vifm`! For example, `pid` 1 has an output `pid/out/1`.
 
 # operating systems
 
