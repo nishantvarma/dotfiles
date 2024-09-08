@@ -88,7 +88,6 @@ that can be opened in explorers!
 * mkvtoolnix-gui
 * mocp
 * mpv
-* noice
 * presenterm
 * qutebrowser
 * recoll
