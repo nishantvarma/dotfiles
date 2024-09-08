@@ -8,14 +8,14 @@ I ❤️ minimalism and [suckless](https://suckless.org/)™ philosophy. See als
   * it can contain another folder (topic) / file (input to **any** program).
   * a link is a light-weight reference.
   * its like encapsulation in oops: bind data + operations.
-* window-manager: `dwm`
-* terminal: `st`
 * explorer: `vifm`
   * `vi`-like tui for outline operations: bookmark, navigate, preview, open.
   * everything is `clickable`.
   * everything opens in a `dwm` window possibly `st`.
 * editor: `vis`
   * `vi`-like bindings with structured regexp.
+* window-manager: `dwm`
+* terminal: `st`
 * automation: `bash`
 * ide: `linux`
 
