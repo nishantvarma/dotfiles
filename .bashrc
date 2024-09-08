@@ -99,6 +99,11 @@ g(){
     git push origin
 }
 
+inferno()
+{
+    "$HOME"/src/inferno/Linux/386/bin/emu -g 1600x784 wm/wm
+}
+
 ll()
 {
     ls -hlrt "$@"
@@ -135,6 +140,12 @@ rio()
 ss()
 {
     maim -s | xclip -selection clipboard -t image/png
+}
+
+ws()
+{
+    echo -n "IP: " && ip addr show wlp0s20f3 | grep -Po 'inet \K[\d.]+' &&
+    python -m http.server --bind=0.0.0.0
 }
 
 # Hacks
