@@ -79,6 +79,7 @@ store lists, dictionaries, trees etc.
 * abduco
 * bat
 * briss
+* cal
 * djview4
 * dvtm
 * fd
