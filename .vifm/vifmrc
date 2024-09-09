@@ -39,7 +39,7 @@ command df df -h %m 2>/dev/null
 command diff vim -d %f %F
 command FZFFind :let $PICK = term("preview")
               \| if $PICK != ""
-              \|     execute "edit" fnameescape($PICK)
+              \|     execute "!open" fnameescape($PICK)
               \| endif
 command FZFGoto :let $PICK = term("folders")
               \| if $PICK != ""
@@ -62,7 +62,7 @@ nmap s :!spawn st<cr>
 nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
-nmap <c-p> :FZFFind<cr>
+nmap <c-o> :FZFFind<cr>
 nmap <c-s> :FZFGoto<cr>
 
 " Viewer
