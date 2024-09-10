@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-wallpaper=$(ls -1 "$HOME"/.wallpapers | dmenu )
+wallpaper=$(ls -1 "$HOME"/.wallpapers | dmenu -l 10)
 feh --bg-scale "$HOME"/.wallpapers/"$wallpaper"
