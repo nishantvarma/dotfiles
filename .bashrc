@@ -137,17 +137,6 @@ rio()
     DISPLAY=:1 spawn rio
 }
 
-ss()
-{
-    maim -s | xclip -selection clipboard -t image/png
-}
-
-ws()
-{
-    echo -n "IP: " && ip addr show wlp0s20f3 | grep -Po 'inet \K[\d.]+' &&
-    python -m http.server --bind=0.0.0.0
-}
-
 # Hacks
 # =====
 
