@@ -50,7 +50,7 @@ command FZFGoto :let $PICK = term("folders")
 " =================
 
 nmap - gh
-nmap E :edit<cr>
+nmap e :edit<cr>
 nmap O :mkdir<space>
 nmap S :sort<cr>
 nmap cc cw<c-u>

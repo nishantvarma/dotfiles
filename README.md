@@ -65,6 +65,7 @@ store lists, dictionaries, trees etc.
 * unzip
 * wget
 * xclip
+* xdotools &&
 * xserver-xorg-input-synaptics
 * xorg-server-xephyr
 * xorg-xhost
