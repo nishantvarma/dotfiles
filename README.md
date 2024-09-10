@@ -6,8 +6,8 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 * outliner: filesystem
   * a *folder* groups **any** topic.
   * it can contain another folder (topic) / file (input to **any** program).
-  * a (relative) link is a (flexible) light-weight reference -- it can creates
-    complex structures.
+  * a link is a light-weight reference -- it can creates complex structures.
+  * indirections are powerful.
   * it's like encapsulation in oops: bind data + operations.
 * explorer: `vifm`
   * `vi`-like tui for outline operations: bookmark, navigate, preview, open.
@@ -21,6 +21,14 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 * ide: `linux`
 
 [The above information can be represented as an outline.]
+
+Dispatch opening, viewing etc. to file types by having a folder in bin.
+
+Autogenerate outlines.
+
+File can be opened via browser, but what about reverse?
+
+OverlayFS.
 
 Need to see if everything: window, process etc., can be mapped to an outline.
 For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
