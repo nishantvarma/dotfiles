@@ -117,6 +117,7 @@ store lists, dictionaries, trees etc.
 * vifm
 * vim
 * vis
+* xnedit
 * xournalpp
 * zathura
 * zoxide
