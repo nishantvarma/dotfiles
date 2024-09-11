@@ -3,7 +3,7 @@
 type=$(mime "$(follow "$1")")
 
 if [[ "$type" == *directory* ]]; then
-    eza --tree "${@}"
+    unbuffer eza -T "${@}"
 elif [[ "$type" == *text* ]]; then
     batcat "${@}"
 fi
