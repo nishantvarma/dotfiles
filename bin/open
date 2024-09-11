@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-file=$(dereference "$1")
+file=$(follow "$1")
 
 shebang()
 {

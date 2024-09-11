@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-type=$(mime "$(dereference "$1")")
+type=$(mime "$(follow "$1")")
 
 if [[ "$type" == *directory* ]]; then
     tree "${@}"
