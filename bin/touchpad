@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
 synclient TapButton=1
+synclient FingerHigh=40
+synclient FingerLow=35
