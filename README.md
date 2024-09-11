@@ -91,7 +91,7 @@ store lists, dictionaries, trees etc.
 * cal
 * djview4
 * dvtm
-* exa
+* eza
 * fd
 * git (cola, gui)
 * harlequin (odbc)
