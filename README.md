@@ -22,7 +22,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 
 [The above information can be represented as an outline.]
 
-Dispatch opening, viewing etc. to file types by having a folder in bin.
+Dispatch opening, viewing etc., to file types by having a folder in bin.
 
 Autogenerate outlines.
 
