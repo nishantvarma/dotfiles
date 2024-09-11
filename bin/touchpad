@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 synclient \
-    FingerHigh=40 \
-    FingerLow=35 \
+    FingerHigh=50 \
+    FingerLow=30 \
+    PalmDetect=1 \
+    PalmMinWidth=8 \
+    PalmMinZ=100 \
     TapButton1=1 \
     TapButton2=3 \
     TapButton3=2
