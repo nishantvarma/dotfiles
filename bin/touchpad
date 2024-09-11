@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 synclient \
-	FingerHigh=40 \
+    FingerHigh=40 \
     FingerLow=35 \
     TapButton1=1 \
-	TapButton2=3 \
-	TapButton3=2
+    TapButton2=3 \
+    TapButton3=2
