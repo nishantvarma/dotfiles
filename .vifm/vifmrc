@@ -26,7 +26,7 @@ nmap s :!spawn st<cr>
 nmap w :file<space><tab>
 nmap yd :!echo %d | xclip %i<cr>
 nmap yf :!echo %c:p | xclip %i<cr>
-nmap <c-o> :prevpen<cr>
+nmap <c-o> :!prevpen<cr>
 
 set fastrun
 set fusehome=/tmp/vifm_fuse
