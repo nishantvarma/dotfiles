@@ -1,9 +1,32 @@
-" Settings
-" ========
-
 autocmd DirEnter Downloads setlocal sort=-mtime
 
 colorscheme Default
+
+fileview * view %c
+filetype * open %f
+
+mark d ~/Data
+mark h ~
+mark n ~/Downloads
+mark o ~/opt
+mark s ~/src
+mark t ~/scratch
+mark u ~/Unsynced
+
+nmap - gh
+nmap e :edit<cr>
+nmap O :mkdir<space>
+nmap S :sort<cr>
+nmap cc cw<c-u>
+nmap gb :file &<cr>l
+nmap i cw<c-a>
+nmap o :touch<space>
+nmap q :quit<CR>
+nmap s :!spawn st<cr>
+nmap w :file<space><tab>
+nmap yd :!echo %d | xclip %i<cr>
+nmap yf :!echo %c:p | xclip %i<cr>
+nmap <c-o> :prevpen<cr>
 
 set fastrun
 set fusehome=/tmp/vifm_fuse
@@ -31,57 +54,3 @@ set viewcolumns=*{name}
 set wildmenu
 
 view
-
-" Commands
-" ========
-
-command df df -h %m 2>/dev/null
-command diff vim -d %f %F
-command FZFFind :let $PICK = term("preview")
-              \| if $PICK != ""
-              \|     execute "!open" fnameescape($PICK)
-              \| endif
-command FZFGoto :let $PICK = term("folders")
-              \| if $PICK != ""
-              \|     execute "goto" fnameescape($PICK)
-              \| endif
-
-" Keyboard Mappings
-" =================
-
-nmap - gh
-nmap e :edit<cr>
-nmap O :mkdir<space>
-nmap S :sort<cr>
-nmap cc cw<c-u>
-nmap gb :file &<cr>l
-nmap i cw<c-a>
-nmap o :touch<space>
-nmap q :quit<CR>
-nmap s :!spawn st<cr>
-nmap w :file<space><tab>
-nmap yd :!echo %d | xclip %i<cr>
-nmap yf :!echo %c:p | xclip %i<cr>
-nmap <c-o> :FZFFind<cr>
-nmap <c-s> :FZFGoto<cr>
-
-" Viewer
-" ======
-
-fileview * view %c
-
-" Opener
-" ======
-
-filetype * open %f
-
-" Bookmarks
-" =========
-
-mark d ~/Data
-mark h ~
-mark n ~/Downloads
-mark o ~/opt
-mark s ~/src
-mark t ~/scratch
-mark u ~/Unsynced
