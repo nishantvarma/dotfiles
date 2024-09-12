@@ -44,10 +44,3 @@ set splitright
 set textwidth=79
 
 syntax on
-
-" plugins @ .vim/pack/bundle/start
-
-" https://github.com/romainl/vim-qf
-" https://github.com/tpope/vim-commentary.git
-" https://github.com/tpope/vim-repeat.git
-" https://github.com/tpope/vim-surround.git
