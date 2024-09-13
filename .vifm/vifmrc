@@ -10,7 +10,7 @@ nmap e :edit<cr>
 nmap gx :!prevpen<cr>
 nmap O :mkdir<space>
 nmap o :touch<space>
-nmap qq :quit<cr>
+nmap q :quit<cr>
 nmap s :!spawn st<cr>
 
 set fastrun
