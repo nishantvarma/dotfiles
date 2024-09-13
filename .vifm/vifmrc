@@ -5,28 +5,11 @@ colorscheme Default
 fileview * view %c
 filetype * open %f
 
-mark d ~/Data
-mark h ~
-mark n ~/Downloads
-mark o ~/opt
-mark s ~/src
-mark t ~/scratch
-mark u ~/Unsynced
-
-nmap - gh
 nmap e :edit<cr>
+nmap gx :!prevpen<cr>
 nmap O :mkdir<space>
-nmap S :sort<cr>
-nmap cc cw<c-u>
-nmap gb :file &<cr>l
-nmap i cw<c-a>
 nmap o :touch<space>
-nmap q :quit<CR>
 nmap s :!spawn st<cr>
-nmap w :file<space><tab>
-nmap yd :!echo %d | xclip %i<cr>
-nmap yf :!echo %c:p | xclip %i<cr>
-nmap <c-o> :!prevpen<cr>
 
 set fastrun
 set fusehome=/tmp/vifm_fuse
