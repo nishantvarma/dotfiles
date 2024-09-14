@@ -16,7 +16,7 @@ end)
 
 backslash = "\\"
 
-vis:map(vis.modes.NORMAL, " ", ":exec vis-commands<Enter>")
+vis:map(vis.modes.NORMAL, " ", ":exec edit+<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
 vis:map(vis.modes.NORMAL, backslash .. "d", "o<Escape>")
 vis:map(vis.modes.NORMAL, backslash .. "q", ":q<Enter>")
