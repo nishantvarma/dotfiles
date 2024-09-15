@@ -1,7 +1,9 @@
 #!/usr/bin/env rc
 
-file=`{file $1}
-mime=`{file -m $1}
+if (! ~ $#* 0) {
+	file=`{file $1}
+	mime=`{file -m $1}
 
-if (~ $file *directory*) tree $*
-if not if (~ $mime *text*) cat $*
+	if (~ $file *directory*) tree $*
+	if not if (~ $mime *text*) cat $*
+}

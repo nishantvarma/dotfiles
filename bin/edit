@@ -1,6 +1,8 @@
 #!/usr/bin/env rc
 
-file=`{file $1}
-mime=`{file -m $1}
+if (! ~ $#* 0) {
+	file=`{file $1}
+	mime=`{file -m $1}
 
-if (~ $mime *text*) vis $*
+	if (~ $mime *text*) st vis $1
+}
