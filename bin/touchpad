@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
 synclient \
     AccelFactor=0.0512689 \
