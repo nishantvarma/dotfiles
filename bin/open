@@ -10,5 +10,5 @@ if not if (~ $1 *.jpeg) spawn page $*
 if not if (~ $1 *.mp3) mocp -l $*
 if not if (~ $1 *.mp4) spawn mpv $*
 if not if (~ $1 *.pdf) spawn zathura $*
-if not if (~ $file *executable*) `{readlink -f $1}
+if not if (~ $file *executable*) spawn st `{readlink -f $1}
 if not if (~ $mime *text*) spawn st vis $*
