@@ -3,12 +3,13 @@
 if (! ~ $#* 0) {
 	file=`{file $1}
 	mime=`{file -m $1}
-	
+
 	if (~ $1 *.djvu) spawn djview4 $1
-	if not if (~ $1 *.jpeg) spawn page $1
+	if not if (~ $1 *.jp[e]g) spawn page $1
 	if not if (~ $1 *.mp3) mocp -l $1
 	if not if (~ $1 *.mp4) spawn mpv $1
 	if not if (~ $1 *.pdf) spawn zathura $1
+	if not if (~ $1 *.png) spawn page $1
 	if not if (~ $file *executable*) spawn st `{readlink -f $1}
 	if not if (~ $mime *text*) spawn st vis $1
 }
