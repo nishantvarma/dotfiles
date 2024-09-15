@@ -13,6 +13,8 @@ nmap o :touch<space>
 nmap q :quit<cr>
 nmap s :!spawn st<cr>
 nmap x :!fuzzyopen<cr>
+nmap yc :!cat %f | xclip -sel clip<cr>
+nmap yn :!echo %f | xclip -sel clip<cr>
 
 set fastrun
 set fusehome=/tmp/vifm_fuse
