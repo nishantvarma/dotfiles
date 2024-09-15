@@ -1,0 +1,3 @@
+#!/usr/bin/env rc
+
+cat $home/commands.vis | vis-menu
