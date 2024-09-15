@@ -3,8 +3,6 @@
 file=`{file $1}
 mime=`{file -m $1}
 
-echo $pwd
-
 if (~ $1 *.djvu) spawn djview4 $*
 if not if (~ $1 *.jpeg) spawn page $*
 if not if (~ $1 *.mp3) mocp -l $*
