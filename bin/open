@@ -1,36 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env rc
 
-file=$(follow "$1")
+file=`{file $1}
+mime=`{file -m $1}
 
-shebang()
-{
-    local header
-    header=$(head -n 1 "$file")
-    if [[ "$header" =~ ^#! ]]; then
-        interpreter=$(echo "$header" | sed 's/^#!//')
-        spawn st $interpreter ${@}
-        true
-    else
-        false
-    fi
-}
+echo $file
 
-type=$(mime "$file")
-
-if [[ "$type" == *audio* ]]; then
-    mocp -l "${@}"
-elif [[ "$type" == *directory* ]]; then
-    spawn st vifm "${@}"
-elif [[ "$type" == *djvu* ]]; then
-    spawn zathura "${@}"
-elif [[ "$type" == *image* ]]; then
-    spawn feh "${@}"
-elif [[ "$type" == *pdf* ]]; then
-    spawn zathura "${@}"
-elif [[ "$type" == *shellscript* ]]; then
-    shebang "${@}" || spawn st bash "${@}"
-elif [[ "$type" == *text* ]]; then
-    shebang "${@}" || spawn st vis "${@}"
-elif [[ "$type" == *video* ]]; then
-    spawn mpv "${@}"
-fi
+if (~ $file *executable*) $1
+if (~ $mime *text*) vis $*
+if (~ $1 *.djvu) spawn zathura $*
+if (~ $1 *.jpeg) spawn page $*
+if (~ $1 *.mp3) mocp -l $*
+if (~ $1 *.mp4) spawn mpv $*
+if (~ $1 *.pdf) spawn zathura $*
