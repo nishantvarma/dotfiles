@@ -5,14 +5,14 @@ colorscheme Default
 filetype * open %f
 fileview * view %c
 
+nmap O :mkdir<space>
 nmap ct :tabnew<cr>
 nmap e :edit<cr>
-nmap ef :!fuzzyedit<cr>
-nmap O :mkdir<space>
+nmap f :!fuzzyedit<cr>
 nmap o :touch<space>
-nmap of :!fuzzyopen<cr>
 nmap q :quit<cr>
 nmap s :!spawn st<cr>
+nmap x :!fuzzyopen<cr>
 
 set fastrun
 set fusehome=/tmp/vifm_fuse
