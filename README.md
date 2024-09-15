@@ -6,7 +6,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 * outliner: filesystem
   * a *folder* groups **any** topic.
   * it can contain another folder (topic) / file (input to **any** program).
-  * a link is a light-weight reference -- it can creates complex structures.
+  * a link is a light-weight reference - it can create complex structures.
   * indirections are powerful.
   * it's like encapsulation in oops: bind data + operations.
 * explorer: `vifm`
@@ -18,7 +18,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 * window-manager: `dwm`
 * terminal: `st`
 * automation: `bash`
-* ide: `linux`
+* ide: `plan9[port]`
 
 [The above information can be represented as an outline.]
 
@@ -45,7 +45,6 @@ store lists, dictionaries, trees etc.
 
 # programming languages
 
-* bash
 * erlang
 * es
 * ghc
@@ -86,15 +85,11 @@ store lists, dictionaries, trees etc.
 # apps
 
 * abduco
-* bat
 * briss
 * cal
 * djview4
 * dvtm
-* eza
-* fd
 * git (cola, gui)
-* harlequin (odbc)
 * jj
 * lynx
 * meld
@@ -105,9 +100,7 @@ store lists, dictionaries, trees etc.
 * qutebrowser
 * recoll
 * rich
-* ripgrep
 * scid
-* sd
 * shellcheck
 * sqlfmt
 * st
@@ -117,14 +110,6 @@ store lists, dictionaries, trees etc.
 * vifm
 * vim
 * vis
-* xnedit
 * xournalpp
 * zathura
 * zoxide
-
-# extras
-
-* cudatext
-* leo
-* sim
-* zed
