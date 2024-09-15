@@ -22,13 +22,11 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 
 [The above information can be represented as an outline.]
 
-Dispatch opening, viewing etc., to file types by having a folder in bin.
-
 Autogenerate outlines.
 
 File can be opened via browser, but what about reverse?
 
-OverlayFS.
+Cooler FS?
 
 Need to see if everything: window, process etc., can be mapped to an outline.
 For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
@@ -69,23 +67,18 @@ store lists, dictionaries, trees etc.
 * socat
 * strace
 * sysstat
-* unzip
-* wget
 * xclip
-* xdotools &&
-* xserver-xorg-input-synaptics
+* xdotools
 * xorg-server-xephyr
 * xorg-xhost
 * xpra
 * xsel
-* xseticon
+* xserver-xorg-input-synaptics
 * yt-dlp
-* zip
 
 # apps
 
 * abduco
-* cal
 * djview4
 * dvtm
 * git (cola, gui)
