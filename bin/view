@@ -1,9 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env rc
 
-type=$(mime "$(follow "$1")")
+file=`{file $1}
+mime=`{file -m $1}
 
-if [[ "$type" == *directory* ]]; then
-    unbuffer eza -T "${@}"
-elif [[ "$type" == *text* ]]; then
-    batcat "${@}"
-fi
+if (~ $file *directory*) tree $*
+if not (~ $mime *text*) cat $*
