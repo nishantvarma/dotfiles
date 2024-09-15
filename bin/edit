@@ -4,5 +4,5 @@ if (! ~ $#* 0) {
 	file=`{file $1}
 	mime=`{file -m $1}
 
-	if (~ $mime *text*) st vis $1
+	if (~ $mime *text*) spawn st vis $1
 }
