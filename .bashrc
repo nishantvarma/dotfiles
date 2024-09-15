@@ -101,7 +101,7 @@ inferno()
 
 ll()
 {
-    ls -hlrt "$@"
+    ls -lrt
 }
 
 mp3()
