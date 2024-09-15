@@ -1,7 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/env rc
 
-webserver()
-{
-    echo -n "IP: " && ip addr show wlp0s20f3 | grep -Po 'inet \K[\d.]+' &&
-    python -m http.server --bind=0.0.0.0
-}
+ip addr show wlp0s20f3 | grep 'inet ' | awk '{print $2}' | cut -d / -f 1 &&
+python -m http.server --bind=0.0.0.0
