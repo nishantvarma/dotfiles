@@ -4,9 +4,9 @@ file=`{file $1}
 mime=`{file -m $1}
 
 if (~ $file *executable*) $1
-if not (~ $mime *text*) vis $*
-if not (~ $1 *.djvu) spawn zathura $*
-if not (~ $1 *.jpeg) spawn page $*
-if not (~ $1 *.mp3) mocp -l $*
-if not (~ $1 *.mp4) spawn mpv $*
-if not (~ $1 *.pdf) spawn zathura $*
+if not if (~ $mime *text*) vis $*
+if not if (~ $1 *.djvu) spawn zathura $*
+if not if (~ $1 *.jpeg) spawn page $*
+if not if (~ $1 *.mp3) mocp -l $*
+if not if (~ $1 *.mp4) spawn mpv $*
+if not if (~ $1 *.pdf) spawn zathura $*

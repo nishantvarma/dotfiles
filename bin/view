@@ -4,4 +4,4 @@ file=`{file $1}
 mime=`{file -m $1}
 
 if (~ $file *directory*) tree $*
-if not (~ $mime *text*) cat $*
+if not if (~ $mime *text*) cat $*
