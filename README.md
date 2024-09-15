@@ -85,28 +85,21 @@ store lists, dictionaries, trees etc.
 # apps
 
 * abduco
-* briss
 * cal
 * djview4
 * dvtm
 * git (cola, gui)
 * jj
-* lynx
 * meld
-* micro
-* mkvtoolnix-gui
 * mocp
 * mpv
 * qutebrowser
 * recoll
-* rich
 * scid
 * shellcheck
-* sqlfmt
 * st
 * tabbed
 * tgpt
-* tmux
 * vifm
 * vim
 * vis
