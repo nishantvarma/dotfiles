@@ -4,7 +4,6 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 # tl;dr
 
 * outliner: filesystem
-  * bind *data* + *operations* like oops.
   * a folder can group ideas related to a *topic*.
   * it can contain other files/folders (contents/topics).
   * a link can create lightweight references.
@@ -12,6 +11,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
   * metadata like *bookmarks* are also files/folders.
   * fuzzy search can be used to bookmark quickly.
   * viewing, editing, opening etc., can be handled by shell script switches.
+  * bind *data* + *operations* like oops.
 * explorer: `vifm`
   * `vi`-like tui for outline operations
   * everything is clickable.
