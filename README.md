@@ -9,7 +9,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
   * binds *data* + *operations* like oops.
   * a link is a light-weight reference that can create complex structures.
   * indirections can create powerful graphs.
-* *bookmarks* are folders that contain **links** to important things.
+* *bookmarks* are folders that contain **links** to a **subset**.
 * viewing, editing, opening etc., are handled by shell script switches.
 * fuzzy searchers like `fzy` can be used to bookmark quickly.
 * explorer: `vifm`
