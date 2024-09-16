@@ -7,7 +7,7 @@ fileview * view %c
 
 nmap O :mkdir<space>
 nmap ct :tabnew<cr>
-nmap e :edit<cr>
+nmap e :!edit %f<cr>
 nmap f :!fuzzyedit<cr>
 nmap o :touch<space>
 nmap q :quit<cr>

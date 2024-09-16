@@ -29,7 +29,7 @@ Autogenerate outlines.
 
 URLS can be opened via browser, but what about reverse?
 
-Cooler FS?
+Cooler FS'es?
 
 Need to see if everything: window, process etc., can be mapped to an outline.
 For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
