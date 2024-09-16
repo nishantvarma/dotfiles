@@ -4,8 +4,8 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 # tl;dr
 
 * outliner: filesystem
-  * a *folder* is a collection of topics.
-  * it can contain others folders(topics)/files(anything).
+  * a *folder* is a collection of *topics*.
+  * it can contain other folders(topics)/files(anything).
   * bind *data* + *operations* like oops.
   * a link is a light-weight reference - it can create complex structures.
   * indirections are powerful.
