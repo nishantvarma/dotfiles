@@ -25,7 +25,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 
 [The above information can be represented as an outline.]
 
-Autogenerate outlines.
+Autogenerate outlines (like `zoxide`).
 
 URLS can be opened via browser, but what about reverse?
 
