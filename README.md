@@ -4,7 +4,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 # tl;dr
 
 * outliner: filesystem
-  * binds *data* + *operations* like oops.
+  * bind *data* + *operations* like oops.
   * a folder can group ideas related to a *topic*.
   * it can contain other files/folders (contents/topics).
   * a link can create lightweight references.
