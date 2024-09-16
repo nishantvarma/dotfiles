@@ -4,24 +4,24 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 # tl;dr
 
 * outliner: filesystem
+  * binds *data* + *operations* like oops.
   * a folder can group ideas related to a *topic*.
   * it can contain other files/folders (contents/topics).
   * a link can create lightweight references.
   * indirections can create complex graphs.
   * metadata like *bookmarks* are also files/folders.
-  * fuzzy searchers like `fzy` can be used to bookmark quickly.
+  * fuzzy search can be used to bookmark quickly.
   * viewing, editing, opening etc., can be handled by shell script switches.
-  * binds *data* + *operations* like oops.
 * explorer: `vifm`
   * `vi`-like tui for outline operations
   * everything is clickable.
-  * everything opens in a new `dwm` window including `st`.
+  * everything opens in a new `dwm` window possibly `st`.
 * editor: `vis`
   * `vi`-like bindings with structural regexp.
 * window-manager: `dwm`
 * terminal: `st`
 * automation: `rc`
-* ide: `plan9port` + `suckless` tools
+* ide: `plan9port` + `suckless`
 
 [The above information can be represented as an outline.]
 
