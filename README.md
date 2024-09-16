@@ -1,14 +1,14 @@
 I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
-[plan9](https://plan9.io/plan9/)[port] and [cat-v](https://doc.cat-v.org/).
+[plan9](https://plan9.io/plan9/) and [cat-v](https://doc.cat-v.org/).
 
 # tl;dr
 
 * outliner: filesystem
+  * binds *data* + *operations* like oops.
   * a folder is a collection of *topics*.
   * it can contain other folders (topics) / files (anything).
-  * binds *data* + *operations* like oops.
-  * a link is a light-weight reference that can create complex structures.
-  * indirections can create powerful graphs.
+  * a link can create light-weight references.
+  * indirections can create complex graphs.
 * *bookmarks* are folders that contain **links** to a **subset**.
 * viewing, editing, opening etc., are handled by shell script switches.
 * fuzzy searchers like `fzy` can be used to bookmark quickly.
@@ -21,7 +21,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 * window-manager: `dwm`
 * terminal: `st`
 * automation: `rc`
-* ide: `plan9[port]` + `suckless` tools
+* ide: `plan9port` + `suckless` tools
 
 [The above information can be represented as an outline.]
 
