@@ -1,5 +1,5 @@
 I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
-[Plan9](https://plan9.io/plan9/)[Port] and [cat-v](https://doc.cat-v.org/).
+[plan9](https://plan9.io/plan9/)[port] and [cat-v](https://doc.cat-v.org/).
 
 # tl;dr
 
