@@ -4,14 +4,14 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 # tl;dr
 
 * outliner: filesystem
-  * binds *data* + *operations* like oops.
-  * a folder is a collection of *topics*.
-  * it can contain other folders (topics) / files (anything).
-  * a link can create light-weight references.
+  * a folder can group ideas related to a *topic*.
+  * it can contain other files/folders (contents/topics).
+  * a link can create lightweight references.
   * indirections can create complex graphs.
-* *bookmarks* are folders that contain **links** to a **subset**.
-* viewing, editing, opening etc., are handled by shell script switches.
-* fuzzy searchers like `fzy` can be used to bookmark quickly.
+  * metadata like *bookmarks* are also files/folders.
+  * fuzzy searchers like `fzy` can be used to bookmark quickly.
+  * viewing, editing, opening etc., can be handled by shell script switches.
+  * binds *data* + *operations* like oops.
 * explorer: `vifm`
   * `vi`-like tui for outline operations
   * everything is clickable.
