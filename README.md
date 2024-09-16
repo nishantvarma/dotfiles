@@ -14,8 +14,8 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
 * fuzzy searchers like `fzy` can be used to bookmark quickly.
 * explorer: `vifm`
   * `vi`-like tui for outline operations
-  * everything is `clickable`.
-  * everything opens in a `dwm` window; possibly `st`.
+  * everything is clickable.
+  * everything opens in a new `dwm` window including `st`.
 * editor: `vis`
   * `vi`-like bindings with structural regexp.
 * window-manager: `dwm`
