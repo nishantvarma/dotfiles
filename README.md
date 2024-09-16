@@ -1,30 +1,33 @@
 I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
-[Plan9](https://plan9.io/plan9/) and [cat-v](https://doc.cat-v.org/).
+[Plan9](https://plan9.io/plan9/)[Port] and [cat-v](https://doc.cat-v.org/).
 
 # tl;dr
 
 * outliner: filesystem
-  * a *folder* groups **any** topic.
-  * it can contain another folder (topic) / file (input to **any** program).
+  * a *folder* is a collection of topics.
+  * it can contain others folders(topics)/files(anything).
+  * bind *data* + *operations* like oops.
   * a link is a light-weight reference - it can create complex structures.
   * indirections are powerful.
-  * it's like encapsulation in oops: bind data + operations.
+* bookmarks are folders that contain *links* to a subset.
+* viewing, editing, opening etc., are handled by switches (shell scripts).
+* fuzzy searchers like `fzy` can be used to bookmark quickly.
 * explorer: `vifm`
-  * `vi`-like tui for outline operations: bookmark, navigate, preview, open.
+  * `vi`-like tui for outline operations
   * everything is `clickable`.
-  * everything opens in a `dwm` window possibly `st`.
+  * everything opens in a `dwm` window; possibly `st`.
 * editor: `vis`
-  * `vi`-like bindings with structured regexp.
+  * `vi`-like bindings with structural regexp.
 * window-manager: `dwm`
 * terminal: `st`
-* automation: `bash`
-* ide: `plan9[port]`
+* automation: `rc`
+* ide: `plan9[port]` + `suckless` tools
 
 [The above information can be represented as an outline.]
 
 Autogenerate outlines.
 
-File can be opened via browser, but what about reverse?
+URLS can be opened via browser, but what about reverse?
 
 Cooler FS?
 
@@ -59,13 +62,8 @@ store lists, dictionaries, trees etc.
 * docker
 * ffmpeg
 * fonts (consolas, dejavu, go, noto + nerd)
-* gnu-netcat
 * gvfs-mtp
-* maim
 * mat2
-* slock
-* socat
-* strace
 * sysstat
 * xclip
 * xdotools
@@ -74,15 +72,17 @@ store lists, dictionaries, trees etc.
 * xpra
 * xsel
 * xserver-xorg-input-synaptics
-* yt-dlp
 
 # apps
 
 * abduco
 * djview4
 * dvtm
+* fzy
 * git (cola, gui)
+* gnu-netcat
 * jj
+* maim
 * meld
 * mocp
 * mpv
@@ -90,12 +90,16 @@ store lists, dictionaries, trees etc.
 * recoll
 * scid
 * shellcheck
+* slock
+* socat
 * st
+* strace
 * tabbed
 * tgpt
 * vifm
 * vim
 * vis
 * xournalpp
+* yt-dlp
 * zathura
 * zoxide
