@@ -9,11 +9,11 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
   * a link can create lightweight references.
   * indirections can create complex graphs.
   * metadata like *bookmarks* are also files/folders.
-  * fuzzy search can be used to bookmark quickly.
-  * viewing, editing, opening etc., can be handled by shell script switches.
-  * bind *data* + *operations* like oops.
+  * fuzzy search can be used to quickly bookmark.
+  * viewing, editing, opening, etc., can be handled by shell script switches.
+  * bind *data* + operations* like oop.
 * explorer: `vifm`
-  * `vi`-like tui for outline operations
+  * `vi`-like tui for outline operations.
   * everything is clickable.
   * everything opens in a new `dwm` window possibly `st`.
 * editor: `vis`
