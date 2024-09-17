@@ -2,6 +2,7 @@
 ! =====
 
 ! Colors
+! ======
 
 XTerm*background: #121212
 XTerm*foreground: #f8f8f2
@@ -24,12 +25,14 @@ XTerm*color14: #40e0d0
 XTerm*color15: #f8f8f2
 
 ! Font
+! ====
 
 XTerm.vt100.faceName: DejaVu Sans Mono:style=Book:antialias=true
 XTerm.vt100.faceSize: 13
 XTerm.vt100.geometry: 80x24
 
 ! General
+! =======
 
 XTerm.allowBoldFonts: true
 XTerm.selectToClipboard: true
