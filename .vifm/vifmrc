@@ -6,6 +6,8 @@ filetype * open %f
 fileview * view %c
 
 nmap O :mkdir<space>
+nmap [t gT
+nmap ]t gt
 nmap ct :tabnew<cr>
 nmap e :!edit %f<cr>
 nmap f :!fuzzyedit<cr>
@@ -15,8 +17,6 @@ nmap s :!spawn st<cr>
 nmap x :!fuzzyopen<cr>
 nmap yc :!cat %f | xclip -sel clip<cr>
 nmap yn :!echo %f | xclip -sel clip<cr>
-nmap ]t gt
-nmap [t gT
 
 set fastrun
 set fusehome=/tmp/vifm_fuse
