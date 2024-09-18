@@ -8,7 +8,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
   * it can contain other files/folders.
   * a link can create lightweight reference.
   * indirections can create complex graphs.
-  * metadata like mru, bookmarks etc., are also files/folders.
+  * metadata like bookmarks, mrus  etc., are also files/folders.
   * fuzzy search can be used to quickly bookmark.
   * viewing, editing, opening, etc., can be delegated to shell scripts.
   * bind data + operations like oop.
