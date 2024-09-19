@@ -1,5 +1,3 @@
 #!/usr/bin/env rc
 
-if (! ~ $#* 0){
-	find $* | fzy
-}
+find $* | fzy

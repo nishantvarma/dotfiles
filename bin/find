@@ -1,5 +1,3 @@
 #!/usr/bin/env rc
 
-if (! ~ $#* 0){
-	fd -L --no-ignore-vcs $*
-}
+fd -L --no-ignore-vcs $*
