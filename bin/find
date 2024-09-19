@@ -1,4 +1,5 @@
 #!/usr/bin/env rc
 
-if (~ $#* 2) lsr $1 | grep $2
-if not lsr $1
+if (! ~ $#* 0){
+	fd -L --no-ignore-vcs $*
+}
