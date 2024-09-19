@@ -11,6 +11,7 @@ if (! ~ $#* 0) {
 	if not if (~ $1 *.mp4) spawn mpv $1
 	if not if (~ $1 *.pdf) spawn zathura $1
 	if not if (~ $1 *.png) spawn page $1
+	if not if (~ $1 *.url) microsoft-edge `{cat $1}
 	if not if (~ $file *executable*) spawn st `{readlink -f $1}
 	if not if (~ $mime *text*) spawn st vis $1
 }
