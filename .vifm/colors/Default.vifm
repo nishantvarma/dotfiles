@@ -1,7 +1,7 @@
 highlight Border cterm=none ctermbg=lightblack ctermfg=white
 highlight BrokenLink cterm=bold ctermbg=black ctermfg=red
 highlight CmdLine cterm=none ctermbg=black ctermfg=white
-highlight CurrLine cterm=reverse ctermbg=none ctermfg=none
+highlight CurrLine cterm=none ctermbg=blue ctermfg=black
 highlight Device cterm=none ctermbg=black ctermfg=yellow
 highlight Directory cterm=bold ctermbg=black ctermfg=blue
 highlight ErrorMsg cterm=bold ctermbg=black ctermfg=red
@@ -13,7 +13,7 @@ highlight Socket cterm=none ctermbg=black ctermfg=yellow
 highlight StatusLine cterm=bold ctermbg=lightblack ctermfg=white
 highlight TabLine cterm=none ctermbg=lightblack ctermfg=white
 highlight TabLineSel cterm=none ctermbg=white ctermfg=black
-highlight TopLine cterm=none ctermbg=lightblack ctermfg=yellow
-highlight TopLineSel cterm=none ctermbg=lightblack ctermfg=green
+highlight TopLine cterm=bold ctermbg=lightblack ctermfg=yellow
+highlight TopLineSel cterm=bold ctermbg=lightblack ctermfg=green
 highlight WildMenu cterm=none ctermbg=white ctermfg=black
 highlight Win cterm=none ctermbg=black ctermfg=white
