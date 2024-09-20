@@ -13,7 +13,7 @@ highlight Socket cterm=none ctermbg=black ctermfg=yellow
 highlight StatusLine cterm=bold ctermbg=lightblack ctermfg=white
 highlight TabLine cterm=none ctermbg=lightblack ctermfg=white
 highlight TabLineSel cterm=none ctermbg=white ctermfg=black
-highlight TopLine cterm=none ctermbg=lightblack ctermfg=white
-highlight TopLineSel cterm=bold ctermbg=lightblack ctermfg=white
+highlight TopLine cterm=none ctermbg=lightblack ctermfg=yellow
+highlight TopLineSel cterm=none ctermbg=lightblack ctermfg=green
 highlight WildMenu cterm=none ctermbg=white ctermfg=black
 highlight Win cterm=none ctermbg=black ctermfg=white
