@@ -12,7 +12,7 @@ highlight Selected cterm=bold ctermbg=black ctermfg=magenta
 highlight Socket cterm=none ctermbg=black ctermfg=yellow
 highlight StatusLine cterm=bold ctermbg=lightblack ctermfg=white
 highlight TabLine cterm=none ctermbg=lightblack ctermfg=white
-highlight TabLineSel cterm=none ctermbg=white ctermfg=black
+highlight TabLineSel cterm=none ctermbg=green ctermfg=black
 highlight TopLine cterm=bold ctermbg=lightblack ctermfg=yellow
 highlight TopLineSel cterm=bold ctermbg=lightblack ctermfg=green
 highlight WildMenu cterm=none ctermbg=white ctermfg=black
