@@ -1,7 +1,7 @@
 highlight Border cterm=none ctermbg=lightblack ctermfg=white
 highlight BrokenLink cterm=bold ctermbg=black ctermfg=red
 highlight CmdLine cterm=none ctermbg=black ctermfg=white
-highlight CurrLine cterm=none ctermbg=blue ctermfg=black
+highlight CurrLine cterm=reverse ctermbg=none ctermfg=none
 highlight Device cterm=none ctermbg=black ctermfg=yellow
 highlight Directory cterm=bold ctermbg=black ctermfg=blue
 highlight ErrorMsg cterm=bold ctermbg=black ctermfg=red
