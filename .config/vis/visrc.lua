@@ -16,7 +16,7 @@ end)
 
 backslash = "\\"
 
-vis:map(vis.modes.NORMAL, " ", ":exec fuzzyedit+<Enter>")
+vis:map(vis.modes.NORMAL, " ", ":exec vis+<Enter>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
 vis:map(vis.modes.NORMAL, backslash .. "d", "o<Escape>")
 vis:map(vis.modes.NORMAL, backslash .. "q", ":q<Enter>")
