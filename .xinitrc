@@ -14,8 +14,8 @@ battery()
 touchpad &&
 xrdb -load "$HOME"/.Xresources &&
 xhost +local: &&
-battery &
+# battery &
 feh --bg-scale "$HOME"/.wallpapers/gradient-cyan.png &&
-slstatus &
-exec dwm
-# exec bspwm
+# slstatus &
+# exec dwm
+exec bspwm
