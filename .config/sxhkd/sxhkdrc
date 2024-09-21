@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+alt + shift + {q,r}
+	bspc {quit,wm -r}
+ 
+alt + {_,shift + }Return
+	{st, bspc node -s biggest.local}

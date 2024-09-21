@@ -36,7 +36,9 @@
 # Folders
 
 !.config/bat/
+!.config/bspwm/
 !.config/mpv/
+!.config/sxhkd/
 !.config/vis/
 !.config/zathura/
 
