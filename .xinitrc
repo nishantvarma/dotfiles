@@ -18,3 +18,4 @@ battery &
 feh --bg-scale "$HOME"/.wallpapers/gradient-cyan.png &&
 slstatus &
 exec dwm
+# exec bspwm
