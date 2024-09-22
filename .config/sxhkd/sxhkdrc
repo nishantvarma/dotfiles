@@ -15,6 +15,9 @@ super + {Left,Right}
 super + {_,shift +} {h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
+super + e
+	9 vifm
+
 super + f
 	bspc desktop -l next
 
