@@ -1,7 +1,7 @@
 #!/usr/bin/env dash
 
-killall sxhkd 2>/dev/null ; sxhkd &
-killall bar 2>/dev/null ; bar &
+pkill -f sxhkd ; sxhkd &
+pkill -f bar ; bar &
 
 xsetroot -cursor_name left_ptr
 
