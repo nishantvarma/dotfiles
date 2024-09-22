@@ -71,6 +71,7 @@ store lists, dictionaries, trees etc.
 * xorg-xhost
 * xpra
 * xsel
+* xshkd
 * xserver-xorg-input-synaptics
 
 # apps
@@ -82,6 +83,7 @@ store lists, dictionaries, trees etc.
 * git (cola, gui)
 * gnu-netcat
 * jj
+* lemonbar
 * maim
 * meld
 * mocp
