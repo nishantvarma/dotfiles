@@ -1,25 +1,5 @@
 #!/usr/bin/env dash
 
-bat()
-{
-	cat /sys/class/power_supply/BAT0/capacity
-}
-
-cpu()
-{
-	top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}'
-}
-
-mem()
-{
-	top -bn1 | grep "MiB Mem" | awk '{printf "%.1f\n", $8 / 1024}'
-}
-
-hl()
-{
-	echo "%{F#000000}%{B#ffffff}$1%{F-}%{B-}"
-}
-
 desktops()
 {
 	output=""
@@ -35,10 +15,35 @@ desktops()
 	echo $output
 }
 
+day()
+{
+	date "+%H:%M:%S %b %d %a %Y"
+}
+
+bat()
+{
+	cat /sys/class/power_supply/BAT0/capacity
+}
+
+cpu()
+{
+	top -bn1 | grep "Cpu(s)" | awk '{printf "%.1f", $2 + $4}'
+}
+
+mem()
+{
+	top -bn1 | grep "MiB Mem" | awk '{printf "%.1f", $8 / 1024}'
+}
+
+hl()
+{
+	echo "%{F#000000}%{B#ffffff}$1%{F-}%{B-}"
+}
+
 status()
 {
 	while true; do
-		echo "%{l}$(desktops) %{c}$(date '+%H:%M:%S %b %d %a %Y') %{r}Cpu $(cpu) | Mem $(mem) | Bat $(bat)"
+		echo "%{l}$(desktops)%{c}$(day)%{r}Cpu $(cpu) | Mem $(mem) | Bat $(bat)"
 		sleep 1
 	done
 }
