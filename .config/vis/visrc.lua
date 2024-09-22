@@ -1,17 +1,17 @@
 require("vis")
 
 vis:command_register("exec", function(argv, force, win, selection, range)
-    local command = table.concat(argv, " ")
-    local file = io.popen(command)
-    local output = file:read()
-    local success, message, status = file:close()
-    if output then
-        for part in string.gmatch(output, "[^:\n]+") do
-            command = part:match("^%s*(.-)%s*$")
-            vis:command(command)
-        end
-    end
-    vis:feedkeys("<vis-redraw>")
+	local command = table.concat(argv, " ")
+	local file = io.popen(command)
+	local output = file:read()
+	local success, message, status = file:close()
+	if output then
+		for part in string.gmatch(output, "[^:\n]+") do
+			command = part:match("^%s*(.-)%s*$")
+			vis:command(command)
+		end
+	end
+	vis:feedkeys("<vis-redraw>")
 end)
 
 backslash = "\\"
@@ -27,9 +27,10 @@ vis:map(vis.modes.NORMAL, "<C-Right>", "<vis-window-next>")
 vis:map(vis.modes.NORMAL, "<C-Up>", "<vis-window-prev>")
 
 vis.events.subscribe(vis.events.INIT, function()
-    vis:command("set autoindent on")
-    vis:command("set theme terminal")
+	vis:command("set autoindent on")
+	vis:command("set theme terminal")
 end)
 
 vis.events.subscribe(vis.events.WIN_OPEN, function(win)
+	vis:command("set tabwidth 4")
 end)
