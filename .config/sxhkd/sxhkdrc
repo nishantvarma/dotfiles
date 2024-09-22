@@ -1,7 +1,16 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
-alt + shift + {q,r}
-	bspc {quit,wm -r}
- 
-alt + {_,shift + }Return
-	{st, bspc node -s biggest.local}
+alt + c
+	st
+
+alt + q
+	bspc quit
+
+alt + r
+	bspc wm -r
+
+alt + Return
+	 bspc node -s biggest.local
+
+alt + x
+	dmenu_run
