@@ -1,11 +1,11 @@
 #!/usr/bin/env dash
 
 killall sxhkd 2>/dev/null ; sxhkd &
-killall slstatus lemonbar 2>/dev/null ; slstatus -s | lemonbar &
+killall bar 2>/dev/null ; bar &
 
 xsetroot -cursor_name left_ptr
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 bspc config automatic_scheme spiral
 bspc config border_width 2
