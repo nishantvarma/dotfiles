@@ -1,16 +1,40 @@
 #!/usr/bin/env dash
 
-alt + c
-	st
+alt + Tab
+	bspc desktop -f last
 
-alt + q
+ctrl + Tab
+	bspc node -f last
+
+super + {_,shift + } {1-9}
+	bspc {desktop -f,node -d} ^{1-9}
+
+super + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
+super + {_,shift +} {h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+super + f
+	bspc desktop -l next
+
+super + m
+	bspc node -s biggest.local
+
+super + p
+	dmenu_run
+
+super + q
+	bspc node -{c,k}
+
+super + shift + q
 	bspc quit
 
-alt + r
+super + r
 	bspc wm -r
 
-alt + Return
-	 bspc node -s biggest.local
+super + Return
+	st
 
-alt + x
-	dmenu_run
+super + s
+	bspc node -s last

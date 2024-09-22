@@ -1,6 +1,7 @@
 #!/usr/bin/env dash
 
-pgrep -x sxhkd >/dev/null || sxhkd &
+killall sxhkd 2>/dev/null ; sxhkd &
+killall slstatus lemonbar 2>/dev/null ; slstatus -s | lemonbar &
 
 xsetroot -cursor_name left_ptr
 
