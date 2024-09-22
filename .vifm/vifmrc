@@ -5,7 +5,7 @@ colorscheme Default
 filetype * open %f
 fileview * view %c
 
-nmap <space> :split | view<cr>
+nmap <space> :view<cr>
 nmap [t gT
 nmap ]t gt
 nmap ct :tabnew<cr>
