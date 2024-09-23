@@ -4,7 +4,7 @@ if (! ~ $#* 0) {
 	file=`{file $1}
 	mime=`{file -m $1}
 
-	if (~ $1 *.djvu) spawn djview4 $1
+	if (~ $1 *.djvu) spawn zathura $1
 	if not if (~ $1 *.jpeg) spawn page $1
 	if not if (~ $1 *.jpg) spawn page $1
 	if not if (~ $1 *.mp3) mocp -l $1

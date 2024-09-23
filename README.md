@@ -77,7 +77,6 @@ store lists, dictionaries, trees etc.
 # apps
 
 * abduco
-* djview4
 * dvtm
 * fzy
 * git (cola, gui)
@@ -103,5 +102,5 @@ store lists, dictionaries, trees etc.
 * vis
 * xournalpp
 * yt-dlp
-* zathura
+* zathura (djvu, ps)
 * zoxide
