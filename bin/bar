@@ -5,10 +5,13 @@ desktops()
 	output=""
 	desktops=$(bspc query -D --names)
 	focused=$(bspc query -D -d focused --names)
+	occupied=$(bspc query -D -d .occupied --names)
 	for desktop in $desktops; do
 		single="%{A:bspc desktop -f $desktop:} $desktop %{A}"
 		if [ "$desktop" = "$focused" ]; then
 			single=$(hl "$single")
+		elif echo "$occupied" | grep -q "$desktop"; then
+			single=$(mark "$single")
 		fi
 		output="$output$single"
 	done
@@ -38,6 +41,11 @@ mem()
 hl()
 {
 	echo "%{F#000000}%{B#ffffff}$1%{F-}%{B-}"
+}
+
+mark()
+{
+	echo "%{F#ffffff}%{B#262626}$1%{F-}%{B-}"
 }
 
 status()
