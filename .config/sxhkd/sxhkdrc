@@ -15,6 +15,9 @@ super + {Left,Right}
 super + {_,shift +} {h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
+super + d
+	bspc node -t floating
+
 super + e
 	st 9 vifm
 
@@ -41,3 +44,6 @@ super + Return
 
 super + s
 	bspc node -s last
+
+super + t
+	bspc node -t tiled
