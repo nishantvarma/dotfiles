@@ -45,7 +45,7 @@ hl()
 
 mark()
 {
-	echo "%{F#ffffff}%{B#444444}$1%{F-}%{B-}"
+	echo "%{F#ffffff}%{B#333333}$1%{F-}%{B-}"
 }
 
 status()
