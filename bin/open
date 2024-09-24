@@ -5,12 +5,14 @@ if (! ~ $#* 0) {
 	mime=`{file -m $1}
 
 	if (~ $1 *.djvu) spawn zathura $1
+	if not if (~ $1 *.gz) spawn st tar -xf $1
 	if not if (~ $1 *.jpeg) spawn page $1
 	if not if (~ $1 *.jpg) spawn page $1
 	if not if (~ $1 *.mp3) mocp -l $1
 	if not if (~ $1 *.mp4) spawn mpv $1
 	if not if (~ $1 *.pdf) spawn zathura $1
 	if not if (~ $1 *.png) spawn page $1
+	if not if (~ $1 *.tar) spawn st tar -xf $1
 	if not if (~ $1 *.url) spawn microsoft-edge `{cat $1}
 	if not if (~ $file *directory*) vifm --remote --server-name server $1
 	if not if (~ $file *executable*) spawn st `{readlink -f $1}
