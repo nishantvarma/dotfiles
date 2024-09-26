@@ -22,8 +22,8 @@ synclient \
     EmulateMidButtonTime=0 \
     EmulateTwoFingerMinW=7 \
     EmulateTwoFingerMinZ=282 \
-    FingerHigh=30 \
-    FingerLow=25 \
+    FingerHigh=40 \
+    FingerLow=30 \
     GrabEventDevice=0 \
     HorizEdgeScroll=0 \
     HorizHysteresis=19 \
@@ -61,8 +61,8 @@ synclient \
     SingleTapTimeout=180 \
     TapAndDragGesture=1 \
     TapButton1=1 \
-    TapButton2=3 \
-    TapButton3=2 \
+    TapButton2=2 \
+    TapButton3=3 \
     TopEdge=89 \
     TouchpadOff=0 \
     VertEdgeScroll=0 \
