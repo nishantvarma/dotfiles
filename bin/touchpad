@@ -34,10 +34,10 @@ synclient \
     LockedDrags=0 \
     LockedDragTimeout=5000 \
     LTCornerButton=0 \
-    MaxDoubleTapTime=180 \
+    MaxDoubleTapTime=100 \
     MaxSpeed=1.75 \
     MaxTapMove=171 \
-    MaxTapTime=180 \
+    MaxTapTime=100 \
     MiddleButtonAreaBottom=0 \
     MiddleButtonAreaLeft=0 \
     MiddleButtonAreaRight=0 \
