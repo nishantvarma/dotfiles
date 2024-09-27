@@ -1,7 +1,15 @@
 #!/usr/bin/env rc
- 
+
+fn title {
+	sleep 1
+	win=`{wmctrl -lp | grep $1 | awk '{print $1}'}
+	if (~ $2 st) wmctrl -ir $win -T $3:$4
+	if not wmctrl -ir $win -T $2:$3
+}
+
 if (! ~ $#* 0) {
 	$* >/dev/null >[2=1] &
+	title $apid $* &
 }
 if not if (~ $#* 0) {
 }

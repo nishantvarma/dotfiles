@@ -1,4 +1,8 @@
-#!/usr/bin/env dash
+#!/usr/bin/env bash
 
-win=$(wmctrl -lp | dmenu -l 10 | awk '{print $1}')
-bspc node -f "$win"
+mapfile -t wins < <(wmctrl -l | awk '{print $4" "$1}')
+sel=$(printf "%s\n" "${wins[@]}" | awk '{print $1}' | dmenu -l 10)
+if [ -n "$sel" ]; then
+    win=$(printf "%s\n" "${wins[@]}" | grep "^$sel" | awk '{print $2}')
+	bspc node -f "$win"
+fi
