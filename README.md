@@ -71,8 +71,10 @@ store lists, dictionaries, trees etc.
 * xorg-xhost
 * xpra
 * xsel
-* xshkd
 * xserver-xorg-input-synaptics
+* xshkd
+* xss-lock
+* xtitle
 
 # apps
 

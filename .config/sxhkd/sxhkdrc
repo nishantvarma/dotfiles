@@ -56,3 +56,6 @@ super + s
 
 super + t
 	bspc node -t tiled
+
+super + z
+	switch

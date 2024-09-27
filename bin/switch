@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+win=$(wmctrl -lp | dmenu -l 10 | awk '{print $1}')
+bspc node -f "$win"
