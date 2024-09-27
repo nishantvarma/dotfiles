@@ -1,3 +1,7 @@
 #!/usr/bin/env rc
  
-$* >/dev/null >[2=1] &
+if (! ~ $#* 0) {
+	$* >/dev/null >[2=1] &
+}
+if not if (~ $#* 0) {
+}

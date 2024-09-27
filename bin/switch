@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
 win=$(wmctrl -lp | dmenu -l 10 | awk '{print $1}')
 bspc node -f "$win"
