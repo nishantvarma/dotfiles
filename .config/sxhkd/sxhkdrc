@@ -28,7 +28,7 @@ super + d
 	bspc node -t floating
 
 super + e
-	st 9 vifm
+	9 spawn st vifm
 
 super + f
 	bspc desktop -l next
@@ -49,7 +49,7 @@ super + r
 	bspc wm -r
 
 super + Return
-	st
+	spawn st
 
 super + s
 	bspc node -s last
