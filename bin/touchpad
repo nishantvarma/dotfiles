@@ -22,8 +22,8 @@ synclient \
     EmulateMidButtonTime=0 \
     EmulateTwoFingerMinW=7 \
     EmulateTwoFingerMinZ=282 \
-    FingerHigh=40 \
-    FingerLow=30 \
+    FingerHigh=50 \
+    FingerLow=40 \
     GrabEventDevice=0 \
     HorizEdgeScroll=0 \
     HorizHysteresis=19 \
