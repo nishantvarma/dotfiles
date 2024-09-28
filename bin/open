@@ -1,8 +1,8 @@
 #!/usr/bin/env rc
 
 if (! ~ $#* 0) {
-	file=`{file $1}
-	mime=`{file -m $1}
+	file=`{file $1 >[2]/dev/null}
+	mime=`{file -m $1 >[2]/dev/null}
 
 	if (~ $1 *.djvu) spawn zathura $1
 	if not if (~ $1 *.gz) spawn st tar -xf $1

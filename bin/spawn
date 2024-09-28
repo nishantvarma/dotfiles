@@ -3,8 +3,12 @@
 fn title {
 	sleep 1
 	win=`{wmctrl -lp | grep $1 | awk '{print $1}'}
-	if (~ $2 st) wmctrl -ir $win -T $3:$4
-	if not wmctrl -ir $win -T $2:$3
+	if (~ $2 st) shift 2
+	if not shift 1
+	if (~ $#* 0) title=st
+	if not if (~ $#* 1) title=$1
+	if not title=$1:$2
+	wmctrl -ir $win -T $title
 }
 
 if (! ~ $#* 0) {
