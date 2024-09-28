@@ -3,7 +3,9 @@ autocmd DirEnter Downloads setlocal sort=-mtime
 colorscheme Default
 
 filetype * open %f
+filetype .* open %f
 fileview * view %c
+fileview .* view %c
 
 nmap <space> :view<cr>
 nmap [t gT
