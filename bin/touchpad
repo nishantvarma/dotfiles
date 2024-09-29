@@ -44,8 +44,8 @@ synclient \
 	MiddleButtonAreaTop=0 \
 	MinSpeed=1 \
 	PalmDetect=1 \
-	PalmMinWidth=10 \
-	PalmMinZ=200 \
+	PalmMinWidth=8 \
+	PalmMinZ=100 \
 	PressureMotionMaxFactor=1 \
 	PressureMotionMaxZ=160 \
 	PressureMotionMinFactor=1 \
