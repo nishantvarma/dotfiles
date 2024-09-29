@@ -17,9 +17,10 @@ end)
 backslash = "\\"
 
 vis:map(vis.modes.NORMAL, " ", ":exec vis+<Enter>")
+vis:map(vis.modes.NORMAL, "q", ":q<Enter>")
+vis:map(vis.modes.NORMAL, "Q", "<vis-macro-record>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
 vis:map(vis.modes.NORMAL, backslash .. "d", "o<Escape>")
-vis:map(vis.modes.NORMAL, backslash .. "q", ":q<Enter>")
 vis:map(vis.modes.NORMAL, backslash .. "u", "O<Escape>")
 vis:map(vis.modes.NORMAL, "<C-Down>", "<vis-window-next>")
 vis:map(vis.modes.NORMAL, "<C-Left>", "<vis-window-prev>")
@@ -32,5 +33,4 @@ vis.events.subscribe(vis.events.INIT, function()
 end)
 
 vis.events.subscribe(vis.events.WIN_OPEN, function(win)
-	vis:command("set tabwidth 8")
 end)
