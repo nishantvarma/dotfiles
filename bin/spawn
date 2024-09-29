@@ -7,7 +7,10 @@ fn title {
 	if not shift 1
 	if (~ $#* 0) title=st:`{pwd}
 	if not if (~ $#* 1) title=$1:`{pwd}
-	if not title=$1:$2
+	if not {
+		if (test -f $2) title=$1:`{realpath $2}
+		if not title=$1:$2
+	}
 	wmctrl -ir $win -T $title
 }
 
