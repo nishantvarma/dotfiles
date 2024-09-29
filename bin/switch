@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-sel=`{wmctrl -l | awk '{print $4}' | dmenu}
+sel=`{wmctrl -l | awk '{print $4}' | dmenu -l 10}
 
 if (! ~ $#sel 0) {
 	win=`{wmctrl -l | grep $sel | awk '{print $1}'}
