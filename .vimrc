@@ -11,8 +11,7 @@ nnoremap [t :tabprevious<CR>
 nnoremap gp gwip
 nnoremap j gj
 nnoremap k gk
-nnoremap <Leader>d o<Esc>k
-nnoremap <Leader>u O<Esc>j
+nnoremap <Enter> O<Esc>j
 nnoremap s :write<CR>
 nnoremap Y y$
 
