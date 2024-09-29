@@ -11,7 +11,7 @@ fn desktops {
 		if not if (echo $occupied | grep -q $desktop) single=`{mark $single}
 		output=$"output$"single
 	}
-	echo $"output
+	echo $output
 }
 
 fn bat {
