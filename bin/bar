@@ -1,64 +1,53 @@
-#!/usr/bin/env dash
+#!/usr/bin/env rc
 
-desktops()
-{
-	output=""
-	desktops=$(bspc query -D --names)
-	focused=$(bspc query -D -d focused --names)
-	occupied=$(bspc query -D -d .occupied --names)
-	for desktop in $desktops; do
-		single="%{A:bspc desktop -f $desktop:} $desktop %{A}"
-		if [ "$desktop" = "$focused" ]; then
-			single=$(hl "$single")
-		elif echo "$occupied" | grep -q "$desktop"; then
-			single=$(mark "$single")
-		fi
-		output="$output$single"
-	done
-	echo $output
+fn desktops {
+	output='Desktop '
+	desktops=`{bspc query -D --names}
+	focused=`{bspc query -D -d focused --names}
+	occupied=`{bspc query -D -d .occupied --names}
+	for (desktop in $desktops) {
+		single='%{A:bspc desktop -f '$desktop':} '$desktop' %{A}'
+		if (~ $desktop $focused) single=`{hl $single}
+		if not if (echo $occupied | grep -q $desktop) single=`{mark $single}
+		output=$"output$"single
+	}
+	echo $"output
 }
 
-day()
-{
-	date "+%H:%M:%S %b %d %a %Y"
-}
-
-bat()
-{
+fn bat {
 	cat /sys/class/power_supply/BAT0/capacity
 }
 
-cpu()
-{
-	top -bn1 | grep "Cpu(s)" | awk '{printf "%.1f", $2 + $4}'
+fn cpu {
+	top -bn1 | grep 'Cpu(s)' | awk '{printf "%.1f", $2 + $4}'
 }
 
-mem()
-{
-	top -bn1 | grep "MiB Mem" | awk '{printf "%.1f", $8 / 1024}'
+fn mem {
+	top -bn1 | grep 'MiB Mem' | awk '{printf "%.1f", $8 / 1024}'
 }
 
-hl()
-{
-	echo "%{F#000000}%{B#ffffff}$1%{F-}%{B-}"
+fn hl {
+	echo '%{F#000000}%{B#ffffff}'$1'%{F-}%{B-}'
 }
 
-mark()
-{
-	echo "%{F#ffffff}%{B#262626}$1%{F-}%{B-}"
+fn mark {
+	echo '%{F#ffffff}%{B#262626}'$1'%{F-}%{B-}'
 }
 
-status()
-{
-	while true; do
-		echo "%{l}$(desktops)%{c}$(day)%{r}Cpu $(cpu) | Mem $(mem) | Bat $(bat)"
+fn status {
+	while (true) {
+		desktops=`{desktops}
+		date=`{date}
+		cpu=`{cpu}
+		mem=`{mem}
+		bat=`{bat}
+		echo '%{l}'$"desktops'%{c}'$"date'%{r}Cpu '$"cpu' | Mem '$"mem' | Bat '$"bat
 		sleep 1
-	done
+	}
 }
 
-status |
-lemonbar -B "#121212" -F "#ffffff" -p |
-while true; do
-	read -r line
-	eval "$line"
-done
+fn process {
+	while (true) eval `{read}
+}
+
+status | lemonbar -B '#121212' -F '#ffffff' -p | process
