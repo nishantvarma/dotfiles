@@ -32,5 +32,5 @@ vis.events.subscribe(vis.events.INIT, function()
 end)
 
 vis.events.subscribe(vis.events.WIN_OPEN, function(win)
-	vis:command("set tabwidth 4")
+	vis:command("set tabwidth 8")
 end)
