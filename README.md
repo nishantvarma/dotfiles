@@ -20,7 +20,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
   * `vi`-like bindings with structural regexp.
 * window-manager: `dwm` or `bspwm`
 * terminal: `st`
-* automation: `rc`
+* shell: `rc`
 * ide: `plan9port` + `suckless`
 
 [The above information can be represented as an outline.]
