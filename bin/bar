@@ -1,17 +1,18 @@
 #!/usr/bin/env rc
 
-fn desktops {
-	output='Desktop '
-	desktops=`{bspc query -D --names}
-	focused=`{bspc query -D -d focused --names}
-	occupied=`{bspc query -D -d .occupied --names}
-	for (desktop in $desktops) {
-		single='%{A:bspc desktop -f '$desktop':} '$desktop' %{A}'
-		if (~ $desktop $focused) single=`{hl $single}
-		if not if (echo $occupied | grep -q $desktop) single=`{mark $single}
-		output=$"output$"single
+fn desks {
+	multi='Desktop '
+	desks=`{bspc query -D --names}
+	foc=`{bspc query -D -d focused --names}
+	occ=`{bspc query -D -d .occupied --names}
+	for (desk in $desks) {
+		sing='%{A:bspc desktop -f '$desk':} '$desk' %{A}'
+		if (~ $desk $foc) sing=`{hl $sing}
+		if not if (echo $occ | grep -q $desk) sing=`{mark $sing}
+		multi=$"multi$"sing
 	}
-	echo $output
+	l=`{bspc query -T -d | jq -r .layout}
+	echo $multi [$"l]
 }
 
 fn bat {
@@ -36,12 +37,15 @@ fn mark {
 
 fn status {
 	while (true) {
-		desktops=`{desktops}
+		desks=`{desks}
 		date=`{date}
 		cpu=`{cpu}
 		mem=`{mem}
 		bat=`{bat}
-		echo '%{l}'$"desktops'%{c}'$"date'%{r}Cpu '$"cpu' | Mem '$"mem' | Bat '$"bat
+		l='%{l}'$"desks
+		c='%{c}'$"date
+		r='%{r}Cpu '$"cpu'% | Mem '$"mem'gb | Bat '$"bat'%'
+		echo $"l$"c$"r
 		sleep 1
 	}
 }
