@@ -44,7 +44,7 @@ fn status {
 		bat=`{bat}
 		l='%{l}'$"desks
 		c='%{c}'$"date
-		r='%{r}Cpu '$"cpu'% | Mem '$"mem'gb | Bat '$"bat'%'
+		r='%{r}Cpu '$"cpu'% | Mem '$"mem'g | Bat '$"bat'%'
 		echo $"l$"c$"r
 		sleep 1
 	}
