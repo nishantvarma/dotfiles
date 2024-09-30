@@ -11,9 +11,9 @@ nnoremap [t :tabprevious<CR>
 nnoremap gp gwip
 nnoremap j gj
 nnoremap k gk
-nnoremap <Enter> O<Esc>j
 nnoremap s :write<CR>
 nnoremap Y y$
+nnoremap <Enter> O<Esc>j
 
 set autoindent
 set backupdir=$HOME/.backup.d/
