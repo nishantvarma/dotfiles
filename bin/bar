@@ -11,8 +11,8 @@ fn desks {
 		if not if (echo $occ | grep -q $desk) sing=`{mark $sing}
 		multi=$"multi$"sing
 	}
-	l=`{bspc query -T -d | jq -r .layout}
-	echo $multi [$"l]
+	lyt=`{bspc query -T -d | jq -r .layout}
+	echo $multi [$"lyt]
 }
 
 fn bat {
