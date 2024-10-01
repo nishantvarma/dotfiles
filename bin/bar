@@ -1,5 +1,13 @@
 #!/usr/bin/env rc
 
+fn bat {
+	cat /sys/class/power_supply/BAT0/capacity
+}
+
+fn cpu {
+	top -bn1 | grep 'Cpu(s)' | awk '{printf "%.1f", $2 + $4}'
+}
+
 fn desks {
 	multi='Desktop '
 	desks=`{bspc query -D --names}
@@ -15,18 +23,6 @@ fn desks {
 	echo $multi [$"lyt]
 }
 
-fn bat {
-	cat /sys/class/power_supply/BAT0/capacity
-}
-
-fn cpu {
-	top -bn1 | grep 'Cpu(s)' | awk '{printf "%.1f", $2 + $4}'
-}
-
-fn mem {
-	top -bn1 | grep 'MiB Mem' | awk '{printf "%.1f", $8 / 1024}'
-}
-
 fn hl {
 	echo '%{F#000000}%{B#ffffff}'$1'%{F-}%{B-}'
 }
@@ -35,9 +31,13 @@ fn mark {
 	echo '%{F#ffffff}%{B#262626}'$1'%{F-}%{B-}'
 }
 
+fn mem {
+	top -bn1 | grep 'MiB Mem' | awk '{printf "%.1f", $8 / 1024}'
+}
+
 fn ready { echo ok >/tmp/bar.fifo }
 
-fn update {
+fn timer {
 	while (true) {
 		sleep 1 && ready
 	}
@@ -68,6 +68,6 @@ if (! test -f /tmp/bar.fifo) {
 	mkfifo /tmp/bar.fifo
 }
 
-update &
+timer &
 
 status | lemonbar -B '#121212' -F '#ffffff' -p | process
