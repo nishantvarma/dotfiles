@@ -37,6 +37,12 @@ fn mark {
 
 fn ready { echo ok >/tmp/bar.fifo }
 
+fn update {
+	while (true) {
+		sleep 1 && ready
+	}
+}
+
 fn status {
 	while (true) {
 		desks=`{desks}
@@ -61,5 +67,7 @@ fn process {
 if (! test -f /tmp/bar.fifo) {
 	mkfifo /tmp/bar.fifo
 }
+
+update &
 
 status | lemonbar -B '#121212' -F '#ffffff' -p | process
