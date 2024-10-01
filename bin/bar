@@ -35,6 +35,8 @@ fn mark {
 	echo '%{F#ffffff}%{B#262626}'$1'%{F-}%{B-}'
 }
 
+fn ready { echo ok >/tmp/bar.fifo }
+
 fn status {
 	while (true) {
 		desks=`{desks}
@@ -46,12 +48,18 @@ fn status {
 		c='%{c}'$"date
 		r='%{r}Cpu '$"cpu'% | Mem '$"mem'g | Bat '$"bat'%'
 		echo $"l$"c$"r
-		sleep 1
+		read /tmp/bar.fifo >/dev/null
 	}
 }
 
 fn process {
-	while (true) eval `{read}
+	while (true) {
+		eval `{read} && ready
+	}
+}
+
+if (! test -f /tmp/bar.fifo) {
+	mkfifo /tmp/bar.fifo
 }
 
 status | lemonbar -B '#121212' -F '#ffffff' -p | process
