@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/env rc
 
 pkill -f sxhkd ; sxhkd &
 pkill -f bar ; bar &
