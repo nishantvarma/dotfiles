@@ -1,7 +1,9 @@
 #!/usr/bin/env rc
 
 fn bat {
-	cat /sys/class/power_supply/BAT0/capacity
+	charge=`{cat /sys/class/power_supply/BAT0/capacity}
+	if (test $charge -lt 15) charge=`{warn $charge}
+	echo $charge
 }
 
 fn cpu {
@@ -35,6 +37,12 @@ fn mem {
 	top -bn1 | grep 'MiB Mem' | awk '{printf "%.1f", $8 / 1024}'
 }
 
+fn process {
+	while (true) {
+		eval `{read} && ready
+	}
+}
+
 fn ready { echo ok >/tmp/bar.fifo }
 
 fn timer {
@@ -58,10 +66,8 @@ fn status {
 	}
 }
 
-fn process {
-	while (true) {
-		eval `{read} && ready
-	}
+fn warn {
+	echo '%{F#ffffff}%{B#ff0000}'$1'%{F-}%{B-}'
 }
 
 if (! test -f /tmp/bar.fifo) {
