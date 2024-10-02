@@ -3,11 +3,12 @@
 fn bat {
 	charge=`{cat /sys/class/power_supply/BAT0/capacity}
 	if (test $charge -lt 15) charge=`{warn $charge}
-	echo $charge
+	echo $charge%
 }
 
 fn cpu {
-	top -bn1 | grep 'Cpu(s)' | awk '{printf "%.1f", $2 + $4}'
+	cpu=`{top -bn1 | grep 'Cpu(s)' | awk '{printf "%.1f", $2 + $4}'}
+	echo $cpu%
 }
 
 fn desks {
@@ -34,7 +35,8 @@ fn mark {
 }
 
 fn mem {
-	top -bn1 | grep 'MiB Mem' | awk '{printf "%.1f", $8 / 1024}'
+	mem=`{top -bn1 | grep 'MiB Mem' | awk '{printf "%.1f", $8 / 1024}'}
+	echo $mem^g
 }
 
 fn process {
@@ -43,7 +45,9 @@ fn process {
 	}
 }
 
-fn ready { echo ok >/tmp/bar.fifo }
+fn ready {
+	echo ok >/tmp/bar.fifo
+}
 
 fn timer {
 	while (true) {
@@ -60,7 +64,7 @@ fn status {
 		bat=`{bat}
 		l='%{l}'$"desks
 		c='%{c}'$"date
-		r='%{r}Cpu '$"cpu'% | Mem '$"mem'g | Bat '$"bat'%'
+		r='%{r}Cpu '$"cpu' | Mem '$"mem' | Bat '$"bat
 		echo $"l$"c$"r
 		read /tmp/bar.fifo >/dev/null
 	}
