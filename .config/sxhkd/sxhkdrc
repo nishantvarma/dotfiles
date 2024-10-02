@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 alt + Tab
-	bspc desktop -f last
+	(bspc desktop -f last & barrefresh)
 
 alt + {h,k,j,l}
 	bspc node -v {-20 0,0 -20,0 20,20 0}
@@ -10,10 +10,10 @@ ctrl + Tab
 	bspc node -f last
 
 ctrl + alt + {Left,Right}
-	bspc desktop -f {prev,next}.local
+	(bspc desktop -f {prev,next}.local & barrefresh)
 
 super + {_, shift +} {1-9}
-	bspc {desktop -f,node -d} ^{1-9}
+	(bspc {desktop -f,node -d} ^{1-9} & barrefresh)
 
 super + {_,shift +} {Left,Up,Down,Right}
 	bspc node -{f,s} {west,north,south,east}

@@ -42,17 +42,7 @@ fn mem {
 
 fn process {
 	while (true) {
-		eval `{read} && ready
-	}
-}
-
-fn ready {
-	echo ok >/tmp/bar.fifo
-}
-
-fn timer {
-	while (true) {
-		sleep 1 && ready
+		eval `{read} && barrefresh
 	}
 }
 
@@ -68,6 +58,12 @@ fn status {
 		r='%{r}Cpu '$"cpu' | Mem '$"mem' | Bat '$"bat
 		echo $"l$"c$"r
 		read /tmp/bar.fifo >/dev/null
+	}
+}
+
+fn timer {
+	while (true) {
+		sleep 1 && barrefresh
 	}
 }
 
