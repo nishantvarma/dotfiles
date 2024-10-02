@@ -2,7 +2,7 @@
 
 fn bat {
 	charge=`{cat /sys/class/power_supply/BAT0/capacity}
-	if (test $charge -lt 25) charge=`{warn $charge'%%'}
+	if (test $charge -lt 25) charge=`{warn $charge%%}
 	if not charge=$charge%
 	echo $charge
 }
