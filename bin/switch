@@ -4,5 +4,6 @@ sel=`{wmctrl -l | awk '{print $4}' | dmenu -l 10}
 
 if (! ~ $#sel 0) {
 	win=`{wmctrl -l | grep $sel | awk '{print $1}'}
-	bspc node -f $win
+	bspc node $win --flag hidden=off
+	bspc node -f $"win
 }
