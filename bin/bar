@@ -68,7 +68,7 @@ fn timer {
 }
 
 fn warn {
-	echo '%{F#ffffff}%{B#ff0000}'$1'%{F-}%{B-}'
+	echo '%{F#ffffff}%{B#e32636}'$1'%{F-}%{B-}'
 }
 
 if (! test -f /tmp/bar.fifo) {
