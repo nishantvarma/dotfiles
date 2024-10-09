@@ -21,4 +21,4 @@ bspc config pointer_modifier mod4
 bspc config split_ratio 0.5
 bspc config window_gap 6
 
-bspc rule -a Zathura state=tiled
+bspc rule -a zathura state=tiled
