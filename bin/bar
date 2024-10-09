@@ -77,4 +77,4 @@ if (! test -f /tmp/bar.fifo) {
 
 timer &
 
-status | lemonbar -B '#121212' -F '#ffffff' -p | process
+status | lemonbar -n panel -B '#121212' -F '#ffffff' -p | process
