@@ -1,0 +1,10 @@
+#!/usr/bin/env rc
+
+panel=`{xdo id -a panel}
+
+bspc subscribe node_state |
+while (true) {
+	msg=`{read}
+	wid=$msg(4) name=$msg(5) state=$msg(6)
+	if (~ $name fullscreen && ~ $state on) xdo below -t $wid $panel
+}
