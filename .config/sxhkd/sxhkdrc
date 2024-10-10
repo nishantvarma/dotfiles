@@ -34,10 +34,13 @@ super + e
 	9 spawn st vifm
 
 super + f
-	bspc desktop -l next
+	bspc node -t fullscreen
 
 super + m
 	bspc node -s biggest.local
+
+super + o
+	bspc desktop -l next
 
 super + p
 	dmenu_run
