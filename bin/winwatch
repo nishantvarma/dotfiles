@@ -2,9 +2,12 @@
 
 panel=`{xdo id -a panel}
 
-bspc subscribe node_state |
+bspc subscribe node desktop |
 while (true) {
 	msg=`{read}
-	wid=$msg(4) name=$msg(5) state=$msg(6)
-	if (~ $name fullscreen && ~ $state on) xdo below -t $wid $panel
+	event=$msg(1) wid=$msg(4) name=$msg(5) state=$msg(6)
+	if (~ $event node_state) {
+		if (~ $name fullscreen && ~ $state on) xdo below -t $wid $panel
+	}
+	if not if (~ $event desktop_focus) barrefresh
 }

@@ -42,7 +42,7 @@ fn mem {
 
 fn process {
 	while (true) {
-		eval `{read} && barrefresh
+		eval `{read}
 	}
 }
 
