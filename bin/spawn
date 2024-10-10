@@ -18,5 +18,4 @@ if (! ~ $#* 0) {
 	$* >/dev/null >[2=1] &
 	title $apid $* &
 }
-if not if (~ $#* 0) {
-}
+if not if (~ $#* 0) ;
