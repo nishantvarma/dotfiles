@@ -39,6 +39,11 @@ sudo dd if=<iso> | sudo pv | sudo dd of=/dev/sdb
 sudo mount -t vfat /dev/sda1 /media/hdd -o rw,uid=$(id -u),gid=$(id -g)
 synclient TapButton1=0
 
+# Tabbed
+# ======
+
+tabbed st -w
+
 # Tmux
 # ====
 

@@ -28,7 +28,7 @@ XTerm*color15: #f8f8f2
 ! ====
 
 XTerm.vt100.faceName: DejaVu Sans Mono:style=Book:antialias=true
-XTerm.vt100.faceSize: 13
+XTerm.vt100.faceSize: 11
 XTerm.vt100.geometry: 80x24
 
 ! General
