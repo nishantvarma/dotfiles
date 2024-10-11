@@ -22,6 +22,8 @@ export LANG=en_US.UTF-8
 if [[ "$TERM" != dumb ]]; then
     export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
 fi
+export OPEN=open
+export PAGER=less
 export PS1='$(basename "$(pwd)") % '
 
 # Functions
