@@ -13,7 +13,7 @@ fn cpu {
 }
 
 fn desks {
-	multi='%{A:spawn switch:} Switch %{A}'
+	multi='%{A:bspc node -f last.local:} * %{A}'
 	desks=`{bspc query -D --names}
 	foc=`{bspc query -D -d focused --names}
 	occ=`{bspc query -D -d .occupied --names}

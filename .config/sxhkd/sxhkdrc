@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 alt + Tab
-	bspc node -f last
+	bspc node -f last.local
 
 alt + {h,k,j,l}
 	bspc node -v {-20 0,0 -20,0 20,20 0}
