@@ -6,7 +6,7 @@ sel=`{
 	grep _NET_WM_NAME |
 	awk '{print $3}' |
 	sed 's/"//g' |
-	dmenu -l 10
+	dmenu -b -l 10
 }
 
 if (! ~ $#sel 0) {
