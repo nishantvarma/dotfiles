@@ -3,7 +3,7 @@
 pkill -f sxhkd ; sxhkd &
 pkill -f bar ; bar &
 sleep 1
-pkill -k winwatch ; winwatch &
+pkill -f winwatch ; winwatch &
 
 xss-lock -- betterlockscreen -l
 
