@@ -8,6 +8,7 @@ if (! ~ $#* 0) {
 	if not if (~ $1 *.gz) spawn st tar -xf $1
 	if not if (~ $1 *.jpeg) spawn page $1
 	if not if (~ $1 *.jpg) spawn page $1
+	if not if (~ $1 *.m4a) spawn mpv $1
 	if not if (~ $1 *.mkv) spawn mpv $1
 	if not if (~ $1 *.mp3) mocp -l $1
 	if not if (~ $1 *.mp4) spawn mpv $1
