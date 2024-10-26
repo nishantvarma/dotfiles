@@ -2,4 +2,4 @@
 
 file=`{fuzzyfind $*}
 
-open $file && vifm --remote --server-name remote $file -c tabnew
+vifm --remote --server-name remote $file -c tabnew

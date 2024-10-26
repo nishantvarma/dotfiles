@@ -12,7 +12,6 @@ nmap [t gT
 nmap ]t gt
 nmap ct :tabnew<cr>
 nmap e :!edit %f<cr>
-nmap f :!fuzzyedit<cr>
 nmap o :touch<space>
 nmap O :mkdir<space>
 nmap q :quit<cr>
