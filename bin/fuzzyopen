@@ -1,3 +1,5 @@
 #!/usr/bin/env rc
 
-open `{fuzzyfind $*}
+file=`{fuzzyfind $*}
+
+open $file && vifm --remote --server-name remote $file -c tabnew
