@@ -16,7 +16,7 @@ nmap o :touch<space>
 nmap O :mkdir<space>
 nmap q :quit<cr>
 nmap s :!spawn st<cr>
-nmap x :!fuzzyopen<cr>
+nmap x :!spawn st fuzzyopen<cr>
 nmap yc :!cat %f | xclip -sel clip<cr>
 nmap yn :!echo %f | xclip -sel clip<cr>
 
