@@ -11,6 +11,7 @@ nmap <space> :view<cr>
 nmap [t gT
 nmap ]t gt
 nmap ct :tabnew<cr>
+nmap cT :tabnew %f<cr>
 nmap e :!edit %f<cr>
 nmap o :touch<space>
 nmap O :mkdir<space>
