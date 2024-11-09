@@ -13,11 +13,12 @@ nmap ]t gt
 nmap ct :tabnew<cr>
 nmap cT :tabnew %f<cr>
 nmap e :!edit %f<cr>
+nmap f :!spawn st vifmfuzzyfind<cr>
 nmap o :touch<space>
 nmap O :mkdir<space>
 nmap q :quit<cr>
 nmap s :!spawn st<cr>
-nmap x :!spawn st vifmfuzzyfind<cr>
+nmap x :!spawn st open<cr>
 nmap yc :!cat %f | xclip -sel clip<cr>
 nmap yn :!echo %f | xclip -sel clip<cr>
 

@@ -1,0 +1,3 @@
+#!/usr/bin/env rc
+
+vifm --remote --server-name remote `{fuzzyfind $*} -c tabnew
