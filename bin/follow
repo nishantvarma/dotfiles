@@ -1,3 +1,4 @@
 #!/usr/bin/env rc
 
-readlink $1 || echo $1
+if (! ~ $#* 0) readlink $1 || echo $1
+if not readlink `{pwd} || echo `{pwd}
