@@ -13,7 +13,7 @@ nmap ]t gt
 nmap ct :tabnew<cr>
 nmap cT :tabnew %f<cr>
 nmap e :!edit %f<cr>
-nmap f :!spawn st vifmfuzzyfind<cr>
+nmap f :!spawn vifmfuzzyfind<cr>
 nmap o :touch<space>
 nmap O :mkdir<space>
 nmap q :quit<cr>
