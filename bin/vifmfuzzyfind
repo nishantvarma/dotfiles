@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
 file=`{fuzzyfind $*}
-if (~ $file "") vifm --remote --server-name remote $"file -c tabnew
+if (! ~ $file '') vifm --remote --server-name remote $"file -c tabnew
