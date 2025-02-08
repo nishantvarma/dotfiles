@@ -7,11 +7,11 @@ filetype .* open %f
 fileview * view %c
 fileview .* view %c
 
+nmap ` :tabnew<cr>
+nmap 1 :tabnew %f<cr>
 nmap <space> :view<cr>
 nmap [t gT
 nmap ]t gt
-nmap ct :tabnew<cr>
-nmap cT :tabnew %f<cr>
 nmap e :!edit %f<cr>
 nmap f :!spawn st vifmfuzzyfind<cr>
 nmap o :touch<space>
