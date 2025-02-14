@@ -81,6 +81,7 @@ store lists, dictionaries, trees etc.
 * abduco
 * dvtm
 * fzy
+* geany (editor)
 * git (cola, gui)
 * gnu-netcat
 * jj
