@@ -1,3 +1,5 @@
 #!/usr/bin/env rc
 
-edit `{fuzzyfind $*}
+output=`{fuzzyfind . $*}
+edit $output
+echo $output
