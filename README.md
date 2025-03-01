@@ -79,6 +79,7 @@ store lists, dictionaries, trees etc.
 # apps
 
 * abduco
+* alited
 * dvtm
 * fzy
 * git (cola, gui)
