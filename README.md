@@ -79,7 +79,6 @@ store lists, dictionaries, trees etc.
 # apps
 
 * abduco
-* alited
 * dvtm
 * fzy
 * git (cola, gui)
@@ -107,3 +106,8 @@ store lists, dictionaries, trees etc.
 * yt-dlp
 * zathura (djvu, ps)
 * zoxide
+
+# exp
+
+* ad
+* alited
