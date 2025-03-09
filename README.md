@@ -109,5 +109,4 @@ store lists, dictionaries, trees etc.
 
 # exp
 
-* ad [sminez]
 * alited
