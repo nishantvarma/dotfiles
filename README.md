@@ -110,3 +110,4 @@ store lists, dictionaries, trees etc.
 # exp
 
 * alited
+* nedit
