@@ -111,3 +111,4 @@ store lists, dictionaries, trees etc.
 
 * alited
 * nedit
+* qtile
