@@ -38,6 +38,7 @@
 !.config/bat/
 !.config/bspwm/
 !.config/mpv/
+!.config/qtile/
 !.config/sxhkd/
 !.config/vis/
 !.config/zathura/
