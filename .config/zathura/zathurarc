@@ -1,4 +1,4 @@
 set default-bg "#4c4c4c"
 set recolor-darkcolor "#bcbcbc"
 set recolor-lightcolor "#262626"
-show-recent 0
+set selection-clipboard clipboard
