@@ -18,7 +18,7 @@ I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
   * everything opens in a new `dwm` window possibly `st`.
 * editor: `vis`
   * `vi`-like bindings with structural regexp.
-* window-manager: `dwm` or `bspwm`
+* window-manager: `dwm` or `qtile`
 * terminal: `st`
 * shell: `rc`
 * ide: `plan9port` + `suckless`
