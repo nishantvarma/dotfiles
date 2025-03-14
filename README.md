@@ -43,6 +43,7 @@ store lists, dictionaries, trees etc.
 
 * oberon (a2)
 * plan9[port] (acme, rc, rio)
+* serenity (ladybird)
 
 # programming languages
 
