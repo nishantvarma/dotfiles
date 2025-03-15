@@ -6,4 +6,5 @@ touchpad &&
 xrdb -load "$HOME"/.Xresources &&
 xhost +local: &&
 feh --bg-scale "$HOME"/.wallpapers/solid-blue.png &&
-exec qtile start
+# exec qtile start
+exec windowlab
