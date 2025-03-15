@@ -33,6 +33,7 @@ keys = [
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus right"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset window sizes"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill window"),
     Key([mod], "r", lazy.spawncmd(), desc="Run command"),
     Key([mod], "space", lazy.layout.next(), desc="Move focus to next window"),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating"),
