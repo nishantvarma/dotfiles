@@ -54,7 +54,7 @@ for i in groups:
         ]
     )
 
-layouts = [layout.Columns(border_focus="#00afff", border_normal="#262626", border_width=2, margin=4), layout.Max()]
+layouts = [layout.Columns(margin=4, border_width=2, border_focus="#00afff", border_normal="#262626", insert_position=1), layout.Max()]
 
 widget_defaults = dict(font="sans", fontsize=12, padding=3)
 extension_defaults = widget_defaults.copy()
