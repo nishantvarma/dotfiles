@@ -5,6 +5,7 @@ if (! ~ $#* 0) {
 	mime=`{file -m $1 >[2]/dev/null}
 
 	if (~ $1 *.djvu) spawn zathura $1
+	if not if (~ $1 *.chm) spawn xchm $1
 	if not if (~ $1 *.epub) spawn ebook-viewer $1
 	if not if (~ $1 *.gz) spawn st tar -xf $1
 	if not if (~ $1 *.jpeg) spawn page $1
