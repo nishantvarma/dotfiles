@@ -111,4 +111,3 @@ store lists, dictionaries, trees etc.
 
 * alited
 * nedit
-* windowlab
