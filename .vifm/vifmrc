@@ -28,7 +28,6 @@ set fusehome=/tmp/vifm_fuse
 set history=10
 set ignorecase
 set incsearch
-set mouse=a
 set nofollowlinks
 set nohlsearch
 set noiec
