@@ -19,7 +19,7 @@ if (! ~ $#* 0) {
 	if not if (~ $1 *.ps) spawn zathura $1
 	if not if (~ $1 *.tar) spawn st tar -xf $1
 	if not if (~ $1 *.tgz) spawn st tar -xf $1
-	if not if (~ $1 *.url) spawn microsoft-edge `{cat $1}
+	if not if (~ $1 *.url) spawn chromium-browser `{cat $1}
 	if not if (~ $1 *.webm) spawn mpv $1
 	if not if (~ $file *directory*) vifm --remote --server-name server $1
 	if not if (~ $file *executable*) spawn st `{readlink -f $1}
