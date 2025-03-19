@@ -1,7 +1,7 @@
 I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
-[plan9](https://plan9.io/plan9/) and [oberon](https://www.projectoberon.net/).
+[oberon](https://www.projectoberon.net/) and [plan9](https://plan9.io/plan9/).
 [cat-v](https://doc.cat-v.org/) offers a lot of resources on plan9 and software
-minimalism, though some sections are opinionated.
+minimalism (though some sections are opinionated).
 
 # tl;dr
 
