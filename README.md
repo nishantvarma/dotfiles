@@ -87,6 +87,7 @@ store lists, dictionaries, trees etc.
 * gnu-netcat
 * jj
 * lemonbar
+* leo
 * maim
 * meld
 * mocp
