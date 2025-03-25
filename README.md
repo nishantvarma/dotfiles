@@ -88,6 +88,7 @@ store lists, dictionaries, trees etc.
 * jj
 * lemonbar
 * leo
+* ma
 * maim
 * meld
 * mocp
