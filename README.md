@@ -63,7 +63,7 @@ store lists, dictionaries, trees etc.
 * bindfs
 * docker
 * ffmpeg
-* fonts (consolas, dejavu, go, gotham, lato, lucida, noto)
+* fonts (cantarell, consolas, dejavu, go, lucida, noto)
 * gvfs-mtp
 * mat2
 * sysstat
