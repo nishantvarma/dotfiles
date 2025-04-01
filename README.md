@@ -6,20 +6,20 @@ on plan9 and software minimalism.
 # tl;dr
 
 * outliner: filesystem
-  * a folder can group ideas related to a topic.
-  * it can contain other files/folders.
-  * a link can create lightweight reference.
-  * indirections can create complex graphs.
-  * metadata like bookmarks, mrus  etc., are also files/folders.
-  * fuzzy search can be used to quickly bookmark.
-  * viewing, editing, opening, etc., can be delegated to shell scripts.
-  * bind data + operations like oop.
+  * a folder can group ideas related to a topic
+  * it can contain other files/folders
+  * a link can create lightweight reference
+  * indirections can create complex graphs
+  * metadata like bookmarks, mrus  etc., are also files/folders
+  * fuzzy search can be used to quickly bookmark
+  * viewing, editing, opening, etc., can be delegated to shell scripts
+  * bind data + operations like oop
 * explorer: `vifm`
-  * `vi`-like tui for outline operations.
-  * everything is clickable.
-  * everything opens in a new `dwm` window possibly `st`.
+  * `vi`-like tui for outline operations
+  * everything is clickable
+  * everything opens in a new `dwm` window possibly `st`
 * editor: `vis`
-  * `vi`-like bindings with structural regexp.
+  * `vi`-like bindings with structural regexp
 * window-manager: `dwm`, `qtile` or `rio'
 * terminal: `st`
 * shell: `rc`
@@ -30,8 +30,6 @@ on plan9 and software minimalism.
 Autogenerate outlines (like `zoxide`).
 
 URLS can be opened via browser, but what about reverse?
-
-Cooler FS'es?
 
 Need to see if everything: window, process etc., can be mapped to an outline.
 For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
