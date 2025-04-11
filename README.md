@@ -80,6 +80,7 @@ store lists, dictionaries, trees etc.
 
 * abduco
 * dvtm
+* freefilesync
 * fzy
 * git (cola, gui)
 * gnu-netcat
