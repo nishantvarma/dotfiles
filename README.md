@@ -92,6 +92,7 @@ store lists, dictionaries, trees etc.
 * meld
 * mocp
 * mpv
+* quark
 * qutebrowser
 * recoll
 * scid
