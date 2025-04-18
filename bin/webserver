@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
 ip addr show wlp0s20f3 | grep 'inet ' | awk '{print $2}' | cut -d / -f 1 &&
-python -m http.server --bind=0.0.0.0
+sudo env PATH=$PATH quark -p 8000 -d . -l
