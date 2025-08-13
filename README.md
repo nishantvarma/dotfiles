@@ -113,8 +113,8 @@ store lists, dictionaries, trees etc.
 
 # exp
 
-* cursor
 * alited
+* cursor
 * emwm
 * nedit
 * zed
