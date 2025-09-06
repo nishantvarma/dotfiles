@@ -102,6 +102,7 @@ store lists, dictionaries, trees etc.
 * st
 * strace
 * tabbed
+* texlive
 * tgpt
 * vifm
 * vim
