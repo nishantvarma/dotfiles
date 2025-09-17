@@ -104,6 +104,7 @@ store lists, dictionaries, trees etc.
 * tabbed
 * texlive
 * texmacs
+* texstudio
 * tgpt
 * vifm
 * vim
