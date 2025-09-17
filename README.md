@@ -103,6 +103,7 @@ store lists, dictionaries, trees etc.
 * strace
 * tabbed
 * texlive
+* texmacs
 * tgpt
 * vifm
 * vim
