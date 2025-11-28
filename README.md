@@ -97,6 +97,7 @@ store lists, dictionaries, trees etc.
 * recoll
 * scid
 * shellcheck
+* simplescreenrecorder
 * slock
 * socat
 * st
