@@ -118,7 +118,4 @@ store lists, dictionaries, trees etc.
 # exp
 
 * alited
-* cursor
-* emwm
-* nedit
-* zed
+* clifm
