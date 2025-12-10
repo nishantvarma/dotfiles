@@ -119,3 +119,4 @@ store lists, dictionaries, trees etc.
 
 * alited
 * clifm
+* https://github.com/sminez/ad
