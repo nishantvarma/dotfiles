@@ -1,0 +1,66 @@
+[editor]
+show_splash = true
+expand_tab = true
+tabstop = 4
+match_indent = true
+status_timeout = 3
+double_click_ms = 200
+minibuffer_lines = 8
+find_command = "fd --hidden"
+
+[filesystem]
+enabled = true
+auto_mount = false
+
+[tree_sitter]
+parser_dir = "~/.ad/tree-sitter/parsers"
+syntax_query_dir = "~/.ad/tree-sitter/queries"
+
+[colorscheme]
+bg = "#121212"
+fg = "#f8f8f2"
+bar_bg = "#262626"
+signcol_fg = "#444444"
+minibuffer_hl = "#318ce7"
+
+[colorscheme.syntax]
+default = { fg = "#f8f8f2", bg = "#121212" }
+dot = { fg = "#e6db74", bg = "#318ce7" }
+load = { fg = "#e6db74", bg = "#fd3f92" }
+exec = { fg = "#e6db74", bg = "#fd5e53" }
+boolean = { fg = "#e6db74", bold = true }
+character = { fg = "#50c878", italic = true }
+comment = { fg = "#262626", italic = true }
+constant = { fg = "#e6db74" }
+function = { fg = "#318ce7" }
+"function.macro" = { fg = "#e6db74" }
+keyword = { fg = "#fd5e53" }
+module = { fg = "#318ce7" }
+number = { fg = "#fd3f92" }
+operator = { fg = "#e6db74" }
+punctuation = { fg = "#40e0d0" }
+string = { fg = "#50c878" }
+type = { fg = "#40e0d0" }
+variable = { fg = "#e6db74" }
+"markup.italic" = { fg = "#e6db74", bg = "#262626", italic = true }
+"markup.bold" = { fg = "#e6db74", bg = "#262626", bold = true }
+"markup.heading" = { fg = "#318ce7", bold = true }
+"markup.raw" = { fg = "#262626", italic = true }
+"markup.quote" = { fg = "#fd3f92", italic = true }
+"markup.link.url" = { fg = "#40e0d0", underline = true }
+"markup.link.label" = { fg = "#318ce7", bold = true }
+"markup.list.unchecked" = { fg = "#e6db74", bold = true }
+"markup.list.checked" = { fg = "#50c878", bold = true }
+"markup.list" = { fg = "#40e0d0", bg = "#262626", bold = true }
+label = { fg = "#e6db74" }
+
+[keys.normal]
+"<space> F" = { run = "fmt" }
+">" = { run = "indent" }
+"<" = { run = "unindent" }
+"<space> w /" = { run = "new-column" }
+"<space> w -" = { run = "new-window" }
+"<space> w h" = { run = "prev-column" }
+"<space> w j" = { run = "next-window" }
+"<space> w k" = { run = "prev-window" }
+"<space> w l" = { run = "next-column" }
