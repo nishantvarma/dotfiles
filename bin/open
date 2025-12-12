@@ -8,6 +8,7 @@ if (! ~ $#* 0) {
 	if not if (~ $1 *.chm) spawn xchm $1
 	if not if (~ $1 *.epub) spawn foliate $1
 	if not if (~ $1 *.gz) spawn st tar -xf $1
+	if not if (~ $1 *.html) spawn microsoft-edge $1
 	if not if (~ $1 *.jpeg) spawn page $1
 	if not if (~ $1 *.jpg) spawn page $1
 	if not if (~ $1 *.m4a) spawn mpv $1
