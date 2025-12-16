@@ -118,5 +118,7 @@ store lists, dictionaries, trees etc.
 # exp
 
 * alited
+* claude-cli
 * clifm
 * https://github.com/sminez/ad
+* opencode.ai
