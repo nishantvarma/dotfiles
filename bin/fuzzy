@@ -1,8 +1,0 @@
-#!/usr/bin/env rc
-
-file=`{search $* | fzy}
-test -e $file || exit
-printf 'o/e: '
-action=`{read}
-if(~ $action e) exec edit $file
-if(~ $action o) exec open $file
