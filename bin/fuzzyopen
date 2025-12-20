@@ -1,5 +1,5 @@
 #!/usr/bin/env rc
 
-output=`{fuzzyfind . $*}
-open $output
-echo $output
+file=`{search $* | fzy}
+test -e $file || exit
+exec open $file

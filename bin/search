@@ -2,6 +2,6 @@
 
 if(~ $1 -g){
 	cat $home/.config/pi/history >[2]/dev/null
-	fd -t d -d 3 . $home
+	fd -d 3 . $home
 }
 if not fd -H -L --no-ignore-vcs $*
