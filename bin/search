@@ -1,6 +1,3 @@
 #!/usr/bin/env rc
 
-if(~ $1 -g){
-	fd -d 3 . $home
-}
-if not fd -H -L --no-ignore-vcs $*
+fd -H -L --no-ignore-vcs $*
