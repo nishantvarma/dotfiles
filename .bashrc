@@ -120,6 +120,12 @@ rio()
     DISPLAY=:1 spawn rio
 }
 
+v(){
+    git add -p &&
+    git commit -m "Fixups" &&
+    git push origin
+}
+
 # Hacks
 # =====
 
