@@ -57,7 +57,8 @@ label = { fg = "#e6db74" }
 [keys.normal]
 "<" = { run = "unindent" }
 ">" = { run = "indent" }
-"q" = { run = "quit" }
+"Q" = { run = "quit" }
+"q" = { run = "delete-buffer" }
 "s" = { run = "write" }
 "<space> <space>" = { run = "prev-buffer" }
 "<space> F" = { run = "fmt" }
