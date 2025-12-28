@@ -118,6 +118,6 @@ store lists, dictionaries, trees etc.
 
 * alited
 * claude-cli
-* clifm
+* frankenwm
 * https://github.com/sminez/ad
 * opencode.ai
