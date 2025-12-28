@@ -85,7 +85,6 @@ store lists, dictionaries, trees etc.
 * git (cola, gui)
 * gnu-netcat
 * jj
-* lemonbar
 * leo
 * ma
 * maim
@@ -103,8 +102,8 @@ store lists, dictionaries, trees etc.
 * st
 * strace
 * tabbed
+* textadept
 * texlive
-* texmacs
 * texstudio
 * tgpt
 * vifm
