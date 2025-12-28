@@ -1,16 +1,4 @@
 #!/usr/bin/env rc
 
-sel=`{
-	bspc query -N -n .window -d focused |
-	xargs -I '{}' xprop -id '{}' |
-	grep _NET_WM_NAME |
-	awk '{print $3}' |
-	sed 's/"//g' |
-	dmenu -b -l 10
-}
-
-if (! ~ $#sel 0) {
-	win=`{wmctrl -l | grep $sel | awk '{print $1}'}
-	bspc node $win --flag hidden=off
-	bspc node -f $"win
-}
+sel=`{wmctrl -l | cut -d' ' -f5- | dmenu -b -l 10}
+if (! ~ $#sel 0) wmctrl -a $"sel
