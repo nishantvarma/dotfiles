@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
-sel=`{wmctrl -l | cut -d' ' -f5- | dmenu -b -l 10}
-if (! ~ $#sel 0) wmctrl -a $"sel
+sel=`{wmctrl -l | dmenu -b -l 10}
+if (! ~ $#sel 0) xdotool windowactivate $sel(1)
