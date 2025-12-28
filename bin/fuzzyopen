@@ -1,5 +1,5 @@
 #!/usr/bin/env rc
 
 file=`{search $* | fzy}
-test -e $file || exit
+~ $file '' && exit
 exec open $file
