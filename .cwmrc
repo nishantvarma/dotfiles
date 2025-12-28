@@ -1,5 +1,8 @@
 borderwidth 2
 snapdist 8
+gap 0 30 0 0
+
+ignore Tray
 
 color activeborder   "#61afef"
 color inactiveborder "#333333"
@@ -16,7 +19,7 @@ fontname "sans-serif:pixelsize=14:bold"
 bind-key 4-Return terminal
 bind-key 4-d      menu-exec
 bind-key 4S-d     menu-cmd
-bind-key 4-slash  menu-window
+bind-key 4-z      menu-window
 
 bind-key 4-q      window-close
 bind-key 4-f      window-fullscreen
