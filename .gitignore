@@ -12,6 +12,7 @@
 !.acme
 !.bash_profile
 !.bashrc
+!.cwmrc
 !.gitconfig
 !.gitignore
 !.rcrc
