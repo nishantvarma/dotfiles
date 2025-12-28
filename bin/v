@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+git add -p &&
+git commit -m Fixups &&
+git push origin

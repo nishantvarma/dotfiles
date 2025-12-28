@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+if (! ~ $#* 0) {
+	awk '/[:{]$/ {match($0,/^[ 	]*/); if(RLENGTH<=4) print NR": "$0}' $1
+}
