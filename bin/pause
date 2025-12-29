@@ -1,3 +1,4 @@
 #!/usr/bin/env rc
 
+echo
 echo -n 'Press any key to continue... ' && read
