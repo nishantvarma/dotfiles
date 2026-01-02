@@ -1,4 +1,16 @@
 #!/usr/bin/env rc
 
-sel=`{wmctrl -l | dmenu -b -l 10}
-if (! ~ $#sel 0) xdotool windowactivate $sel(1)
+sel=`{
+	bspc query -N -n .window -d focused |
+	xargs -I '{}' xprop -id '{}' |
+	grep _NET_WM_NAME |
+	awk '{print $3}' |
+	sed 's/"//g' |
+	dmenu -b -l 10
+}
+
+if (! ~ $#sel 0) {
+	win=`{wmctrl -l | grep $sel | awk '{print $1}'}
+	bspc node $win --flag hidden=off
+	bspc node -f $"win
+}
