@@ -6,4 +6,5 @@ touchpad &&
 xrdb -load "$HOME"/.Xresources &&
 xhost +local: &&
 feh --bg-scale "$HOME"/.wallpapers/solid-gray.jpg &&
-exec frankenwm
+sxhkd &
+exec bspwm
