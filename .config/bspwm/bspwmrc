@@ -16,7 +16,6 @@ bspc config border_width 2
 bspc config borderless_monocle true
 bspc config focus_follows_pointer true
 bspc config gapless_monocle true
-bspc config initial_polarity first_child
 bspc config merge_overlapping_monitors true
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
