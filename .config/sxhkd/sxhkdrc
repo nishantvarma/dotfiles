@@ -52,7 +52,7 @@ super + q
 	bspc node -{c,k}
 
 super + shift + q
-	(pkill -f bar & pfill -f sxhkd & bspc quit)
+	(pkill -f bar & pkill -f sxhkd & bspc quit)
 
 super + r
 	bspc wm -r

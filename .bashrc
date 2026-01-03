@@ -76,12 +76,6 @@ exts()
     find . -type f | grep -oE '\.(\w+)$' | sort -u
 }
 
-g(){
-    git add -p &&
-    git commit -m "Fixups" &&
-    git push origin
-}
-
 inferno()
 {
     "$HOME"/src/inferno/Linux/386/bin/emu -g 1600x784 wm/wm
