@@ -1,16 +1,14 @@
 #!/usr/bin/env rc
 
-sel=`{
-	bspc query -N -n any.window -d focused |
-	xargs -I '{}' xprop -id '{}' |
-	grep _NET_WM_NAME |
-	awk '{print $3}' |
-	sed 's/"//g' |
-	dmenu -b -l 10
+fn names {
+	for (id in `{bspc query -N -n any.window -d focused})
+		xdotool getwindowname $id >[2]/dev/null
 }
 
+sel = `{names | dmenu -b -l 10}
+
 if (! ~ $#sel 0) {
-	win=`{wmctrl -l | grep $sel | awk '{print $1}'}
+	win = `{wmctrl -l | grep $sel | awk '{print $1}'}
 	bspc node $win --flag hidden=off
 	bspc node -f $"win
 }
