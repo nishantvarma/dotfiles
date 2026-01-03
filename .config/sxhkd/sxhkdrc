@@ -34,7 +34,7 @@ super + d
 	bspc node -t floating
 
 super + e
-	9 spawn st vifm
+	9 spawn st pi
 
 super + f
 	bspc node -t fullscreen
