@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 sel=`{
-	bspc query -N -n .window -d focused |
+	bspc query -N -n any.window -d focused |
 	xargs -I '{}' xprop -id '{}' |
 	grep _NET_WM_NAME |
 	awk '{print $3}' |
