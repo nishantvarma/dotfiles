@@ -8,7 +8,7 @@ fn names {
 sel = `{names | dmenu -b -l 10}
 
 if (! ~ $#sel 0) {
-	win = `{wmctrl -l | grep $sel | awk '{print $1}'}
+	win = `{xdotool search --name $"sel | head -1}
 	bspc node $win --flag hidden=off
 	bspc node -f $"win
 }
