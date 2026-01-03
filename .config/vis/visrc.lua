@@ -24,7 +24,7 @@ vis:map(vis.modes.NORMAL, "<C-Down>", "<vis-window-next>")
 vis:map(vis.modes.NORMAL, "<C-Left>", "<vis-window-prev>")
 vis:map(vis.modes.NORMAL, "<C-Right>", "<vis-window-next>")
 vis:map(vis.modes.NORMAL, "<C-Up>", "<vis-window-prev>")
-vis:map(vis.modes.NORMAL, "<Enter>", "O<Escape>")
+vis:map(vis.modes.NORMAL, "<Enter>", "i<Enter><Escape>")
 
 vis.events.subscribe(vis.events.INIT, function()
 	vis:command("set autoindent on")
