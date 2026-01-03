@@ -13,7 +13,7 @@ ctrl + alt + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
 ctrl + alt + {Up,Down}
-	bspc node @parent -R {90,270}
+	bspc node @parent -R {270,90}
 
 super + {_,shift +} {1-9}
 	bspc {desktop -f,node -d} ^{1-9}
