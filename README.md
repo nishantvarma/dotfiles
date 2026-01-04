@@ -26,17 +26,12 @@ on plan9 and software minimalism.
 
 [The above information can be represented as an outline.]
 
-Autogenerate outlines (like `zoxide`).
+TODO:
 
-URLS can be opened via browser, but what about reverse?
+1. URLS can be opened via browser, but what about reverse?
 
-Need to see if everything: window, process etc., can be mapped to an outline.
-For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
-
-If interprocess communication happens via files (like Plan 9), such outlines
-can integrate well with the environment, allowing for enhanced scripting
-possibilities without creating new data-structures. A file-system can actually
-store lists, dictionaries, trees etc.
+2. Need to see if everything: window, process etc., can be mapped to an outline.
+   For example, `pid` 1 has a window `pid/win/1` and output `pid/out/1/<outline>`.
 
 # operating systems
 
