@@ -15,6 +15,7 @@
 !.cwmrc
 !.gitconfig
 !.gitignore
+!.hacks.sh
 !.rcrc
 !.tmux.conf
 !.vimrc

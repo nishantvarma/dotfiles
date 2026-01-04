@@ -14,18 +14,33 @@ unset PROMPT_COMMAND
 
 shopt -s autocd
 
+# Path
+# ====
+
+PATH=$HOME/.local/share/.venv/bin
+PATH+=:$HOME/bin
+PATH+=:$HOME/.local/bin
+PATH+=:$HOME/src/plan9/bin
+PATH+=:/usr/local/sbin
+PATH+=:/usr/local/bin
+PATH+=:/usr/sbin
+PATH+=:/usr/bin
+PATH+=:/sbin
+PATH+=:/bin
+
 # Exports
 # =======
 
 export EDITOR=vis
 export HISTFILE=/dev/null
 export LANG=en_US.UTF-8
+export OPEN=open
+export PAGER=less
+export PLAN9=$HOME/src/plan9
+export PS1='$(basename "$(pwd)") % '
 if [[ "$TERM" != dumb ]]; then
     export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
 fi
-export OPEN=open
-export PAGER=less
-export PS1='$(basename "$(pwd)") % '
 
 # Functions
 # =========
