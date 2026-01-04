@@ -20,7 +20,7 @@ on plan9 and software minimalism.
   * everything opens in a new `dwm` window possibly `st`
 * editor: `vis`
   * `vi`-like bindings with structural regexp
-* window-manager: `dwm`, `bspwm` or `rio'
+* window-manager: `dwm`, `bspwm` or `rio`
 * terminal: `st`
 * shell: `rc`
 * ide: `plan9port` + `suckless`
