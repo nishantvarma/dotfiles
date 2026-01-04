@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+echo
+echo 'Waiting for 2 seconds...'
+sleep 2
