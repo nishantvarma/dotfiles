@@ -20,13 +20,13 @@ shopt -s autocd
 PATH=$HOME/.local/share/.venv/bin
 PATH+=:$HOME/bin
 PATH+=:$HOME/.local/bin
-PATH+=:$HOME/src/plan9/bin
 PATH+=:/usr/local/sbin
 PATH+=:/usr/local/bin
 PATH+=:/usr/sbin
 PATH+=:/usr/bin
 PATH+=:/sbin
 PATH+=:/bin
+PATH+=:$HOME/src/plan9/bin
 
 # Exports
 # =======
