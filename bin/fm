@@ -92,7 +92,11 @@ class FM:
     def ls(self):
         try:
             self.files = sorted(
-                [f for f in self.cwd.iterdir() if self.hidden or not f.name.startswith(".")],
+                [
+                    f
+                    for f in self.cwd.iterdir()
+                    if self.hidden or not f.name.startswith(".")
+                ],
                 key=lambda p: (not p.is_dir(), p.name.lower()),
             )
         except PermissionError:
@@ -292,7 +296,11 @@ class FM:
 
     def sh(self):
         cmd = " ".join(SHELL) + "; true"
-        subprocess.Popen([TERM, "-e", "sh", "-c", cmd], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen(
+            [TERM, "-e", "sh", "-c", cmd],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
 
     def toggle(self):
         if self.cur:
