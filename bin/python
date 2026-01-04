@@ -1,3 +1,0 @@
-#!/usr/bin/env rc
-
-exec $home/.local/share/.venv/bin/python $*
