@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "$HOME"/.bashrc
+
 export GDK_BACKEND=x11
 
 touchpad &&
