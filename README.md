@@ -100,7 +100,7 @@
 
 # links
 
-[suckless](https://suckless.org/)
-[project oberon](https://www.projectoberon.net/)
-[plan9](https://plan9.io/plan9/)
-[cat-v](https://doc.cat-v.org/)
+* [suckless](https://suckless.org/)
+* [project oberon](https://www.projectoberon.net/)
+* [plan9](https://plan9.io/plan9/)
+* [cat-v](https://doc.cat-v.org/)
