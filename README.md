@@ -9,10 +9,9 @@ on plan9 and software minimalism.
   * a folder can group ideas related to a topic
   * it can contain other files/folders
   * a link can create lightweight reference
-  * indirections can create complex graphs
-  * metadata like bookmarks, mrus etc., are also files/folders
+  * metadata like bookmarks, mrus etc., can be links
   * fuzzy search can be used to quickly bookmark
-  * viewing, editing, opening, etc., can be delegated to shell scripts
+  * [viewing](bin/view), [editing](bin/edit), [opening](bin/open), etc., can be delegated to shell scripts
   * bind data + operations like oop
 * explorer: `vifm`, [fm](bin/fm)
   * `vi`-like tui for outline operations
