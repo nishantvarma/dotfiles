@@ -14,7 +14,7 @@ on plan9 and software minimalism.
   * fuzzy search can be used to quickly bookmark
   * viewing, editing, opening, etc., can be delegated to shell scripts
   * bind data + operations like oop
-* explorer: `vifm`, `[fm](bin/fm)`
+* explorer: `vifm`, [fm](bin/fm)
   * `vi`-like tui for outline operations
   * everything is clickable
   * everything opens in a new `dwm` window possibly `st`
