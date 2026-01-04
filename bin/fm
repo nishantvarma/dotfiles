@@ -299,7 +299,6 @@ class FM:
             self.sel ^= {self.cur}
 
     def quit(self):
-        self.out(self.t.exit_fullscreen + self.t.normal_cursor + self.t.clear)
         return True
 
     def vc(self):
