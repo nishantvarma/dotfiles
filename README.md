@@ -1,18 +1,13 @@
-I ❤ minimalism and [suckless](https://suckless.org/)™ philosophy. See also
-[project oberon](https://www.projectoberon.net/) and [plan9](https://plan9.io/plan9/).
-[cat-v](https://doc.cat-v.org/) has a lot of (slightly opinionated) resources
-on plan9 and software minimalism.
-
 # tl;dr
 
 * outliner: filesystem
-  * a folder can group ideas related to a topic
+  * a folder can group ideas
   * it can contain other files/folders
   * a link can create lightweight reference
   * metadata like bookmarks, mrus etc., can be links
   * fuzzy search can be used to quickly bookmark
-  * [viewing](bin/view), [editing](bin/edit), [opening](bin/open), etc., can be delegated to shell scripts
   * bind data + operations like oop
+  * [view](bin/view), [edit](bin/edit), [open](bin/open) etc.
 * explorer: `vifm`, [fm](bin/fm)
   * `vi`-like tui for outline operations
   * everything is clickable
@@ -23,8 +18,6 @@ on plan9 and software minimalism.
 * terminal: `st`
 * shell: `rc`
 * ide: `plan9port` + `suckless`
-
-[The above information can be represented as an outline.]
 
 # operating systems
 
@@ -104,3 +97,10 @@ on plan9 and software minimalism.
 * claude-cli
 * https://github.com/sminez/ad
 * opencode.ai
+
+# links
+
+[suckless](https://suckless.org/)
+[project oberon](https://www.projectoberon.net/)
+[plan9](https://plan9.io/plan9/)
+[cat-v](https://doc.cat-v.org/)
