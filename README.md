@@ -10,17 +10,17 @@ on plan9 and software minimalism.
   * it can contain other files/folders
   * a link can create lightweight reference
   * indirections can create complex graphs
-  * metadata like bookmarks, mrus  etc., are also files/folders
+  * metadata like bookmarks, mrus etc., are also files/folders
   * fuzzy search can be used to quickly bookmark
   * viewing, editing, opening, etc., can be delegated to shell scripts
   * bind data + operations like oop
-* explorer: `vifm`
+* explorer: `vifm`, `[fm](bin/fm)`
   * `vi`-like tui for outline operations
   * everything is clickable
   * everything opens in a new `dwm` window possibly `st`
 * editor: `vis`
   * `vi`-like bindings with structural regexp
-* window-manager: `dwm`, `qtile` or `rio'
+* window-manager: `dwm`, `bspwm` or `rio'
 * terminal: `st`
 * shell: `rc`
 * ide: `plan9port` + `suckless`
@@ -91,12 +91,11 @@ store lists, dictionaries, trees etc.
 * meld
 * mocp
 * mpv
-* quark
+* quark (webserver)
 * qutebrowser
 * recoll
 * scid
 * shellcheck
-* simplescreenrecorder
 * slock
 * socat
 * st
@@ -105,7 +104,6 @@ store lists, dictionaries, trees etc.
 * textadept
 * texlive
 * texstudio
-* tgpt
 * vifm
 * vim
 * vis
@@ -116,7 +114,6 @@ store lists, dictionaries, trees etc.
 
 # exp
 
-* alited
 * claude-cli
 * https://github.com/sminez/ad
 * opencode.ai
