@@ -81,7 +81,7 @@ store lists, dictionaries, trees etc.
 * abduco
 * dvtm
 * freefilesync
-* fzy
+* fzy (fuzzy)
 * git (cola, gui)
 * gnu-netcat
 * jj
