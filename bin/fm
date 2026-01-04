@@ -226,7 +226,8 @@ class FM:
         for src in self.clip:
             dst = self.cwd / src.name
             if not dst.exists():
-                dst.symlink_to(src)
+                rel = os.path.relpath(src, self.cwd)
+                dst.symlink_to(rel)
 
     def mark(self):
         default = self.cwd.name
