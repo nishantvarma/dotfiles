@@ -20,6 +20,8 @@ VC = "v"
 
 
 class FM:
+    # core
+
     def __init__(self, path="."):
         self.t = Terminal()
         self.cwd = Path(path).absolute()
@@ -89,20 +91,6 @@ class FM:
         except KeyboardInterrupt:
             self.quit()
 
-    def ls(self):
-        try:
-            self.files = sorted(
-                [
-                    f
-                    for f in self.cwd.iterdir()
-                    if self.hidden or not f.name.startswith(".")
-                ],
-                key=lambda p: (not (p.is_symlink() or p.is_dir()), p.name.lower()),
-            )
-        except PermissionError:
-            self.files = []
-        self.idx = max(0, min(len(self.files) - 1, self.idx))
-
     def draw(self):
         t = self.t
         self.out(t.home)
@@ -129,6 +117,8 @@ class FM:
             print(t.clear_eol)
         self.status()
 
+    # actions
+
     def cd(self, p):
         self.last = self.cwd
         self.cwd, self.idx = p.absolute(), 0
@@ -148,6 +138,11 @@ class FM:
 
     def copy(self):
         self.yank(False)
+
+    def create(self, label, fn):
+        name = self.prompt(f"{label}: ")
+        if name:
+            fn(self.cwd / name)
 
     def cut(self):
         self.yank(True)
@@ -173,19 +168,6 @@ class FM:
             self.cd(p)
         elif p.is_file():
             self.spawn(OPEN, str(p))
-
-    def compl(self, s):
-        p = Path(s).expanduser()
-        d, pre = (p, "") if p.is_dir() else (p.parent, p.name)
-        try:
-            m = [f for f in d.iterdir() if f.name.startswith(pre)]
-        except OSError:
-            return s
-        if not m:
-            return s
-        if len(m) == 1:
-            return str(m[0]) + "/" if m[0].is_dir() else str(m[0])
-        return str(d / os.path.commonprefix([f.name for f in m]))
 
     def help(self):
         self.out(self.t.home + self.t.clear)
@@ -230,6 +212,20 @@ class FM:
                 dst.symlink_to(rel)
         self.clip = []
 
+    def ls(self):
+        try:
+            self.files = sorted(
+                [
+                    f
+                    for f in self.cwd.iterdir()
+                    if self.hidden or not f.name.startswith(".")
+                ],
+                key=lambda p: (not (p.is_symlink() or p.is_dir()), p.name.lower()),
+            )
+        except PermissionError:
+            self.files = []
+        self.idx = max(0, min(len(self.files) - 1, self.idx))
+
     def mark(self):
         default = self.cwd.name
         name = self.prompt(f"mark [{default}]: ")
@@ -242,6 +238,9 @@ class FM:
     def mv(self, d):
         if self.files:
             self.idx = max(0, min(len(self.files) - 1, self.idx + d))
+
+    def next(self):
+        self.find(1)
 
     def paste(self):
         for src in self.clip:
@@ -257,6 +256,12 @@ class FM:
                 pass
         if self.cutting:
             self.clip = []
+
+    def prev(self):
+        self.find(-1)
+
+    def quit(self):
+        return True
 
     def rename(self):
         if not self.cur:
@@ -290,12 +295,6 @@ class FM:
         self.pat = pat.lower()
         self.next()
 
-    def next(self):
-        self.find(1)
-
-    def prev(self):
-        self.find(-1)
-
     def sh(self):
         cmd = " ".join(SHELL) + "; true"
         subprocess.Popen(
@@ -308,11 +307,23 @@ class FM:
         if self.cur:
             self.sel ^= {self.cur}
 
-    def quit(self):
-        return True
-
     def vc(self):
         self.spawn(VC)
+
+    # helpers
+
+    def compl(self, s):
+        p = Path(s).expanduser()
+        d, pre = (p, "") if p.is_dir() else (p.parent, p.name)
+        try:
+            m = [f for f in d.iterdir() if f.name.startswith(pre)]
+        except OSError:
+            return s
+        if not m:
+            return s
+        if len(m) == 1:
+            return str(m[0]) + "/" if m[0].is_dir() else str(m[0])
+        return str(d / os.path.commonprefix([f.name for f in m]))
 
     @property
     def cur(self):
@@ -327,11 +338,6 @@ class FM:
                 self.idx = idx
                 return
 
-    def create(self, label, fn):
-        name = self.prompt(f"{label}: ")
-        if name:
-            fn(self.cwd / name)
-
     def highlight(self, idx, f):
         if idx == self.idx:
             return self.t.on_gray20
@@ -339,14 +345,14 @@ class FM:
             return self.t.on_gray30
         return str()
 
-    def isesc(self, key):
-        return key.name == "KEY_ESCAPE"
+    def isbs(self, key):
+        return key.name == "KEY_BACKSPACE" or key == chr(127)
 
     def isenter(self, key):
         return key.name == "KEY_ENTER" or key == "\n"
 
-    def isbs(self, key):
-        return key.name == "KEY_BACKSPACE" or key == chr(127)
+    def isesc(self, key):
+        return key.name == "KEY_ESCAPE"
 
     def prompt(self, msg, complete=None):
         t = self.t
@@ -383,17 +389,6 @@ class FM:
             return 0
         return max(0, min(self.idx - h // 2, len(self.files) - h))
 
-    @contextmanager
-    def tty(self):
-        t = self.t
-        self.out(t.exit_fullscreen + t.clear + t.normal_cursor)
-        os.system("stty sane")
-        try:
-            yield
-        finally:
-            os.system("stty -echo -icanon")
-            self.out(t.enter_fullscreen + t.clear + t.civis)
-
     def spawn(self, *cmd):
         with self.tty():
             ret = subprocess.run(cmd)
@@ -422,13 +417,44 @@ class FM:
         except ValueError:
             return str(p)
 
+    @contextmanager
+    def tty(self):
+        t = self.t
+        self.out(t.exit_fullscreen + t.clear + t.normal_cursor)
+        os.system("stty sane")
+        try:
+            yield
+        finally:
+            os.system("stty -echo -icanon")
+            self.out(t.enter_fullscreen + t.clear + t.civis)
+
     def yank(self, cut):
         self.clip = self.targets()
         self.cutting = cut
         self.sel.clear()
 
+    # output
+
+    def bold(self, s):
+        return self.t.bold + s + self.t.normal
+
+    def blue(self, s):
+        return self.t.blue + s + self.t.normal
+
+    def cyan(self, s):
+        return self.t.cyan + s + self.t.normal
+
+    def dim(self, s):
+        return self.t.dim + s + self.t.normal
+
+    def green(self, s):
+        return self.t.green + s + self.t.normal
+
     def out(self, *args):
         print(*args, end=str(), flush=True)
+
+    def plain(self, s):
+        return s + self.t.normal
 
     def status(self, msg=str(), cursor=False):
         pos = self.t.move_xy(0, self.t.height - 1)
@@ -438,26 +464,8 @@ class FM:
     def title(self, s):
         self.out(f"{chr(27)}]2;{s}{chr(7)}")
 
-    def bold(self, s):
-        return self.t.bold + s + self.t.normal
-
-    def dim(self, s):
-        return self.t.dim + s + self.t.normal
-
     def yellow(self, s):
         return self.t.yellow + s + self.t.normal
-
-    def cyan(self, s):
-        return self.t.cyan + s + self.t.normal
-
-    def blue(self, s):
-        return self.t.blue + s + self.t.normal
-
-    def green(self, s):
-        return self.t.green + s + self.t.normal
-
-    def plain(self, s):
-        return s + self.t.normal
 
 
 if __name__ == "__main__":
