@@ -22,7 +22,7 @@ VC = "v"
 class FM:
     def __init__(self, path="."):
         self.t = Terminal()
-        self.cwd = Path(path).resolve()
+        self.cwd = Path(path).absolute()
         self.last = None
         self.files, self.clip, self.sel = [], [], set()
         self.cutting, self.hidden, self.idx = False, False, 0
@@ -32,7 +32,7 @@ class FM:
 
     def run(self):
         os.chdir(self.cwd)
-        self.title(f"fm:{self.cwd}")
+        self.title(f"fm:{self.cwd.resolve()}")
         t = self.t
         self.keys = {
             "a": ("Add file", lambda: self.create("touch", Path.touch)),
@@ -106,7 +106,7 @@ class FM:
     def draw(self):
         t = self.t
         self.out(t.home)
-        title = self.bold(self.tilde(self.cwd))
+        title = self.bold(self.tilde(self.cwd.resolve()))
         if self.sel:
             title += self.dim(f" [{len(self.sel)}]")
         if self.clip:
@@ -131,7 +131,7 @@ class FM:
 
     def cd(self, p):
         self.last = self.cwd
-        self.cwd, self.idx = p.resolve(), 0
+        self.cwd, self.idx = p.absolute(), 0
         try:
             os.chdir(self.cwd)
         except PermissionError:
@@ -139,7 +139,7 @@ class FM:
             self.status("permission denied")
             self.t.inkey(timeout=1)
             return
-        self.title(f"fm:{self.cwd}")
+        self.title(f"fm:{self.cwd.resolve()}")
         self.sel.clear()
 
     def chmod(self):
