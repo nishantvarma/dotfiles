@@ -61,6 +61,12 @@
 !.moc/keymap
 !.moc/themes
 
+# Python
+
+!.python/
+.python/*
+!.python/requirements.txt
+
 # Vifm
 
 !.vifm/
