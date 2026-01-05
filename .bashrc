@@ -82,7 +82,7 @@ cm()
 dirty()
 {
     if ! git diff --quiet; then
-        git status --porcelain && g
+        git status --porcelain && v
     fi
 }
 
