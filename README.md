@@ -97,6 +97,7 @@
 * claude-cli
 * https://github.com/sminez/ad
 * opencode.ai
+* zed
 
 # links
 
