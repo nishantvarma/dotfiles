@@ -12,9 +12,9 @@ from blessed import Terminal
 EDIT = "edit"
 FZYEDIT = "fzedit"
 FZYOPEN = "fzopen"
-MARKS = ".config/fm/marks"
 OPEN = "open"
 SHELL = ["rlwrap", "-c", "rc"]
+TAGS = ".config/fm/tagged"
 TERM = "st"
 VC = "v"
 
@@ -29,8 +29,8 @@ class FM:
         self.files, self.clip, self.sel = [], [], set()
         self.cutting, self.hidden, self.idx = False, False, 0
         self.pat = str()
-        self.marks = Path.home() / MARKS
-        self.marks.mkdir(parents=True, exist_ok=True)
+        self.tags = Path.home() / TAGS
+        self.tags.mkdir(parents=True, exist_ok=True)
 
     def run(self):
         os.chdir(self.cwd)
@@ -47,7 +47,7 @@ class FM:
             "j": (None, lambda: self.mv(1)),
             "k": (None, lambda: self.mv(-1)),
             "l": ("Link", self.link),
-            "m": ("Mark", self.mark),
+            "m": ("Toggle", self.toggle),
             "n": ("Next", self.next),
             "N": ("Prev", self.prev),
             "o": ("Fuzzy open", lambda: self.spawn(FZYOPEN)),
@@ -55,7 +55,7 @@ class FM:
             "q": ("Quit", self.quit),
             "r": ("Rename", self.rename),
             "s": ("Shell", self.sh),
-            "t": ("Toggle", self.toggle),
+            "t": ("Tag", self.tag),
             "u": ("Unclip", lambda: setattr(self, "clip", [])),
             "v": ("VC", self.vc),
             "V": ("Git gui", lambda: self.spawn("git", "gui")),
@@ -64,7 +64,7 @@ class FM:
             "*": ("Chmod +x", self.chmod),
             ".": ("Hidden", lambda: setattr(self, "hidden", not self.hidden)),
             "/": ("Search", self.search),
-            "`": ("Marks", lambda: self.cd(self.marks)),
+            "`": ("Tagged", lambda: self.cd(self.tags)),
             "~": ("Home", lambda: self.cd(Path.home())),
             "\n": (None, self.enter),
             "KEY_DOWN": (None, lambda: self.mv(1)),
@@ -226,15 +226,6 @@ class FM:
             self.files = []
         self.idx = max(0, min(len(self.files) - 1, self.idx))
 
-    def mark(self):
-        default = self.cwd.name
-        name = self.prompt(f"mark [{default}]: ")
-        if name is None:
-            return
-        name = name or default
-        (self.marks / name).unlink(missing_ok=True)
-        (self.marks / name).symlink_to(self.cwd)
-
     def mv(self, d):
         if self.files:
             self.idx = max(0, min(len(self.files) - 1, self.idx + d))
@@ -302,6 +293,15 @@ class FM:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
+
+    def tag(self):
+        default = self.cwd.name
+        name = self.prompt(f"tag [{default}]: ")
+        if name is None:
+            return
+        name = name or default
+        (self.tags / name).unlink(missing_ok=True)
+        (self.tags / name).symlink_to(self.cwd)
 
     def toggle(self):
         if self.cur:
