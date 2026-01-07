@@ -236,6 +236,11 @@ class FM:
     def paste(self):
         for src in self.clip:
             dst = self.cwd / src.name
+            if dst.exists():
+                name = self.prompt(f"name [{src.name}]: ")
+                if name is None:
+                    continue
+                dst = self.cwd / (name or src.name)
             try:
                 if self.cutting:
                     shutil.move(src, dst)
@@ -290,6 +295,7 @@ class FM:
         cmd = " ".join(SHELL) + "; true"
         subprocess.Popen(
             [TERM, "-e", "sh", "-c", cmd],
+            cwd=self.ctx,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
@@ -301,7 +307,8 @@ class FM:
             return
         name = name or default
         (self.tags / name).unlink(missing_ok=True)
-        (self.tags / name).symlink_to(self.cwd)
+        rel = os.path.relpath(self.cwd, self.tags)
+        (self.tags / name).symlink_to(rel)
 
     def toggle(self):
         if self.cur:
@@ -324,6 +331,12 @@ class FM:
         if len(m) == 1:
             return str(m[0]) + "/" if m[0].is_dir() else str(m[0])
         return str(d / os.path.commonprefix([f.name for f in m]))
+
+    @property
+    def ctx(self):
+        if self.cwd.name == "tagged" and self.cur and self.cur.is_dir():
+            return self.cur
+        return self.cwd
 
     @property
     def cur(self):
@@ -391,7 +404,7 @@ class FM:
 
     def spawn(self, *cmd):
         with self.tty():
-            ret = subprocess.run(cmd)
+            ret = subprocess.run(cmd, cwd=self.ctx)
             if ret.returncode:
                 os.system("pause")
 
