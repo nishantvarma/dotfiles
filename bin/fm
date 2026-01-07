@@ -42,8 +42,11 @@ class FM:
             "c": ("Copy", self.copy),
             "d": ("Delete", self.rm),
             "e": ("Edit", self.edit),
+            "f": ("Check", lambda: self.spawn("lint", cur=True, wait=True)),
+            "F": ("Format", lambda: self.spawn("lint", "-f", cur=True, wait=True)),
             "g": ("Goto", self.goto),
             "h": ("Help", self.help),
+            "i": ("Inspect", lambda: self.spawn("view", cur=True, wait=True)),
             "j": (None, lambda: self.mv(1)),
             "k": (None, lambda: self.mv(-1)),
             "l": ("Link", self.link),
@@ -62,6 +65,7 @@ class FM:
             "z": ("Fuzzy edit", lambda: self.spawn(FZYEDIT)),
             " ": ("Select", self.select),
             "*": ("Chmod +x", self.chmod),
+            "=": ("Outline", lambda: self.spawn("outline", cur=True, wait=True)),
             ".": ("Hidden", lambda: setattr(self, "hidden", not self.hidden)),
             "/": ("Search", self.search),
             "`": ("Tagged", lambda: self.cd(self.tags)),
@@ -149,7 +153,7 @@ class FM:
 
     def edit(self):
         if self.cur and self.cur.is_file():
-            self.spawn(EDIT, str(self.cur))
+            self.spawn(EDIT, cur=True)
 
     def enter(self):
         if not self.cur:
@@ -157,7 +161,7 @@ class FM:
         if self.cur.is_dir():
             self.cd(self.cur)
         else:
-            self.spawn(OPEN, str(self.cur))
+            self.spawn(OPEN, cur=True)
 
     def goto(self):
         s = self.prompt("goto: ", self.compl)
@@ -167,7 +171,7 @@ class FM:
         if p.is_dir():
             self.cd(p)
         elif p.is_file():
-            self.spawn(OPEN, str(p))
+            self.spawn(OPEN, p)
 
     def help(self):
         self.out(self.t.home + self.t.clear)
@@ -406,10 +410,13 @@ class FM:
             return 0
         return max(0, min(self.idx - h // 2, len(self.files) - h))
 
-    def spawn(self, *cmd):
+    def spawn(self, *cmd, cur=False, wait=False):
         with self.tty():
+            if cur:
+                cmd = cmd + (self.cur,)
+            cmd = tuple(str(c) for c in cmd if c is not None)
             ret = subprocess.run(cmd, cwd=self.ctx)
-            if ret.returncode:
+            if wait or ret.returncode:
                 os.system("pause")
 
     def style(self, p):
