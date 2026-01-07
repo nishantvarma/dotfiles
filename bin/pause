@@ -1,4 +1,6 @@
 #!/usr/bin/env rc
 
-echo
-echo -n 'Press any key to continue... ' && read
+notify -n yellow 'Press any key to continue... '
+stty -echo
+read
+stty echo
