@@ -47,7 +47,6 @@ class FM:
             "j": (None, lambda: self.mv(1)),
             "k": (None, lambda: self.mv(-1)),
             "l": ("Link", self.link),
-            "m": ("Toggle", self.toggle),
             "n": ("Next", self.next),
             "N": ("Prev", self.prev),
             "o": ("Fuzzy open", lambda: self.spawn(FZYOPEN)),
@@ -61,6 +60,7 @@ class FM:
             "V": ("Git gui", lambda: self.spawn("git", "gui")),
             "x": ("Cut", self.cut),
             "z": ("Fuzzy edit", lambda: self.spawn(FZYEDIT)),
+            " ": ("Select", self.select),
             "*": ("Chmod +x", self.chmod),
             ".": ("Hidden", lambda: setattr(self, "hidden", not self.hidden)),
             "/": ("Search", self.search),
@@ -291,8 +291,16 @@ class FM:
         self.pat = pat.lower()
         self.next()
 
+    def select(self):
+        if self.cur:
+            self.sel ^= {self.cur}
+
     def sh(self):
-        cmd = " ".join(SHELL) + "; true"
+        shfile = self.ctx / "sh"
+        if shfile.is_file() and os.access(shfile, os.X_OK):
+            cmd = "./sh; true"
+        else:
+            cmd = " ".join(SHELL) + "; true"
         subprocess.Popen(
             [TERM, "-e", "sh", "-c", cmd],
             cwd=self.ctx,
@@ -309,10 +317,6 @@ class FM:
         (self.tags / name).unlink(missing_ok=True)
         rel = os.path.relpath(self.cwd, self.tags)
         (self.tags / name).symlink_to(rel)
-
-    def toggle(self):
-        if self.cur:
-            self.sel ^= {self.cur}
 
     def vc(self):
         self.spawn(VC)
