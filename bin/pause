@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-notify -n white '[•] Press any key to continue... '
+notify -n green '[•] Press any key to continue... '
 stty -echo
 read
 stty echo
