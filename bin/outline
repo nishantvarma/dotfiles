@@ -1,5 +1,14 @@
 #!/usr/bin/env rc
 
+fn blocks {
+	awk -v depth=$1 '/[:{]$/ {
+		match($0, /^[ \t]*/)
+		if (RLENGTH <= depth) print NR": "$0
+	}' $2
+}
+
 if (! ~ $#* 0) {
-	awk '/[:{]$/ {match($0,/^[ 	]*/); if(RLENGTH<=4) print NR": "$0}' $1
+	file=`{file $1}
+	if (~ $file *directory*) { tree $1 | less -FX; true }
+	if not { blocks 4 $1 | less -FX; true }
 }
