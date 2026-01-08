@@ -1,16 +1,6 @@
 #!/usr/bin/env rc
 
-fn outline {
-	awk '/^[ \t]*(class |def |fn |[a-z_].*\(\))/ { print NR": "$0 }' $1
-}
-
 fn show { $* | less; true }
 
-if (~ $#* 0) {
-	awk '/^[ \t]*(class |def |fn |[a-z_].*\(\))/ { print NR": "$0 }'
-}
-if not {
-	file=`{file $1}
-	if (~ $file *directory*) show tree --gitignore $1
-	if not show outline $1
-}
+file=`{file $1}
+if (~ $file *directory*) show tree --gitignore $1
