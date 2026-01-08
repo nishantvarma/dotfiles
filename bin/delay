@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
-notify green '==> Waiting for 2 seconds...'
+notify green '[waiting 2s]'
 sleep 2
