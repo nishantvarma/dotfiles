@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
-notify green '[waiting]'
+notify green '[...]'
 sleep 2
