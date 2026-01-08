@@ -18,6 +18,6 @@ fn show { $* | less; true }
 
 if (! ~ $#* 0) {
 	file=`{file $1}
-	if (~ $file *directory*) show tree $1
+	if (~ $file *directory*) show tree --gitignore $1
 	if not show outline $1
 }
