@@ -1,14 +1,23 @@
 #!/usr/bin/env rc
 
-fn blocks {
-	awk -v depth=$1 '/[:{]$/ {
-		match($0, /^[ \t]*/)
-		if (RLENGTH <= depth) print NR": "$0
-	}' $2
+fn pyblocks { awk '/^[ \t]*(class |def )/ { print NR": "$0 }' $1 }
+fn shblocks { awk '/^fn / || /^[a-z_].*\(\)/ { print NR": "$0 }' $1 }
+
+fn outline {
+	shebang=`{sed -n '1p' $1}
+	switch ($1) {
+	case *.py; pyblocks $1
+	case *.sh *.bash *.rc *.zsh; shblocks $1
+	case *
+		if (~ $shebang *python*) pyblocks $1
+		if not if (~ $shebang *bash* *sh* *rc* *zsh*) shblocks $1
+	}
 }
+
+fn show { $* | less; true }
 
 if (! ~ $#* 0) {
 	file=`{file $1}
-	if (~ $file *directory*) { tree $1 | less -FX; true }
-	if not { blocks 4 $1 | less -FX; true }
+	if (~ $file *directory*) show tree $1
+	if not show outline $1
 }
