@@ -8,7 +8,7 @@ fn sync {
 		case y Y
 			msg=`{prompt 'message' Fixups}
 			git commit -m $"msg &&
-			if (confirm 'push?')
+			if (confirm 'push?' y)
 				git push origin
 		case s S
 			clear
