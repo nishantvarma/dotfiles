@@ -19,4 +19,5 @@ if (! git diff --cached --quiet) {
 			git push origin
 	}
 }
+
 true

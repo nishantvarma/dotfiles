@@ -1,5 +1,5 @@
 #!/usr/bin/env rc
 
 echo
-notify yellow '==>' $*
+notify yellow '['$*']'
 echo
