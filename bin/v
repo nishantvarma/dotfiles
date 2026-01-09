@@ -33,4 +33,5 @@ if (! git diff --quiet) {
 }
 
 sync
+
 true
