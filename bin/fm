@@ -274,7 +274,7 @@ class FM:
         if not paths:
             return
         names = " ".join(p.name for p in paths)
-        self.status(f"rm {names}? ")
+        self.status(f"rm {names}? ", cursor=True)
         if self.t.inkey() != "y":
             return
         for p in paths:
