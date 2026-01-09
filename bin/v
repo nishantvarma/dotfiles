@@ -9,13 +9,24 @@ if (! git diff --quiet) {
 	git add -p
 }
 
-if (! git diff --cached --quiet) {
+while (! git diff --cached --quiet) {
 	heading sync
-	if (confirm 'commit?') {
+	notify -n 'commit? [y,n,u,v,x] '
+	reply=`{read}
+	switch ($reply) {
+	case y Y
 		msg=`{prompt 'message' Fixups}
 		git commit -m $"msg &&
 		if (confirm 'push?')
 			git push origin
+	case u U
+		git reset -p
+	case x X
+		git gui
+	case v V
+		gitk
+	case *
+		break
 	}
 }
 
