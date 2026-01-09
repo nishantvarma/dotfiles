@@ -481,7 +481,7 @@ class FM:
 
     def status(self, msg=str(), cursor=False):
         pos = self.t.move_xy(0, self.t.height - 1)
-        cur = self.t.cnorm if cursor else str()
+        cur = self.t.cnorm if cursor else self.t.civis
         self.out(pos + self.t.clear_eol + cur + msg)
 
     def title(self, s):
