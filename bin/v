@@ -2,7 +2,7 @@
 
 fn sync {
 	if (! git diff --cached --quiet) {
-		heading sync
+		heading -b sync
 		reply=`{choice 'commit?' 'y,n,u,v,x'}
 		switch ($reply) {
 		case y Y
@@ -23,7 +23,7 @@ fn sync {
 	}
 }
 
-heading status
+heading -b status
 git status -s
 
 new=`{git ls-files --others --exclude-standard}
@@ -35,7 +35,7 @@ if (! ~ $#new 0) {
 }
 
 if (! git diff --quiet) {
-	heading -a stage
+	heading -ab stage
 	git add -p
 }
 
