@@ -1,0 +1,8 @@
+#!/usr/bin/env rc
+
+echo -n $1 '['$2']: ' >[1=2]
+reply=`{read}
+if (~ $reply '')
+	echo $2
+if not
+	echo $reply

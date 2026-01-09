@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+echo -n $1 '[y/N] '
+reply=`{read}
+~ $reply y Y

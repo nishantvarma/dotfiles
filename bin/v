@@ -1,5 +1,19 @@
 #!/usr/bin/env rc
 
-git add -p &&
-git commit -m Fixups &&
-git push origin
+heading status
+git status -s
+git add -N .
+
+if (! git diff --quiet) {
+	heading stage
+	git add -p
+}
+
+heading commit
+if (confirm 'commit?') {
+	msg=`{prompt 'message' Fixups}
+	git commit -m $msg &&
+	heading push
+	if (confirm 'push?')
+		git push origin
+}

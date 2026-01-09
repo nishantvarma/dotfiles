@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+echo
+notify yellow '==>' $*
+echo

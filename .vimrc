@@ -1,5 +1,8 @@
 " vim: syntax=vim
 
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 color dark
 
 nnoremap ]b :bnext<CR>
