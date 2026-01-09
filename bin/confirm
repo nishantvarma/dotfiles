@@ -1,6 +1,11 @@
 #!/usr/bin/env rc
 
-notify -n green '❯ '$1 '[y/n] '
+if (~ $2 y)
+	hint='[Y/n] '
+if not
+	hint='[y/n] '
+
+notify -n green '❯ '$1 $hint
 reply=`{read}
 if (~ $#reply 0)
 	~ $2 y
