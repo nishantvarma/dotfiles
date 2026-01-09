@@ -1,12 +1,12 @@
 #!/usr/bin/env rc
 
-t=() e=()
+a=() b=()
 while (~ $1 -*) {
-	~ $1 -t && t=1
-	~ $1 -e && e=1
+	~ $1 -*a* && a=1
+	~ $1 -*b* && b=1
 	shift
 }
 
-if (! ~ $t 1) echo
+if (~ $a 1) echo
 notify yellow '['$*']'
-if (! ~ $e 1) echo
+if (~ $b 1) echo

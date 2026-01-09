@@ -23,12 +23,19 @@ fn sync {
 	}
 }
 
-heading -t status
+heading status
 git status -s
-git add -N .
+
+new=`{git ls-files --others --exclude-standard}
+if (! ~ $#new 0) {
+	if (confirm 'add '$#new' new?')
+		for (f in $new)
+			if (confirm $f'?')
+				git add $f
+}
 
 if (! git diff --quiet) {
-	heading stage
+	heading -a stage
 	git add -p
 }
 

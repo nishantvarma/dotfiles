@@ -1,5 +1,5 @@
 #!/usr/bin/env rc
 
-notify -n green $1 '[y/n] '
+notify -n green '❯ '$1 '[y/n] '
 reply=`{read}
 ~ $reply y Y

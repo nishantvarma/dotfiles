@@ -1,5 +1,5 @@
 #!/usr/bin/env rc
 
-notify -n green $1 '['$2'] ' >[1=2]
+notify -n green '❯ '$1 '['$2'] ' >[1=2]
 reply=`{read}
 echo $reply

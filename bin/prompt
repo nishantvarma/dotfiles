@@ -1,8 +1,8 @@
 #!/usr/bin/env rc
 
-notify -n green $1 '['$2']: ' >[1=2]
+notify -n green '❯ '$1 '['$2']: ' >[1=2]
 reply=`{read}
-if (~ $reply '')
+if (~ $#reply 0)
 	echo $2
 if not
 	echo $reply
