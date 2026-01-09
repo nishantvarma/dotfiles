@@ -11,13 +11,15 @@ if (! git diff --quiet) {
 
 while (! git diff --cached --quiet) {
 	heading sync
-	notify -n 'commit? [y,n,u,v,x] '
+	notify -n green 'commit? [y,n,u,v,x] '
 	reply=`{read}
 	switch ($reply) {
 	case y Y
 		msg=`{prompt 'message' Fixups}
 		git commit -m $"msg &&
-		if (confirm 'push?')
+		notify -n green 'push? [y/n] '
+		push=`{read}
+		if (~ $push y Y)
 			git push origin
 	case u U
 		git reset -p
