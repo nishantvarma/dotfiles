@@ -12,7 +12,7 @@ if (! git diff --quiet) {
 heading commit
 if (confirm 'commit?') {
 	msg=`{prompt 'message' Fixups}
-	git commit -m $msg &&
+	git commit -m $"msg &&
 	heading push
 	if (confirm 'push?')
 		git push origin
