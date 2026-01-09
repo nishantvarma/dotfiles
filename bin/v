@@ -28,6 +28,7 @@ git status -s
 
 new=`{git ls-files --others --exclude-standard}
 if (! ~ $#new 0) {
+	echo
 	if (confirm 'add '$#new' new?')
 		for (f in $new)
 			if (confirm $f'?')
