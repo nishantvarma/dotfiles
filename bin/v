@@ -17,9 +17,7 @@ while (! git diff --cached --quiet) {
 	case y Y
 		msg=`{prompt 'message' Fixups}
 		git commit -m $"msg &&
-		notify -n green 'push? [y/n] '
-		push=`{read}
-		if (~ $push y Y)
+		if (confirm 'push?')
 			git push origin
 	case u U
 		git reset -p
