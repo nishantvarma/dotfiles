@@ -130,7 +130,7 @@ class FM:
         except PermissionError:
             self.cwd = self.last
             self.status("permission denied")
-            self.t.inkey(timeout=1)
+            self.t.inkey(timeout=2)
             return
         self.title(f"fm:{self.cwd.resolve()}")
         self.sel.clear()
