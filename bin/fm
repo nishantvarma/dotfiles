@@ -135,6 +135,13 @@ class FM:
         self.title(f"fm:{self.cwd.resolve()}")
         self.sel.clear()
 
+    def catch(self, fn, *args, timeout=2):
+        try:
+            fn(*args)
+        except OSError as e:
+            self.status(f"error: {e.strerror}")
+            self.t.inkey(timeout=timeout)
+
     def chmod(self):
         if self.cur:
             self.cur.chmod(self.cur.stat().st_mode ^ 0o111)
@@ -145,7 +152,7 @@ class FM:
     def create(self, label, fn):
         name = self.prompt(f"{label}: ")
         if name:
-            fn(self.cwd / name)
+            self.catch(fn, self.cwd / name)
 
     def cut(self):
         self.yank(True)
@@ -267,7 +274,7 @@ class FM:
             return
         name = self.prompt(f"mv {self.cur.name}: ")
         if name:
-            self.cur.rename(self.cwd / name)
+            self.catch(self.cur.rename, self.cwd / name)
 
     def rm(self):
         paths = self.targets()
