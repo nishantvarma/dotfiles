@@ -135,13 +135,6 @@ class FM:
         self.title(f"fm:{self.cwd.resolve()}")
         self.sel.clear()
 
-    def catch(self, fn, *args, timeout=2):
-        try:
-            fn(*args)
-        except OSError as e:
-            self.status(f"error: {e.strerror}")
-            self.t.inkey(timeout=timeout)
-
     def chmod(self):
         if self.cur:
             self.cur.chmod(self.cur.stat().st_mode ^ 0o111)
@@ -332,6 +325,13 @@ class FM:
         self.spawn(VC)
 
     # helpers
+
+    def catch(self, fn, *args, timeout=2):
+        try:
+            fn(*args)
+        except OSError as e:
+            self.status(f"error: {e.strerror}")
+            self.t.inkey(timeout=timeout)
 
     def compl(self, s):
         p = Path(s).expanduser()
