@@ -37,7 +37,7 @@ super + e
 	9 spawn st fm
 
 super + f
-	bspc node -t fullscreen
+	bspc node -t ~fullscreen
 
 super + m
 	bspc node -s biggest.local
