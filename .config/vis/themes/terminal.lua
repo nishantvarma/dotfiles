@@ -1,5 +1,15 @@
 local lexers = vis.lexers
 
+-- Color  │ Semantic     │ Elements
+-- ───────┼──────────────┼─────────────────────────────────
+-- green  │ creation     │ def, class, lambda, additions
+-- yellow │ control      │ if, for, return, match, tags
+-- blue   │ names        │ functions, classes, methods, headings
+-- cyan   │ values       │ strings, numbers, True/False/None, self
+-- magenta│ meta         │ import, @decorator, preprocessor
+-- red    │ danger       │ exceptions, errors, deletions
+-- gray   │ noise        │ comments, separators
+
 -- ui
 lexers.STYLE_DEFAULT = ""
 lexers.STYLE_CURSOR = "fore:black,back:white"
@@ -17,16 +27,27 @@ lexers.STYLE_EOF = "fore:gray"
 
 -- syntax
 lexers.STYLE_COMMENT = "fore:gray"
-lexers.STYLE_STRING = "fore:green"
-lexers.STYLE_REGEX = "fore:green"
+lexers.STYLE_STRING = "fore:cyan"
+lexers.STYLE_STRING_DOC = "fore:magenta"
+lexers.STYLE_REGEX = "fore:cyan,italics"
 lexers.STYLE_NUMBER = "fore:cyan"
 lexers.STYLE_CONSTANT = "fore:cyan"
 lexers.STYLE_KEYWORD = "fore:yellow"
+lexers.STYLE_KEYWORD_DECLARATION = "fore:green"
+lexers.STYLE_KEYWORD_IMPORT = "fore:magenta"
 lexers.STYLE_TYPE = "fore:cyan"
 lexers.STYLE_FUNCTION = "fore:blue"
-lexers.STYLE_CLASS = "fore:yellow"
+lexers.STYLE_FUNCTION_BUILTIN = "fore:blue,italics"
+lexers.STYLE_FUNCTION_BUILTIN_SPECIAL = "fore:blue,italics"
+lexers.STYLE_FUNCTION_METHOD = "fore:blue,italics"
+lexers.STYLE_KEYWORD_SOFT = "fore:yellow,italics"
+lexers.STYLE_ANNOTATION = "fore:magenta"
+lexers.STYLE_CLASS = "fore:blue"
 lexers.STYLE_DEFINITION = "fore:blue"
+lexers.STYLE_CONSTANT_BUILTIN = "fore:red"
+lexers.STYLE_CONSTANT_BUILTIN_BOOLEAN = "fore:cyan"
 lexers.STYLE_VARIABLE = ""
+lexers.STYLE_VARIABLE_BUILTIN = "fore:cyan,italics"
 lexers.STYLE_IDENTIFIER = ""
 lexers.STYLE_OPERATOR = ""
 lexers.STYLE_PREPROCESSOR = "fore:magenta"
@@ -34,7 +55,7 @@ lexers.STYLE_ATTRIBUTE = "fore:magenta"
 lexers.STYLE_LABEL = "fore:magenta"
 lexers.STYLE_TAG = "fore:yellow"
 lexers.STYLE_ERROR = "fore:white,back:red"
-lexers.STYLE_EMBEDDED = "fore:green"
+lexers.STYLE_EMBEDDED = "fore:cyan"
 lexers.STYLE_NOTHING = ""
 lexers.STYLE_WHITESPACE = ""
 lexers.STYLE_HEADING = "fore:blue,bold"
@@ -47,7 +68,7 @@ lexers.STYLE_CHANGE = "fore:yellow"
 -- markup
 lexers.STYLE_BOLD = "bold"
 lexers.STYLE_ITALIC = "italics"
-lexers.STYLE_CODE = "fore:green"
+lexers.STYLE_CODE = "fore:cyan"
 lexers.STYLE_LINK = "fore:cyan"
 lexers.STYLE_REFERENCE = "fore:cyan"
 lexers.STYLE_HR = "fore:gray"
