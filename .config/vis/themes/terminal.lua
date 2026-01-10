@@ -23,7 +23,7 @@ lexers.STYLE_SEPARATOR = "fore:gray"
 lexers.STYLE_STATUS = "fore:white,back:gray"
 lexers.STYLE_STATUS_FOCUSED = "fore:green,back:gray"
 lexers.STYLE_INFO = "fore:white"
-lexers.STYLE_EOF = "fore:gray"
+lexers.STYLE_EOF = "fore:black"
 
 -- syntax
 lexers.STYLE_COMMENT = "fore:gray"
