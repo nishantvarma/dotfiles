@@ -1,0 +1,4 @@
+#!/usr/bin/env rc
+
+wallpaper=`{ls $home/.wallpapers/* | dmenu -i -b -l 10 -p 'wallpaper:'}
+feh --bg-scale $wallpaper

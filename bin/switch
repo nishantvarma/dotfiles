@@ -5,7 +5,7 @@ fn names {
 		xdotool getwindowname $id >[2]/dev/null
 }
 
-sel = `{names | dmenu -b -l 10}
+sel = `{names | dmenu -i -b -l 10 -p 'switch:'}
 
 if (! ~ $#sel 0) {
 	win = `{xdotool search --name $"sel | head -1}
