@@ -31,7 +31,7 @@ super + minus
 	bspc node --flag hidden=on
 
 super + d
-	bspc node -t floating
+	bspc node -t ~floating
 
 super + e
 	9 spawn st fm

@@ -2,4 +2,7 @@
 
 notify -n green '❯ '$1 '['$2'] ' >[1=2]
 reply=`{read}
-echo $reply
+if (~ $#reply 0)
+	echo $3
+if not
+	echo $reply
