@@ -6,8 +6,8 @@ local lexers = vis.lexers
 -- yellow │ control      │ if, for, return, match, tags
 -- blue   │ names        │ functions, classes, methods, headings
 -- cyan   │ values       │ strings, numbers, True/False/None, self
--- magenta│ meta         │ import, @decorator, preprocessor
--- red    │ danger       │ exceptions, errors, deletions
+-- magenta│ meta         │ @decorator, preprocessor
+-- red    │ external     │ import, exceptions, errors, deletions
 -- gray   │ noise        │ comments, separators
 
 -- ui
@@ -34,7 +34,7 @@ lexers.STYLE_NUMBER = "fore:cyan"
 lexers.STYLE_CONSTANT = "fore:cyan"
 lexers.STYLE_KEYWORD = "fore:yellow"
 lexers.STYLE_KEYWORD_DECLARATION = "fore:green"
-lexers.STYLE_KEYWORD_IMPORT = "fore:magenta"
+lexers.STYLE_KEYWORD_IMPORT = "fore:red"
 lexers.STYLE_TYPE = "fore:cyan"
 lexers.STYLE_FUNCTION = "fore:blue"
 lexers.STYLE_FUNCTION_BUILTIN = "fore:blue,italics"
