@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
-wallpaper=`{ls $home/.wallpapers/* | dmenu -i -b -l 10 -p 'wallpaper:'}
-feh --bg-scale $wallpaper
+wp=`{ls $home/.wallpapers/* | dmenu -i -b -l 10 -p 'wp:'}
+feh --bg-scale $wp

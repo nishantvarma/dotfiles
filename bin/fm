@@ -28,6 +28,7 @@ class FM:
         self.last = None
         self.files, self.clip, self.sel = [], [], set()
         self.cutting, self.hidden, self.idx = False, False, 0
+        self.alt = None
         self.pat = str()
         self.tags = Path.home() / TAGS
         self.tags.mkdir(parents=True, exist_ok=True)
@@ -67,6 +68,7 @@ class FM:
             "*": ("Chmod +x", self.chmod),
             ".": ("Hidden", lambda: setattr(self, "hidden", not self.hidden)),
             "/": ("Search", self.search),
+            "'": ("Alt", lambda: setattr(self, "alt", None if self.alt else self.cwd)),
             "`": ("Tagged", lambda: self.cd(self.tags)),
             "~": ("Home", lambda: self.cd(Path.home())),
             "\n": (None, self.enter),
@@ -74,7 +76,7 @@ class FM:
             "KEY_ENTER": (None, self.enter),
             "KEY_LEFT": (None, lambda: self.cd(self.cwd.parent)),
             "KEY_RIGHT": (None, self.enter),
-            "KEY_TAB": (None, lambda: self.cd(self.last) if self.last else None),
+            "KEY_TAB": (None, self.tab),
             "KEY_UP": (None, lambda: self.mv(-1)),
         }
         try:
@@ -103,6 +105,8 @@ class FM:
         if self.clip:
             mode = "cut" if self.cutting else "cp"
             title += self.dim(f" {mode}:{len(self.clip)}")
+        if self.alt:
+            title += self.dim(f" alt:{self.alt.name}")
         print(title + t.clear_eol)
         h = t.height - 2
         if len(self.files) > h:
@@ -310,6 +314,14 @@ class FM:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
+
+    def tab(self):
+        if self.alt:
+            prev = self.cwd
+            self.cd(self.alt)
+            self.alt = prev
+        elif self.last:
+            self.cd(self.last)
 
     def tag(self):
         default = self.cwd.name
