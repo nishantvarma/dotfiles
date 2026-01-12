@@ -5,14 +5,14 @@ git rev-parse --git-dir >/dev/null >[2=1] || exit 0
 fn sync {
 	if (! git diff --cached --quiet) {
 		heading -ab sync
-		reply=`{choice 'commit?' 'Y,n,s,u,v,x' y}
+		reply=`{choice 'commit?' 'Y,n,r,u,v,x' y}
 		switch ($reply) {
 		case y Y
 			msg=`{prompt 'message' Fixups}
 			git commit -m $"msg &&
 			if (confirm 'push?' y)
 				git push origin
-		case s S
+		case r R
 			clear
 			exec v
 		case u U

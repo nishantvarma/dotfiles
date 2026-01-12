@@ -269,7 +269,7 @@ class FM:
     def rename(self):
         if not self.cur:
             return
-        name = self.prompt(f"mv {self.cur.name}: ")
+        name = self.prompt("mv: ", default=self.cur.name)
         if name:
             self.catch(self.cur.rename, self.cwd / name)
 
@@ -393,10 +393,13 @@ class FM:
     def isesc(self, key):
         return key.name == "KEY_ESCAPE"
 
-    def prompt(self, msg, complete=None):
+    def prompt(self, msg, complete=None, default=str()):
         t = self.t
-        self.status(msg, cursor=True)
-        buf = str()
+        buf, pos = default, len(default)
+        def draw():
+            self.status(msg + buf, cursor=True)
+            self.out(t.move_left * (len(buf) - pos))
+        draw()
         while True:
             key = t.inkey()
             if self.isesc(key) or key.name == "KEY_DOWN":
@@ -405,16 +408,22 @@ class FM:
             if self.isenter(key):
                 self.out(t.civis)
                 return buf
-            if self.isbs(key):
-                if buf:
-                    buf = buf[:-1]
-                    self.out(t.move_left + " " + t.move_left)
+            if key.name == "KEY_LEFT" and pos > 0:
+                pos -= 1
+            elif key.name == "KEY_RIGHT" and pos < len(buf):
+                pos += 1
+            elif self.isbs(key) and pos > 0:
+                buf = buf[:pos-1] + buf[pos:]
+                pos -= 1
             elif key.name == "KEY_TAB" and complete:
                 buf = complete(buf)
-                self.status(msg + buf, cursor=True)
+                pos = len(buf)
             elif key.isprintable():
-                buf += key
-                self.out(key)
+                buf = buf[:pos] + key + buf[pos:]
+                pos += 1
+            else:
+                continue
+            draw()
 
     def row(self, i, f):
         fmt, suf = self.style(f)
