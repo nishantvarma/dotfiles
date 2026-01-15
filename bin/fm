@@ -20,7 +20,6 @@ VC = "v"
 
 
 class FM:
-
     # core
 
     def __init__(self, path="."):
@@ -397,9 +396,11 @@ class FM:
     def prompt(self, msg, complete=None, default=str()):
         t = self.t
         buf, pos = default, len(default)
+
         def draw():
             self.status(msg + buf, cursor=True)
             self.out(t.move_left * (len(buf) - pos))
+
         draw()
         while True:
             key = t.inkey()
@@ -414,7 +415,7 @@ class FM:
             elif key.name == "KEY_RIGHT" and pos < len(buf):
                 pos += 1
             elif self.isbs(key) and pos > 0:
-                buf = buf[:pos-1] + buf[pos:]
+                buf = buf[: pos - 1] + buf[pos:]
                 pos -= 1
             elif key.name == "KEY_TAB" and complete:
                 buf = complete(buf)

@@ -53,6 +53,12 @@
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
 
+# Config > Zed
+
+!.config/zed/
+.config/zed/*
+!.config/zed/themes/
+
 # Moc
 
 !.moc/

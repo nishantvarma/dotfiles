@@ -98,7 +98,7 @@
 * claude-cli
 * https://github.com/sminez/ad
 * opencode.ai
-* zed (zedokai filter spectrum)
+* zed
 
 # links
 
