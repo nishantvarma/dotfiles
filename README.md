@@ -94,6 +94,7 @@
 
 # exp
 
+* aider
 * claude-cli
 * https://github.com/sminez/ad
 * opencode.ai
