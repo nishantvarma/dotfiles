@@ -19,7 +19,7 @@
           "orange": "#ffb86c — caution: warnings, escapes, regex",
           "gray": "#666666 — noise: comments, muted elements",
           "white": "#ffffff — neutral: variables, cursor, active elements",
-          "silver": "#999999 — ui: sidebar, tabs, icons",
+          "silver": "#eeeeee — ui: sidebar, tabs, icons",
           "base": "#b3b3b3 — default: punctuation, editor text"
         },
 
