@@ -26,6 +26,10 @@
         "background": "#121212",
         "background.appearance": "opaque",
         "elevated_surface.background": "#1a1a1a",
+        "element.hover": "#ffffff08",
+        "element.selected": "#ffffff10",
+        "ghost_element.hover": "#ffffff08",
+        "ghost_element.selected": "#ffffff10",
         "surface.background": "#101010",
         "panel.background": "#101010",
         "panel.focused_border": "#14dbc450",
@@ -36,7 +40,7 @@
         "toolbar.background": "#121212",
 
         "tab_bar.background": "#101010",
-        "tab.active_background": "#121212",
+        "tab.active_background": "#1c1c1c",
         "tab.inactive_background": "#101010",
 
         "border": "#101010",
