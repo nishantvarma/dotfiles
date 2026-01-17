@@ -1,5 +1,5 @@
 #!/usr/bin/env rc
 
-file=`{search $* | fzy}
+file=`{f $* | fzy}
 ~ $#file 0 && exit
 exec edit $file
