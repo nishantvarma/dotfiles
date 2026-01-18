@@ -1,9 +1,3 @@
 #!/usr/bin/env rc
 
-if (! ~ $#* 0) {
-	file=`{file $1}
-	mime=`{file -m $1}
-
-	if (~ $file *directory*) spawn st fm `{readlink -f $1}
-	if not if (~ $mime *text*) spawn st vis $1
-}
+spawn st vis +0 $*
