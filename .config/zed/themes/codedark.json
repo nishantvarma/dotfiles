@@ -1,11 +1,11 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
-  "id": "vscode",
-  "name": "VS Code Dark+",
+  "id": "codedark",
+  "name": "Code Dark",
   "author": "Nishant Varma",
   "themes": [
     {
-      "name": "VS Code Dark+",
+      "name": "Code Dark",
       "appearance": "dark",
       "style": {
         "palette": {
