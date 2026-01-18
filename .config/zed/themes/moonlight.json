@@ -32,7 +32,7 @@
         "ghost_element.selected": "#ffffff10",
         "surface.background": "#121212",
         "panel.background": "#121212",
-        "panel.focused_border": "#14dbc450",
+        "panel.focused_border": "#ffffff30",
 
         "title_bar.background": "#121212",
         "title_bar.inactive_background": "#121212",
@@ -45,8 +45,8 @@
 
         "border": "#121212",
         "border.disabled": "#00000050",
-        "border.focused": "#14dbc450",
-        "border.selected": "#14dbc450",
+        "border.focused": "#ffffff30",
+        "border.selected": "#ffffff30",
         "border.transparent": "#00000000",
         "border.variant": "#ffffff10",
 
