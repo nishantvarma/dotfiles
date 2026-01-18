@@ -1,6 +1,6 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
-  "id": "one-dark",
+  "id": "onedark",
   "name": "One Dark",
   "author": "Nishant Varma",
   "themes": [
@@ -9,7 +9,6 @@
       "appearance": "dark",
       "style": {
         "palette": {
-          "note": "One Dark color palette",
           "red": "#e06c75 — variables, tags, errors",
           "green": "#98c379 — strings, success",
           "yellow": "#e5c07b — types, warnings",
