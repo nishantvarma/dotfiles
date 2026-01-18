@@ -12,7 +12,7 @@ from blessed import Terminal
 EDIT = "edit"
 FZYEDIT = "fzedit"
 FZYOPEN = "fzopen"
-FZYSEARCH = "fzs"
+FZYSEARCH = "fzsearch"
 OPEN = "open"
 SHELL = ["rc"]
 TAGS = ".config/fm/tagged"
