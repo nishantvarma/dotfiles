@@ -4,4 +4,4 @@
 match=`{rg -n $* | fzy}
 ~ $#match 0 && exit
 ifs=: parts=`{echo $match}
-exec edit +$parts(2) $parts(1)
+exec e +$parts(2) $parts(1)

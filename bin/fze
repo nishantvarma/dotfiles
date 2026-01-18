@@ -2,4 +2,4 @@
 
 file=`{f $* | fzy}
 ~ $#file 0 && exit
-exec open $file
+exec e $file
