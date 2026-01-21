@@ -19,6 +19,8 @@ backslash = "\\"
 vis:map(vis.modes.NORMAL, " ", ":exec vis+<Enter>")
 vis:map(vis.modes.NORMAL, "gp", '"+p')
 vis:map(vis.modes.NORMAL, "gy", '"+y')
+vis:map(vis.modes.VISUAL, "gy", '"+y')
+vis:map(vis.modes.VISUAL_LINE, "gy", '"+y')
 vis:map(vis.modes.NORMAL, "q", ":q<Enter>")
 vis:map(vis.modes.NORMAL, "Q", "<vis-macro-record>")
 vis:map(vis.modes.NORMAL, "s", ":w<Enter>")
