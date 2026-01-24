@@ -26,7 +26,7 @@ class FM:
     def __init__(self, path="."):
         self.t = Terminal()
         self.cwd = Path(path).absolute()
-        self.last = None
+        self.last, self.pos = None, {}
         self.files, self.clip, self.sel = [], [], set()
         self.cutting, self.hidden, self.idx = False, False, 0
         self.alt = None
@@ -129,8 +129,9 @@ class FM:
     # actions
 
     def cd(self, p):
-        self.last = self.cwd
-        self.cwd, self.idx = p.absolute(), 0
+        self.pos[self.cwd] = self.idx
+        self.last, self.cwd = self.cwd, p.absolute()
+        self.idx = self.pos.get(self.cwd, 0)
         try:
             os.chdir(self.cwd)
         except PermissionError:
