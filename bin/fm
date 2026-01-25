@@ -44,6 +44,7 @@ class FM:
             "c": ("Copy", self.copy),
             "C": ("Cut", self.cut),
             "d": ("Delete", self.rm),
+            "D": ("Debug", self.debug),
             "e": ("Edit", self.edit),
             "f": ("Check", lambda: self.spawn("lint", cur=True, wait=True)),
             "F": ("Format", lambda: self.spawn("lint", "-f", cur=True, wait=True)),
@@ -160,6 +161,10 @@ class FM:
 
     def cut(self):
         self.yank(True)
+
+    def debug(self):
+        with self.tty():
+            breakpoint()
 
     def edit(self):
         if self.cur and self.cur.is_file():
