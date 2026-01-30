@@ -73,7 +73,7 @@
 * mpv
 * quark (webserver)
 * qutebrowser
-* rclone
+* rclone (onedrive)
 * recoll
 * scid
 * shellcheck
