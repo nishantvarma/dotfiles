@@ -1,6 +1,5 @@
 #!/usr/bin/env rc
 
 tput setaf 2
-tput bold
 echo -n '❯ '
 tput sgr0
