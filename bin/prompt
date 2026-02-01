@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
-notify -n green '❯' >[1=2]
-notify -n white ' '$1 '['$2']: ' >[1=2]
+cue >[1=2]
+echo -n $1 '['$2']: ' >[1=2]
 reply=`{read}
 if (~ $#reply 0)
 	echo $2

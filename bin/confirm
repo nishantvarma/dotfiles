@@ -5,8 +5,8 @@ if (~ $2 y)
 if not
 	hint='[y/n] '
 
-notify -n green '❯'
-notify -n white ' '$1 $hint
+cue
+echo -n $1 $hint
 reply=`{read}
 if (~ $#reply 0)
 	~ $2 y

@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-notify -n green '[continue] '
+bracket -n green continue
 stty -echo
 read
 stty echo

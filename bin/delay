@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
-notify green '[...]'
+bracket green ...
 sleep 2
