@@ -12,7 +12,7 @@ fn commit {
 }
 
 fn push {
-	reply=`{choice 'push?' 'y,N,!' n}
+	reply=`{choice 'push?' 'Y,n,!' y}
 	args=(); ~ $reply '!' && args=--force
 	~ $reply y Y '!' && git push origin $args
 }
