@@ -3,11 +3,15 @@
 git rev-parse --git-dir >/dev/null >[2=1] || exit 0
 
 fn commit {
-	msg=`{prompt 'message' $1}
-	args=()
-	~ $2 --amend && args=--amend
-	if (~ $"msg '') args=($args --no-edit)
-	if not args=($args -m $"msg)
+	if (~ $1 amend) {
+		msg=`{prompt 'message' ''}
+		if (~ $"msg '') args=(--amend --no-edit)
+		if not args=(--amend -m $"msg)
+	}
+	if not {
+		msg=`{prompt 'message' Fixups}
+		args=(-m $"msg)
+	}
 	git commit $args && push
 }
 
@@ -23,9 +27,9 @@ fn sync {
 		reply=`{choice 'commit?' 'Y,n,a,r,u,v,x' y}
 		switch ($reply) {
 		case y Y
-			commit Fixups
+			commit
 		case a A
-			commit '' --amend
+			commit amend
 		case r R
 			clear
 			exec v
