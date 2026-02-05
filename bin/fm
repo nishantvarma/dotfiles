@@ -154,7 +154,9 @@ class FM:
                 self.cur.chmod(mode | 0o111)
 
     def copy(self):
-        self.yank(False)
+        self.clip = self.targets()
+        self.cutting = False
+        self.sel.clear()
 
     def create(self, label, fn):
         name = self.prompt(f"{label}: ")
@@ -162,7 +164,9 @@ class FM:
             self.catch(fn, self.cwd / name)
 
     def cut(self):
-        self.yank(True)
+        self.clip = self.targets()
+        self.cutting = True
+        self.sel.clear()
 
     def debug(self):
         with self.tty():
@@ -510,11 +514,6 @@ class FM:
         finally:
             os.system("stty -echo -icanon")
             self.out(t.enter_fullscreen + t.clear + t.civis)
-
-    def yank(self, cut):
-        self.clip = self.targets()
-        self.cutting = cut
-        self.sel.clear()
 
     # output
 
