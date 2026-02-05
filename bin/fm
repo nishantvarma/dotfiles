@@ -65,6 +65,8 @@ class FM:
             "v": ("VC", self.vc),
             "V": ("Git gui", lambda: self.spawn("gitk")),
             "x": ("Fuzzy open", lambda: self.spawn(FZYOPEN)),
+            "y": ("Yank path", self.yank),
+            "Y": ("Yank content", lambda: self.yank(content=True)),
             "z": ("Fuzzy edit", lambda: self.spawn(FZYEDIT)),
             " ": ("Select", self.select),
             "*": ("Chmod +x", self.chmod),
@@ -351,6 +353,15 @@ class FM:
 
     def vc(self):
         self.spawn(VC)
+
+    def yank(self, content=False):
+        if not self.cur:
+            return
+        if content and self.cur.is_file():
+            data = self.cur.read_bytes()
+        else:
+            data = str(self.cur.absolute()).encode()
+        subprocess.run(["xclip", "-selection", "clipboard"], input=data)
 
     # helpers
 
