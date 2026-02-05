@@ -16,9 +16,9 @@ fn commit {
 }
 
 fn push {
-	reply=`{choice 'push?' 'Y,n,!' y}
-	args=(); ~ $reply '!' && args=--force
-	~ $reply y Y '!' && git push origin $args
+	reply=`{choice 'push?' 'Y,n' y}
+	args=(); ~ $reply Y && args=--force
+	~ $reply y Y && git push origin $args
 }
 
 fn sync {
