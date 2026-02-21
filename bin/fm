@@ -21,8 +21,6 @@ VC = "v"
 
 
 class FM:
-    # -- core --
-
     def __init__(self, path="."):
         self.t = Terminal()
         self.cwd = Path(path).absolute()
@@ -33,6 +31,8 @@ class FM:
         self.pat = str()
         self.tags = Path.home() / TAGS
         self.tags.mkdir(parents=True, exist_ok=True)
+
+    # -- core --
 
     def run(self):
         os.chdir(self.cwd)
