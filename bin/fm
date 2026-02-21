@@ -21,7 +21,7 @@ VC = "v"
 
 
 class FM:
-    # core
+    # -- core --
 
     def __init__(self, path="."):
         self.t = Terminal()
@@ -129,7 +129,7 @@ class FM:
             print(t.clear_eol)
         self.status()
 
-    # actions
+    # -- actions --
 
     def cd(self, p):
         self.pos[self.cwd] = self.idx
@@ -367,7 +367,7 @@ class FM:
             data = str(self.cur.absolute()).encode()
         subprocess.run(["xclip", "-selection", "clipboard"], input=data)
 
-    # helpers
+    # -- helpers --
 
     def catch(self, fn, *args, timeout=2):
         try:
@@ -515,7 +515,7 @@ class FM:
             os.system("stty -echo -icanon")
             self.out(t.enter_fullscreen + t.clear + t.civis)
 
-    # output
+    # -- output --
 
     def bold(self, s):
         return self.t.bold + s + self.t.normal
