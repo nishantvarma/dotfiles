@@ -433,6 +433,7 @@ class FM:
             self.out(t.move_left * (len(buf) - pos))
 
         draw()
+
         while True:
             key = t.inkey()
             if self.isesc(key) or key.name == "KEY_DOWN":
