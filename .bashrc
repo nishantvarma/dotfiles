@@ -51,7 +51,7 @@ bkp()
 
     repo=$(basename "$(git remote get-url origin)")
 
-    git bundle create ~/scratch/"${repo%.git}" --all
+    git bundle create ~/scratch/"$repo" --all
 }
 
 cd()
