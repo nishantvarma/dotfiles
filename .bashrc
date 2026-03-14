@@ -79,6 +79,11 @@ cm()
     done
 }
 
+cr()
+{
+    claude --resume "$1"
+}
+
 dirty()
 {
     if ! git diff --quiet; then
