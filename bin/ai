@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+SESSIONS=~/.claude/projects
+
+title()
+{
+    jq -r 'select(.type=="custom-title") | .customTitle' \
+        "$1" 2>/dev/null | tail -1
+}
+
+projdir()
+{
+    local d
+    d=$(basename "$(dirname "$1")")
+    echo "${d//-//}"
+}
+
+nth()
+{
+    local j=0
+    for f in "$SESSIONS"/*/*.jsonl; do
+        ((++j == $1)) && echo "$f" && return
+    done
+}
+
+list()
+{
+    local i=0 f proj
+    for f in "$SESSIONS"/*/*.jsonl; do
+        proj=$(basename "$(dirname "$f")")
+        proj=${proj##*-}
+        printf "%2d) %-30s %-10s %5s  %s\n" "$((++i))" \
+            "$(title "$f")" "$proj" \
+            "$(du -h "$f" | cut -f1)" \
+            "$(/usr/bin/ls -l --time-style='+%m-%d %H:%M' \
+                "$f" | awk '{print $6,$7}')"
+    done
+}
+
+resume()
+{
+    local f
+    f=$(nth "$1") || return
+    cd "$(projdir "$f")" && claude --resume "$(basename "$f" .jsonl)"
+}
+
+delete()
+{
+    local f
+    f=$(nth "$1") || return
+    rm -f "$f" && rm -rf "${f%.jsonl}"
+}
+
+fork()
+{
+    local f name
+    f=$(nth "$1") || return
+    read -rp "Name: " name
+    cd "$(projdir "$f")" &&
+    claude --resume "$(basename "$f" .jsonl)" \
+        --fork-session --name "$name"
+}
+
+menu()
+{
+    local sel n
+    while true; do
+        clear
+        list
+        echo
+        echo "r# resume  d# delete  f# fork  q quit"
+        echo
+        read -rp "❯ " sel
+        n=${sel:1}
+        case ${sel:0:1} in
+            q) break ;;
+            r) resume "$n"; read -n1 -rp "Press any key..." ;;
+            d) delete "$n" ;;
+            f) fork "$n"; read -n1 -rp "Press any key..." ;;
+        esac
+    done
+}
+
+menu
