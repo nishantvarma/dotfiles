@@ -41,7 +41,7 @@ list()
         proj=$(basename "$(projdir "$f")")
         size=$(du -h "$f" | cut -f1)
         time=$(find "$f" -printf '%Tm-%Td %TH:%TM\n')
-        printf "%2d) %-20s %-15s %5s  %s\n" \
+        printf "%d) %-20s %-15s %5s  %s\n" \
             "$((++i))" "$(title "$f")" \
             "$proj" "$size" "$time"
     done
