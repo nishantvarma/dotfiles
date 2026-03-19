@@ -82,13 +82,13 @@ menu()
         clear
         list
         echo
-        echo "#[r]esume  #[d]elete  #[f]ork  [q]uit"
+        echo "[r]esume  [d]elete  [f]ork  [q]uit"
         echo
         read -rp "❯ " sel
         [[ -z $sel ]] && continue
         [[ $sel == q ]] && break
-        n=${sel:0:${#sel}-1}
-        case ${sel: -1} in
+        n=${sel:1}
+        case ${sel:0:1} in
             r) resume "$n"; break ;;
             f) fork "$n"; break ;;
             d) delete "$n" ;;
