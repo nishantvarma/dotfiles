@@ -156,6 +156,7 @@ class FM:
             return
         self.title(f"fm:{self.cwd.resolve()}")
         self.sel.clear()
+        subprocess.Popen(["zoxide", "add", str(self.cwd)])
 
     def chmod(self):
         if self.cur:
@@ -385,7 +386,8 @@ class FM:
             return
         r = subprocess.run(
             ["zoxide", "query", q],
-            capture_output=True, text=True,
+            capture_output=True,
+            text=True,
         )
         if r.returncode == 0 and r.stdout.strip():
             self.cd(Path(r.stdout.strip()))
