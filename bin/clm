@@ -2,16 +2,9 @@
 
 SESSIONS=~/.claude/projects
 
-title()
-{
-    jq -r 'select(.type=="custom-title") | .customTitle' \
-        "$1" 2>/dev/null | tail -1
-}
-
-projdir()
-{
-    jq -r 'select(.cwd) | .cwd' "$1" 2>/dev/null | head -1
-}
+# -------------------------------------------------------
+# Helpers
+# -------------------------------------------------------
 
 nth()
 {
@@ -21,25 +14,37 @@ nth()
     done
 }
 
-list()
+projdir()
 {
-    local i=0 f proj
-    for f in "$SESSIONS"/*/*.jsonl; do
-        proj=$(basename "$(dirname "$f")")
-        proj=${proj##*-}
-        printf "%2d) %-30s %-10s %5s  %s\n" "$((++i))" \
-            "$(title "$f")" "$proj" \
-            "$(du -h "$f" | cut -f1)" \
-            "$(/usr/bin/ls -l --time-style='+%m-%d %H:%M' \
-                "$f" | awk '{print $6,$7}')"
-    done
+    jq -r 'select(.cwd) | .cwd' "$1" 2>/dev/null | head -1
 }
 
-resume()
+sid()
 {
-    local f
-    f=$(nth "$1") || return
-    cd "$(projdir "$f")" && claude --resume "$(basename "$f" .jsonl)"
+    basename "$1" .jsonl
+}
+
+title()
+{
+    jq -r 'select(.type=="custom-title") | .customTitle' \
+        "$1" 2>/dev/null | tail -1
+}
+
+# -------------------------------------------------------
+# Actions
+# -------------------------------------------------------
+
+list()
+{
+    local i=0 f proj size time
+    for f in "$SESSIONS"/*/*.jsonl; do
+        proj=$(basename "$(projdir "$f")")
+        size=$(du -h "$f" | cut -f1)
+        time=$(find "$f" -printf '%Tm-%Td %TH:%TM\n')
+        printf "%2d) %-20s %-15s %5s  %s\n" \
+            "$((++i))" "$(title "$f")" \
+            "$proj" "$size" "$time"
+    done
 }
 
 delete()
@@ -55,9 +60,20 @@ fork()
     f=$(nth "$1") || return
     read -rp "Name: " name
     cd "$(projdir "$f")" &&
-    claude --resume "$(basename "$f" .jsonl)" \
+    claude --resume "$(sid "$f")" \
         --fork-session --name "$name"
 }
+
+resume()
+{
+    local f
+    f=$(nth "$1") || return
+    cd "$(projdir "$f")" && claude --resume "$(sid "$f")"
+}
+
+# -------------------------------------------------------
+# Menu
+# -------------------------------------------------------
 
 menu()
 {
@@ -66,15 +82,16 @@ menu()
         clear
         list
         echo
-        echo "#r open  #d delete  #f fork  q quit"
+        echo "#[r]esume  #[d]elete  #[f]ork  [q]uit"
         echo
         read -rp "❯ " sel
+        [[ -z $sel ]] && continue
+        [[ $sel == q ]] && break
         n=${sel:0:${#sel}-1}
         case ${sel: -1} in
-            q) break ;;
-            r) resume "$n"; read -n1 -rp "Press any key..." ;;
+            r) resume "$n"; break ;;
+            f) fork "$n"; break ;;
             d) delete "$n" ;;
-            f) fork "$n"; read -n1 -rp "Press any key..." ;;
         esac
     done
 }
