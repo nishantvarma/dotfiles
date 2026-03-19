@@ -81,7 +81,7 @@ cm()
 
 cr()
 {
-    claude --resume "$1"
+    claude --resume "$@"
 }
 
 dirty()
