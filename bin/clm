@@ -60,8 +60,7 @@ fork()
     f=$(nth "$1") || return
     read -rp "Name: " name
     cd "$(projdir "$f")" &&
-    claude --resume "$(sid "$f")" \
-        --fork-session --name "$name"
+    claude --resume "$(sid "$f")" --fork-session --name "$name"
 }
 
 resume()
