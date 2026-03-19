@@ -55,20 +55,32 @@ delete()
 }
 
 fork()
-{
+(
     local f name
     f=$(nth "$1") || return
-    read -rp "Name: " name
+    read -rp "name: " name
     cd "$(projdir "$f")" &&
     claude --resume "$(sid "$f")" --fork-session --name "$name"
-}
+)
+
+add()
+(
+    local dir name
+    read -erp "dir: " dir
+    [[ -z $dir ]] && return
+    dir=$(eval echo "$dir")
+    [[ -d $dir ]] || return
+    read -rp "name: " name
+    [[ -z $name ]] && return
+    cd "$dir" && claude --name "$name"
+)
 
 resume()
-{
+(
     local f
     f=$(nth "$1") || return
     cd "$(projdir "$f")" && claude --resume "$(sid "$f")"
-}
+)
 
 # -------------------------------------------------------
 # Menu
@@ -81,13 +93,14 @@ menu()
         clear
         list
         echo
-        echo "[r]esume  [d]elete  [f]ork  [q]uit"
+        echo "[a]dd  [r]esume  [d]elete  [f]ork  [q]uit"
         echo
         read -rp "❯ " sel
         [[ -z $sel ]] && continue
         [[ $sel == q ]] && break
         n=${sel:1}
         case ${sel:0:1} in
+            a) add; break ;;
             r) resume "$n"; break ;;
             f) fork "$n"; break ;;
             d) delete "$n" ;;
