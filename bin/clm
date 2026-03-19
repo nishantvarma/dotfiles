@@ -10,9 +10,7 @@ title()
 
 projdir()
 {
-    local d
-    d=$(basename "$(dirname "$1")")
-    echo "${d//-//}"
+    jq -r 'select(.cwd) | .cwd' "$1" 2>/dev/null | head -1
 }
 
 nth()
@@ -68,11 +66,11 @@ menu()
         clear
         list
         echo
-        echo "r# resume  d# delete  f# fork  q quit"
+        echo "#r open  #d delete  #f fork  q quit"
         echo
         read -rp "❯ " sel
-        n=${sel:1}
-        case ${sel:0:1} in
+        n=${sel:0:${#sel}-1}
+        case ${sel: -1} in
             q) break ;;
             r) resume "$n"; read -n1 -rp "Press any key..." ;;
             d) delete "$n" ;;
