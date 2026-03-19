@@ -9,6 +9,7 @@ from pathlib import Path
 
 from blessed import Terminal
 
+AI = "clm"
 EDIT = "e"
 FZYEDIT = "fze"
 FZYOPEN = "fzo"
@@ -47,8 +48,8 @@ class FM:
             "e": ("Edit", self.edit),
             "f": ("Check", lambda: self.spawn("lint", cur=True, wait=True)),
             "F": ("Format", lambda: self.spawn("lint", "-f", cur=True, wait=True)),
-            "g": ("Fuzzy open", lambda: self.spawn(FZYOPEN)),
-            "i": ("Sessions", lambda: self.spawn("clm")),
+            "g": ("Fuzzy edit", lambda: self.spawn(FZYEDIT)),
+            "i": ("Sessions", lambda: self.spawn(AI)),
             "h": (None, lambda: self.cd(self.cwd.parent)),
             "j": (None, lambda: self.mv(1)),
             "k": (None, lambda: self.mv(-1)),
@@ -64,7 +65,7 @@ class FM:
             "u": ("Unclip", lambda: setattr(self, "clip", [])),
             "v": ("VC", self.vc),
             "V": ("Git gui", lambda: self.spawn("gitk")),
-            "x": ("Fuzzy edit", lambda: self.spawn(FZYEDIT)),
+            "x": ("Fuzzy open", lambda: self.spawn(FZYOPEN)),
             "y": ("Yank path", self.yank),
             "Y": ("Yank content", lambda: self.yank(content=True)),
             "z": ("Zoxide", self.zoxide),
