@@ -1,62 +1,73 @@
+# ----
 # Dvtm
-# ====
+# ----
 
 dvtm -c fifo
 echo [create|focus|tag] ... > fifo
 
+# -----
 # Gnome
-# =====
+# -----
 
 gsettings set org.gnome.desktop.lockdown disable-lock-screen true
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 
+# ------
 # Plan 9
-# ======
+# ------
 
 libfontconfig1-dev libx11-dev x11proto-core-dev libxt-dev libxext-dev
 
+# ----
 # Qemu
-# ====
+# ----
 
 qemu-system-x86_64 -boot d -cdrom <iso> -m 512
 
+# -----
 # Rsync
-# =====
+# -----
 
 rsync -am --include='*.pdf' --include='*/' --exclude='*' src/ dest
 
+# -----
 # Socat
-# =====
+# -----
 
 socat STDIN STDOUT # echo
 socat TCP-LISTEN:10000,crlf - # watching
 socat TCP-LISTEN:10000,fork,reuseaddr TCP:google.com:443 # relay
 
+# ------
 # System
-# ======
+# ------
 
 sudo dd if=<iso> | sudo pv | sudo dd of=/dev/sdb
 sudo mount -t vfat /dev/sda1 /media/hdd -o rw,uid=$(id -u),gid=$(id -g)
 synclient TapButton1=0
 
+# ------
 # Tabbed
-# ======
+# ------
 
 tabbed st -w
 
+# ----
 # Tmux
-# ====
+# ----
 
 Right Click # Menu
 Shift + Mouse # Terminal Emulator
 
+# -----
 # Xargs
-# =====
+# -----
 
 cat branches | xargs -i{} -- sh -c 'git checkout {}; git cherry-pick <commit>'
 
+# --------
 # X Server
-# ========
+# --------
 
 xhost +local: # allow access
 export DISPLAY=:0 # inside chroot
