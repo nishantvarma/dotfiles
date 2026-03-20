@@ -98,6 +98,9 @@ menu()
         read -rp "❯ " sel
         [[ -z $sel ]] && continue
         [[ $sel == q ]] && break
+        if [[ $sel =~ ^[0-9]+$ ]]; then
+            resume "$sel"; break
+        fi
         n=${sel:1}
         case ${sel:0:1} in
             a) add; break ;;
