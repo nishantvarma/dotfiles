@@ -385,7 +385,7 @@ class FM:
         if not q:
             return
         r = subprocess.run(
-            ["zoxide", "query", q],
+            ["zoxide", "query"] + q.split(),
             capture_output=True,
             text=True,
         )

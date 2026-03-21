@@ -1,13 +1,21 @@
 #!/usr/bin/env rc
 
-panel=`{xdo id -a panel}
-
 bspc subscribe node desktop |
 while (true) {
 	msg=`{read}
 	event=$msg(1) wid=$msg(4) name=$msg(5) state=$msg(6)
 	if (~ $event node_state) {
-		if (~ $name fullscreen && ~ $state on) xdo below -t $wid $panel
+		if (~ $name fullscreen && ~ $state on) {
+			panel=`{xdo id -a panel}
+			xdo below -t $wid $panel
+		}
 	}
-	if not if (~ $event desktop_focus) barrefresh
+	if not if (~ $event desktop_focus) {
+		barrefresh
+		fs=`{bspc query -N -n focused.fullscreen}
+		if (! ~ $#fs 0) {
+			panel=`{xdo id -a panel}
+			xdo below -t $fs $panel
+		}
+	}
 }

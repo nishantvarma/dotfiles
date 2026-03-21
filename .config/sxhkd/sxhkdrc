@@ -1,5 +1,8 @@
 #!/usr/bin/env rc
 
+F11
+	bspc node -t ~fullscreen
+
 alt + Tab
 	bspc node -f last.local
 
