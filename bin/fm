@@ -9,7 +9,7 @@ from pathlib import Path
 
 from blessed import Terminal
 
-AI = "clm"
+AI = "a"
 EDIT = "e"
 FZYEDIT = "fze"
 FZYOPEN = "fzo"
@@ -40,8 +40,7 @@ class FM:
         self.title(f"fm:{self.cwd.resolve()}")
         t = self.t
         self.keys = {
-            "a": ("add file", lambda: self.create("touch", Path.touch)),
-            "A": ("add dir", lambda: self.create("mkdir", Path.mkdir)),
+            "a": ("sessions", self.ai),
             "c": ("copy", self.copy),
             "C": ("cut", self.cut),
             "d": ("delete", self.rm),
@@ -49,7 +48,8 @@ class FM:
             "f": ("check", lambda: self.spawn("lint", cur=True, wait=True)),
             "F": ("format", lambda: self.spawn("lint", "-f", cur=True, wait=True)),
             "g": ("fuzzy edit", lambda: self.spawn(FZYEDIT)),
-            "i": ("sessions", self.ai),
+            "i": ("add file", lambda: self.create("touch", Path.touch)),
+            "I": ("add dir", lambda: self.create("mkdir", Path.mkdir)),
             "h": (None, lambda: self.cd(self.cwd.parent)),
             "j": (None, lambda: self.mv(1)),
             "k": (None, lambda: self.mv(-1)),
