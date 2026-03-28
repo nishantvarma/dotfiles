@@ -3,12 +3,12 @@
 bspc subscribe node desktop |
 while (true) {
 	msg=`{read}
-	event=$msg(1) wid=$msg(4) name=$msg(5) state=$msg(6)
+	event=$msg(1) name=$msg(5) state=$msg(6)
 	if (~ $event node_state && ~ $name fullscreen) {
 		if (~ $state on) xdo hide -a panel
 		if not xdo show -a panel
 	}
-	if not if (~ $event desktop_focus) {
+	if not if (~ $event node_remove desktop_focus) {
 		barrefresh
 		fs=`{bspc query -N -n focused.fullscreen}
 		if (! ~ $#fs 0) xdo hide -a panel
