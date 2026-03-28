@@ -1,76 +1,100 @@
 #!/usr/bin/env rc
 
-F11
-	bspc node -t ~fullscreen
+# -- node --
 
+# focus
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# swap
+super + shift + {h,j,k,l}
+	bspc node -s {west,south,north,east}
+
+# resize expand
+super + ctrl + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# resize shrink
+super + ctrl + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# float move
+alt + {h,j,k,l}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# focus last
 alt + Tab
 	bspc node -f last.local
 
-alt + {h,k,j,l}
-	bspc node -v {-20 0,0 -20,0 20,20 0}
-
-ctrl + Tab
-	bspc desktop -f last
-
-ctrl + alt + {Left,Right}
-	bspc desktop -f {prev,next}.local
-
-ctrl + alt + {Up,Down}
-	bspc node @parent -R {270,90}
-
-super + {_,shift +} {1-9}
-	bspc {desktop -f,node -d} ^{1-9}
-
-super + {_,shift +} {Left,Up,Down,Right}
-	bspc node -{f,s} {west,north,south,east}
-
-super + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-super + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-super + minus
-	bspc node --flag hidden=on
-
-super + d
-	bspc node -t ~floating
-
-super + e
-	9 spawn st fm
-
-super + f
-	bspc node -t ~fullscreen
+# swap last / biggest
+super + s
+	bspc node -s last
 
 super + m
 	bspc node -s biggest.local
 
-super + o
-	bspc desktop -l next
+# state
+super + d
+	bspc node -t ~floating
 
-super + p
-	dmenu_run
+super + f
+	bspc node -t ~fullscreen
+
+super + t
+	bspc node -t ~tiled
+
+super + minus
+	bspc node --flag hidden=on
 
 super + q
 	bspc node -{c,k}
 
-super + shift + q
-	(pkill -f bar & pkill -f sxhkd & bspc quit)
+# -- desktop --
+
+# focus
+super + {_,shift +} {1-9}
+	bspc {desktop -f,node -d} ^{1-9}
+
+# nav
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
+ctrl + Tab
+	bspc desktop -f last
+
+# rotate / layout
+ctrl + alt + {Up,Down}
+	bspc node @parent -R {270,90}
+
+super + o
+	bspc desktop -l next
+
+# -- wm --
 
 super + r
 	bspc wm -r
 
+super + shift + q
+	(pkill -f bar & pkill -f sxhkd & bspc quit)
+
+# -- apps --
+
+super + e
+	9 spawn st fm
+
+super + p
+	dmenu_run
+
 super + Return
 	spawn st
-
-super + s
-	bspc node -s last
-
-super + t
-	bspc node -t tiled
 
 super + w
 	wp
 
 super + z
 	switch
+
+# -- misc --
+
+F11
+	bspc node -t ~fullscreen
