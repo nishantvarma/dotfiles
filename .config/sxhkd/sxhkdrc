@@ -58,10 +58,11 @@ ctrl + alt + {Left,Right}
 ctrl + Tab
 	bspc desktop -f last
 
-# rotate / layout
+# rotate
 super + space
 	bspc node @parent -R 90
 
+# layout
 super + o
 	bspc desktop -l next
 

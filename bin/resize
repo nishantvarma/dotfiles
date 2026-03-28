@@ -1,0 +1,13 @@
+#!/usr/bin/env rc
+
+step=20
+switch($1) {
+case left
+    bspc node -z left -$step 0 || bspc node -z right -$step 0
+case right
+    bspc node -z right $step 0 || bspc node -z left $step 0
+case up
+    bspc node -z top 0 -$step || bspc node -z bottom 0 -$step
+case down
+    bspc node -z bottom 0 $step || bspc node -z top 0 $step
+}
