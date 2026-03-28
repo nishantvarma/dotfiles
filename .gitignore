@@ -47,6 +47,12 @@
 !.config/vis/
 !.config/zathura/
 
+# Config > OpenCode
+
+!.config/opencode/
+.config/opencode/*
+!.config/opencode/opencode.json
+
 # Config > Qutebrowser
 
 !.config/qutebrowser/
@@ -66,6 +72,12 @@
 !.moc/config
 !.moc/keymap
 !.moc/themes
+
+# OpenCode
+
+!.opencode/
+.opencode/*
+!.opencode/opencode.jsonc
 
 # Python
 
