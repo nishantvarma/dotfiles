@@ -28,6 +28,20 @@ PATH+=:/sbin
 PATH+=:/bin
 PATH+=:$HOME/src/plan9/bin
 
+# Colors
+# ======
+
+: "${TERM:=xterm-256color}"
+e=$(tput setaf 1)
+g=$(tput setaf 2)
+y=$(tput setaf 3)
+l=$(tput setaf 4)
+m=$(tput setaf 5)
+a=$(tput setaf 6)
+w=$(tput setaf 7)
+b=$(tput bold)
+r=$(tput sgr0)
+
 # Exports
 # =======
 
@@ -52,6 +66,12 @@ bkp()
     repo=$(basename "$(git remote get-url origin)")
 
     git bundle create ~/scratch/"$repo" --all
+}
+
+bold()
+{
+    local msg=$1
+    echo "${b}${msg}${r}"
 }
 
 cd()
@@ -91,6 +111,11 @@ dirty()
     fi
 }
 
+error()
+{
+    echo "${b}${e}$*${r}" >&2
+}
+
 exts()
 {
     find . -type f | grep -oE '\.(\w+)$' | sort -u
@@ -101,6 +126,11 @@ inferno()
     "$HOME"/src/inferno/Linux/386/bin/emu -g 1600x784 wm/wm
 }
 
+info()
+{
+    echo "${b}$*${r}"
+}
+
 ll()
 {
     ls -lrt
@@ -108,7 +138,6 @@ ll()
 
 mp3()
 {
-
     cm "$@" mp3
 }
 
@@ -132,6 +161,22 @@ rio()
     spawn Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
     sleep 0.1 &&
     DISPLAY=:1 spawn rio
+}
+
+sudo()
+{
+    error "sudo: $*"
+    command sudo "$@"
+}
+
+success()
+{
+    echo "${b}${g}$*${r}"
+}
+
+warn()
+{
+    echo "${b}${y}$*${r}"
 }
 
 # Hacks
