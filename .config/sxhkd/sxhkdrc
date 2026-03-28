@@ -59,7 +59,7 @@ ctrl + Tab
 	bspc desktop -f last
 
 # rotate
-super + space
+super + r
 	bspc node @parent -R 90
 
 # layout
@@ -68,7 +68,7 @@ super + o
 
 # -- wm --
 
-super + r
+super + shift + r
 	bspc wm -r
 
 super + shift + q
