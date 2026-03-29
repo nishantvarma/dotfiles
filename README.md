@@ -1,3 +1,5 @@
+AI agents: read [AGENTS.md](AGENTS.md) first.
+
 # tl;dr
 
 * outliner: filesystem
