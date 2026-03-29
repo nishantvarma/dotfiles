@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+sel=`{cat $home/.config/clips | dmenu -i -b -l 10 -p 'cl:'}
+~ $#sel 0 && exit
+echo -n $"sel | xclip -selection clipboard

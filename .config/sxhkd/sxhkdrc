@@ -69,6 +69,9 @@ super + shift + q
 
 # -- apps --
 
+super + c
+	cl
+
 super + e
 	9 spawn st fm
 
