@@ -22,12 +22,9 @@ alt + {Left,Right,Up,Down}
 alt + Tab
 	bspc node -f last.local
 
-# swap last / biggest
-super + s
-	bspc node -s last
-
+# monocle
 super + m
-	bspc node -s biggest.local
+	bspc desktop -l next
 
 # state
 super + d
@@ -45,6 +42,10 @@ super + minus
 super + q
 	bspc node -{c,k}
 
+# rotate
+super + r
+	bspc node @parent -R 90
+
 # -- desktop --
 
 # focus
@@ -57,14 +58,6 @@ ctrl + alt + {Left,Right}
 
 ctrl + Tab
 	bspc desktop -f last
-
-# rotate
-super + r
-	bspc node @parent -R 90
-
-# layout
-super + o
-	bspc desktop -l next
 
 # -- wm --
 
