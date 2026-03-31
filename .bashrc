@@ -32,15 +32,23 @@ PATH+=:$HOME/src/plan9/bin
 # ======
 
 : "${TERM:=xterm-256color}"
-e=$(tput setaf 1)
-g=$(tput setaf 2)
-y=$(tput setaf 3)
-l=$(tput setaf 4)
-m=$(tput setaf 5)
-a=$(tput setaf 6)
-w=$(tput setaf 7)
-b=$(tput bold)
-r=$(tput sgr0)
+
+dumb()
+{
+    [[ $TERM == dumb ]]
+}
+
+if ! dumb; then
+    e=$(tput setaf 1)
+    g=$(tput setaf 2)
+    y=$(tput setaf 3)
+    l=$(tput setaf 4)
+    m=$(tput setaf 5)
+    a=$(tput setaf 6)
+    w=$(tput setaf 7)
+    b=$(tput bold)
+    r=$(tput sgr0)
+fi
 
 # Exports
 # =======
@@ -52,7 +60,7 @@ export OPEN=open
 export PAGER=less
 export PLAN9=$HOME/src/plan9
 export PS1='$(basename "$(pwd)") % '
-if [[ "$TERM" != dumb ]]; then
+if ! dumb; then
     export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
 fi
 
