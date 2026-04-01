@@ -66,11 +66,11 @@ fork()
 add()
 (
     local dir name
-    read -erp "dir: " dir
+    read -erp "dir: " -i "$HOME/scratch" dir
     [[ -z $dir ]] && return
     dir=$(eval echo "$dir")
     [[ -d $dir ]] || return
-    read -rp "name: " name
+    read -erp "name: " -i "scratch" name
     [[ -z $name ]] && return
     cd "$dir" && claude --name "$name"
 )
