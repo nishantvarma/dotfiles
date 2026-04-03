@@ -166,7 +166,7 @@ plan9()
 
 rio()
 {
-    spawn Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 && # 1920x964
+    spawn Xephyr -br -ac -noreset -screen 1600x784 -resizeable :1 &&
     sleep 0.1 &&
     DISPLAY=:1 spawn rio
 }
