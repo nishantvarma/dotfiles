@@ -9,7 +9,7 @@ while (true) {
 		if not xdo show -a panel
 	}
 	if not if (~ $event node_remove desktop_focus) {
-		barrefresh
+		refreshbar
 		fs=`{bspc query -N -n focused.fullscreen}
 		if (! ~ $#fs 0) xdo hide -a panel
 		if not xdo show -a panel

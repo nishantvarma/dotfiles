@@ -25,4 +25,4 @@ xss-lock -- betterlockscreen -l
 pkill -f sxhkd ; sxhkd &
 pkill -f bar ; bar &
 sleep 1
-pkill -f winwatch ; winwatch &
+pkill -f watchwin ; watchwin &

@@ -63,7 +63,7 @@ fn status {
 
 fn timer {
 	while (true) {
-		sleep 1 && barrefresh
+		sleep 1 && refreshbar
 	}
 }
 
