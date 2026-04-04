@@ -25,5 +25,5 @@ if (! ~ $#* 0) {
 	if not if (~ $1 *.xz) spawn st tar -xf $1
 	if not if (~ $file *directory*) spawn st fm `{readlink -f $1}
 	if not if (~ $file *executable*) spawn st `{readlink -f $1}
-	if not if (~ $mime *text*) spawn st vis $1
+	if not if (~ $mime *text*) e $1
 }

@@ -1,3 +1,4 @@
 #!/usr/bin/env rc
 
-spawn st vis +0 $*
+if (~ $#EDITOR 0) EDITOR=vis
+spawn st $EDITOR $*
