@@ -1,14 +1,26 @@
 #!/usr/bin/env rc
 
+wins=`{bspc query -N -n any.window -d focused}
+
 fn names {
-	for (id in `{bspc query -N -n any.window -d focused})
+	for (id in $wins)
 		xdotool getwindowname $id >[2]/dev/null
 }
 
-sel = `{names | dmenu -i -b -l 10 -p 'switch:'}
+fn winid {
+	for (id in $wins) {
+		name=`{xdotool getwindowname $id >[2]/dev/null}
+		if (~ $"name $1) { echo $id ; return }
+	}
+}
+
+fs=`{bspc query -N -n focused.fullscreen}
+sel=`{names | dmenu -i -b -l 10 -p 'switch:'}
 
 if (! ~ $#sel 0) {
-	win = `{xdotool search --name $"sel | head -1}
+	win=`{winid $"sel}
 	bspc node $win --flag hidden=off
+	if (! ~ $#fs 0) bspc node -t tiled
 	bspc node -f $"win
+	if (! ~ $#fs 0) bspc node -t fullscreen
 }

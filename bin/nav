@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+fs=`{bspc query -N -n focused.fullscreen}
+if (! ~ $#fs 0) bspc node -t tiled
+bspc node -f $1
