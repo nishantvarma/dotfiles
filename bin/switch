@@ -11,14 +11,10 @@ fn names {
 		xdotool getwindowname $id >[2]/dev/null
 }
 
-fs=`{bspc query -N -n focused.fullscreen}
 sel=`{names | awk '{print NR, $0}' | dmenu -i -b -l 10 -p 'switch:'}
 
 if (! ~ $#sel 0) {
-	n=$sel(1)
-	win=$wins($n)
+	win=$wins($sel(1))
 	bspc node $win --flag hidden=off
-	if (! ~ $#fs 0) bspc node -t tiled
-	bspc node -f $win
-	if (! ~ $#fs 0) bspc node -t fullscreen
+	foc $win
 }

@@ -4,7 +4,7 @@
 
 # focus
 super + {Left,Right,Up,Down}
-	nav {west,east,north,south}
+	foc {west,east,north,south}
 
 # swap
 super + shift + {Left,Right,Up,Down}
@@ -20,7 +20,7 @@ alt + {Left,Right,Up,Down}
 
 # focus last
 alt + Tab
-	bspc node -f last.local
+	foc last.local
 
 # monocle
 super + m
