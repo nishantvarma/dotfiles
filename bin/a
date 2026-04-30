@@ -58,7 +58,7 @@ fork()
 (
     local f name
     f=$(nth "$1") || return
-    read -rp "name: " name
+    read -erp "name: " -i "scratch" name
     cd "$(projdir "$f")" &&
     claude --resume "$(sid "$f")" --fork-session --name "$name"
 )
