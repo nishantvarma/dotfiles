@@ -15,6 +15,12 @@ fn title {
 }
 
 if (! ~ $#* 0) {
-	$* >/dev/null >[2=1] &
-	title $apid $* &
+	if (~ $1 st && ! ~ $#TMUX 0) {
+		shift
+		tmux new-window $*
+	}
+	if not {
+		$* >/dev/null >[2=1] &
+		title $apid $* &
+	}
 }
