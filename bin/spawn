@@ -17,7 +17,6 @@ fn title {
 if (! ~ $#* 0) {
 	if (~ $1 st && ! ~ $#TMUX 0) {
 		shift
-		if (~ $1 -e) shift
 		tmux new-window $*
 	}
 	if not {

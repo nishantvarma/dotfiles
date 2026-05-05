@@ -137,7 +137,7 @@ class FM:
 
     def ai(self):
         subprocess.Popen(
-            ["spawn", TERM, "-e", AI],
+            ["spawn", TERM, AI],
             cwd=self.ctx,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
@@ -339,12 +339,9 @@ class FM:
 
     def sh(self):
         shfile = self.ctx / "sh"
-        if shfile.is_file() and os.access(shfile, os.X_OK):
-            cmd = "./sh; true"
-        else:
-            cmd = " ".join(SHELL) + "; true"
+        cmd = ["./sh"] if (shfile.is_file() and os.access(shfile, os.X_OK)) else SHELL
         subprocess.Popen(
-            ["spawn", TERM, "-e", "sh", "-c", cmd],
+            ["spawn", TERM] + cmd,
             cwd=self.ctx,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
