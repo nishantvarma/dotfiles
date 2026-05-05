@@ -137,7 +137,7 @@ class FM:
 
     def ai(self):
         subprocess.Popen(
-            [TERM, "-e", AI],
+            ["spawn", TERM, "-e", AI],
             cwd=self.ctx,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
@@ -344,7 +344,7 @@ class FM:
         else:
             cmd = " ".join(SHELL) + "; true"
         subprocess.Popen(
-            [TERM, "-e", "sh", "-c", cmd],
+            ["spawn", TERM, "-e", "sh", "-c", cmd],
             cwd=self.ctx,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
