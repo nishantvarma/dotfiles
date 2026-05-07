@@ -8,15 +8,23 @@ SESSIONS=~/.claude/projects
 
 nth()
 {
-    local j=0
+    local f j=0
     for f in "$SESSIONS"/*/*.jsonl; do
         ((++j == $1)) && echo "$f" && return
     done
 }
 
-projdir()
+fields()  # stdout: cwd<TAB>title
 {
-    jq -r 'select(.cwd) | .cwd' "$1" 2>/dev/null | head -1
+    local cwd='' m title=''
+    while IFS= read -r m; do
+        case $m in
+            '"cwd":'*) cwd=${m#*:\"}; cwd=${cwd%\"} ;;
+            '"customTitle":'*) title=${m#*:\"}; title=${title%\"} ;;
+        esac
+        [[ -n $cwd && -n $title ]] && break
+    done < <(rg -o '"(cwd|customTitle)":"[^"]*"' "$1" 2>/dev/null)
+    printf '%s\t%s' "$cwd" "$title"
 }
 
 sid()
@@ -24,26 +32,30 @@ sid()
     basename "$1" .jsonl
 }
 
-title()
-{
-    jq -r 'select(.type=="custom-title") | .customTitle' \
-        "$1" 2>/dev/null | tail -1
-}
-
 # -------------------------------------------------------
 # Actions
 # -------------------------------------------------------
 
+statmap()  # populates size and mtime by path
+{
+    local bytes epoch f
+    while IFS=$'\t' read -r f bytes epoch; do
+        size[$f]=$(( (bytes + 512) / 1024 ))K
+        printf -v mtime[$f] '%(%m-%d %H:%M)T' "$epoch"
+    done < <(stat -c $'%n\t%s\t%Y' "$SESSIONS"/*/*.jsonl 2>/dev/null)
+}
+
 list()
 {
-    local i=0 f proj size time
+    local -A size mtime
+    local cwd f i=0 proj title
+    statmap
+
     for f in "$SESSIONS"/*/*.jsonl; do
-        proj=$(basename "$(projdir "$f")")
-        size=$(du -h "$f" | cut -f1)
-        time=$(find "$f" -printf '%Tm-%Td %TH:%TM\n')
-        printf "%d) %-16s %-16s %-4s %s\n" \
-            "$((++i))" "$(title "$f")" \
-            "$proj" "$size" "$time"
+        IFS=$'\t' read -r cwd title < <(fields "$f")
+        proj=$(basename "$cwd")
+        printf "%d) %-16s %-16s %-5s %s\n" \
+            "$((++i))" "$title" "$proj" "${size[$f]}" "${mtime[$f]}"
     done
 }
 
@@ -56,11 +68,11 @@ delete()
 
 fork()
 (
-    local f name
+    local cwd f name title
     f=$(nth "$1") || return
+    IFS=$'\t' read -r cwd title < <(fields "$f")
     read -erp "name: " -i "scratch" name
-    cd "$(projdir "$f")" &&
-    claude --resume "$(sid "$f")" --fork-session --name "$name"
+    cd "$cwd" && claude --resume "$(sid "$f")" --fork-session --name "$name"
 )
 
 add()
@@ -77,9 +89,10 @@ add()
 
 resume()
 (
-    local f
+    local cwd f title
     f=$(nth "$1") || return
-    cd "$(projdir "$f")" && claude --resume "$(sid "$f")"
+    IFS=$'\t' read -r cwd title < <(fields "$f")
+    cd "$cwd" && claude --resume "$(sid "$f")"
 )
 
 # -------------------------------------------------------
@@ -88,7 +101,7 @@ resume()
 
 menu()
 {
-    local sel n
+    local n sel
     while true; do
         clear
         list
