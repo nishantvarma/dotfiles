@@ -16,14 +16,9 @@ nth()
 
 fields()  # stdout: cwd<TAB>title
 {
-    local cwd='' m title=''
-    while IFS= read -r m; do
-        case $m in
-            '"cwd":'*) cwd=${m#*:\"}; cwd=${cwd%\"} ;;
-            '"customTitle":'*) title=${m#*:\"}; title=${title%\"} ;;
-        esac
-        [[ -n $cwd && -n $title ]] && break
-    done < <(rg -o '"(cwd|customTitle)":"[^"]*"' "$1" 2>/dev/null)
+    local cwd title
+    cwd=$(rg -om1 '"cwd":"([^"]*)"' -r '$1' "$1" 2>/dev/null)
+    title=$(rg -o '"customTitle":"([^"]*)"' -r '$1' "$1" 2>/dev/null | tail -1)
     printf '%s\t%s' "$cwd" "$title"
 }
 
