@@ -54,22 +54,6 @@ list()
     done
 }
 
-delete()
-{
-    local f
-    f=$(nth "$1") || return
-    rm -f "$f" && rm -rf "${f%.jsonl}"
-}
-
-fork()
-(
-    local cwd f name title
-    f=$(nth "$1") || return
-    IFS=$'\t' read -r cwd title < <(fields "$f")
-    read -erp "name: " -i "scratch" name
-    cd "$cwd" && claude --resume "$(sid "$f")" --fork-session --name "$name"
-)
-
 add()
 (
     local dir name
@@ -90,6 +74,31 @@ resume()
     cd "$cwd" && claude --resume "$(sid "$f")"
 )
 
+delete()
+{
+    local f
+    f=$(nth "$1") || return
+    rm -f "$f" && rm -rf "${f%.jsonl}"
+}
+
+fork()
+(
+    local cwd f name title
+    f=$(nth "$1") || return
+    IFS=$'\t' read -r cwd title < <(fields "$f")
+    read -erp "name: " -i "scratch" name
+    cd "$cwd" && claude --resume "$(sid "$f")" --fork-session --name "$name"
+)
+
+renew()
+(
+    local cwd f title
+    f=$(nth "$1") || return
+    IFS=$'\t' read -r cwd title < <(fields "$f")
+    rm -f "$f" && rm -rf "${f%.jsonl}"
+    cd "$cwd" && claude --name "$title"
+)
+
 # -------------------------------------------------------
 # Menu
 # -------------------------------------------------------
@@ -101,7 +110,7 @@ menu()
         clear
         list
         echo
-        echo "[a]dd  [r]esume  [d]elete  [f]ork  [q]uit"
+        echo "[a]dd  [r]esume  [d]elete  [f]ork  [x]renew  [q]uit"
         echo
         read -rp "❯ " sel
         [[ -z $sel ]] && continue
@@ -113,8 +122,9 @@ menu()
         case ${sel:0:1} in
             a) add; break ;;
             r) resume "$n"; break ;;
-            f) fork "$n"; break ;;
             d) delete "$n" ;;
+            f) fork "$n"; break ;;
+            x) renew "$n"; break ;;
         esac
     done
 }
