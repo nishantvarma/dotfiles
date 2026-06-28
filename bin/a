@@ -57,7 +57,7 @@ list()
 add()
 (
     local dir name
-    read -erp "dir: " -i "$HOME/scratch" dir
+    read -erp "dir: " -i "$PWD" dir
     [[ -z $dir ]] && return
     dir=$(eval echo "$dir")
     [[ -d $dir ]] || return
