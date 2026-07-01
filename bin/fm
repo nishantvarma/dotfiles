@@ -54,6 +54,8 @@ class FM:
             "j": (None, lambda: self.mv(1)),
             "k": (None, lambda: self.mv(-1)),
             "l": ("link", self.link),
+            "m": ("clone", self.clone),
+            "M": ("clone dir", lambda: self.clone(True)),
             "n": ("next", self.next),
             "N": ("prev", self.prev),
             "o": ("outline", lambda: self.spawn("outline", cur=True)),
@@ -165,6 +167,23 @@ class FM:
                 self.cur.chmod(mode & ~0o111)
             else:
                 self.cur.chmod(mode | 0o111)
+
+    def clone(self, dirs=False):
+        if not self.cur or self.cur.is_symlink():
+            return
+        src, home = self.cur.resolve(), Path.home()
+        roots = [home / "Data", home, Path("/")]
+        root = next(r for r in roots if src.is_relative_to(r))
+        dst = home / "Unsynced" / src.relative_to(root)
+        if not dst.exists():
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            if src.is_file():
+                shutil.copy2(src, dst)
+            elif dirs:
+                shutil.copytree(src, dst)
+            else:
+                dst.mkdir()
+        self.cd(dst if dst.is_dir() else dst.parent)
 
     def copy(self):
         self.clip = self.targets()
