@@ -3,4 +3,4 @@
 model=haiku
 effort=low
 
-exec claude -p --model $model --effort $effort $*
+exec claude -p --no-session-persistence --model $model --effort $effort $*
