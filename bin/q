@@ -1,0 +1,6 @@
+#!/usr/bin/env rc
+
+model=haiku
+effort=low
+
+exec claude -p --model $model --effort $effort $*
