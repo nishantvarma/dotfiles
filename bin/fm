@@ -291,6 +291,7 @@ class FM:
         self.find(1)
 
     def paste(self):
+        failed = []
         for src in self.clip:
             dst = self.cwd / src.name
             if dst.exists():
@@ -306,9 +307,12 @@ class FM:
                 else:
                     shutil.copy2(src, dst)
             except (OSError, shutil.Error):
-                pass
+                failed.append(src.name)
         if self.cutting:
             self.clip = []
+        if failed:
+            self.status(f"paste failed: {' '.join(failed)}")
+            self.t.inkey(timeout=2)
 
     def prev(self):
         self.find(-1)
