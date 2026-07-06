@@ -11,6 +11,7 @@ from blessed import Terminal
 
 AI = "a"
 EDIT = "e"
+EXEC = "exec"
 FZYEDIT = "fze"
 FZYOPEN = "fzo"
 FZYSEARCH = "fzs"
@@ -41,6 +42,7 @@ class FM:
         t = self.t
         self.keys = {
             "a": ("sessions", self.ai),
+            "b": ("duplicate", self.dupe),
             "c": ("copy", self.copy),
             "C": ("cut", self.cut),
             "d": ("delete", self.rm),
@@ -67,6 +69,7 @@ class FM:
             "u": ("unclip", lambda: setattr(self, "clip", [])),
             "v": ("vc", self.vc),
             "V": ("git gui", lambda: self.spawn("gitk")),
+            "w": ("workflow", self.workflow),
             "x": ("fuzzy open", lambda: self.spawn(FZYOPEN)),
             "y": ("yank path", self.yank),
             "Y": ("yank content", lambda: self.yank(content=True)),
@@ -203,6 +206,9 @@ class FM:
     def debug(self):
         with self.tty():
             breakpoint()
+
+    def dupe(self):
+        self.spawn(OPEN, str(self.cwd))
 
     def edit(self):
         if self.cur and self.cur.is_file():
@@ -362,7 +368,7 @@ class FM:
 
     def sh(self):
         shfile = self.ctx / "sh"
-        cmd = ["./sh"] if (shfile.is_file() and os.access(shfile, os.X_OK)) else SHELL
+        cmd = ["./sh"] if self.execable(shfile) else SHELL
         subprocess.Popen(
             ["spawn", TERM] + cmd,
             cwd=self.ctx,
@@ -390,6 +396,11 @@ class FM:
 
     def vc(self):
         self.spawn(VC)
+
+    def workflow(self):
+        exec = self.ctx / EXEC
+        if self.execable(exec):
+            self.spawn("./exec")
 
     def yank(self, content=False):
         if not self.cur:
@@ -443,6 +454,10 @@ class FM:
     @property
     def cur(self):
         return self.files[self.idx] if self.files else None
+
+    def execable(self, path):
+        p = Path(path) if not isinstance(path, Path) else path
+        return p.is_file() and os.access(p, os.X_OK)
 
     def find(self, d):
         if not self.pat or not self.files:
