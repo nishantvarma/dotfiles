@@ -400,7 +400,7 @@ class FM:
     def workflow(self):
         exec = self.ctx / EXEC
         if self.execable(exec):
-            self.spawn("./exec")
+            self.spawn(OPEN, str(exec))
 
     def yank(self, content=False):
         if not self.cur:
