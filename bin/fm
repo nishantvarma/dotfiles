@@ -5,6 +5,7 @@ import shutil
 import subprocess
 import sys
 from contextlib import contextmanager
+from functools import partialmethod
 from pathlib import Path
 
 from blessed import Terminal
@@ -141,12 +142,7 @@ class FM:
     # -- actions --
 
     def ai(self):
-        subprocess.Popen(
-            ["spawn", TERM, AI],
-            cwd=self.ctx,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
+        self.detach(AI)
 
     def cd(self, p):
         self.pos[self.cwd] = self.idx
@@ -367,14 +363,8 @@ class FM:
             self.sel ^= {self.cur}
 
     def sh(self):
-        shfile = self.ctx / "sh"
-        cmd = ["./sh"] if self.execable(shfile) else SHELL
-        subprocess.Popen(
-            ["spawn", TERM] + cmd,
-            cwd=self.ctx,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
+        cmd = ["./sh"] if self.execable(self.ctx / "sh") else SHELL
+        self.detach(*cmd)
 
     def tab(self):
         if self.alt:
@@ -455,8 +445,15 @@ class FM:
     def cur(self):
         return self.files[self.idx] if self.files else None
 
-    def execable(self, path):
-        p = Path(path) if not isinstance(path, Path) else path
+    def detach(self, *cmd):
+        subprocess.Popen(
+            ["spawn", TERM, *cmd],
+            cwd=self.ctx,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+
+    def execable(self, p):
         return p.is_file() and os.access(p, os.X_OK)
 
     def find(self, d):
@@ -578,20 +575,15 @@ class FM:
 
     # -- output --
 
-    def bold(self, s):
-        return self.t.bold + s + self.t.normal
+    def paint(self, attr, s):
+        return getattr(self.t, attr) + s + self.t.normal
 
-    def blue(self, s):
-        return self.t.blue + s + self.t.normal
-
-    def cyan(self, s):
-        return self.t.cyan + s + self.t.normal
-
-    def dim(self, s):
-        return self.t.dim + s + self.t.normal
-
-    def green(self, s):
-        return self.t.green + s + self.t.normal
+    bold = partialmethod(paint, "bold")
+    blue = partialmethod(paint, "blue")
+    cyan = partialmethod(paint, "cyan")
+    dim = partialmethod(paint, "dim")
+    green = partialmethod(paint, "green")
+    yellow = partialmethod(paint, "yellow")
 
     def out(self, *args):
         print(*args, end=str(), flush=True)
@@ -606,9 +598,6 @@ class FM:
 
     def title(self, s):
         self.out(f"{chr(27)}]2;{s}{chr(7)}")
-
-    def yellow(self, s):
-        return self.t.yellow + s + self.t.normal
 
 
 if __name__ == "__main__":
