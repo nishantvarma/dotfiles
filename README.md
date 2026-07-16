@@ -14,8 +14,8 @@ AI agents: read [AGENTS.md](AGENTS.md) first.
   * `vi`-like tui for outline operations
   * everything is clickable
   * everything opens in a new `dwm` window possibly `st`
-* editor: `vis`
-  * `vi`-like bindings with structural regexp
+* editor: `neatvi`
+  * `vi` clone
 * window-manager: `dwm`, `bspwm` or `rio`
 * terminal: `st`
 * shell: `rc`
