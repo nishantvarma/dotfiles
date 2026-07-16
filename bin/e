@@ -1,4 +1,4 @@
 #!/usr/bin/env rc
 
-if (~ $#EDITOR 0) EDITOR=vis
+if (~ $#EDITOR 0) EDITOR=nvi
 spawn st $EDITOR $*
