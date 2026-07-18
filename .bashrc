@@ -53,7 +53,7 @@ fi
 # Exports
 # =======
 
-export EDITOR=nvi
+export EDITOR=ed
 export HISTFILE=/dev/null
 export LANG=en_US.UTF-8
 export OPEN=open
