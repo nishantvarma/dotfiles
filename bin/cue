@@ -1,5 +1,0 @@
-#!/usr/bin/env rc
-
-tput setaf 2
-echo -n '> '
-tput sgr0

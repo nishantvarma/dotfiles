@@ -27,6 +27,7 @@ PATH+=:/usr/bin
 PATH+=:/sbin
 PATH+=:/bin
 PATH+=:$HOME/src/plan9/bin
+PATH+=:$HOME/src/sys/bin
 
 # Colors
 # ======
