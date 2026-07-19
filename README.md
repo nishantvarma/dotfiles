@@ -9,8 +9,8 @@ AI agents: read [AGENTS.md](AGENTS.md) first.
   * metadata like bookmarks, mrus etc., can be links
   * fuzzy search can be used to quickly bookmark
   * bind data + operations like oop
-  * [view](bin/view), [edit](bin/edit), [open](bin/open) etc.
-* explorer: `vifm`, [fm](bin/fm)
+  * view/edit/open etc.
+* explorer: `vifm`, [fm](../src/sys)
   * `vi`-like tui for outline operations
   * everything is clickable
   * everything opens in a new `dwm` window possibly `st`
