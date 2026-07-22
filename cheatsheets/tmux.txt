@@ -1,0 +1,91 @@
+ TMUX ------------------------------------------------------------------
+
+ prefix is ` (backtick), not the usual ctrl-b. everything below is
+ pressed as: ` <key>
+
+
+ YOUR OVERRIDES (.tmux.conf, only 4 real bindings) -----------------
+
+
+ ` b   toggle status bar
+ ` m   toggle mouse
+ ` {   swap-pane -U  (move current pane up/prev in order)
+ ` }   swap-pane -D  (move current pane down/next in order)
+
+ everything else you might remember configuring (< > k l r Tab
+ backtick-passthrough) is now stock tmux default. no need to set it.
+
+
+ WINDOWS (default) ---------------------------------------------------
+
+
+ ` c        new window
+ ` ,        rename window
+ ` &        kill window (confirm)
+ ` n        next window
+ ` p        previous window
+ ` 0-9      jump to window by index
+ ` l        swap window with... (prompt)
+ ` <        move window left, follow it
+ ` >        move window right, follow it
+ ` .        move-window to target (prompt)
+ ` f        find window (prompt)
+ ` w        choose-tree window list
+ ` Tab      last (previously focused) window
+ ` '        select window by index/name (prompt)
+
+
+ PANES (default) ------------------------------------------------------
+
+
+ ` %        split vertically   (new pane to the right)
+ ` "        split horizontally (new pane below)
+ ` arrow    move focus to pane in that direction
+ ` o        cycle focus to next pane
+ ` q        show pane numbers, press number to jump
+ ` z        zoom/unzoom current pane fullscreen
+ ` x        kill pane (confirm)
+ ` !        break pane into its own window
+ ` space    cycle preset layouts (even-h, even-v, main-h, main-v, tiled)
+ ` { / }    swap pane up/down in order        <- yours, restored
+ M-1..7     select-layout directly (even-h/v, main-h/v, tiled, mirrored)
+ M-arrow    resize pane by 5
+ C-arrow    resize pane by 1
+ S-arrow    scroll pane view 10 lines
+
+
+ SESSIONS (default) ---------------------------------------------------
+
+
+ ` d        detach
+ ` D        choose client
+ ` s        choose-tree session list
+ ` $        rename session
+ ` (        switch to previous session
+ ` )        switch to next session
+ ` L        switch to last session
+
+
+ COPY MODE (default) ---------------------------------------------------
+
+
+ ` [        enter copy mode
+ ` ]        paste buffer
+ ` #        list buffers
+ ` =        choose buffer
+
+ inside copy mode: vi-style movement (hjkl, w/b, /, ?, etc.)
+
+
+ MISC (default) ---------------------------------------------------------
+
+
+ ` :        command prompt
+ ` ?        list all keys
+ ` /        look up what a key does (prompt)
+ ` ~        show last messages
+ ` i        display message
+ ` t        clock
+ ` z        zoom pane
+ ` C-z      suspend client
+ ` C        customize-mode (interactive binding editor)
