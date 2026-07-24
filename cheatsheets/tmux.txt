@@ -8,11 +8,11 @@
 
 
  ` b      toggle status bar
+ ` l      open floating pane  (swapped with stock Tab)
  ` m      toggle mouse
+ ` Tab    last-window          (swapped with stock l)
  ` {      swap-pane -U  (move current pane up/prev in order)
  ` }      swap-pane -D  (move current pane down/next in order)
- ` l      open floating pane  (swapped with stock Tab)
- ` Tab    last-window          (swapped with stock l)
 
  everything else you might remember configuring (< > k r
  backtick-passthrough) is now stock tmux default. no need to set it.
