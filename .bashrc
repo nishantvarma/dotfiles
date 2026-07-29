@@ -20,10 +20,10 @@ shopt -s autocd
 pathadd()
 {
     if [[ ":$PATH:" != *":$1:"* ]]; then
-        PATH="$1${PATH:+:$PATH}"
+        PATH="${PATH:+$PATH:}$1"
     fi
 }
-pathadd $HOME/src/sys/bin
+PATH=$HOME/src/sys/bin
 pathadd $HOME/bin
 pathadd $HOME/.local/bin
 pathadd /usr/local/sbin
