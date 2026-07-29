@@ -25,6 +25,8 @@ pkgs=(
     moc
     mpv
     pkg-config
+    pipx
+    python3
     ripgrep
     tree
     wmctrl
@@ -42,6 +44,10 @@ sudo apt install -y "${pkgs[@]}"
 
 mkdir -p "$HOME/.local/bin"
 command -v fdfind >/dev/null && ln -sf /usr/bin/fdfind "$HOME/.local/bin/fd"
+
+# pipx
+pipx ensurepath
+pipx install -r "$C/requirements.txt"
 
 # st
 if [[ ! -d $HOME/src/st ]]; then

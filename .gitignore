@@ -80,12 +80,6 @@
 .opencode/*
 !.opencode/opencode.jsonc
 
-# Python
-
-!.python/
-.python/*
-!.python/requirements.txt
-
 # Vifm
 
 !.vifm/

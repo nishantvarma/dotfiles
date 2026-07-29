@@ -17,7 +17,6 @@ shopt -s autocd
 # Path
 # ====
 
-PATH=$HOME/.python/bin
 PATH+=:$HOME/bin
 PATH+=:$HOME/.local/bin
 PATH+=:/usr/local/sbin
