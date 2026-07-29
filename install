@@ -47,7 +47,7 @@ command -v fdfind >/dev/null && ln -sf /usr/bin/fdfind "$HOME/.local/bin/fd"
 
 # pipx
 pipx ensurepath
-pipx install -r "$C/requirements.txt"
+xargs -n1 pipx install < "$C/requirements.txt"
 
 # st
 if [[ ! -d $HOME/src/st ]]; then
