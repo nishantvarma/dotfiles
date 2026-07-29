@@ -17,6 +17,7 @@ shopt -s autocd
 # Path
 # ====
 
+PATH+=:$HOME/src/sys/bin
 PATH+=:$HOME/bin
 PATH+=:$HOME/.local/bin
 PATH+=:/usr/local/sbin
@@ -26,7 +27,6 @@ PATH+=:/usr/bin
 PATH+=:/sbin
 PATH+=:/bin
 PATH+=:$HOME/src/plan9/bin
-PATH+=:$HOME/src/sys/bin
 
 # Colors
 # ======
