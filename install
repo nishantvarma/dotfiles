@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+C=$HOME/dotfiles
+D=$HOME/Data
+S=git@github.com:nishantvarma/sys.git
+
+# packages
+pkgs=(
+    autoconf
+    automake
+    bison
+    build-essential
+    fd-find
+    feh
+    fzy
+    git
+    golang-go
+    libevent-dev
+    libncurses-dev
+    libx11-dev
+    libxft-dev
+    libxinerama-dev
+    moc
+    mpv
+    pkg-config
+    ripgrep
+    tree
+    wmctrl
+    xclip
+    xdotool
+    xorg-dev
+    zathura
+    zathura-djvu
+    zathura-pdf-poppler
+    zathura-ps
+    zoxide
+)
+sudo apt update
+sudo apt install -y "${pkgs[@]}"
+
+mkdir -p "$HOME/.local/bin"
+command -v fdfind >/dev/null && ln -sf /usr/bin/fdfind "$HOME/.local/bin/fd"
+
+# st
+if [[ ! -d $HOME/src/st ]]; then
+    mkdir -p "$HOME/src/st"
+    tar xzf "$D/cs/tools/st.tar" -C "$HOME/src/st" --strip-components=1
+fi
+if [[ ! -x $HOME/src/st/st ]]; then
+    cd "$HOME/src/st" && make
+fi
+[[ -x $HOME/src/st/st ]] && ln -sfr "$HOME/src/st/st" "$HOME/.local/bin/st"
+
+# tmux
+if [[ ! -d $HOME/src/tmux ]]; then
+    mkdir -p "$HOME/src/tmux"
+    tar xzf "$D/cs/tools/tmux.tar" -C "$HOME/src/tmux" --strip-components=1
+fi
+if [[ ! -x $HOME/src/tmux/tmux ]]; then
+    cd "$HOME/src/tmux" && sh autogen.sh && ./configure && make
+fi
+[[ -x $HOME/src/tmux/tmux ]] &&
+    ln -sfr "$HOME/src/tmux/tmux" "$HOME/.local/bin/tmux"
+
+# plan9port
+if [[ ! -d $HOME/src/plan9 ]]; then
+    mkdir -p "$HOME/src/plan9"
+    tar xf "$D/cs/sys/plan9-bell-labs/plan9port.tar" \
+        -C "$HOME/src/plan9" --strip-components=1
+fi
+if [[ ! -x $HOME/src/plan9/bin/9 ]]; then
+    cd "$HOME/src/plan9" && ./INSTALL
+fi
+[[ -x $HOME/src/plan9/bin/9 ]] &&
+    ln -sfr "$HOME/src/plan9/bin/9" "$HOME/.local/bin/9"
+
+# sys
+if [[ ! -d $HOME/src/sys/.git ]]; then
+    git clone "$S" "$HOME/src/sys"
+fi
+if [[ ! -x $HOME/src/sys/bin/fm || ! -x $HOME/src/sys/bin/ed ]]; then
+    cd "$HOME/src/sys" && ./build
+fi
+
+# dotfiles
+yn()
+{
+    local ans
+    printf "%s [Y/n] " "$*"
+    read -rn1 ans
+    echo
+    [[ $ans != n && $ans != N ]]
+}
+
+yn "Symlink dotfiles?" && cd "$C" && git ls-files | while read -r f; do
+    mkdir -p "$(dirname "$HOME/$f")"
+    if [[ -e $HOME/$f && ! -L $HOME/$f ]]; then
+        printf "  overwrite %s? [y/N] " "$f"
+        read -rn1 ans
+        echo
+        [[ $ans != y && $ans != Y ]] && continue
+        rm "$HOME/$f"
+    fi
+    ln -sfr "$C/$f" "$HOME/$f"
+done
