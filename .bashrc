@@ -17,16 +17,22 @@ shopt -s autocd
 # Path
 # ====
 
-PATH+=:$HOME/src/sys/bin
-PATH+=:$HOME/bin
-PATH+=:$HOME/.local/bin
-PATH+=:/usr/local/sbin
-PATH+=:/usr/local/bin
-PATH+=:/usr/sbin
-PATH+=:/usr/bin
-PATH+=:/sbin
-PATH+=:/bin
-PATH+=:$HOME/src/plan9/bin
+pathadd()
+{
+    if [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="$1${PATH:+:$PATH}"
+    fi
+}
+pathadd $HOME/src/sys/bin
+pathadd $HOME/bin
+pathadd $HOME/.local/bin
+pathadd /usr/local/sbin
+pathadd /usr/local/bin
+pathadd /usr/sbin
+pathadd /usr/bin
+pathadd /sbin
+pathadd /bin
+pathadd $HOME/src/plan9/bin
 
 # Colors
 # ======
