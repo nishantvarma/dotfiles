@@ -12,7 +12,6 @@
 !.acme
 !.bash_profile
 !.bashrc
-!.cwmrc
 !.gitconfig
 !.gitignore
 !.hacks.sh
@@ -26,7 +25,6 @@
 
 # Folders
 
-!.ad
 !.vim
 !.wallpapers/
 !bin/
@@ -45,7 +43,6 @@
 !.config/mpv/
 !.config/qtile/
 !.config/sxhkd/
-!.config/vis/
 !.config/zathura/
 
 # Config > OpenCode
@@ -59,12 +56,6 @@
 !.config/qutebrowser/
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
-
-# Config > Zed
-
-!.config/zed/
-.config/zed/*
-!.config/zed/themes/
 
 # Moc
 
