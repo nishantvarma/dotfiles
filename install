@@ -4,6 +4,7 @@ set -euo pipefail
 
 C=$HOME/dotfiles
 D=$HOME/Data
+P=${PLAN9:-$HOME/src/plan9}
 S=git@github.com:nishantvarma/sys.git
 
 # packages
@@ -71,16 +72,19 @@ fi
     ln -sfr "$HOME/src/tmux/tmux" "$HOME/.local/bin/tmux"
 
 # plan9port
-if [[ ! -d $HOME/src/plan9 ]]; then
-    mkdir -p "$HOME/src/plan9"
-    tar xf "$D/cs/sys/plan9-bell-labs/plan9port.tar" \
-        -C "$HOME/src/plan9" --strip-components=1
+if [[ ! -d $P ]]; then
+    mkdir -p "$P"
+    tar xf "$D/cs/sys/plan9-bell-labs/plan9port.tar" -C "$P" --strip-components=1
 fi
-if [[ ! -x $HOME/src/plan9/bin/9 ]]; then
-    cd "$HOME/src/plan9" && ./INSTALL
+if [[ ! -x $P/bin/9 ]]; then
+    cd "$P" && ./INSTALL
 fi
-[[ -x $HOME/src/plan9/bin/9 ]] &&
-    ln -sfr "$HOME/src/plan9/bin/9" "$HOME/.local/bin/9"
+[[ -x $P/bin/9 ]] && ln -sfr "$P/bin/9" "$HOME/.local/bin/9"
+for f in ed p; do
+    if [[ -f $P/bin/$f ]]; then
+        mv "$P/bin/$f" "$P/bin/$f.bkp"
+    fi
+done
 
 # sys
 if [[ ! -d $HOME/src/sys/.git ]]; then
