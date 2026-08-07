@@ -70,6 +70,11 @@ if ! dumb; then
     export PROMPT_COMMAND="echo -n -e '\x1b[5 q'"
 fi
 
+# Aliases
+# =======
+
+alias q=exit
+
 # Functions
 # =========
 
