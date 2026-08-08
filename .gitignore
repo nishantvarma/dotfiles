@@ -38,6 +38,7 @@
 
 # Folders
 
+!.config/alacritty/
 !.config/bat/
 !.config/bspwm/
 !.config/mpv/
