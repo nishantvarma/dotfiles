@@ -1,0 +1,19 @@
+# yt-dlp
+
+# YouTube requires solving a JS "n-signature" challenge; without a runtime the
+# media URLs come back unsigned and every download 403s. Only deno is enabled
+# by default, so point yt-dlp at node instead. Drop this line if deno is
+# installed.
+
+--js-runtimes node
+
+# The challenge solver itself is not shipped with yt-dlp; fetch it from GitHub.
+
+--remote-components ejs:github
+
+# Some videos serve nothing but storyboards or DRM-protected formats to the
+# default clients. When that happens, retry on the command line with:
+#
+#     --extractor-args "youtube:player_client=web_embedded"
+#
+# Left out here on purpose: it changes format selection for every video.

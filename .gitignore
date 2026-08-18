@@ -44,6 +44,7 @@
 !.config/mpv/
 !.config/qtile/
 !.config/sxhkd/
+!.config/yt-dlp/
 !.config/zathura/
 
 # Config > OpenCode
