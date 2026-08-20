@@ -29,7 +29,7 @@
         "ghost_element.hover": "#ffffff08",
         "ghost_element.selected": "#ffffff10",
         "surface.background": "#0c0c0c",
-        "panel.background": "#0c0c0c",
+        "panel.background": "#090909",
         "panel.focused_border": "#6b6b6b80",
 
         "title_bar.background": "#0c0c0c",
@@ -60,7 +60,7 @@
         "icon.muted": "#58626e",
         "icon.placeholder": "#58626e50",
 
-        "editor.background": "#101010",
+        "editor.background": "#111111",
         "editor.foreground": "#aab3c0",
         "editor.gutter.background": "#101010",
         "editor.line_number": "#3e4550",
