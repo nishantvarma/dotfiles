@@ -25,7 +25,6 @@
     "dock": "left"
   },
   "ui_font_size": 16,
-  "ui_font_weight": 700,
   "buffer_font_size": 15,
   "theme": {
     "mode": "dark",
