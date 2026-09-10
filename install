@@ -52,6 +52,18 @@ command -v fdfind >/dev/null && ln -sf /usr/bin/fdfind "$HOME/.local/bin/fd"
 pipx ensurepath
 xargs -n1 pipx install < "$C/requirements.txt"
 
+# -- quark --
+
+if [[ ! -d $HOME/src/quark ]]; then
+    mkdir -p "$HOME/src/quark"
+    tar xzf "$D/cs/tools/quark.tar" -C "$HOME/src/quark" --strip-components=1
+fi
+if [[ ! -x $HOME/src/quark/quark ]]; then
+    cd "$HOME/src/quark" && make
+fi
+[[ -x $HOME/src/quark/quark ]] &&
+    ln -sfr "$HOME/src/quark/quark" "$HOME/.local/bin/quark"
+
 # -- st --
 
 if [[ ! -d $HOME/src/st ]]; then
