@@ -111,6 +111,10 @@ cm()
 
     for file in "${files[@]}"; do
         echo "Processing $file"
+        if [[ $file == http* ]]; then
+            yt-dlp -t "$extn" --exec 'mat2 --inplace {}' "$file"
+            continue
+        fi
         if [[ $file != *.$extn ]]; then
             ffmpeg -i "$file" "${file%.*}.$extn" &&
             rm "$file"

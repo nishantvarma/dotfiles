@@ -8,8 +8,3 @@
 # The default client signs URLs that 403 mid-download.
 
 --extractor-args youtube:player_client=web_embedded,default
-
-# Everything here feeds an mp3 library; --no-extract-audio for video.
-
--x
---audio-format mp3
