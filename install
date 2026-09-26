@@ -26,8 +26,8 @@ pkgs=(
     libxinerama-dev
     moc
     mpv
-    pkg-config
     pipx
+    pkg-config
     python3
     ripgrep
     tree
