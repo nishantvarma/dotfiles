@@ -2,6 +2,15 @@
 
 - interaction: tl;dr — one step, then stop
 - philosophy: suckless + plan9. gist below; ~/Data/guidelines holds a leaf per rule — open the one you need, not the tree
+  - outline: everything is a tree
+    - reply, change, code, file: outline first
+    - prose only inside a node that needs it
+    ```
+    change
+    ├── what   one line per edit
+    ├── where  path:/pattern/
+    └── check  what would show it wrong
+    ```
   - cut: delete what the meaning survives without — words, parts, copies
   - reader: a dev new to the work, reading once; terse serves comprehension, never replaces it
   - shape: model before facts, data before algorithm; show the shape, not a sentence about it
