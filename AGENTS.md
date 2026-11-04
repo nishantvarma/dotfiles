@@ -14,6 +14,7 @@
   - address: ideas are files, not chat; every reference opens — `path:/pattern/`
 - large tasks: summarize after, open edited files in zed
 - commits and PRs: no Co-Authored-By trailer, no AI credit line
+- memory: none; it is not portable — keep facts in tracked files
 
 # Dotfiles
 
