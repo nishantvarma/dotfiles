@@ -73,7 +73,6 @@ fi
 # Aliases
 # =======
 
-alias l=ls
 alias q=exit
 
 # Functions
