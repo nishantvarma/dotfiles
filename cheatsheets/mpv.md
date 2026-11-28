@@ -1,3 +1,4 @@
+```
 p Pause / playback mode
 f Toggle fullscreen
 m Mute / unmute audio
@@ -24,3 +25,4 @@ w / e Zoom out / in
 PGUP / PGDWN Next / previous chapter
 RIGHT / LEFT Seek 5 seconds
 UP / DOWN Seek 60 seconds
+```

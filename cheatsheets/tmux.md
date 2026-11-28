@@ -1,3 +1,4 @@
+```
  TMUX ------------------------------------------------------------------
 
  prefix is ` (backtick), not the usual ctrl-b. everything below is
@@ -91,3 +92,4 @@
  ` z      zoom pane
  ` C-z    suspend client
  ` C      customize-mode (interactive binding editor)
+```

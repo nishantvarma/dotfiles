@@ -99,7 +99,7 @@ AI agents: read [AGENTS.md](AGENTS.md) first.
 
 * aider
 * claude-cli
-* https://github.com/sminez/ad
+* [ad](https://github.com/sminez/ad)
 * opencode.ai
 * zed
 
